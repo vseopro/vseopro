@@ -24,6 +24,8 @@ html(lang="ru")
     link(rel="shortcut icon", href="img/favicon.png", type="image/x-icon")
 
     link(href="http://cdn.jsdelivr.net/bootstrap/3.3.4/css/bootstrap.min.css", rel="stylesheet", media="screen")
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css')
     link(href="css/style.css", rel="stylesheet")
 
     |<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,6 +39,9 @@ html(lang="ru")
 
   body
     block header
+      include _header
+    block nav-menu
+      include _nav-menu
     block content
     block footer
     block modal

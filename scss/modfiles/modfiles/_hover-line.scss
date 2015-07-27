@@ -1,0 +1,22 @@
+.hover-underline {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.hover-line {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.no-underline {
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+}
