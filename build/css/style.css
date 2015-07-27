@@ -177,6 +177,10 @@ nav.main {
     background: #192637;
 }
 
+.first-menu__item {
+    border-top: 2px solid transparent;
+}
+
 .first-menu__item:first-child .first-menu__link {
     padding-left: 15px !important;
 }
@@ -184,18 +188,27 @@ nav.main {
 .first-menu__link {
     font-size: 15px;
     font-size: 1.07143rem;
-    padding: 14px 20px 14px 10px;
+    padding: 14px 20px 16px 10px;
     color: #fff;
 }
 
-.first-menu__link:hover,
+.first-menu__link:hover {
+    color: #ff690b;
+}
+
 .first-menu__link:focus,
 .first-menu__link:active {
-    color: #ff690b;
+    color: #fff;
 }
 
 .first-menu__has-menu {
     position: relative;
+}
+
+.first-menu__has-menu:hover,
+.first-menu__has-menu:focus,
+.first-menu__has-menu:active {
+    border-color: #ff690b;
 }
 
 .first-menu__has-menu:hover > .first-menu__link,
