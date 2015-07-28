@@ -220,6 +220,8 @@ nav.main {
 .first-menu__has-menu:hover > .second-menu__list,
 .first-menu__has-menu:focus > .second-menu__list,
 .first-menu__has-menu:active > .second-menu__list {
+    max-width: 5000px;
+    max-height: 5000px;
     opacity: 1;
     visibility: visible;
     -webkit-transform: perspective(600px) rotateX(0deg);
@@ -305,6 +307,8 @@ nav.main {
 .second-menu__has-menu:hover > .third-menu__list,
 .second-menu__has-menu:focus > .third-menu__list,
 .second-menu__has-menu:active > .third-menu__list {
+    max-width: 5000px;
+    max-height: 5000px;
     opacity: 1;
     visibility: visible;
     -webkit-transform: perspective(600px) rotateX(0deg);

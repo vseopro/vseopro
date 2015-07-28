@@ -66,8 +66,8 @@ nav.main{
         color: $color-orange;
       }
       > .second-menu__list{
-        // max-width: 5000px;
-        // max-height: 5000px;
+        max-width: 5000px;
+        max-height: 5000px;
         opacity: 1;
         visibility: visible;
         transform: perspective(600px) rotateX(0deg);
@@ -129,6 +129,8 @@ nav.main{
         background: $color-orange;
       }
       > .third-menu__list{
+        max-width: 5000px;
+        max-height: 5000px;
         opacity: 1;
         visibility: visible;
         transform: perspective(600px) rotateX(0deg);
