@@ -11,6 +11,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var csscomb      = require('gulp-csscomb');
 var prettify     = require('gulp-html-prettify');
 var cmq          = require('gulp-combine-media-queries');
+var svgSprite    = require("gulp-svg-sprites");
 
 var coffee       = require('gulp-coffee');
 
@@ -33,6 +34,31 @@ gulp.task('browser-sync', function() {
 
 gulp.task('reload', function () {
     browserSync.reload();
+});
+
+
+
+/**
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Задача для генерирования SVG спрайт
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
+
+var spriteConfig = {
+    preview: false,
+    layout: 'diagonal',
+    padding: 0,
+    selector: 'icon__%f',
+    svg: {
+        sprite: "img/sprite.svg"
+    },
+    cssFile: "./scss/meta/_sprite.scss"
+};
+
+gulp.task('sprite', function () {
+    return gulp.src('./svg/**/*.svg')
+        .pipe(svgSprite(spriteConfig))
+        .pipe(gulp.dest("./"));
 });
 
 /**
@@ -115,6 +141,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./coffee/**/*.coffee', ['coffee']);
+    gulp.watch('./svg/**/*.svg', ['sprite']);
     gulp.watch('./jade/**/*.jade', ['jade']);
 });
 
@@ -129,6 +156,7 @@ gulp.task('default',
         'watch',
         'sass',
         'jade',
+        'sprite',
         'coffee',
         'browser-sync'
     ]
