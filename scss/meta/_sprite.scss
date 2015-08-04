@@ -8,16 +8,28 @@
     display: inline-block;
     background-image: url("../img/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 37em 7.9em;
+    background-size: 39.1em 7.9em;
 }
 
 .no-svg .icon:before {
     background-image: url("../img/sprite.png");
 }
 
-.icon.ico__logo:before {
+.icon.icon__find:before {
     background-position: 0em 0em;
-    width: 36.93em;
-    height: 7.83em;
+    width: 1.86em;
+    height: 1.8699999999999999em;
+}
+
+.icon.icon__login:before {
+    background-position: -1.9em -1.9em;
+    width: 1.2em;
+    height: 1em;
+}
+
+.icon.icon__logo:before {
+    background-position: -3.1em -2.9em;
+    width: 36em;
+    height: 5em;
 }
 

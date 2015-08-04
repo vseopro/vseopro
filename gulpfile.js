@@ -9,6 +9,7 @@ var jade         = require('gulp-jade');
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var csscomb      = require('gulp-csscomb');
+var svgo         = require('gulp-svgo');
 var prettify     = require('gulp-html-prettify');
 var cmq          = require('gulp-combine-media-queries');
 var svgSprite    = require("gulp-svg-sprites");
@@ -58,6 +59,7 @@ var spriteConfig = {
 gulp.task('sprite', function () {
     return gulp.src('./svg/**/*.svg')
         .pipe(svgSprite(spriteConfig))
+        .pipe(svgo())
         .pipe(gulp.dest("./"));
 });
 
