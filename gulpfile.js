@@ -6,21 +6,23 @@
 
 var gulp         = require('gulp');
 var jade         = require('gulp-jade');
+
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var csso         = require('gulp-csso');
 var csscomb      = require('gulp-csscomb');
+var cssbeautify  = require('gulp-cssbeautify');
+var cmq          = require('gulp-combine-media-queries');
+
 var svgo         = require('gulp-svgo');
 var prettify     = require('gulp-html-prettify');
 var cmq          = require('gulp-combine-media-queries');
-var svgSprite    = require("gulp-svg-sprites");
-
+var svgSprite    = require("gulp-svg-sprite");
 var coffee       = require('gulp-coffee');
-
-var gutil        = require( 'gulp-util' );
 var ftp          = require( 'vinyl-ftp' );
 
-var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
+var browserSync  = require('browser-sync');
+var reload       = browserSync.reload;
 
 var FTPconfig = require('./config').ftpConfig;
 
@@ -45,23 +47,29 @@ gulp.task('reload', function () {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 */
 
-var spriteConfig = {
-    preview: false,
-    layout: 'diagonal',
-    padding: 0,
-    selector: 'icon__%f',
-    svg: {
-        sprite: "img/sprite.svg"
-    },
-    cssFile: "./scss/meta/_sprite.scss"
-};
-
-gulp.task('sprite', function () {
-    return gulp.src('./svg/**/*.svg')
-        .pipe(svgSprite(spriteConfig))
-        .pipe(svgo())
-        .pipe(gulp.dest("./"));
-});
+gulp.task('sprite', function() {
+    var config = {
+        dest : '.',
+        mode : {
+            css : {
+                prefix: ".ico__%s",
+                dest : './build/test',
+                layout:'diagonal',
+                dimensions: true,
+                sprite : '../img/sprite.svg',
+                render : {
+                     // css : {dest : 'css/sprite.css'},
+                     scss : {
+                        dest : '../../scss/meta/_sprite.scss'
+                     }
+                },
+            }
+        }
+    };
+    gulp.src('./svg/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('./'));
+})
 
 /**
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -70,18 +78,12 @@ gulp.task('sprite', function () {
 */
 
 gulp.task( 'upload', function() {
-
     var conn = ftp.create( FTPconfig );
-
     var globs = [
         './build/**'
     ];
 
-    // using base = '.' will transfer everything to /public_html correctly
-    // turn off buffering in gulp.src for best performance
-
     return gulp.src( globs, { base: './build/', buffer: false } )
-        // .pipe( conn.newer( '/' ) ) // only upload newer files
         .pipe( conn.dest( '/' ) );
 } );
 
@@ -119,17 +121,16 @@ gulp.task('sass', function () {
             outputStyle: 'nested',
             errLogToConsole: true
         }))
-        .pipe(autoprefixer('last 2 version',
-            'safari 5',
-            'ie 8',
-            'ie 9',
-            'opera 12.1',
-            'ios 6',
-            'android 4'
-            ))
+        .pipe(autoprefixer({
+            browsers: ['ie >= 8', 'last 3 versions', '> 2%'],
+            cascade: false
+        }))
         .pipe(cmq())
+        .pipe(csso())
+        .pipe(cssbeautify({
+            autosemicolon: true
+        }))
         .pipe(csscomb())
-        // .pipe(csso())
         .pipe(gulp.dest('./build/css'))
         .pipe(reload({stream:true}));
 });

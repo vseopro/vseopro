@@ -143,43 +143,32 @@ html {
     user-select: none;
 }
 
-.icon {
-    font-size: 10px;
+.ico__find,
+.ico__login,
+.ico__logo {
+    background: url(../img/sprite-10ec1bd6.svg) no-repeat;
 }
 
-.icon:before {
-    content: ' ';
-    vertical-align: middle;
-    display: inline-block;
-    background-image: url('../img/sprite.svg');
-    background-repeat: no-repeat;
-    background-size: 39.1em 7.9em;
-}
-
-.no-svg .icon:before {
-    background-image: url('../img/sprite.png');
-}
-
-.icon.icon__find:before {
+.ico__find {
     background-position: 0 0;
-    width: 1.86em;
-    height: 1.87em;
+    width: 18.6px;
+    height: 18.7px;
 }
 
-.icon.icon__login:before {
-    background-position: -1.9em -1.9em;
-    width: 1.2em;
-    height: 1em;
+.ico__login {
+    background-position: 5.01319% 27.53623%;
+    width: 12px;
+    height: 10px;
 }
 
-.icon.icon__logo:before {
-    background-position: -3.1em -2.9em;
-    width: 36em;
-    height: 5em;
+.ico__logo {
+    background-position: 100% 100%;
+    width: 360px;
+    height: 50px;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
     color: #6c707c;
     background: #f1f1f1;
@@ -200,7 +189,6 @@ header.main {
 }
 
 .header-logo__description {
-    font-size: 15px;
     font-size: 1.07143rem;
 }
 
@@ -217,11 +205,10 @@ nav.main {
 }
 
 .first-menu__item:first-child .first-menu__link {
-    padding-left: 15px !important;
+    padding-left: 15px!important;
 }
 
 .first-menu__link {
-    font-size: 15px;
     font-size: 1.07143rem;
     padding: 14px 20px 16px 10px;
     color: #fff;
@@ -259,10 +246,10 @@ nav.main {
     max-height: 5000px;
     opacity: 1;
     visibility: visible;
-    -webkit-transform: perspective(600px) rotateX(0deg);
-    transform: perspective(600px) rotateX(0deg);
-    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
-    transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+    -webkit-transform: perspective(600px)rotateX(0);
+    transform: perspective(600px)rotateX(0);
+    -webkit-transition: -webkit-transform .5s ease,opacity .2s ease,max-height 0 step-end,max-width 0 step-end,padding 0 step-end;
+    transition: transform .5s ease,opacity .2s ease,max-height 0s step-end,max-width 0s step-end,padding 0s step-end;
 }
 
 .first-menu__has-menu:hover::after,
@@ -302,7 +289,7 @@ nav.main {
     position: absolute;
     min-width: 200px;
     top: 100%;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.3);
     opacity: 0;
     visibility: visible;
     max-width: 0;
@@ -310,10 +297,10 @@ nav.main {
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
-    -webkit-transform: perspective(600px) rotateX(-90deg);
-    transform: perspective(600px) rotateX(-90deg);
-    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s;
-    transition: transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s;
+    -webkit-transform: perspective(600px)rotateX(-90deg);
+    transform: perspective(600px)rotateX(-90deg);
+    -webkit-transition: -webkit-transform .5s ease,opacity .6s ease,max-height .6s step-end,max-width .6s;
+    transition: transform .5s ease,opacity .6s ease,max-height .6s step-end,max-width .6s;
 }
 
 .second-menu__item:last-child .second-menu__link {
@@ -346,10 +333,10 @@ nav.main {
     max-height: 5000px;
     opacity: 1;
     visibility: visible;
-    -webkit-transform: perspective(600px) rotateX(0deg);
-    transform: perspective(600px) rotateX(0deg);
-    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
-    transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+    -webkit-transform: perspective(600px)rotateX(0);
+    transform: perspective(600px)rotateX(0);
+    -webkit-transition: -webkit-transform .5s ease,opacity .2s ease,max-height 0 step-end,max-width 0 step-end,padding 0 step-end;
+    transition: transform .5s ease,opacity .2s ease,max-height 0s step-end,max-width 0s step-end,padding 0s step-end;
 }
 
 .second-menu__has-menu::after,
@@ -379,9 +366,8 @@ nav.main {
 }
 
 .second-menu__link {
-    font-size: 15px;
     font-size: 1.07143rem;
-    background: rgba(25, 38, 55, 0.8);
+    background: rgba(25,38,55,.8);
     padding: 14px 25px 14px 15px;
     color: #fff;
     border-bottom: 1px solid #6c707c;
@@ -405,10 +391,10 @@ nav.main {
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
-    -webkit-transform: perspective(600px) rotateX(-90deg);
-    transform: perspective(600px) rotateX(-90deg);
-    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s;
-    transition: transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s;
+    -webkit-transform: perspective(600px)rotateX(-90deg);
+    transform: perspective(600px)rotateX(-90deg);
+    -webkit-transition: -webkit-transform .5s ease,opacity .6s ease,max-height .6s step-end,max-width .6s;
+    transition: transform .5s ease,opacity .6s ease,max-height .6s step-end,max-width .6s;
 }
 
 .third-menu__item:last-child .third-menu__link {
@@ -416,9 +402,8 @@ nav.main {
 }
 
 .third-menu__link {
-    font-size: 15px;
     font-size: 1.07143rem;
-    background: rgba(25, 38, 55, 0.8);
+    background: rgba(25,38,55,.8);
     padding: 14px 14px 14px 15px;
     color: #fff;
     border-bottom: 1px solid #6c707c;
