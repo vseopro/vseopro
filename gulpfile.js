@@ -51,6 +51,11 @@ gulp.task('sprite', function() {
     var config = {
         dest : '.',
         mode : {
+            shape:{
+                dimension:{
+                    attributes: true
+                }
+            },
             css : {
                 prefix: ".ico__%s",
                 dest : './build/test',

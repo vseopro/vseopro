@@ -15,8 +15,8 @@
     <meta itemprop="name" content="">
     <meta itemprop="description" content="">
     <meta itemprop="image" content="">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href="http://cdn.jsdelivr.net/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Roboto:700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -50,9 +50,9 @@
         </div>
     </header>
     <nav class="main">
-        <div class="container">
+        <div class="container pr">
             <div class="row">
-                <div class="nav-main pull-left">
+                <div class="nav-main">
                     <ul class="lsn pl0 mb0 clearfix first-menu__list">
                         <li class="pull-left first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Главная</a>
                         </li>
@@ -162,11 +162,24 @@
                         </li>
                     </ul>
                 </div>
-                <div class="nav-search pull-right"></div>
+                <div class="nav-search">
+                    <ul class="nav-search__list lsn pl0 mb0 clearfix">
+                        <li class="nav-search__item"><span class="dib nav-search__find icon-search cur no-select"></span>
+                            <div class="search-input hover-transform-before">
+                                <form>
+                                    <input type="text" class="search-input__field">
+                                </form>
+                            </div>
+                        </li>
+                        <li class="nav-search__item"><span class="dib nav-search__login icon-login cur no-select">Вход</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
     <script src="//cdn.jsdelivr.net/g/jquery@2.1.4,bootstrap@3.3.4,underscorejs@1.8.3"></script>
+    <script src="js/react.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

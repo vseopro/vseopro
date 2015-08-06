@@ -1,24 +1,10 @@
 %svg-common {
-	background: url(../img/sprite-10ec1bd6.svg) no-repeat;
-}
-
-.ico__find {
-	@extend %svg-common;
-	background-position: 0 0;
-	width: 18.6px;
-	height: 18.7px;
-}
-
-.ico__login {
-	@extend %svg-common;
-	background-position: 5.013192612137203% 27.536231884057973%;
-	width: 12px;
-	height: 10px;
+	background: url(../img/sprite-c98c7fb7.svg) no-repeat;
 }
 
 .ico__logo {
 	@extend %svg-common;
-	background-position: 100% 100%;
+	background-position: 0 0;
 	width: 360px;
 	height: 50px;
 }

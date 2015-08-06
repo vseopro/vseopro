@@ -1,3 +1,30 @@
+%hover-transform-before{
+  opacity: 0;
+  visibility: visible;
+  max-width: 0;
+  max-height: 0;
+  transform-origin: 0 0;
+  transform: perspective(600px) rotateX(-90deg);
+  transition: transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s;
+}
+
+%hover-transform-after{
+  opacity: 1;
+  visibility: visible;
+  max-width: 5000px;
+  max-height: 5000px;
+  transform: perspective(600px) rotateX(0deg);
+  transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+}
+
+.hover-transform-before{
+  @extend %hover-transform-before;
+}
+
+.hover-transform-after{
+  @extend %hover-transform-after;
+}
+
 header.main{
   padding-bottom: 28px;
   padding-top: 22px;
@@ -32,7 +59,7 @@ nav.main{
 }
 
 .nav-main{
-
+  float: left;
 }
 
 .first-menu{
@@ -66,12 +93,7 @@ nav.main{
         color: $color-orange;
       }
       > .second-menu__list{
-        max-width: 5000px;
-        max-height: 5000px;
-        opacity: 1;
-        visibility: visible;
-        transform: perspective(600px) rotateX(0deg);
-        transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+        @extend %hover-transform-after;
       }
       &::after, &::before{
         background: $color-orange;
@@ -103,13 +125,8 @@ nav.main{
     min-width: 200px;
     top: 100%;
     box-shadow: 1px 1px 1px 1px black(.3);
-    opacity: 0;
-    visibility: visible;
-    max-width: 0;
-    max-height: 0;
-    transform-origin: 0 0;
-    transform: perspective(600px) rotateX(-90deg);
-    transition: transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s
+    @extend %hover-transform-before;
+    z-index: 1;
   }
   &__item{
     // position: relative;
@@ -129,12 +146,7 @@ nav.main{
         background: $color-orange;
       }
       > .third-menu__list{
-        max-width: 5000px;
-        max-height: 5000px;
-        opacity: 1;
-        visibility: visible;
-        transform: perspective(600px) rotateX(0deg);
-        transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+        @extend %hover-transform-after;
       }
     }
     &::after, &::before{
@@ -174,13 +186,8 @@ nav.main{
     left: 100%;
     top: 0;
     min-width: 200px;
-    opacity: 0;
-    visibility: visible;
-    max-width: 0;
-    max-height: 0;
-    transform-origin: 0 0;
-    transform: perspective(600px) rotateX(-90deg);
-    transition: transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s
+    @extend %hover-transform-before;
+    z-index: 1;
   }
   &__item{
     &:last-child{
@@ -198,5 +205,47 @@ nav.main{
    &:hover, &:focus, &:active{
      color: $color-orange;
    }
+  }
+}
+
+.nav-search{
+  float: right;
+  &__list{
+
+  }
+  &__item{
+    float: left;
+  }
+  &__find{
+    padding: 12px 4px 11px;
+    color: white(1);
+    @include font-size(20);
+    border-top: 2px transparent solid;
+    &:hover, &:focus, &:active{
+      color: $color-orange;
+    }
+    &.active{
+      border-color: $color-orange;
+      color: $color-orange;
+    }
+  }
+  &__login{
+    padding: 17px 20px 15px;
+    color: white(1);
+    @include font-size(15);
+    &:hover, &:focus, &:active{
+      color: $color-orange;
+    }
+  }
+  .search-input{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    background: rgba(25,38,55,.8);
+    &__field{
+      width: 100%;
+    }
   }
 }

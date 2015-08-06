@@ -1,7 +1,7 @@
 nav.main
-  .container
+  .container.pr
     .row
-      .nav-main.pull-left
+      .nav-main
         ul.lsn.pl0.mb0.clearfix.first-menu__list
           li.pull-left.first-menu__item
             a(href="#").db.no-underline.cur.no-select.first-menu__link Главная
@@ -171,5 +171,13 @@ nav.main
             a(href="#").db.no-underline.cur.no-select.first-menu__link Платное
           li.pull-left.first-menu__item
             a(href="#").db.no-underline.cur.no-select.first-menu__link Помощь сайту
-      .nav-search.pull-right
+      .nav-search
+        ul.nav-search__list.lsn.pl0.mb0.clearfix
+          li.nav-search__item
+            span.dib.nav-search__find.icon-search.cur.no-select
+            .search-input.hover-transform-before
+              form
+                input(type='text').search-input__field
 
+          li.nav-search__item
+            span.dib.nav-search__login.icon-login.cur.no-select Вход
