@@ -172,12 +172,50 @@ nav.main
           li.pull-left.first-menu__item
             a(href="#").db.no-underline.cur.no-select.first-menu__link Помощь сайту
       .nav-search
-        ul.nav-search__list.lsn.pl0.mb0.clearfix
-          li.nav-search__item
+        .dropdown
+          a#search-form__label(data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
             span.dib.nav-search__find.icon-search.cur.no-select
-            .search-input.hover-transform-before
-              form
-                input(type='text').search-input__field
-
-          li.nav-search__item
+          .search-form.hover-transform-before.dropdown-menu(aria-labelledby="search-form__label")
+            form.search-form__form.pr
+              span.icon-search.search-form__ico
+              input(type='text' placeholder="Введите текст для поиска").search-form__field.fluid.no-outline
+              button(type="submit").search-form__submit.no-outline
+                span.icon-right
+        .dropdown
+          a#login-form__label(data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
             span.dib.nav-search__login.icon-login.cur.no-select Вход
+          .login-form.hover-transform-before.dropdown-menu(aria-labelledby="login-form__label")
+            .container-fluid
+              .row
+                .col-xs-4.login-form__col
+                  h3.login-form__title.text-center Вход на сайт
+                  form
+                    input(type="text" placeholder="Логин или email").fluid.login-form__login.no-outline
+                    input(type="password" placeholder="Пароль").fluid.login-form__password.no-outline
+                    .row
+                      .col-xs-6
+                        button(type="submit").btn.btn-orange.fluid.login-form__btn Войти
+                      .col-xs-6
+                        a(href="#").login-form__restore.hover-underline.db Восстановить пароль
+
+                .col-xs-4.login-form__col
+                  h3.login-form__title.text-center Войти через
+                  .row
+                    .col-xs-6
+                      a(href="#").login-form__btn.btn.btn-vk.fluid Вконтакте
+                    .col-xs-6
+                      a(href="#").login-form__btn.btn.btn-google.fluid Google
+                    .col-xs-6
+                      a(href="#").login-form__btn.btn.btn-odnoklassniki.fluid Одноклассники
+                    .col-xs-6
+                      a(href="#").login-form__btn.btn.btn-mail.fluid Mail.ru
+                    .col-xs-6
+                      a(href="#").login-form__btn.btn.btn-facebook.fluid Facebook
+                    .col-xs-6
+                      a(href="#").login-form__btn.btn.btn-yandex.fluid Яндекс
+
+                .col-xs-4.login-form__col
+                  h3.login-form__title.text-center Я новый пользователь
+                  p.login-form__description Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.
+                  a(href="#").btn.btn-red.login-form__register Зарегистрироваться
+

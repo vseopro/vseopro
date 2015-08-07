@@ -1,12 +1,10 @@
-/**
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    обьявляем переменные и зависимости
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-*/
-
 var gulp         = require('gulp');
-var jade         = require('gulp-jade');
 
+// html compile
+var jade         = require('gulp-jade');
+var prettify     = require('gulp-html-prettify');
+
+// css compile
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var csso         = require('gulp-csso');
@@ -14,11 +12,13 @@ var csscomb      = require('gulp-csscomb');
 var cssbeautify  = require('gulp-cssbeautify');
 var cmq          = require('gulp-combine-media-queries');
 
+// svg compile
 var svgo         = require('gulp-svgo');
-var prettify     = require('gulp-html-prettify');
-var cmq          = require('gulp-combine-media-queries');
 var svgSprite    = require("gulp-svg-sprite");
-var coffee       = require('gulp-coffee');
+
+// coffee compile
+// var coffee       = require('gulp-coffee');
+var coffeex = require('gulp-coffee-react');
 var ftp          = require( 'vinyl-ftp' );
 
 var browserSync  = require('browser-sync');
@@ -38,14 +38,6 @@ gulp.task('browser-sync', function() {
 gulp.task('reload', function () {
     browserSync.reload();
 });
-
-
-
-/**
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    Задача для генерирования SVG спрайт
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-*/
 
 gulp.task('sprite', function() {
     var config = {
@@ -76,12 +68,6 @@ gulp.task('sprite', function() {
         .pipe(gulp.dest('./'));
 })
 
-/**
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    задача для закачки проекта на ftp
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-*/
-
 gulp.task( 'upload', function() {
     var conn = ftp.create( FTPconfig );
     var globs = [
@@ -91,12 +77,6 @@ gulp.task( 'upload', function() {
     return gulp.src( globs, { base: './build/', buffer: false } )
         .pipe( conn.dest( '/' ) );
 } );
-
-/**
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    задача для компиляции jade
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-*/
 
 gulp.task('jade', function(){
     gulp.src('./jade/!(_)*.jade')
@@ -109,16 +89,11 @@ gulp.task('jade', function(){
 
 gulp.task('coffee', function() {
   gulp.src('./coffee/**/*.coffee')
-    .pipe(coffee())
+    // .pipe(coffee())
+    .pipe(coffeex())
     .pipe(gulp.dest('./build/js/'))
     .pipe(reload({stream:true}));
 });
-
-/**
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    задача для компиляции scss файлов
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-*/
 
 gulp.task('sass', function () {
     gulp.src(['./scss/style.scss'])
@@ -140,24 +115,12 @@ gulp.task('sass', function () {
         .pipe(reload({stream:true}));
 });
 
-/**
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    список файлов для наблюдения
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-*/
-
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./coffee/**/*.coffee', ['coffee']);
     gulp.watch('./svg/**/*.svg', ['sprite']);
     gulp.watch('./jade/**/*.jade', ['jade']);
 });
-
-/**
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    задача по-умолчанию
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-*/
 
 gulp.task('default',
     [

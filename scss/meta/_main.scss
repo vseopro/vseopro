@@ -28,6 +28,7 @@
 header.main{
   padding-bottom: 28px;
   padding-top: 22px;
+  background: white(1);
 }
 
 .top-line-decorator{
@@ -67,7 +68,7 @@ nav.main{
 
   }
   &__item{
-    border-top: 2px solid transparent;
+    // border-top: 2px solid transparent;
     &:first-child{
       .first-menu__link{
         padding-left: 15px !important;
@@ -75,10 +76,12 @@ nav.main{
     }
   }
   &__link{
+    border-top: 2px solid transparent;
     @include font-size(15);
-    padding: 14px 20px 16px 10px;
+    padding: 14px 19px 16px 10px;
     color: white(1);
     &:hover{
+      border-color: $color-orange;
       color: $color-orange;
     }
     &:focus, &:active{
@@ -88,8 +91,8 @@ nav.main{
   &__has-menu{
     position: relative;
     &:hover, &:focus, &:active{
-      border-color: $color-orange;
       > .first-menu__link{
+        border-color: $color-orange;
         color: $color-orange;
       }
       > .second-menu__list{
@@ -126,7 +129,7 @@ nav.main{
     top: 100%;
     box-shadow: 1px 1px 1px 1px black(.3);
     @extend %hover-transform-before;
-    z-index: 1;
+    z-index: 2;
   }
   &__item{
     // position: relative;
@@ -187,7 +190,7 @@ nav.main{
     top: 0;
     min-width: 200px;
     @extend %hover-transform-before;
-    z-index: 1;
+    z-index: 2;
   }
   &__item{
     &:last-child{
@@ -210,42 +213,148 @@ nav.main{
 
 .nav-search{
   float: right;
-  &__list{
-
-  }
-  &__item{
+  .dropdown{
     float: left;
+    position: static !important;
   }
-  &__find{
-    padding: 12px 4px 11px;
-    color: white(1);
-    @include font-size(20);
-    border-top: 2px transparent solid;
-    &:hover, &:focus, &:active{
-      color: $color-orange;
+  .dropdown-menu{
+    z-index: 1;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    display: block !important;
+    @extend %hover-transform-before;
+  }
+  .open{
+    .dropdown-menu{
+      @extend %hover-transform-after;
     }
-    &.active{
+    .nav-search__find,
+    .nav-search__login{
       border-color: $color-orange;
       color: $color-orange;
     }
   }
+  &__find,
   &__login{
-    padding: 17px 20px 15px;
     color: white(1);
-    @include font-size(15);
+    border-top: 2px transparent solid;
     &:hover, &:focus, &:active{
       color: $color-orange;
+      border-color: $color-orange;
     }
   }
-  .search-input{
+  &__find{
+    padding: 12px 4px 11px;
+    @include font-size(20);
+  }
+  &__login{
+    padding: 14px 20px 16px;
+    @include font-size(15);
+  }
+}
+
+.login-form,
+.search-form{
+  background: rgba(25,38,55,.8);
+  // position: absolute;
+  // top: 100%;
+  left: 15px;
+  right: 15px;
+}
+
+.login-form{
+  color: white(1);
+  &__login,
+  &__password{
+    border: 2px #6c707c solid;
+    background: transparent;
+    height: 46px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    @include placeholder {
+      color: white(1);
+    }
+    &:focus, &:active{
+      border-color: white(1);
+    }
+  }
+  &__login{
+
+  }
+  &__password{
+  }
+  &__description{
+    font-weight: $light;
+  }
+  &__col{
+    width: 33.333333%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    float: none;
+  }
+  &__title{
+    margin-bottom: 25px;
+  }
+  &__register{
     position: absolute;
-    top: 100%;
-    left: 0;
+    margin-bottom: 20px;
+    padding: 12px;
+    bottom: 0;
+    width: auto;
+    right: 15px;
+    display: block;
+    left: 15px;
+  }
+  &__btn{
+    margin-bottom: 20px;
+    padding: 12px;
+  }
+  &__restore{
+    margin-top: 11px;
+    color: $color-red;
+    &:hover, &:focus, &:active{
+      color: $color-red;
+    }
+  }
+}
+
+.search-form{
+  padding: 10px 15px;
+  &__form{
+
+  }
+  &__ico{
+    color: white(1);
+    font-size: 20px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+  }
+  &__field{
+    height: 40px;
+    background: transparent;
+    border: 1px $color-orange solid;
+    color: white(1);
+    padding-left: 40px;
+    @include placeholder {
+      color: white(1);
+    }
+  }
+  &__submit{
+    position: absolute;
+    top: 0;
     right: 0;
-    padding: 10px 15px;
-    background: rgba(25,38,55,.8);
-    &__field{
-      width: 100%;
+    bottom: 0;
+    background: transparent;
+    border-width: 0 0 0 1px;
+    border-left: 1px $color-orange solid;
+    color: white(1);
+    padding: 0 30px;
+    &:hover, &:focus, &:active{
+      background: $color-orange;
     }
   }
 }

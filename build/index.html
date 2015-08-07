@@ -6,15 +6,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="img/demo.jpg">
-    <meta property="og:title" content="Demo jade example">
-    <meta property="og:description" content="Demo jade example">
     <meta name="keywords" content="">
     <meta name="author" content="">
     <meta name="description" content="">
-    <meta itemprop="name" content="">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="test url">
+    <meta property="og:title" content="test title">
+    <meta property="og:description" content="test description">
+    <meta property="og:image" content="image_url">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href="http://cdn.jsdelivr.net/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -163,17 +165,60 @@
                     </ul>
                 </div>
                 <div class="nav-search">
-                    <ul class="nav-search__list lsn pl0 mb0 clearfix">
-                        <li class="nav-search__item"><span class="dib nav-search__find icon-search cur no-select"></span>
-                            <div class="search-input hover-transform-before">
-                                <form>
-                                    <input type="text" class="search-input__field">
-                                </form>
+                    <div class="dropdown"><a id="search-form__label" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="dib nav-search__find icon-search cur no-select"></span></a>
+                        <div aria-labelledby="search-form__label"
+                        class="search-form hover-transform-before dropdown-menu">
+                            <form class="search-form__form pr"><span class="icon-search search-form__ico"></span>
+                                <input type="text" placeholder="Введите текст для поиска" class="search-form__field fluid no-outline">
+                                <button type="submit" class="search-form__submit no-outline"><span class="icon-right"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="dropdown"><a id="login-form__label" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="dib nav-search__login icon-login cur no-select">Вход</span></a>
+                        <div aria-labelledby="login-form__label"
+                        class="login-form hover-transform-before dropdown-menu">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4 login-form__col">
+                                        <h3 class="login-form__title text-center">Вход на сайт</h3>
+                                        <form>
+                                            <input type="text" placeholder="Логин или email" class="fluid login-form__login no-outline">
+                                            <input type="password" placeholder="Пароль" class="fluid login-form__password no-outline">
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <button type="submit" class="btn btn-orange fluid login-form__btn">Войти</button>
+                                                </div>
+                                                <div class="col-xs-6"><a href="#" class="login-form__restore hover-underline db">Восстановить пароль</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-xs-4 login-form__col">
+                                        <h3 class="login-form__title text-center">Войти через</h3>
+                                        <div class="row">
+                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-vk fluid">Вконтакте</a>
+                                            </div>
+                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-google fluid">Google</a>
+                                            </div>
+                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-odnoklassniki fluid">Одноклассники</a>
+                                            </div>
+                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-mail fluid">Mail.ru</a>
+                                            </div>
+                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-facebook fluid">Facebook</a>
+                                            </div>
+                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-yandex fluid">Яндекс</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 login-form__col">
+                                        <h3 class="login-form__title text-center">Я новый пользователь</h3>
+                                        <p class="login-form__description">Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.</p><a href="#" class="btn btn-red login-form__register">Зарегистрироваться</a>
+                                    </div>
+                                </div>
                             </div>
-                        </li>
-                        <li class="nav-search__item"><span class="dib nav-search__login icon-login cur no-select">Вход</span>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

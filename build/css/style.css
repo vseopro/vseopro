@@ -43,6 +43,17 @@
     outline: none;
 }
 
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fluid {
+    width: 100%;
+}
+
 html {
     font-size: 14px;
 }
@@ -136,17 +147,10 @@ html {
     list-style: none;
 }
 
-.no-select {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.eot?87287038');
-    src: url('../font/fontello.eot?87287038#iefix') format('embedded-opentype'),url('../font/fontello.woff?87287038') format('woff'),url('../font/fontello.ttf?87287038') format('truetype'),url('../font/fontello.svg?87287038#fontello') format('svg');
+    src: url('../font/fontello.eot?38691500');
+    src: url('../font/fontello.eot?38691500#iefix') format('embedded-opentype'),url('../font/fontello.woff?38691500') format('woff'),url('../font/fontello.ttf?38691500') format('truetype'),url('../font/fontello.svg?38691500#fontello') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -178,6 +182,10 @@ html {
     content: '\e801';
 }
 
+.icon-right:before {
+    content: '\e802';
+}
+
 .ico__logo {
     background: url(../img/sprite-c98c7fb7.svg) no-repeat;
     background-position: 0 0;
@@ -192,9 +200,103 @@ body {
     background: #f1f1f1;
 }
 
+.btn {
+    border-radius: 0;
+    color: #fff;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    color: #fff;
+    box-shadow: none;
+}
+
+.btn-orange {
+    background: #ff690b;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active {
+    background: #d75300;
+}
+
+.btn-red {
+    width: 100%;
+    background: #ef4628;
+}
+
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active {
+    background: #d42d10;
+}
+
+.btn-vk {
+    background: #5b7fa6;
+}
+
+.btn-vk:hover,
+.btn-vk:focus,
+.btn-vk:active {
+    background: #486686;
+}
+
+.btn-facebook {
+    background: #3b5998;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active {
+    background: #2d4373;
+}
+
+.btn-google {
+    background: #d62408;
+}
+
+.btn-google:hover,
+.btn-google:focus,
+.btn-google:active {
+    background: #a51c06;
+}
+
+.btn-mail {
+    background: #168de2;
+}
+
+.btn-mail:hover,
+.btn-mail:focus,
+.btn-mail:active {
+    background: #1170b4;
+}
+
+.btn-yandex {
+    background: red;
+}
+
+.btn-yandex:hover,
+.btn-yandex:focus,
+.btn-yandex:active {
+    background: #c00;
+}
+
+.btn-odnoklassniki {
+    background: #fa890f;
+}
+
+.btn-odnoklassniki:hover,
+.btn-odnoklassniki:focus,
+.btn-odnoklassniki:active {
+    background: #d26f04;
+}
+
 .hover-transform-before,
 .second-menu__list,
-.third-menu__list {
+.third-menu__list,
+.nav-search .dropdown-menu {
     opacity: 0;
     visibility: visible;
     max-width: 0;
@@ -214,7 +316,8 @@ body {
 .first-menu__has-menu:active > .second-menu__list,
 .second-menu__has-menu:hover > .third-menu__list,
 .second-menu__has-menu:focus > .third-menu__list,
-.second-menu__has-menu:active > .third-menu__list {
+.second-menu__has-menu:active > .third-menu__list,
+.nav-search .open .dropdown-menu {
     opacity: 1;
     visibility: visible;
     max-width: 5000px;
@@ -228,6 +331,7 @@ body {
 header.main {
     padding-bottom: 28px;
     padding-top: 22px;
+    background: #fff;
 }
 
 .top-line-decorator {
@@ -255,21 +359,19 @@ nav.main {
     float: left;
 }
 
-.first-menu__item {
-    border-top: 2px solid transparent;
-}
-
 .first-menu__item:first-child .first-menu__link {
     padding-left: 15px!important;
 }
 
 .first-menu__link {
+    border-top: 2px solid transparent;
     font-size: 1.07143rem;
-    padding: 14px 20px 16px 10px;
+    padding: 14px 19px 16px 10px;
     color: #fff;
 }
 
 .first-menu__link:hover {
+    border-color: #ff690b;
     color: #ff690b;
 }
 
@@ -282,15 +384,10 @@ nav.main {
     position: relative;
 }
 
-.first-menu__has-menu:hover,
-.first-menu__has-menu:focus,
-.first-menu__has-menu:active {
-    border-color: #ff690b;
-}
-
 .first-menu__has-menu:hover > .first-menu__link,
 .first-menu__has-menu:focus > .first-menu__link,
 .first-menu__has-menu:active > .first-menu__link {
+    border-color: #ff690b;
     color: #ff690b;
 }
 
@@ -332,7 +429,7 @@ nav.main {
     min-width: 200px;
     top: 100%;
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,.3);
-    z-index: 1;
+    z-index: 2;
 }
 
 .second-menu__item:last-child .second-menu__link {
@@ -403,7 +500,7 @@ nav.main {
     left: 100%;
     top: 0;
     min-width: 200px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .third-menu__item:last-child .third-menu__link {
@@ -428,49 +525,185 @@ nav.main {
     float: right;
 }
 
-.nav-search__item {
+.nav-search .dropdown {
     float: left;
+    position: static!important;
 }
 
-.nav-search__find {
-    padding: 12px 4px 11px;
+.nav-search .dropdown-menu {
+    z-index: 1;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    display: block!important;
+}
+
+.nav-search .open .nav-search__find,
+.nav-search .open .nav-search__login {
+    border-color: #ff690b;
+    color: #ff690b;
+}
+
+.nav-search__find,
+.nav-search__login {
     color: #fff;
-    font-size: 1.42857rem;
     border-top: 2px transparent solid;
 }
 
 .nav-search__find:hover,
 .nav-search__find:focus,
-.nav-search__find:active {
-    color: #ff690b;
-}
-
-.nav-search__find.active {
-    border-color: #ff690b;
-    color: #ff690b;
-}
-
-.nav-search__login {
-    padding: 17px 20px 15px;
-    color: #fff;
-    font-size: 1.07143rem;
-}
-
+.nav-search__find:active,
 .nav-search__login:hover,
 .nav-search__login:focus,
 .nav-search__login:active {
     color: #ff690b;
+    border-color: #ff690b;
 }
 
-.nav-search .search-input {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 10px 15px;
+.nav-search__find {
+    padding: 12px 4px 11px;
+    font-size: 1.42857rem;
+}
+
+.nav-search__login {
+    padding: 14px 20px 16px;
+    font-size: 1.07143rem;
+}
+
+.login-form,
+.search-form {
     background: rgba(25,38,55,.8);
+    left: 15px;
+    right: 15px;
 }
 
-.nav-search .search-input__field {
-    width: 100%;
+.login-form {
+    color: #fff;
+}
+
+.login-form__login,
+.login-form__password {
+    border: 2px #6c707c solid;
+    background: 0 0;
+    height: 46px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form__login::-webkit-input-placeholder,
+.login-form__password::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.login-form__login:-moz-placeholder,
+.login-form__password:-moz-placeholder,
+.login-form__login::-moz-placeholder,
+.login-form__password::-moz-placeholder {
+    color: #fff;
+}
+
+.login-form__login:-ms-input-placeholder,
+.login-form__password:-ms-input-placeholder {
+    color: #fff;
+}
+
+.login-form__login:focus,
+.login-form__login:active,
+.login-form__password:focus,
+.login-form__password:active {
+    border-color: #fff;
+}
+
+.login-form__description {
+    font-weight: 300;
+}
+
+.login-form__col {
+    width: 33.33333%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    float: none;
+}
+
+.login-form__title {
+    margin-bottom: 25px;
+}
+
+.login-form__register {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    right: 15px;
+    display: block;
+    left: 15px;
+}
+
+.login-form__register,
+.login-form__btn {
+    margin-bottom: 20px;
+    padding: 12px;
+}
+
+.login-form__restore {
+    margin-top: 11px;
+    color: #ef4628;
+}
+
+.login-form__restore:hover,
+.login-form__restore:focus,
+.login-form__restore:active {
+    color: #ef4628;
+}
+
+.search-form {
+    padding: 10px 15px;
+}
+
+.search-form__ico {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
+.search-form__field {
+    height: 40px;
+    background: 0 0;
+    border: 1px #ff690b solid;
+    color: #fff;
+    padding-left: 40px;
+}
+
+.search-form__field::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.search-form__field:-moz-placeholder,
+.search-form__field::-moz-placeholder {
+    color: #fff;
+}
+
+.search-form__field:-ms-input-placeholder {
+    color: #fff;
+}
+
+.search-form__submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: 0 0;
+    border-width: 0 0 0 1px;
+    border-left: 1px #ff690b solid;
+    color: #fff;
+    padding: 0 30px;
+}
+
+.search-form__submit:hover,
+.search-form__submit:focus,
+.search-form__submit:active {
+    background: #ff690b;
 }

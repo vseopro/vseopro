@@ -1,6 +1,6 @@
 (function() {
-  $('.nav-search__find').on('click', function() {
-    return $(this).toggleClass('active').siblings('.search-input').toggleClass('hover-transform-after');
+  $('.nav-search .dropdown-menu').on('click', function() {
+    return false;
   });
 
 }).call(this);
