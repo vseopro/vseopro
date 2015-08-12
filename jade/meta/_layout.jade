@@ -1,4 +1,5 @@
 doctype html
+//- html(lang="ru").open-right-mobile-menu
 html(lang="ru")
   head
     block title
@@ -42,10 +43,16 @@ html(lang="ru")
   body
     block header
       include _header
+
     block nav-menu
       include _nav-menu
-    block content
+
+    main
+      block content
+
     block footer
+      //- include _footer
+
     block modal
 
     script(src="//cdn.jsdelivr.net/g/jquery@2.1.4,bootstrap@3.3.4,underscorejs@1.8.3")

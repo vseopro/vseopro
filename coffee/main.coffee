@@ -34,9 +34,17 @@
 
 # React.render <SearchBoxButton />, document.getElementById('nav-search__item')
 
-$('.nav-search .dropdown-menu').on 'click', ->
-  false
+# $('.nav-search .dropdown-menu').on 'click', ->
+  # false
   # $(@)
   #   .toggleClass('nav-search__find--active')
   #   .siblings('.search-input')
   #   .toggleClass('hover-transform-after')
+
+$('.open-menu__button').on 'click', ->
+  targetAction = $(@).data('show')
+  if targetAction == 'left-menu'
+    $('html').toggleClass('open-left-mobile-menu')
+  else
+    $('html').toggleClass('open-right-mobile-menu')
+

@@ -1,5 +1,5 @@
 var gulp         = require('gulp');
-
+var fs = require('fs');
 // html compile
 var jade         = require('gulp-jade');
 var prettify     = require('gulp-html-prettify');
@@ -78,9 +78,16 @@ gulp.task( 'upload', function() {
         .pipe( conn.dest( '/' ) );
 } );
 
+var dataJSON = JSON.parse(fs.readFileSync('./json/config.json', 'utf-8'));
+
 gulp.task('jade', function(){
+
     gulp.src('./jade/!(_)*.jade')
-        .pipe(jade())
+
+        .pipe(jade({
+            locals: dataJSON
+        }))
+
         .pipe(prettify({indent_char: '  ', indent_size: 2}))
         .on('error', console.log)
         .pipe(gulp.dest('./build/'))

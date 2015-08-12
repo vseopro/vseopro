@@ -1,0 +1,104 @@
+footer.main
+  .footer-subs
+    .container
+      .row
+        .col-md-8
+          h3.text-uppercase Подписаться на наши еженедельные новости
+          p Введите Ваш E-Mail и выберети категорию в открывшимся окне.
+        .col-md-4
+          form
+            .row
+              .col-xs-6
+                input(type="text" placeholder="Email").fluid
+              .col-xs-6
+                button(type="submit").btn.btn-orange Ок
+
+  .footer-social
+    .container
+      .row
+        .col-xs-3
+          .footer-social__item
+            .row
+              .col-xs-6
+                p Мы в твиттере
+              .col-xs-6
+                a(href="#").btn.btn-orange Перейти
+        .col-xs-3
+          .footer-social__item
+            .row
+              .col-xs-6
+                p Мы в твиттере
+              .col-xs-6
+                a(href="#").btn.btn-orange Перейти
+        .col-xs-3
+          .footer-social__item
+            .row
+              .col-xs-6
+                p Мы в твиттере
+              .col-xs-6
+                a(href="#").btn.btn-orange Перейти
+        .col-xs-3
+          .footer-social__item
+            .row
+              .col-xs-6
+                p Мы в твиттере
+              .col-xs-6
+                a(href="#").btn.btn-orange Перейти
+
+  .container
+    .row
+      .col-xs-6
+        .footer-last-user
+          .footer-last-user__title
+          .row
+            -for(var i = 0; i < 15; i++)
+              .col-xs-4
+                .row
+                  .col-xs-6
+                    .footer-last-user
+                      img(src="http://placehold.it/67x67").img-responsive
+                  .col-xs-6
+                    span.db сейчас ON
+                    span.db Ник Test
+                    span.db Пользователи
+                    span.db Был в 10:00
+
+      .col-xs-6
+        .footer-tags
+          -for(var i = 0; i < 50; i++)
+            span.dib Ник Test#{i * 10}
+
+.footer-copyright
+  .container
+    .row
+      .col-xs-4
+        ul.lsn.pl0.mb0
+          li.pull-left Copyright 2015г.
+          li.pull-left "Vseopro.ru"
+          li.pull-left Яндекс.метрика
+          li.pull-left.text-uppercase Анали сайта
+      .col-xs-4
+        ul.lsn.pl0.mb0
+          li.pull-left
+            a(href="#").db Заказ рекламы
+          li.pull-left
+            a(href="#").db Лента RSS
+          li.pull-left
+            a(href="#").db Карта сайта
+          li.pull-left
+            a(href="#").db Обратная связь
+      .col-xs-4
+        ul.lsn.pl0.mb0
+          li.pull-left
+            a(href="#").db VK
+          li.pull-left
+            a(href="#").db VK
+          li.pull-left
+            a(href="#").db VK
+          li.pull-left
+            a(href="#").db VK
+          li.pull-left
+            a(href="#").db VK
+          li.pull-left
+            a(href="#").db VK
+

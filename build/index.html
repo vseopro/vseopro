@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="header-logo">
-                        <a href="#" class="header-logo__link db no-underline ico__logo"></a><span class="header-logo__description db">Всё для веб-мастера! Всё для создания сайта!</span>
+                        <a href="#" class="header-logo__link db no-underline ico__logo img-responsive"></a><span class="header-logo__description db">Всё для веб-мастера! Всё для создания сайта!</span>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -51,20 +51,28 @@
             </div>
         </div>
     </header>
-    <nav class="main">
-        <div class="container pr">
-            <div class="row">
+    <nav class="main open-menu-position">
+        <div class="container pr open-menu-position">
+            <div class="row open-menu-position">
+                <div class="hidden-md hidden-lg pull-left">
+                    <button type="button" data-show="left-menu" class="open-menu__button no-outline no-select"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span>
+                    </button><span class="nav-main__button-label text-white">Главное меню</span>
+                </div>
+                <div class="hidden-md hidden-lg pull-right"><span class="login-form__button-label text-white">Форма логина</span>
+                    <button type="button" data-show="right-menu" class="open-menu__button no-outline no-select"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span>
+                    </button>
+                </div>
                 <div class="nav-main">
                     <ul class="lsn pl0 mb0 clearfix first-menu__list">
-                        <li class="pull-left first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Главная</a>
+                        <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Главная</a>
                         </li>
-                        <li class="pull-left first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Популярные cms</a>
+                        <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Популярные cms</a>
                         </li>
-                        <li class="pull-left first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Другие</a>
+                        <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Другие</a>
                         </li>
-                        <li class="pull-left first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Веб-мастеру</a>
+                        <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Веб-мастеру</a>
                         </li>
-                        <li class="pull-left first-menu__item first-menu__has-menu"><a href="#" class="db no-underline cur no-select first-menu__link">Игры</a>
+                        <li class="first-menu__item first-menu__has-menu"><a href="#" class="db no-underline cur no-select first-menu__link">Игры</a>
                             <ul class="second-menu__list pl0 mb0">
                                 <li class="second-menu__item second-menu__has-menu"><a href- "# class="second-menu__link db no-underline cur no-select ">Браузерные игры</a><ul class="third-menu__list pl0 mb0 "><li class="third-menu__item third-menu__has-menu "><a href-"# class="third-menu__link db no-underline cur no-select">Браузерные
                                     игры</a>
@@ -109,8 +117,8 @@
                                 </li>
                                 <li class="third-menu__item"><a href- "# class="third-menu__link db no-underline cur no-select ">Браузерные игры</a></li><li class="third-menu__item "><a href-"# class="third-menu__link db no-underline cur no-select">Браузерные игры</a>
                                 </li>
-                                <li class="third-menu__item"><a href- "# class="third-menu__link db no-underline cur no-select ">Игровые CMS</a></li></ul></li></ul></li><li class="pull-left first-menu__item first-menu__has-menu "><a href="# " class="db no-underline cur no-select
-                                    first-menu__link ">Сервисы</a><ul class="second-menu__list pl0 mb0 "><li class="second-menu__item second-menu__has-menu "><a href-"# class="second-menu__link db no-underline cur no-select">Браузерные игры</a>
+                                <li class="third-menu__item"><a href- "# class="third-menu__link db no-underline cur no-select ">Игровые CMS</a></li></ul></li></ul></li><li class="first-menu__item first-menu__has-menu "><a href="# " class="db no-underline cur no-select first-menu__link
+                                    ">Сервисы</a><ul class="second-menu__list pl0 mb0 "><li class="second-menu__item second-menu__has-menu "><a href-"# class="second-menu__link db no-underline cur no-select">Браузерные игры</a>
                                     <ul class="third-menu__list pl0 mb0">
                                         <li class="third-menu__item third-menu__has-menu"><a href- "# class="third-menu__link db no-underline cur no-select ">Браузерные игры</a></li><li class="third-menu__item "><a href-"# class="third-menu__link db no-underline cur no-select">Браузерные игры</a>
                                         </li>
@@ -158,9 +166,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="pull-left first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Платное</a>
+                        <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Платное</a>
                         </li>
-                        <li class="pull-left first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Помощь сайту</a>
+                        <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Помощь сайту</a>
                         </li>
                     </ul>
                 </div>
@@ -180,38 +188,38 @@
                         class="login-form hover-transform-before dropdown-menu">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-xs-4 login-form__col">
+                                    <div class="col-md-4 login-form__col">
                                         <h3 class="login-form__title text-center">Вход на сайт</h3>
                                         <form>
                                             <input type="text" placeholder="Логин или email" class="fluid login-form__login no-outline">
                                             <input type="password" placeholder="Пароль" class="fluid login-form__password no-outline">
                                             <div class="row">
-                                                <div class="col-xs-6">
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <button type="submit" class="btn btn-orange fluid login-form__btn">Войти</button>
                                                 </div>
-                                                <div class="col-xs-6"><a href="#" class="login-form__restore hover-underline db">Восстановить пароль</a>
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="http://google.com" class="login-form__restore hover-underline db">Восстановить пароль</a>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="col-xs-4 login-form__col">
+                                    <div class="col-md-4 login-form__col">
                                         <h3 class="login-form__title text-center">Войти через</h3>
                                         <div class="row">
-                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-vk fluid">Вконтакте</a>
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-vk fluid">Вконтакте</a>
                                             </div>
-                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-google fluid">Google</a>
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-google fluid">Google</a>
                                             </div>
-                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-odnoklassniki fluid">Одноклассники</a>
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-odnoklassniki fluid">Одноклассники</a>
                                             </div>
-                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-mail fluid">Mail.ru</a>
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-mail fluid">Mail.ru</a>
                                             </div>
-                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-facebook fluid">Facebook</a>
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-facebook fluid">Facebook</a>
                                             </div>
-                                            <div class="col-xs-6"><a href="#" class="login-form__btn btn btn-yandex fluid">Яндекс</a>
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-yandex fluid">Яндекс</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-4 login-form__col">
+                                    <div class="col-md-4 login-form__col">
                                         <h3 class="login-form__title text-center">Я новый пользователь</h3>
                                         <p class="login-form__description">Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.</p><a href="#" class="btn btn-red login-form__register">Зарегистрироваться</a>
                                     </div>
@@ -223,6 +231,7 @@
             </div>
         </div>
     </nav>
+    <main></main>
     <script src="//cdn.jsdelivr.net/g/jquery@2.1.4,bootstrap@3.3.4,underscorejs@1.8.3"></script>
     <script src="js/react.min.js"></script>
     <script src="js/main.js"></script>

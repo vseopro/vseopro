@@ -1,20 +1,24 @@
 %hover-transform-before{
   opacity: 0;
   visibility: visible;
-  max-width: 0;
-  max-height: 0;
-  transform-origin: 0 0;
-  transform: perspective(600px) rotateX(-90deg);
-  transition: transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s;
+  @media(min-width: 992px){
+    max-width: 0;
+    max-height: 0;
+    transform-origin: 0 0;
+    transform: perspective(600px) rotateX(-90deg);
+    transition: transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end, max-width 0.6s;
+  }
 }
 
 %hover-transform-after{
   opacity: 1;
   visibility: visible;
-  max-width: 5000px;
-  max-height: 5000px;
-  transform: perspective(600px) rotateX(0deg);
-  transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+  @media(min-width: 992px){
+    max-width: 5000px;
+    max-height: 5000px;
+    transform: perspective(600px) rotateX(0deg);
+    transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+  }
 }
 
 .hover-transform-before{
@@ -23,6 +27,125 @@
 
 .hover-transform-after{
   @extend %hover-transform-after;
+}
+
+.open-left-mobile-menu,
+.open-right-mobile-menu{
+  @media(max-width: 992px){
+    body{
+      position: relative;
+      overflow-x: hidden;
+    }
+    .open-menu-position{
+      position: static !important;
+    }
+  }
+}
+
+.open-left-mobile-menu{
+  @media(max-width: 992px){
+    body{
+      left: 400px;
+    }
+    .nav-search{
+      // display: none;
+    }
+    .nav-main{
+      position: absolute;
+      top: 0;
+      left: -400px;
+      width: 400px;
+      background: #192637;
+      display: block;
+    }
+  }
+  @media(max-width: 500px){
+    body{
+      left: 300px;
+    }
+    .nav-main{
+      left: -300px;
+      width: 300px;
+    }
+  }
+  @media(max-width: 500px){
+    body{
+      left: 250px;
+    }
+    .nav-main{
+      left: -250px;
+      width: 250px;
+    }
+  }
+}
+
+.open-right-mobile-menu{
+  @media(max-width: 992px){
+    body{
+      right: 400px;
+    }
+    .nav-search{
+      position: absolute;
+      top: 0;
+      right: -400px;
+      width: 400px;
+      background: #192637;
+      display: block;
+      float: none;
+      .dropdown{
+        float: none;
+        > a{
+          display: none;
+        }
+      }
+      .dropdown-menu{
+        opacity: 1;
+        position: static;
+        width: 100%;
+        box-shadow: none;
+      }
+    }
+  }
+  @media(max-width: 500px){
+    body{
+      right: 300px;
+    }
+    .nav-search{
+      right: -300px;
+      width: 300px;
+    }
+  }
+  @media(max-width: 400px){
+    body{
+      right: 250px;
+    }
+    .nav-search{
+      right: -250px;
+      width: 250px;
+    }
+  }
+}
+
+.open-menu__button{
+  position: relative;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: white(0);
+  border: 1px solid white(0);
+  // border-radius: 4px;
+}
+
+.open-menu__span{
+  background: white(1);
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 3px;
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 header.main{
@@ -61,6 +184,9 @@ nav.main{
 
 .nav-main{
   float: left;
+  @media(max-width: 992px){
+    display: none;
+  }
 }
 
 .first-menu{
@@ -69,6 +195,10 @@ nav.main{
   }
   &__item{
     // border-top: 2px solid transparent;
+    float: left;
+    @media(max-width: 992px){
+      float: none;
+    }
     &:first-child{
       .first-menu__link{
         padding-left: 15px !important;
@@ -97,6 +227,9 @@ nav.main{
       }
       > .second-menu__list{
         @extend %hover-transform-after;
+        @media(max-width: 992px){
+          display: block;
+        }
       }
       &::after, &::before{
         background: $color-orange;
@@ -130,6 +263,10 @@ nav.main{
     box-shadow: 1px 1px 1px 1px black(.3);
     @extend %hover-transform-before;
     z-index: 2;
+    @media(max-width: 992px){
+      position: static;
+      display: none;
+    }
   }
   &__item{
     // position: relative;
@@ -150,6 +287,9 @@ nav.main{
       }
       > .third-menu__list{
         @extend %hover-transform-after;
+        @media(max-width: 992px){
+          display: block;
+        }
       }
     }
     &::after, &::before{
@@ -191,6 +331,10 @@ nav.main{
     min-width: 200px;
     @extend %hover-transform-before;
     z-index: 2;
+    @media(max-width: 992px){
+      position: static;
+      display: none;
+    }
   }
   &__item{
     &:last-child{
@@ -213,6 +357,9 @@ nav.main{
 
 .nav-search{
   float: right;
+  @media(max-width: 992px){
+    display: none;
+  }
   .dropdown{
     float: left;
     position: static !important;
@@ -259,8 +406,12 @@ nav.main{
   background: rgba(25,38,55,.8);
   // position: absolute;
   // top: 100%;
-  left: 15px;
-  right: 15px;
+  left: 0px;
+  right: 0px;
+  @media(min-width: 992px){
+    left: 15px;
+    right: 15px;
+  }
 }
 
 .login-form{
@@ -280,33 +431,36 @@ nav.main{
     }
   }
   &__login{
-
   }
   &__password{
+
   }
   &__description{
     font-weight: $light;
   }
   &__col{
-    width: 33.333333%;
-    height: 100%;
-    display: table-cell;
-    vertical-align: top;
-    position: relative;
-    float: none;
+    @media(min-width: 992px){
+      width: 33.333333%;
+      height: 100%;
+      display: table-cell;
+      vertical-align: top;
+      position: relative;
+      float: none;
+    }
   }
   &__title{
     margin-bottom: 25px;
   }
   &__register{
-    position: absolute;
     margin-bottom: 20px;
     padding: 12px;
-    bottom: 0;
-    width: auto;
-    right: 15px;
-    display: block;
-    left: 15px;
+    @media(min-width: 992px){
+      position: absolute;
+      bottom: 0;
+      right: 15px;
+      left: 15px;
+      width: auto;
+    }
   }
   &__btn{
     margin-bottom: 20px;
@@ -317,6 +471,10 @@ nav.main{
     color: $color-red;
     &:hover, &:focus, &:active{
       color: $color-red;
+    }
+    @media(max-width: 992px){
+      margin-top: 0;
+      text-align: center;
     }
   }
 }
@@ -348,13 +506,25 @@ nav.main{
     top: 0;
     right: 0;
     bottom: 0;
-    background: transparent;
-    border-width: 0 0 0 1px;
-    border-left: 1px $color-orange solid;
+    background: #192637;
+    // border-width: 0 0 0 1px;
+    border: 1px $color-orange solid;
     color: white(1);
     padding: 0 30px;
     &:hover, &:focus, &:active{
       background: $color-orange;
     }
+    @media(min-width:992px){
+      background: transparent;
+    }
   }
+}
+
+.nav-main__button-label,
+.login-form__button-label{
+  // color: white(1);
+}
+
+footer.main{
+  background: $color-bold;
 }
