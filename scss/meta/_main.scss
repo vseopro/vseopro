@@ -431,6 +431,7 @@ nav.main{
     }
   }
   &__login{
+
   }
   &__password{
 
@@ -481,42 +482,45 @@ nav.main{
 
 .search-form{
   padding: 10px 15px;
-  &__form{
+}
 
-  }
-  &__ico{
+.search-form__form{
+
+}
+.search-form__ico{
+  color: white(1);
+  font-size: 20px;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.search-form__field{
+  height: 40px;
+  background: transparent;
+  border: 1px $color-orange solid;
+  color: white(1);
+  padding-left: 40px;
+  @include placeholder {
     color: white(1);
-    font-size: 20px;
-    position: absolute;
-    top: 6px;
-    left: 10px;
   }
-  &__field{
-    height: 40px;
+}
+
+.search-form__submit{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #192637;
+  // border-width: 0 0 0 1px;
+  border: 1px $color-orange solid;
+  color: white(1);
+  padding: 0 30px;
+  &:hover, &:focus, &:active{
+    background: $color-orange;
+  }
+  @media(min-width:992px){
     background: transparent;
-    border: 1px $color-orange solid;
-    color: white(1);
-    padding-left: 40px;
-    @include placeholder {
-      color: white(1);
-    }
-  }
-  &__submit{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #192637;
-    // border-width: 0 0 0 1px;
-    border: 1px $color-orange solid;
-    color: white(1);
-    padding: 0 30px;
-    &:hover, &:focus, &:active{
-      background: $color-orange;
-    }
-    @media(min-width:992px){
-      background: transparent;
-    }
   }
 }
 
