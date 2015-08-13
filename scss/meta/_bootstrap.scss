@@ -16,7 +16,7 @@
     }
   }
   &-red{
-    width: 100%;
+    // width: 100%;
     background: $color-red;
     &:hover, &:focus, &:active{
       background: darken($color-red, 10%);

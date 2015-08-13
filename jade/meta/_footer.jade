@@ -1,104 +1,124 @@
 footer.main
-  .footer-subs
-    .container
-      .row
-        .col-md-8
-          h3.text-uppercase Подписаться на наши еженедельные новости
-          p Введите Ваш E-Mail и выберети категорию в открывшимся окне.
-        .col-md-4
-          form
-            .row
-              .col-xs-6
-                input(type="text" placeholder="Email").fluid
-              .col-xs-6
-                button(type="submit").btn.btn-orange Ок
+  .container
+    .row
+      .col-xs-12
+        .footer-subs
+          .row
+            .col-md-8
+              h3.text-uppercase.footer-subs__title Подписаться на наши еженедельные новости
+              p.footer-subs__description.text-white Введите Ваш E-Mail и выберети категорию в открывшимся окне.
+            .col-md-4
+              form
+                .row
+                  .col-xs-8
+                    input(type="text" placeholder="Email").fluid.footer-subs__input
+                  .col-xs-4
+                    button(type="submit").btn.btn-orange.footer-subs__btn.fluid ОK
 
   .footer-social
     .container
       .row
-        .col-xs-3
+        .col-xs-12.col-sm-6.col-md-3.col-lg-3
           .footer-social__item
             .row
-              .col-xs-6
-                p Мы в твиттере
-              .col-xs-6
-                a(href="#").btn.btn-orange Перейти
-        .col-xs-3
+              .col-xs-7
+                p.text-white.footer-social__title Мы в твиттере
+              .col-xs-5
+                a(href="#").btn.btn-orange.pull-right Перейти
+        .col-xs-12.col-sm-6.col-md-3.col-lg-3
           .footer-social__item
             .row
-              .col-xs-6
-                p Мы в твиттере
-              .col-xs-6
-                a(href="#").btn.btn-orange Перейти
-        .col-xs-3
+              .col-xs-7
+                p.text-white.footer-social__title Мы в Facebook
+              .col-xs-5
+                a(href="#").btn.btn-orange.pull-right Перейти
+        .col-xs-12.col-sm-6.col-md-3.col-lg-3
           .footer-social__item
             .row
-              .col-xs-6
-                p Мы в твиттере
-              .col-xs-6
-                a(href="#").btn.btn-orange Перейти
-        .col-xs-3
+              .col-xs-7
+                p.text-white.footer-social__title Мы в Контакте
+              .col-xs-5
+                a(href="#").btn.btn-orange.pull-right Перейти
+        .col-xs-12.col-sm-6.col-md-3.col-lg-3
           .footer-social__item
             .row
-              .col-xs-6
-                p Мы в твиттере
-              .col-xs-6
-                a(href="#").btn.btn-orange Перейти
+              .col-xs-7
+                p.text-white.footer-social__title Мы в Одноклассниках
+              .col-xs-5
+                a(href="#").btn.btn-orange.pull-right Перейти
 
   .container
     .row
-      .col-xs-6
+      .col-xs-12.col-sm-6.col-md-6.col-lg-6
         .footer-last-user
-          .footer-last-user__title
+          p.footer-last-user__title.text-white Последние посетители
           .row
             -for(var i = 0; i < 15; i++)
-              .col-xs-4
+              .col-xs-6.col-sm-6.col-md-6.col-lg-4
                 .row
                   .col-xs-6
-                    .footer-last-user
+                    .footer-last-user__img
                       img(src="http://placehold.it/67x67").img-responsive
                   .col-xs-6
-                    span.db сейчас ON
-                    span.db Ник Test
-                    span.db Пользователи
-                    span.db Был в 10:00
+                    span.db.footer-last-user__text сейчас
+                      span.footer-last-user__status ON
+                    span.db.footer-last-user__text Ник Test
+                    span.db.footer-last-user__text Пользователи
+                    span.db.footer-last-user__text Был в 10:00
 
-      .col-xs-6
-        .footer-tags
+      .col-xs-12.col-sm-6.col-md-6.col-lg-6
+        .footer-tags.clearfix
+          p.footer-tags__title.text-white Теги сайта
           -for(var i = 0; i < 50; i++)
-            span.dib Ник Test#{i * 10}
+            a(href="#").db.footer-tags__item Страница #{i * 33}
+        .show-all-tags
+          //- a(href="").btn.btn-red Страница
+          a(href="").btn.btn-red Показать все теги
 
 .footer-copyright
   .container
     .row
-      .col-xs-4
-        ul.lsn.pl0.mb0
-          li.pull-left Copyright 2015г.
-          li.pull-left "Vseopro.ru"
-          li.pull-left Яндекс.метрика
-          li.pull-left.text-uppercase Анали сайта
-      .col-xs-4
-        ul.lsn.pl0.mb0
-          li.pull-left
-            a(href="#").db Заказ рекламы
-          li.pull-left
-            a(href="#").db Лента RSS
-          li.pull-left
-            a(href="#").db Карта сайта
-          li.pull-left
-            a(href="#").db Обратная связь
-      .col-xs-4
-        ul.lsn.pl0.mb0
-          li.pull-left
-            a(href="#").db VK
-          li.pull-left
-            a(href="#").db VK
-          li.pull-left
-            a(href="#").db VK
-          li.pull-left
-            a(href="#").db VK
-          li.pull-left
-            a(href="#").db VK
-          li.pull-left
-            a(href="#").db VK
+      .col-xs-12
+        .site-working.clearfix
+          span.pull-left.site-working__title.text-white Сайт работает в
+          ul.pl0.mb0.lsn.clearfix.pull-left
+            li.pull-left: span.icon-firefox.text-white.site-working__icon
+            li.pull-left: span.icon-chrome.text-white.site-working__icon
+            li.pull-left: span.icon-opera.text-white.site-working__icon
+            li.pull-left: span.icon-ie.text-white.site-working__icon
 
+        ul.lsn.pl0.mb0.copyright-text
+          li.text-white.copyright-text__item Copyright 2015 г.
+          li.text-white.copyright-text__item «Vseopro.ru»
+          //- li.text-white.copyright-text__item Яндекс.метрика
+          //- li.text-white.copyright-text__item.text-uppercase Анали сайта
+
+        ul.lsn.pl0.mb0.footer-link.clearfix
+          li.footer-link__item
+            a(href="#").footer-link__link.db Карта сайта
+          li.footer-link__item
+            a(href="#").footer-link__link.db Обратная связь
+          li.footer-link__item
+            a(href="#").footer-link__link.db Правообладателям
+          li.footer-link__item
+            a(href="#").footer-link__link.db Заказ рекламы
+
+        ul.lsn.pl0.mb0.footer-ico
+          li.pull-left.footer-ico__item
+            a(href="#").footer-ico__link.db
+              span.icon-vk
+          li.pull-left.footer-ico__item
+            a(href="#").footer-ico__link.db
+              span.icon-odnoklassniki
+          li.pull-left.footer-ico__item
+            a(href="#").footer-ico__link.db
+              span.icon-twitter
+          li.pull-left.footer-ico__item
+            a(href="#").footer-ico__link.db
+              span.icon-gplus
+          li.pull-left.footer-ico__item
+            a(href="#").footer-ico__link.db
+              span.icon-facebook
+          li.pull-left.footer-ico__item
+            a(href="#").footer-ico__link.db
+              span.icon-rss

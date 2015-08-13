@@ -8,4 +8,5 @@
       return $('html').toggleClass('open-right-mobile-menu');
     }
   });
+
 }).call(this);

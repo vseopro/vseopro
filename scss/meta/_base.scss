@@ -1,6 +1,7 @@
 html{
   background: #192637;
 }
+
 body{
   font-family: $open-sans;
   font-weight: $regular;
@@ -10,9 +11,15 @@ body{
 
 main{
   background: $color-gray;
-  height: 3000px;
+  // height: 3000px;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: $bold;
 }
+
+a,
+.btn{
+  transition: all 0.17s ease-in-out;
+}
+
