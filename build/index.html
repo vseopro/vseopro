@@ -65,7 +65,8 @@
                     <button type="button" data-show="right-menu" class="open-menu__button no-outline no-select"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span>
                     </button>
                 </div>
-                <div class="nav-main clearfix">
+                <!-- основное меню видно везде кроме мобильных устройств -->
+                <div class="nav-main clearfix visible-md visible-lg">
                     <ul class="lsn pl0 mb0 clearfix first-menu__list">
                         <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Главная</a>
                         </li>
@@ -139,63 +140,85 @@
                         </li>
                     </ul>
                 </div>
-                <div class="nav-search">
-                    <div class="dropdown"><a id="search-form__label" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="dib nav-search__find icon-search cur no-select"></span></a>
-                        <div aria-labelledby="search-form__label"
-                        class="search-form hover-transform-before dropdown-menu">
-                            <form class="search-form__form pr"><span class="icon-search search-form__ico"></span>
-                                <input type="text" placeholder="Введите текст для поиска" class="search-form__field fluid no-outline">
-                                <button type="submit" class="search-form__submit no-outline"><span class="icon-right"></span>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="dropdown"><a id="login-form__label" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="dib nav-search__login icon-login cur no-select">Вход</span></a>
-                        <div aria-labelledby="login-form__label"
-                        class="login-form hover-transform-before dropdown-menu">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-4 login-form__col">
-                                        <h3 class="login-form__title text-center">Вход на сайт</h3>
-                                        <form>
-                                            <input type="text" placeholder="Логин или email" class="fluid login-form__login no-outline">
-                                            <input type="password" placeholder="Пароль" class="fluid login-form__password no-outline">
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                    <button type="submit" class="btn btn-orange fluid login-form__btn">Войти</button>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="http://google.com" class="login-form__restore hover-underline db">Восстановить пароль</a>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-md-4 login-form__col">
-                                        <h3 class="login-form__title text-center">Войти через</h3>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-vk fluid">Вконтакте</a>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-google fluid">Google</a>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-odnoklassniki fluid">Одноклассники</a>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-mail fluid">Mail.ru</a>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-facebook fluid">Facebook</a>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-yandex fluid">Яндекс</a>
-                                            </div>
+                <!-- мобильное меню видно на всех устройств менбше 992px -->
+                <div id="mobile-menu" class="nav-main clearfix">
+                    <div class="list-group panel"><a href="#" class="list-group-item mobile__link__first">Главная</a><a href="#" class="list-group-item mobile__link__first">Популярные CMS</a><a href="#" class="list-group-item mobile__link__first">Другие</a><a href="#" class="list-group-item mobile__link__first">Веб-мастеру</a>
+                        <a
+                        href="#target-menu4" data-toggle="collapse" data-parent="#mobile-menu" class="list-group-item mobile__link__first mobile__has-menu">Игры</a>
+                            <div id="target-menu4" class="collapse"><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#target-submenu41" data-toggle="collapse" data-parent="#SubMenu1" class="list-group-item mobile__link__second mobile__has-menu">Браузерные игры</a>
+                                <div
+                                id="target-submenu41" class="collapse list-group-submenu"><a href="#" class="list-group-item mobile__link__third">submenu3</a><a href="#" class="list-group-item mobile__link__third">submenu3</a>
+                            </div><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a>
+                    </div><a href="#target-menu5" data-toggle="collapse" data-parent="#mobile-menu" class="list-group-item mobile__link__first mobile__has-menu">Сервисы</a>
+                    <div id="target-menu5" class="collapse"><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#target-submenu51" data-toggle="collapse" data-parent="#SubMenu1" class="list-group-item mobile__link__second mobile__has-menu">Браузерные игры</a>
+                        <div
+                        id="target-submenu51" class="collapse list-group-submenu"><a href="#" class="list-group-item mobile__link__third">submenu3</a><a href="#" class="list-group-item mobile__link__third">submenu3</a>
+                    </div><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a>
+                </div><a href="#target-menu6" data-toggle="collapse" data-parent="#mobile-menu" class="list-group-item mobile__link__first mobile__has-menu">Платное</a>
+                <div id="target-menu6" class="collapse"><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#target-submenu61" data-toggle="collapse" data-parent="#SubMenu1" class="list-group-item mobile__link__second mobile__has-menu">Браузерные игры</a>
+                    <div
+                    id="target-submenu61" class="collapse list-group-submenu"><a href="#" class="list-group-item mobile__link__third">submenu3</a><a href="#" class="list-group-item mobile__link__third">submenu3</a>
+                </div><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a>
+            </div><a href="#" class="list-group-item mobile__link__first">Помощь сайту</a>
+        </div>
+        </div>
+        <div class="nav-search">
+            <div class="dropdown"><a id="search-form__label" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="dib nav-search__find icon-search cur no-select"></span></a>
+                <div aria-labelledby="search-form__label"
+                class="search-form hover-transform-before dropdown-menu">
+                    <form class="search-form__form pr"><span class="icon-search search-form__ico"></span>
+                        <input type="text" placeholder="Введите текст для поиска" class="search-form__field fluid no-outline">
+                        <button type="submit" class="search-form__submit no-outline"><span class="icon-right"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="dropdown"><a id="login-form__label" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="dib nav-search__login icon-login cur no-select">Вход</span></a>
+                <div aria-labelledby="login-form__label"
+                class="login-form hover-transform-before dropdown-menu">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4 login-form__col">
+                                <h3 class="login-form__title text-center">Вход на сайт</h3>
+                                <form>
+                                    <input type="text" placeholder="Логин или email" class="fluid login-form__login no-outline">
+                                    <input type="password" placeholder="Пароль" class="fluid login-form__password no-outline">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <button type="submit" class="btn btn-orange fluid login-form__btn">Войти</button>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="http://google.com" class="login-form__restore hover-underline db">Восстановить пароль</a>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 login-form__col">
-                                        <h3 class="login-form__title text-center">Я новый пользователь</h3>
-                                        <p class="login-form__description">Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.</p><a href="#" class="btn btn-red login-form__register">Зарегистрироваться</a>
+                                </form>
+                            </div>
+                            <div class="col-md-4 login-form__col">
+                                <h3 class="login-form__title text-center">Войти через</h3>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-vk fluid">Вконтакте</a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-google fluid">Google</a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-odnoklassniki fluid">Одноклассники</a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-mail fluid">Mail.ru</a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-facebook fluid">Facebook</a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-yandex fluid">Яндекс</a>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-md-4 login-form__col">
+                                <h3 class="login-form__title text-center">Я новый пользователь</h3>
+                                <p class="login-form__description">Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.</p><a href="#" class="btn btn-red login-form__register">Зарегистрироваться</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </nav>
     <main></main>
