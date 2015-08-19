@@ -22,7 +22,7 @@ nav.main.open-menu-position
                 a(href="#{key.url}").db.no-underline.cur.no-select.first-menu__link #{key.text}
             if key.submenu !== undefined
               li.first-menu__item.first-menu__has-menu
-                a(href="#").db.no-underline.cur.no-select.first-menu__link #{key.text}
+                a.db.no-underline.cur.no-select.first-menu__link #{key.text}
                 ul.second-menu__list.pl0.mb0
                   each val in key.submenu
                     if val.submenu == undefined
@@ -30,7 +30,7 @@ nav.main.open-menu-position
                         a(href="#").second-menu__link.db.no-underline.cur.no-select #{val.text}
                     if val.submenu !== undefined
                       li.second-menu__item.second-menu__has-menu
-                        a(href="#").second-menu__link.db.no-underline.cur.no-select #{val.text}
+                        a.second-menu__link.db.no-underline.cur.no-select #{val.text}
                         ul.third-menu__list.pl0.mb0
                           each link in val.submenu
                             li.third-menu__item

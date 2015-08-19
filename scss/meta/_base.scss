@@ -19,7 +19,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 a,
-.btn{
+.btn,
+.nav-search__find,
+.nav-search__login{
   transition: all 0.17s ease-in-out;
 }
 
@@ -31,4 +33,9 @@ a,
   bottom: 0;
   // background: red;
   z-index: 1;
+}
+
+.top-line-decorator{
+  background: url(../img/img_top_line_decorator.jpg) top center repeat-Y;
+  height: 3px;
 }
