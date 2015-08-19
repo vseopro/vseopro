@@ -1,5 +1,5 @@
 var gulp         = require('gulp');
-var fs = require('fs');
+var fs           = require('fs');
 // html compile
 var jade         = require('gulp-jade');
 var prettify     = require('gulp-html-prettify');
@@ -17,14 +17,14 @@ var svgo         = require('gulp-svgo');
 var svgSprite    = require("gulp-svg-sprite");
 
 // coffee compile
-// var coffee       = require('gulp-coffee');
-var coffeex = require('gulp-coffee-react');
+// var coffee    = require('gulp-coffee');
+var coffeex      = require('gulp-coffee-react');
 var ftp          = require( 'vinyl-ftp' );
 
 var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 
-var FTPconfig = require('./config').ftpConfig;
+var FTPconfig    = require('./config').ftpConfig;
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -78,9 +78,9 @@ gulp.task( 'upload', function() {
         .pipe( conn.dest( '/' ) );
 } );
 
-var dataJSON = JSON.parse(fs.readFileSync('./json/config.json', 'utf-8'));
 
 gulp.task('jade', function(){
+    var dataJSON = JSON.parse(fs.readFileSync('./json/config.json', 'utf-8'));
 
     gulp.src('./jade/!(_)*.jade')
 
@@ -126,7 +126,7 @@ gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./coffee/**/*.coffee', ['coffee']);
     gulp.watch('./svg/**/*.svg', ['sprite']);
-    gulp.watch('./jade/**/*.jade', ['jade']);
+    gulp.watch(['./jade/**/*.jade', './json/**/*.json'], ['jade']);
 });
 
 gulp.task('default',
