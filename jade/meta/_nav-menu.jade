@@ -14,28 +14,29 @@ nav.main.open-menu-position
             span.open-menu__span
       //- .nav-main.visible-md.visible-lg
 
-      //- .nav-main.clearfix
+      .nav-main.clearfix
         ul.lsn.pl0.mb0.clearfix.first-menu__list
           each key in navMenu
-            li.first-menu__item
-              if key.submenu == undefined
-                a(href="#").db.no-underline.cur.no-select.first-menu__link  #{key.text}
-              if key.submenu !== undefined
+            if key.submenu == undefined
+              li.first-menu__item
+                a(href="#{key.url}").db.no-underline.cur.no-select.first-menu__link  #{key.text}
+            if key.submenu !== undefined
+              li.first-menu__item.first-menu__has-menu
                 a(href="#").db.no-underline.cur.no-select.first-menu__link  #{key.text}
                 ul.second-menu__list.pl0.mb0
-                  li.second-menu__item.second-menu__has-menu
-                    each val in key.submenu
-                      li
-                        if val.submenu == undefined
-                          a(href="#") #{val.text}
-                        if val.submenu !== undefined
-                          a.trigger.right-caret #{val.text}
-                          ul.pl0.lsn.mb0.dropdown-menu.sub-menu
-                            each link in val.submenu
-                              li
-                                a(href="#") #{link.text}
+                  each val in key.submenu
+                    if val.submenu == undefined
+                      li.second-menu__item
+                        a(href="#").second-menu__link.db.no-underline.cur.no-select #{val.text}
+                    if val.submenu !== undefined
+                      li.second-menu__item.second-menu__has-menu
+                        a(href="#").second-menu__link.db.no-underline.cur.no-select #{val.text}
+                        ul.third-menu__list.pl0.mb0
+                          each link in val.submenu
+                            li.third-menu__item
+                              a(href="#").third-menu__link.db.no-underline.cur.no-select #{link.text}
 
-      .nav-main
+      //- .nav-main
         ul.lsn.pl0.mb0.clearfix.first-menu__list
           li.first-menu__item
             a(href="#").db.no-underline.cur.no-select.first-menu__link Главная
