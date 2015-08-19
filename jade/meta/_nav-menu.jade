@@ -19,10 +19,10 @@ nav.main.open-menu-position
           each key in navMenu
             if key.submenu == undefined
               li.first-menu__item
-                a(href="#{key.url}").db.no-underline.cur.no-select.first-menu__link  #{key.text}
+                a(href="#{key.url}").db.no-underline.cur.no-select.first-menu__link #{key.text}
             if key.submenu !== undefined
               li.first-menu__item.first-menu__has-menu
-                a(href="#").db.no-underline.cur.no-select.first-menu__link  #{key.text}
+                a(href="#").db.no-underline.cur.no-select.first-menu__link #{key.text}
                 ul.second-menu__list.pl0.mb0
                   each val in key.submenu
                     if val.submenu == undefined
