@@ -37,7 +37,7 @@
     margin-right: auto;
 }
 
-.overflow-elipsis,
+.text-overflow,
 .db {
     display: block;
 }
@@ -53,6 +53,12 @@
 
 .dn {
     display: none;
+}
+
+.text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .transform-middle,
@@ -528,6 +534,7 @@ header.main {
 }
 
 nav.main {
+    margin-bottom: 30px;
     background: #192637;
 }
 
@@ -1087,6 +1094,89 @@ footer.main {
     color: #ff690b;
 }
 
+.hot-news {
+    margin-bottom: 30px;
+}
+
+.hot-news__button {
+    padding: 9px 12px;
+}
+
+.hot-news__render {
+    background: #6c707c;
+    padding-right: 75px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.hot-news__text {
+    color: #fff;
+}
+
+.hot-news__prev,
+.hot-news__next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: 0 0;
+    width: 34px;
+}
+
+.hot-news__next {
+    right: 0;
+}
+
+.hot-news__prev:hover,
+.hot-news__next:hover {
+    background: #545761;
+}
+
+.hot-news__prev:before,
+.hot-news__prev:after,
+.hot-news__next:before,
+.hot-news__next:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    background: #fff;
+    width: 15px;
+    height: 1px;
+}
+
+.hot-news__prev:before,
+.hot-news__next:before {
+    margin-top: 5px;
+}
+
+.hot-news__prev:after,
+.hot-news__next:after {
+    margin-top: -5px;
+}
+
+.hot-news__prev {
+    right: 34px;
+}
+
+.hot-news__prev:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.hot-news__prev:after,
+.hot-news__next:before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.hot-news__next:after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 @media (min-width:992px) {
     .hover-transform-before,
     .second-menu__list,
@@ -1274,6 +1364,10 @@ footer.main {
     .login-form__restore {
         margin-top: 0;
         text-align: center;
+    }
+
+    .hot-news__button {
+        margin-bottom: 20px;
     }
 }
 
