@@ -254,13 +254,22 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto Slab',serif;
 }
 
 a,
 .btn {
     -webkit-transition: all .17s ease-in-out;
     transition: all .17s ease-in-out;
+}
+
+.mobile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .btn {
@@ -1045,6 +1054,11 @@ footer.main {
     .open-right-mobile-menu body {
         position: relative;
         overflow-x: hidden;
+    }
+
+    .open-left-mobile-menu .mobile-overlay,
+    .open-right-mobile-menu .mobile-overlay {
+        display: block;
     }
 
     .open-left-mobile-menu .open-menu-position,

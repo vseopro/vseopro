@@ -48,3 +48,6 @@ $('.open-menu__button').on 'click', ->
   else
     $('html').toggleClass('open-right-mobile-menu')
 
+$('.mobile-overlay').on 'click', ->
+  $('html').attr("class", '')
+

@@ -9,4 +9,8 @@
     }
   });
 
+  $('.mobile-overlay').on('click', function() {
+    return $('html').attr("class", '');
+  });
+
 }).call(this);

@@ -44,6 +44,9 @@
       position: relative;
       overflow-x: hidden;
     }
+    .mobile-overlay{
+      display: block;
+    }
     .open-menu-position{
       position: static !important;
     }
