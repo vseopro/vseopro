@@ -2,16 +2,16 @@ nav.main.open-menu-position
   .container.pr.open-menu-position
     .row.open-menu-position
       .hidden-md.hidden-lg.pull-left
-        button(type="button" data-show="left-menu").open-menu__button.no-outline.no-select
+        button(type="button" data-show="left-menu").open-menu__button.no-outline.no-select.pull-left
           -for(var i = 0; i < 3; i++)
             span.open-menu__span
-        span.nav-main__button-label.text-white Главное меню
+        span.nav-main__button-label.text-white Меню
 
       .hidden-md.hidden-lg.pull-right
-        span.login-form__button-label.text-white Форма логина
-        button(type="button" data-show="right-menu").open-menu__button.no-outline.no-select
+        button(type="button" data-show="right-menu").open-menu__button.no-outline.no-select.pull-right
           -for(var i = 0; i < 3; i++)
             span.open-menu__span
+        span.login-form__button-label.text-white Вход
       //- .nav-main.visible-md.visible-lg
 
       <!-- основное меню видно везде кроме мобильных устройств -->
@@ -293,5 +293,5 @@ nav.main.open-menu-position
                 .col-md-4.login-form__col
                   h3.login-form__title.text-center Я новый пользователь
                   p.login-form__description Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.
-                  a(href="#").btn.btn-red.login-form__register Зарегистрироваться
+                  a(href="#").btn.btn-red.login-form__register.fluid Зарегистрироваться
 

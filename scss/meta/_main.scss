@@ -207,6 +207,16 @@
   }
 }
 
+.nav-main__button-label{
+  float: left;
+  margin-top: 15px;
+}
+
+.login-form__button-label{
+  float: right;
+  margin-top: 15px;
+}
+
 header.main{
   padding-bottom: 28px;
   padding-top: 22px;
@@ -558,6 +568,9 @@ nav.main{
   padding-left: 40px;
   @include placeholder {
     color: white(1);
+  }
+  &::-ms-clear {
+    display: none;
   }
 }
 

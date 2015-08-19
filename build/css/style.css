@@ -515,6 +515,16 @@ a,
     margin-bottom: 0;
 }
 
+.nav-main__button-label {
+    float: left;
+    margin-top: 15px;
+}
+
+.login-form__button-label {
+    float: right;
+    margin-top: 15px;
+}
+
 header.main {
     padding-bottom: 28px;
     padding-top: 22px;
@@ -853,6 +863,10 @@ nav.main {
 
 .search-form__field:-ms-input-placeholder {
     color: #fff;
+}
+
+.search-form__field::-ms-clear {
+    display: none;
 }
 
 .search-form__submit {
