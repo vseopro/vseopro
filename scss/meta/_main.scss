@@ -679,12 +679,15 @@ footer.main{
   @include font-size(10);
   font-weight: $light;
   margin-bottom: 4px;
-  color: #6C707C;
+  color: #ccc;
 }
 
 .footer-last-user__status{
-  color: #47ac64;
+  color: #25CE56;
   margin-left: 5px;
+  &.off{
+    color: #FB3131;
+  }
 }
 
 .footer-last-user__title{
@@ -723,7 +726,7 @@ footer.main{
 }
 
 .show-all-tags{
-
+  margin-bottom: 20px;
 }
 
 .footer-copyright{
@@ -927,6 +930,133 @@ footer.main{
     &:after{
       transform: rotate(45deg);
       // margin-top: -10px;
+    }
+  }
+  &__text{
+    &:hover, &:focus, &:active{
+      color: #FFF;
+    }
+  }
+}
+
+.white-block{
+  background: #FFF;
+  box-shadow: 0px 0px 7px 0px black(.17);
+  padding: 26px 30px 30px 30px;
+  margin-bottom: 32px;
+  &__title{
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    color: $color-orange;
+    border-bottom: 1px #f1f1f1 solid;
+  }
+  &__text{
+    @include font-size(13);
+    color: #6C707C;
+  }
+}
+
+section.welcome-block{
+  .white-block{
+    &__title{
+      @include font-size(30);
+    }
+  }
+}
+
+section.forums-answer{
+
+}
+
+.forums-answer{
+  &__wrap{
+
+  }
+  &__ico{
+    @include font-size(20);
+    color: #B1B2B7;
+  }
+  &__item{
+    border-bottom: 1px #f1f1f1 solid;
+    margin-bottom: 14px;
+    padding-bottom: 5px;
+  }
+  &__text{
+    @include font-size(13);
+    color: $color-orange;
+  }
+  &__title{
+    @include font-size(18);
+    // font-weight: $open-sans-bold;
+    color: #192637;
+    margin-bottom: 10px;
+  }
+  &__footer{
+    &__text{
+      @include font-size(12);
+      color: #B1B2B7;
+    }
+    &__count{
+      color: #192637;
+      margin-left: 5px;
+    }
+  }
+}
+
+.editors-choice{
+  &__wrap{
+
+  }
+  &__img{
+    width: 100%;
+    margin-top: 14px;
+  }
+  &__text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #192637;
+    background: white(.7);
+    @include font-size(16);
+    padding: 14px 20px;
+  }
+}
+
+.last-news{
+  &__wrap{
+
+  }
+  &__item{
+    border-bottom: 1px #f1f1f1 solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  &__title{
+    @include font-size(18);
+    color: #192637;
+    margin-bottom: 12px;
+
+  }
+  &__img{
+    margin-top: 8px;
+    @media(max-width: 992px){
+      display: table;
+      margin: 0 auto 20px;
+    }
+  }
+  &__text{
+    color: $color-orange;
+    @include font-size(12);
+  }
+  &__ico{
+    @include font-size(20);
+    color: #919191;
+  }
+  &__demo-text{
+    margin-top: 20px;
+    &--link{
+      color: $color-orange;
     }
   }
 }

@@ -18,6 +18,25 @@ h1, h2, h3, h4, h5, h6{
   font-family: $bold;
 }
 
+h1{
+
+}
+h2{
+
+}
+h3{
+
+}
+h4{
+
+}
+h5{
+
+}
+h6{
+
+}
+
 a,
 .btn,
 .nav-search__find,
@@ -39,4 +58,12 @@ a,
 .top-line-decorator{
   background: url(../img/img_top_line_decorator.jpg) top center repeat-Y;
   height: 3px;
+}
+
+.text-light{
+  font-weight: $light;
+}
+
+.text-bold{
+  font-weight: $open-sans-bold;
 }

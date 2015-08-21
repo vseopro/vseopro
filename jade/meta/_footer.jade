@@ -36,7 +36,7 @@ footer.main.visible-lg.visible-md
           .footer-social__item
             .row
               .col-xs-7
-                p.text-white.footer-social__title Мы в Контакте
+                p.text-white.footer-social__title Мы Вконтакте
               .col-xs-5
                 a(href="#").btn.btn-orange.pull-right Перейти
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
@@ -51,7 +51,7 @@ footer.main.visible-lg.visible-md
     .row
       .col-xs-12.col-sm-6.col-md-6.col-lg-6
         .footer-last-user
-          p.footer-last-user__title.text-white Последние посетители
+          p.footer-last-user__title.text-white <span class="icon-users-1"></span> Последние посетители
           .row
             -for(var i = 0; i < 15; i++)
               .col-xs-6.col-sm-6.col-md-6.col-lg-4
@@ -61,14 +61,14 @@ footer.main.visible-lg.visible-md
                       img(src="http://placehold.it/67x67").img-responsive
                   .col-xs-6
                     span.db.footer-last-user__text сейчас
-                      span.footer-last-user__status ON
+                      span(class="footer-last-user__status #{ i == 4 ? 'off' : ''}") #{ i == 4 ? 'OFF' : 'ON'}
                     span.db.footer-last-user__text Ник Test
                     span.db.footer-last-user__text Пользователи
                     span.db.footer-last-user__text Был в 10:00
 
       .col-xs-12.col-sm-6.col-md-6.col-lg-6
         .footer-tags.clearfix
-          p.footer-tags__title.text-white Теги сайта
+          p.footer-tags__title.text-white <span class="icon-tag"> Теги сайта
           -for(var i = 0; i < 50; i++)
             a(href="#").db.footer-tags__item Страница #{i * 33}
         .show-all-tags
