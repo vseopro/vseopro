@@ -14,7 +14,7 @@ var cssbeautify          = require('gulp-cssbeautify');
 var postcss              = require('gulp-postcss');
 var autoprefixer         = require('autoprefixer-core');
 var postcssPseudoContent = require('postcss-pseudo-elements-content');
-var rucksack             = require('gulp-rucksack');
+var rucksack             = require('rucksack-css');
 var postcssFocus         = require('postcss-focus');
 var pxtorem              = require('postcss-pxtorem');
 var selector             = require('postcss-custom-selectors')
@@ -68,7 +68,9 @@ gulp.task('sass', function () {
             root_value: 14,
             selector_black_list: ['html'],
         }),
-        rucksack,
+        rucksack({
+            fallbacks: false
+        }),
         postcssPseudoContent,
         postcssFocus,
         mqpacker,

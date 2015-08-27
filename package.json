@@ -27,12 +27,12 @@
     "gulp-html-prettify": "0.0.1",
     "gulp-jade": "^1.0.0",
     "gulp-postcss": "^6.0.0",
-    "gulp-rucksack": "^0.1.2",
     "gulp-sass": "^2.0.4",
     "postcss-custom-selector": "^1.0.0",
     "postcss-custom-selectors": "^3.0.0",
     "postcss-focus": "^1.0.0",
     "postcss-pseudo-elements-content": "^1.0.0",
-    "postcss-pxtorem": "^3.0.0"
+    "postcss-pxtorem": "^3.0.0",
+    "rucksack-css": "^0.6.7"
   }
 }
