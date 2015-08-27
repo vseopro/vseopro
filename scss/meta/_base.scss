@@ -14,7 +14,7 @@ main{
   // height: 3000px;
 }
 
-h1, h2, h3, h4, h5, h6{
+:--heading{
   font-family: $bold;
 }
 
@@ -42,6 +42,15 @@ a,
 .nav-search__find,
 .nav-search__login{
   transition: all 0.17s ease-in-out;
+}
+
+a.link{
+  color: $color-orange;
+  text-decoration: none;
+  &:hover{
+    color: $color-orange;
+    text-decoration: underline;
+  }
 }
 
 .mobile-overlay{

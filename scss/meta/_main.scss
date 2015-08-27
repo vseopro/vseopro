@@ -231,7 +231,7 @@ header.main{
 
   }
   &__description{
-    @include font-size(15);
+    font-size: 15px;
   }
 }
 
@@ -272,35 +272,22 @@ nav.main{
   }
   &__link{
     border-top: 2px solid transparent;
-    @include font-size(15);
+    font-size: 15px;
     padding: 14px 19px 16px 10px;
     color: white(1);
+    position: relative;
     &:hover{
       border-color: $color-orange;
       color: $color-orange;
+      &:after, &:before{
+        background: $color-orange;
+        transition: all 0.17s ease-in-out;
+      }
     }
     &:focus, &:active{
-      color: white(1);
+      // color: white(1);
     }
-  }
-  &__has-menu{
-    position: relative;
-    &:hover, &:focus, &:active{
-      > .first-menu__link{
-        border-color: $color-orange;
-        color: $color-orange;
-      }
-      > .second-menu__list{
-        @extend %hover-transform-after;
-        @media(max-width: 992px){
-          display: block;
-        }
-      }
-      &::after, &::before{
-        background: $color-orange;
-      }
-    }
-    &::after, &::before{
+    &:after, &:before{
       position: absolute;
       content:"";
       background: white(1);
@@ -310,12 +297,26 @@ nav.main{
       // margin-top: -3px;
       right: 8px;
     }
-    &::before{
+    &:before{
       transform: rotate(45deg);
     }
-    &::after{
+    &:after{
       transform: rotate(-45deg);
       right: 4px;
+    }
+  }
+  &__has-menu{
+    // position: relative;
+    &:hover{
+      > .first-menu__link{
+
+      }
+      > .second-menu__list{
+        @extend %hover-transform-after;
+        @media(max-width: 992px){
+          display: block;
+        }
+      }
     }
   }
 }
@@ -341,20 +342,18 @@ nav.main{
       }
     }
   }
-  &__has-menu{
+  &__link{
+    font-size: 15px;
+    background: rgba($color-black, .8);
+    padding: 14px 25px 14px 15px;
+    color: white(1);
+    border-bottom: 1px solid $color;
     position: relative;
-    &:hover, &:focus, &:active{
-      .second-menu__link{
-        color: $color-orange;
-      }
-      &::after, &::before{
+    &:hover{
+      color: $color-orange;
+      &:after, &:before{
         background: $color-orange;
-      }
-      > .third-menu__list{
-        @extend %hover-transform-after;
-        @media(max-width: 992px){
-          display: block;
-        }
+        transition: all 0.17s ease-in-out;
       }
     }
     &::after, &::before{
@@ -376,14 +375,15 @@ nav.main{
       margin-top: 2px;
     }
   }
-  &__link{
-    @include font-size(15);
-    background: rgba($color-black, .8);
-    padding: 14px 25px 14px 15px;
-    color: white(1);
-    border-bottom: 1px solid $color;
-    &:hover, &:focus, &:active{
-      color: $color-orange;
+  &__has-menu{
+    position: relative;
+    &:hover{
+      > .third-menu__list{
+        @extend %hover-transform-after;
+        @media(max-width: 992px){
+          display: block;
+        }
+      }
     }
   }
 }
@@ -409,12 +409,12 @@ nav.main{
     }
   }
   &__link{
-   @include font-size(15);
+   font-size: 15px;
    background: rgba($color-black, .8);
    padding: 14px 14px 14px 15px;
    color: white(1);
    border-bottom: 1px solid $color;
-   &:hover, &:focus, &:active{
+   &:hover{
      color: $color-orange;
    }
   }
@@ -451,18 +451,18 @@ nav.main{
   &__login{
     color: white(1);
     border-top: 2px transparent solid;
-    &:hover, &:focus, &:active{
+    &:hover{
       color: $color-orange;
       border-color: $color-orange;
     }
   }
   &__find{
     padding: 12px 4px 11px;
-    @include font-size(20);
+    font-size: 20px;
   }
   &__login{
     padding: 14px 20px 16px;
-    @include font-size(15);
+    font-size: 15px;
   }
 }
 
@@ -488,10 +488,10 @@ nav.main{
     height: 46px;
     padding-left: 20px;
     margin-bottom: 20px;
-    @include placeholder {
+    &::placeholder {
       color: white(1);
     }
-    &:focus, &:active{
+    &:--enter{
       border-color: white(1);
     }
   }
@@ -535,7 +535,7 @@ nav.main{
   &__restore{
     margin-top: 11px;
     color: $color-red;
-    &:hover, &:focus, &:active{
+    &:hover{
       color: $color-red;
     }
     @media(max-width: 992px){
@@ -566,7 +566,7 @@ nav.main{
   border: 1px $color-orange solid;
   color: white(1);
   padding-left: 40px;
-  @include placeholder {
+  &::placeholder {
     color: white(1);
   }
   &::-ms-clear {
@@ -584,7 +584,7 @@ nav.main{
   border: 1px $color-orange solid;
   color: white(1);
   padding: 0 30px;
-  &:hover, &:focus, &:active{
+  &:hover{
     background: $color-orange;
   }
   @media(min-width:992px){
@@ -611,7 +611,7 @@ footer.main{
 }
 
 .footer-subs__title{
-  @include font-size(16);
+  font-size: 16px;
   color: $color-orange;
 }
 
@@ -638,7 +638,7 @@ footer.main{
   margin-bottom: 0;
   margin-top: 8px;
   font-weight: $light;
-  @include font-size(13);
+  font-size: 13px;
 }
 
 .footer-social__item{
@@ -660,8 +660,7 @@ footer.main{
 .footer-tags__title{
   position: relative;
   margin-bottom: 37px;
-  &:after{
-    content: '';
+  &:after-c{
     position: absolute;
     left: 0;
     bottom: -17px;
@@ -676,7 +675,7 @@ footer.main{
 }
 
 .footer-last-user__text{
-  @include font-size(10);
+  font-size: 10px;
   font-weight: $light;
   margin-bottom: 4px;
   color: #ccc;
@@ -691,17 +690,17 @@ footer.main{
 }
 
 .footer-last-user__title{
-  @include font-size(16);
+  font-size: 16px;
   // margin-bottom: 0;
 }
 
 .footer-tags{
   padding-top: 45px;
   &__title{
-    @include font-size(16);
+    font-size: 16px;
   }
   &__item{
-    @include font-size(11);
+    font-size: 11px;
     color: #b9b9b9;
     // display: inline-block;
     padding: 8px 10px;
@@ -711,7 +710,7 @@ footer.main{
     margin-right: 3px;
     float: left;
     font-weight: $light;
-    &:hover, &:focus, &:active{
+    &:hover{
       text-decoration: none;
       color: white(1);
       background: $color-orange;
@@ -744,11 +743,11 @@ footer.main{
     float: none;
   }
   &__title{
-    @include font-size(12);
+    font-size: 11px;
     margin-right: 5px;
   }
   &__icon{
-    @include font-size(20);
+    font-size: 20px;
     margin-top: -5px;
     display: inline-block;
     margin-right: 2px;
@@ -757,7 +756,7 @@ footer.main{
 
 .copyright-text{
   @extend %float-left;
-  @include font-size(12);
+  font-size: 12px;
   margin-right: 15px;
   @media(max-width: 1200px){
     display: table;
@@ -766,7 +765,7 @@ footer.main{
   }
   &__item{
     @extend %float-left;
-    @include font-size(12);
+    font-size: 12px;
     margin-right: 10px;
     &:last-child{
       margin-right: 0;
@@ -796,9 +795,9 @@ footer.main{
     }
   }
   &__link{
-    @include font-size(12);
+    font-size: 12px;
     color: $color-orange;
-    &:hover, &:focus, &:active{
+    &:hover{
       color: $color-orange;
     }
   }
@@ -826,39 +825,39 @@ footer.main{
     width: 30px;
     height: 30px;
     margin-top: -7px;
-    @include font-size(16);
+    font-size: 16px;
     &.vk{
-      &:hover, &:focus, &:active{
+      &:hover{
         color: $color-vk;
         // background: $color-orange;
       }
     }
     &.odnoklassniki{
-      &:hover, &:focus, &:active{
+      &:hover{
         color: $color-odnoklassniki;
         // background: $color-orange;
       }
     }
     &.twitter{
-      &:hover, &:focus, &:active{
+      &:hover{
         color: $color-mail;
         // background: $color-orange;
       }
     }
     &.google{
-      &:hover, &:focus, &:active{
+      &:hover{
         color: $color-google;
         // background: $color-orange;
       }
     }
     &.facebook{
-      &:hover, &:focus, &:active{
+      &:hover{
         color: $color-facebook;
         // background: $color-orange;
       }
     }
     &.rss{
-      &:hover, &:focus, &:active{
+      &:hover{
         // color: white(1);
         color: $color-orange;
       }
@@ -933,7 +932,7 @@ footer.main{
     }
   }
   &__text{
-    &:hover, &:focus, &:active{
+    &:hover{
       color: #FFF;
     }
   }
@@ -951,7 +950,7 @@ footer.main{
     border-bottom: 1px #f1f1f1 solid;
   }
   &__text{
-    @include font-size(13);
+    font-size: 13px;
     color: #6C707C;
   }
 }
@@ -959,7 +958,7 @@ footer.main{
 section.welcome-block{
   .white-block{
     &__title{
-      @include font-size(30);
+      font-size: 30px;
     }
   }
 }
@@ -973,7 +972,7 @@ section.forums-answer{
 
   }
   &__ico{
-    @include font-size(20);
+    font-size: 20px;
     color: #B1B2B7;
   }
   &__item{
@@ -982,18 +981,19 @@ section.forums-answer{
     padding-bottom: 5px;
   }
   &__text{
-    @include font-size(13);
+    font-size: 13px;
     color: $color-orange;
   }
   &__title{
-    @include font-size(18);
+    font-size: 18px;
     // font-weight: $open-sans-bold;
     color: #192637;
     margin-bottom: 10px;
+    font-family: $open-sans;
   }
   &__footer{
     &__text{
-      @include font-size(12);
+      font-size: 12px;
       color: #B1B2B7;
     }
     &__count{
@@ -1018,7 +1018,7 @@ section.forums-answer{
     bottom: 0;
     color: #192637;
     background: white(.7);
-    @include font-size(16);
+    font-size: 16px;
     padding: 14px 20px;
   }
 }
@@ -1033,10 +1033,10 @@ section.forums-answer{
     padding-bottom: 20px;
   }
   &__title{
-    @include font-size(18);
+    font-size: 18px;
     color: #192637;
     margin-bottom: 12px;
-
+    font-family: $open-sans;
   }
   &__img{
     margin-top: 8px;
@@ -1047,16 +1047,16 @@ section.forums-answer{
   }
   &__text{
     color: $color-orange;
-    @include font-size(12);
+    font-size: 12px;
   }
   &__ico{
-    @include font-size(20);
+    font-size: 20px;
     color: #919191;
   }
   &__demo-text{
     margin-top: 20px;
     &--link{
-      color: $color-orange;
+      // color: $color-orange;
     }
   }
 }

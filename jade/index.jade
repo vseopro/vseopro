@@ -29,18 +29,19 @@ block content
       .col-md-8
         section.forums-answer
           .white-block
-            h3.white-block__title.mt0 <span class="icon-lightbulb"></span> Ответы с форума
+            h4.white-block__title.mt0 <span class="icon-lightbulb"></span> Ответы с форума
             .forums-answer__wrap
               -for(var i = 0; i < 3; i++)
                 .forums-answer__item
-                  span.forums-answer__title.text-overflow.text-bold Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты
+                  h2.forums-answer__title.text-overflow.text-bold
+                    a(href="#") Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты
                   .row
                     .col-md-3
-                      p.text-overflow.text-light.forums-answer__text <span class="icon-user forums-answer__ico"></span> Admin
+                      a(href="#").link.text-overflow.text-light.forums-answer__text <span class="icon-user forums-answer__ico"></span> Admin
                     .col-md-3
-                      p.text-overflow.text-light.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 03.05.2510
+                      a(href="#").link.text-overflow.text-light.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 03.05.2510
                     .col-md-6
-                      p.text-overflow.text-light.forums-answer__text <span class="icon-comment-1 forums-answer__ico"></span> Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао
+                      a(href="#").link.text-overflow.text-light.forums-answer__text <span class="icon-comment-1 forums-answer__ico"></span> Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао
 
             .forums-answer__footer
               .row
@@ -49,37 +50,40 @@ block content
                     span.forums-answer__footer__count 523564
                 .col-md-4
                   span.forums-answer__footer__text Количество сообщений:
-                    span.forums-answer__footer__count 523564
+                    span.forums-answer__footer__count 8255
                 .col-md-5
                   span.forums-answer__footer__text Количество пользователей:
-                    span.forums-answer__footer__count 523564
+                    span.forums-answer__footer__count 62364
+
         section.last-news
           .white-block
-            h3.white-block__title.mt0 <span class="icon-bookmark"></span> Последние новости
+            h4.white-block__title.mt0 <span class="icon-bookmark"></span> Последние новости
             .last-news__wrap
               -for(var i = 0; i < 10; i++)
                 .last-news__item
                   .row
                     .col-md-4
-                      img(src="img/img_demo_last-news.jpg").img-responsive.last-news__img
+                      img(src="img/img_demo_last-news.jpg" alt="last news img").img-responsive.last-news__img
                     .col-md-8
-                      span.text-bold.db.last-news__title Горячие новости дня затоплен цукцук ук служба Яндекс. Рефераты. H2
+                      h2.text-bold.db.last-news__title
+                        a(href="#") Горячие новости дня затоплен цукцук ук служба Яндекс. Рефераты.
                       .row
-                        .col-sm-4
-                          span.last-news__text.text-light <span class="icon-user last-news__ico"></span> Admin
-                        .col-sm-4
-                          span.last-news__text.text-light <span class="icon-calendar last-news__ico"></span> 03.05.2510
-                        .col-sm-4
-                          span.last-news__text.text-light <span class="icon-folder-open last-news__ico"></span> photoshop
+                        .col-sm-4.col-md-4
+                          a(href="#").link.last-news__text.text-light <span class="icon-user last-news__ico"></span> Admin
+                        .col-sm-4.col-md-4
+                          a(href="#").link.last-news__text.text-light <span class="icon-calendar last-news__ico"></span> 03.05.2510
+                        .col-sm-4.col-md-4
+                          a(href="#").link.last-news__text.text-light <span class="icon-folder-open last-news__ico"></span> photoshop
 
                       .last-news__demo-text
-                        p.mb0 Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена  ываыва ываыва ываыва ываываварв ываыва затоплен служба  затоплен служба  <br> фывф ывфыв фывфы <a href="#" class="last-news__demo-text--link">Читать далее...</a>
+                        p.mb0 Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена  ываыва ываыва ываыва ываываварв ываыва затоплен служба  затоплен служба  <br> фывф ывфыв фывфы <a href="#" class="last-news__demo-text--link link">Читать далее...</a>
+            .last-news__pagination
 
       <!-- сайдбар -->
       .col-xs-4.visible-md.visible-lg
         section.editors-choice
           .white-block
-            h4.white-block__title.mt0 <span class="icon-award"></span> Выбор редакции
+            h5.white-block__title.mt0 <span class="icon-award"></span> Выбор редакции
             .editors-choice__wrap.pr
               img(src="img/img_demo_sidebar_image.jpg" alt="editors choice img").editors-choice__img
               span.editors-choice__text.text-owerflow Ай фон на запчасти подходи Ай фон на запчасти подходи Ай фон на запчасти подходи

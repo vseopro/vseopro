@@ -1,30 +1,30 @@
-var gulp         = require('gulp');
-var fs           = require('fs');
+var gulp                 = require('gulp');
+var fs                   = require('fs');
+
 // html compile
-var jade         = require('gulp-jade');
-var prettify     = require('gulp-html-prettify');
+var jade                 = require('gulp-jade');
+var prettify             = require('gulp-html-prettify');
 
 // css compile
-var sass         = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var csso         = require('gulp-csso');
-var csscomb      = require('gulp-csscomb');
-var cssbeautify  = require('gulp-cssbeautify');
-var cmq          = require('gulp-combine-media-queries');
+var sass                 = require('gulp-sass');
+var csso                 = require('gulp-csso');
+var csscomb              = require('gulp-csscomb');
+var cssbeautify          = require('gulp-cssbeautify');
 
-// svg compile
-var svgo         = require('gulp-svgo');
-var svgSprite    = require("gulp-svg-sprite");
+var postcss              = require('gulp-postcss');
+var autoprefixer         = require('autoprefixer-core');
+var postcssPseudoContent = require('postcss-pseudo-elements-content');
+var rucksack             = require('gulp-rucksack');
+var postcssFocus         = require('postcss-focus');
+var pxtorem              = require('postcss-pxtorem');
+var selector             = require('postcss-custom-selectors')
+var mqpacker             = require("css-mqpacker");
 
 // coffee compile
-// var coffee    = require('gulp-coffee');
-var coffeex      = require('gulp-coffee-react');
-var ftp          = require( 'vinyl-ftp' );
+var coffee               = require('gulp-coffee');
 
-var browserSync  = require('browser-sync');
-var reload       = browserSync.reload;
-
-var FTPconfig    = require('./config').ftpConfig;
+var browserSync          = require('browser-sync');
+var reload               = browserSync.reload;
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -38,46 +38,6 @@ gulp.task('browser-sync', function() {
 gulp.task('reload', function () {
     browserSync.reload();
 });
-
-gulp.task('sprite', function() {
-    var config = {
-        dest : '.',
-        mode : {
-            shape:{
-                dimension:{
-                    attributes: true
-                }
-            },
-            css : {
-                prefix: ".ico__%s",
-                dest : './build/test',
-                layout:'diagonal',
-                dimensions: true,
-                sprite : '../img/sprite.svg',
-                render : {
-                     // css : {dest : 'css/sprite.css'},
-                     scss : {
-                        dest : '../../scss/meta/_sprite.scss'
-                     }
-                },
-            }
-        }
-    };
-    gulp.src('./svg/*.svg')
-        .pipe(svgSprite(config))
-        .pipe(gulp.dest('./'));
-})
-
-gulp.task( 'upload', function() {
-    var conn = ftp.create( FTPconfig );
-    var globs = [
-        './build/**'
-    ];
-
-    return gulp.src( globs, { base: './build/', buffer: false } )
-        .pipe( conn.dest( '/' ) );
-} );
-
 
 gulp.task('jade', function(){
     var dataJSON = JSON.parse(fs.readFileSync('./json/config.json', 'utf-8'));
@@ -96,27 +56,33 @@ gulp.task('jade', function(){
 
 gulp.task('coffee', function() {
   gulp.src('./coffee/**/*.coffee')
-    // .pipe(coffee())
-    .pipe(coffeex())
+    .pipe(coffee())
     .pipe(gulp.dest('./build/js/'))
     .pipe(reload({stream:true}));
 });
 
 gulp.task('sass', function () {
+    var processors = [
+        autoprefixer({browsers: ['ie >= 8', 'last 3 versions', '> 2%']}),
+        pxtorem({
+            root_value: 14,
+            selector_black_list: ['html'],
+        }),
+        rucksack,
+        postcssPseudoContent,
+        postcssFocus,
+        mqpacker,
+        selector
+    ];
+
     gulp.src(['./scss/style.scss'])
         .pipe(sass({
             outputStyle: 'nested',
             errLogToConsole: true
         }))
-        .pipe(autoprefixer({
-            browsers: ['ie >= 8', 'last 3 versions', '> 2%'],
-            cascade: false
-        }))
-        .pipe(cmq())
+        .pipe(postcss(processors))
         .pipe(csso())
-        .pipe(cssbeautify({
-            autosemicolon: true
-        }))
+        .pipe(cssbeautify())
         .pipe(csscomb())
         .pipe(gulp.dest('./build/css'))
         .pipe(reload({stream:true}));
@@ -125,7 +91,6 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./coffee/**/*.coffee', ['coffee']);
-    gulp.watch('./svg/**/*.svg', ['sprite']);
     gulp.watch(['./jade/**/*.jade', './json/**/*.json'], ['jade']);
 });
 
@@ -134,7 +99,6 @@ gulp.task('default',
         'watch',
         'sass',
         'jade',
-        'sprite',
         'coffee',
         'browser-sync'
     ]

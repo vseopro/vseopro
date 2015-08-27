@@ -25,6 +25,8 @@ footer.main.visible-lg.visible-md
                 p.text-white.footer-social__title Мы в твиттере
               .col-xs-5
                 a(href="#").btn.btn-orange.pull-right Перейти
+          .footer-social__block
+            img(src="http://placehold.it/270x330" alt="social img").img-responsive
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           .footer-social__item
             .row
@@ -32,6 +34,8 @@ footer.main.visible-lg.visible-md
                 p.text-white.footer-social__title Мы в Facebook
               .col-xs-5
                 a(href="#").btn.btn-orange.pull-right Перейти
+          .footer-social__block
+            img(src="http://placehold.it/270x330" alt="social img").img-responsive
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           .footer-social__item
             .row
@@ -39,6 +43,8 @@ footer.main.visible-lg.visible-md
                 p.text-white.footer-social__title Мы Вконтакте
               .col-xs-5
                 a(href="#").btn.btn-orange.pull-right Перейти
+          .footer-social__block
+            img(src="http://placehold.it/270x330" alt="social img").img-responsive
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           .footer-social__item
             .row
@@ -46,6 +52,8 @@ footer.main.visible-lg.visible-md
                 p.text-white.footer-social__title Мы в Одноклассниках
               .col-xs-5
                 a(href="#").btn.btn-orange.pull-right Перейти
+          .footer-social__block
+            img(src="http://placehold.it/270x330" alt="social img").img-responsive
 
   .container
     .row
@@ -58,7 +66,7 @@ footer.main.visible-lg.visible-md
                 .row
                   .col-xs-6
                     .footer-last-user__img
-                      img(src="http://placehold.it/67x67").img-responsive
+                      img(src="http://placehold.it/67x67" alt="last user img").img-responsive
                   .col-xs-6
                     span.db.footer-last-user__text сейчас
                       span(class="footer-last-user__status #{ i == 4 ? 'off' : ''}") #{ i == 4 ? 'OFF' : 'ON'}
@@ -68,7 +76,7 @@ footer.main.visible-lg.visible-md
 
       .col-xs-12.col-sm-6.col-md-6.col-lg-6
         .footer-tags.clearfix
-          p.footer-tags__title.text-white <span class="icon-tag"> Теги сайта
+          p.footer-tags__title.text-white <span class="icon-tag"></span> Теги сайта
           -for(var i = 0; i < 50; i++)
             a(href="#").db.footer-tags__item Страница #{i * 33}
         .show-all-tags
