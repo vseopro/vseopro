@@ -9,8 +9,11 @@
         return $('html').toggleClass('open-right-mobile-menu');
       }
     });
-    return $('.mobile-overlay').on('click', function() {
+    $('.mobile-overlay').on('click', function() {
       return $('html').attr("class", '');
+    });
+    return $(".login-form, .search-form").on("click", function() {
+      return false;
     });
   });
 

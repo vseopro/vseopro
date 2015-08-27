@@ -3,10 +3,14 @@ html{
 }
 
 body{
-  font-family: $open-sans;
-  font-weight: $regular;
+  font-family: $regular;
   color: $color;
   background: $color-gray;
+
+  // -webkit-font-smoothing: subpixel-antialiased !important;
+  // -webkit-backface-visibility: hidden;
+  // -moz-backface-visibility:    hidden;
+  // -ms-backface-visibility:     hidden;
 }
 
 main{
@@ -15,7 +19,7 @@ main{
 }
 
 :--heading{
-  font-family: $bold;
+  font-family: $roboto;
 }
 
 h1{
@@ -37,6 +41,10 @@ h6{
 
 }
 
+a{
+  color: $color-orange;
+}
+
 a,
 .btn,
 .nav-search__find,
@@ -49,6 +57,15 @@ a.link{
   text-decoration: none;
   &:hover{
     color: $color-orange;
+    text-decoration: underline;
+  }
+}
+
+.dark-blue-link{
+  color: #192637;
+  text-decoration: none;
+  &:hover{
+    color: lighten(#192637, 5%);
     text-decoration: underline;
   }
 }
@@ -70,9 +87,17 @@ a.link{
 }
 
 .text-light{
-  font-weight: $light;
+  font-family: $light;
 }
 
 .text-bold{
-  font-weight: $open-sans-bold;
+  font-family: $bold;
+}
+
+.hover-transform-before{
+  @extend %hover-transform-before;
+}
+
+.hover-transform-after{
+  @extend %hover-transform-after;
 }

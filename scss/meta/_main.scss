@@ -1,11 +1,3 @@
-.hover-transform-before{
-  @extend %hover-transform-before;
-}
-
-.hover-transform-after{
-  @extend %hover-transform-after;
-}
-
 .open-left-mobile-menu,
 .open-right-mobile-menu{
   @media(max-width: 992px){
@@ -279,37 +271,43 @@ nav.main{
     &:hover{
       border-color: $color-orange;
       color: $color-orange;
-      &:after, &:before{
-        background: $color-orange;
-        transition: all 0.17s ease-in-out;
-      }
-    }
-    &:focus, &:active{
-      // color: white(1);
-    }
-    &:after, &:before{
-      position: absolute;
-      content:"";
-      background: white(1);
-      height: 2px;
-      width: 7px;
-      top:50%;
-      // margin-top: -3px;
-      right: 8px;
-    }
-    &:before{
-      transform: rotate(45deg);
-    }
-    &:after{
-      transform: rotate(-45deg);
-      right: 4px;
     }
   }
   &__has-menu{
     // position: relative;
+    > .first-menu__link{
+      &:hover{
+        &:after, &:before{
+          background: $color-orange;
+          transition: all 0.17s ease-in-out;
+        }
+      }
+      &:after, &:before{
+        position: absolute;
+        content:"";
+        background: white(1);
+        height: 2px;
+        width: 7px;
+        top:50%;
+        // margin-top: -3px;
+        right: 8px;
+      }
+      &:before{
+        transform: rotate(45deg);
+      }
+      &:after{
+        transform: rotate(-45deg);
+        right: 4px;
+      }
+    }
     &:hover{
       > .first-menu__link{
-
+        border-color: $color-orange;
+        color: $color-orange;
+        &:after, &:before{
+          background: $color-orange;
+          // transition: all 0.17s ease-in-out;
+        }
       }
       > .second-menu__list{
         @extend %hover-transform-after;
@@ -351,33 +349,44 @@ nav.main{
     position: relative;
     &:hover{
       color: $color-orange;
-      &:after, &:before{
-        background: $color-orange;
-        transition: all 0.17s ease-in-out;
-      }
-    }
-    &::after, &::before{
-      position: absolute;
-      content:"";
-      background: white(1);
-      height: 2px;
-      width: 7px;
-      top:50%;
-      right: 10px;
-      margin-top: -2px;
-    }
-    &::before{
-      transform: rotate(45deg);
-    }
-    &::after{
-      transform: rotate(-45deg);
-      right: 10px;
-      margin-top: 2px;
     }
   }
   &__has-menu{
     position: relative;
+    > .second-menu__link{
+      &:hover{
+        &:after, &:before{
+          background: $color-orange;
+          transition: all 0.17s ease-in-out;
+        }
+      }
+      &::after, &::before{
+        position: absolute;
+        content:"";
+        background: white(1);
+        height: 2px;
+        width: 7px;
+        top:50%;
+        right: 10px;
+        margin-top: -2px;
+      }
+      &::before{
+        transform: rotate(45deg);
+      }
+      &::after{
+        transform: rotate(-45deg);
+        right: 10px;
+        margin-top: 2px;
+      }
+    }
     &:hover{
+      > .second-menu__link{
+        color: $color-orange;
+        &:after, &:before{
+          background: $color-orange;
+          // transition: all 0.17s ease-in-out;
+        }
+      }
       > .third-menu__list{
         @extend %hover-transform-after;
         @media(max-width: 992px){
@@ -502,7 +511,7 @@ nav.main{
 
   }
   &__description{
-    font-weight: $light;
+    font-family: $light;
   }
   &__col{
     @media(min-width: 992px){
@@ -637,7 +646,7 @@ footer.main{
 .footer-social__title{
   margin-bottom: 0;
   margin-top: 8px;
-  font-weight: $light;
+  font-family: $light;
   font-size: 13px;
 }
 
@@ -676,7 +685,7 @@ footer.main{
 
 .footer-last-user__text{
   font-size: 10px;
-  font-weight: $light;
+  font-family: $light;
   margin-bottom: 4px;
   color: #ccc;
 }
@@ -709,7 +718,7 @@ footer.main{
     margin-bottom: 3px;
     margin-right: 3px;
     float: left;
-    font-weight: $light;
+    font-family: $light;
     &:hover{
       text-decoration: none;
       color: white(1);
@@ -989,7 +998,7 @@ section.forums-answer{
     // font-weight: $open-sans-bold;
     color: #192637;
     margin-bottom: 10px;
-    font-family: $open-sans;
+    // font-family: $open-sans;
   }
   &__footer{
     &__text{
@@ -1036,7 +1045,7 @@ section.forums-answer{
     font-size: 18px;
     color: #192637;
     margin-bottom: 12px;
-    font-family: $open-sans;
+    // font-family: $open-sans;
   }
   &__img{
     margin-top: 8px;

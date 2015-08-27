@@ -9,3 +9,5 @@ $ ->
   $('.mobile-overlay').on 'click', ->
     $('html').attr("class", '')
 
+  $(".login-form, .search-form").on "click", ->
+    return no
