@@ -20,11 +20,36 @@ var pxtorem              = require('postcss-pxtorem');
 var selector             = require('postcss-custom-selectors')
 var mqpacker             = require("css-mqpacker");
 
-// coffee compile
-var coffee               = require('gulp-coffee');
-
 var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
+
+var postCSSFocus = function (css, opts) {
+    css.walkRules(function (rule) {
+        if ( rule.selector.indexOf(':hover') !== -1 ) {
+            var focuses = [];
+            rule.selectors.forEach(function (selector) {
+                if ( selector.indexOf(':hover') !== -1 ) {
+                    focuses.push(selector.replace(/:hover/g, ':focus'));
+                }
+            });
+            if ( focuses.length ) {
+                rule.selectors = rule.selectors.concat(focuses);
+            }
+        }
+
+        if ( rule.selector.indexOf(':only-hover') !== -1 ) {
+            var hovered = [];
+            rule.selectors.forEach(function (selector) {
+                if ( selector.indexOf(':only-hover') !== -1 ) {
+                    hovered.push(selector.replace(/:only-hover/g, ':hover'));
+                }
+            });
+            if ( hovered.length ) {
+                rule.selectors = hovered;
+            }
+        }
+    });
+};
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -54,13 +79,6 @@ gulp.task('jade', function(){
         .pipe(reload({stream:true}));
 });
 
-gulp.task('coffee', function() {
-  gulp.src('./coffee/**/*.coffee')
-    .pipe(coffee())
-    .pipe(gulp.dest('./build/js/'))
-    .pipe(reload({stream:true}));
-});
-
 gulp.task('sass', function () {
     var processors = [
         autoprefixer({browsers: ['ie >= 8', 'last 3 versions', '> 2%']}),
@@ -72,9 +90,9 @@ gulp.task('sass', function () {
             fallbacks: false
         }),
         postcssPseudoContent,
-        postcssFocus,
         mqpacker,
-        selector
+        selector,
+        postCSSFocus
     ];
 
     gulp.src(['./scss/style.scss'])
@@ -92,7 +110,6 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
-    gulp.watch('./coffee/**/*.coffee', ['coffee']);
     gulp.watch(['./jade/**/*.jade', './json/**/*.json'], ['jade']);
 });
 
@@ -101,7 +118,6 @@ gulp.task('default',
         'watch',
         'sass',
         'jade',
-        'coffee',
         'browser-sync'
     ]
 );

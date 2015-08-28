@@ -20,7 +20,6 @@
     "browser-sync": "^2.6.4",
     "css-mqpacker": "^4.0.0",
     "gulp": "^3.8.11",
-    "gulp-coffee": "^2.3.1",
     "gulp-cssbeautify": "^0.1.3",
     "gulp-csscomb": "^3.0.4",
     "gulp-csso": "^1.0.0",
@@ -30,7 +29,6 @@
     "gulp-sass": "^2.0.4",
     "postcss-custom-selector": "^1.0.0",
     "postcss-custom-selectors": "^3.0.0",
-    "postcss-focus": "^1.0.0",
     "postcss-pseudo-elements-content": "^1.0.0",
     "postcss-pxtorem": "^3.0.0",
     "rucksack-css": "^0.6.7"

@@ -436,7 +436,8 @@ nav.main{
   }
   .dropdown{
     float: left;
-    position: static !important;
+    // position: static !important;
+    position: static;
   }
   .dropdown-menu{
     z-index: 1;
@@ -460,9 +461,13 @@ nav.main{
   &__login{
     color: white(1);
     border-top: 2px transparent solid;
-    &:hover{
+    &:only-hover{
       color: $color-orange;
       border-color: $color-orange;
+    }
+    &:focus{
+     color: #fff;
+     border-color: white(0);
     }
   }
   &__find{

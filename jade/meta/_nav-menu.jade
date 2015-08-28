@@ -249,18 +249,17 @@ nav.main.open-menu-position
       //- .nav-search.visible-md.visible-lg
       .nav-search
         .dropdown
-          a#search-form__label(data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
-            span.dib.nav-search__find.icon-search.cur.no-select
-          .search-form.hover-transform-before.dropdown-menu(aria-labelledby="search-form__label")
+          a(data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")#search-form__label.nav-search__find.db.no-underline
+            span.icon-search
+          .search-form.hover-transform-before.dropdown-menu.no-select(aria-labelledby="search-form__label")
             form.search-form__form.pr
               span.icon-search.search-form__ico
               input(type='text' placeholder="Введите текст для поиска").search-form__field.fluid.no-outline
               button(type="submit").search-form__submit.no-outline
                 span.icon-right
         .dropdown
-          a#login-form__label(data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
-            span.dib.nav-search__login.icon-login.cur.no-select Вход
-          .login-form.hover-transform-before.dropdown-menu(aria-labelledby="login-form__label")
+          a(data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")#login-form__label.nav-search__login.db.no-underline <span class="icon-login"></span> Вход
+          .login-form.hover-transform-before.dropdown-menu.no-select(aria-labelledby="login-form__label")
             .container-fluid
               .row
                 .col-md-4.login-form__col
