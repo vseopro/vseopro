@@ -15,7 +15,6 @@ var postcss              = require('gulp-postcss');
 var autoprefixer         = require('autoprefixer-core');
 var postcssPseudoContent = require('postcss-pseudo-elements-content');
 var rucksack             = require('rucksack-css');
-var postcssFocus         = require('postcss-focus');
 var pxtorem              = require('postcss-pxtorem');
 var selector             = require('postcss-custom-selectors')
 var mqpacker             = require("css-mqpacker");
@@ -70,7 +69,8 @@ gulp.task('jade', function(){
     gulp.src('./jade/!(_)*.jade')
 
         .pipe(jade({
-            locals: dataJSON
+            locals: dataJSON,
+            pretty: true
         }))
 
         .pipe(prettify({indent_char: '  ', indent_size: 2}))
@@ -87,7 +87,8 @@ gulp.task('sass', function () {
             selector_black_list: ['html'],
         }),
         rucksack({
-            fallbacks: false
+            fallbacks: false,
+            autoprefixer: false
         }),
         postcssPseudoContent,
         mqpacker,

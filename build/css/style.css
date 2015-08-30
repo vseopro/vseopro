@@ -410,6 +410,14 @@ h6 {
     font-family: 'roboto-slab-bold',sans-serif;
 }
 
+h4 {
+    font-size: 1.71429rem;
+}
+
+h5 {
+    font-size: 1.28571rem;
+}
+
 a {
     color: #ff690b;
 }
@@ -682,9 +690,22 @@ header.main {
     padding-top: 12px;
 }
 
-nav.main {
-    margin-bottom: 30px;
+nav.main,
+.affix-wrap {
     background: #192637;
+}
+
+.affix-wrap {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.nav-afix.affix {
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
 }
 
 .first-menu__item {
@@ -698,7 +719,7 @@ nav.main {
 .first-menu__link {
     border-top: 2px solid transparent;
     font-size: 1.07143rem;
-    padding: 14px 19px 16px 10px;
+    padding: 14px 18px 13px 10px;
     color: #fff;
     position: relative;
 }
@@ -899,12 +920,12 @@ nav.main {
 }
 
 .nav-search__find {
-    padding: 12px 4px 11px;
+    padding: 11px 4px 9px;
     font-size: 1.42857rem;
 }
 
 .nav-search__login {
-    padding: 14px 20px 16px;
+    padding: 13px 20px 14px;
     font-size: 1.07143rem;
 }
 
@@ -1079,10 +1100,6 @@ footer.main {
     margin-bottom: 20px;
 }
 
-.footer-last-user {
-    padding-top: 45px;
-}
-
 .footer-last-user__title,
 .footer-tags__title {
     position: relative;
@@ -1098,6 +1115,10 @@ footer.main {
     width: 68px;
     height: 1px;
     content: '';
+}
+
+.footer-last-user {
+    padding-top: 45px;
 }
 
 .footer-last-user__img {
@@ -1378,7 +1399,7 @@ section.welcome-block .white-block__title {
 .forums-answer__item {
     border-bottom: 1px #f1f1f1 solid;
     margin-bottom: 14px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 
 .forums-answer__text {
@@ -1390,6 +1411,10 @@ section.welcome-block .white-block__title {
     font-size: 1.28571rem;
     color: #192637;
     margin-bottom: 10px;
+}
+
+.forums-answer__footer {
+    margin-bottom: 1px;
 }
 
 .forums-answer__footer__text {
@@ -1420,14 +1445,16 @@ section.welcome-block .white-block__title {
 
 .last-news__item {
     border-bottom: 1px #f1f1f1 solid;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 13px;
+    padding-bottom: 14px;
 }
 
 .last-news__title {
     font-size: 1.28571rem;
     color: #192637;
     margin-bottom: 12px;
+    margin-top: 3px;
+    line-height: 1.57143rem;
 }
 
 .last-news__img {
@@ -1446,6 +1473,45 @@ section.welcome-block .white-block__title {
 
 .last-news__demo-text {
     margin-top: 20px;
+}
+
+.sidebar-login-form__input {
+    border: 1px #d9d9d9 solid;
+    font-size: .85714rem;
+    height: 40px;
+    margin-bottom: 20px;
+    background: #f7f7f7;
+    padding: 0 20px;
+}
+
+.sidebar-login-form__input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.sidebar-login-form__input::-moz-placeholder {
+    color: #999;
+}
+
+.sidebar-login-form__input:-ms-input-placeholder {
+    color: #999;
+}
+
+.sidebar-login-form__input::placeholder {
+    color: #999;
+}
+
+.sidebar-login-form__input:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-login-form__input:hover,
+.sidebar-login-form__input:focus {
+    border-color: #b3b3b3;
+}
+
+.sidebar-login-form__enter,
+.sidebar-login-form__register {
+    padding: 14px 0;
 }
 
 @media (min-width:992px) {
@@ -1567,6 +1633,10 @@ section.welcome-block .white-block__title {
         position: static;
         width: 100%;
         box-shadow: none;
+    }
+
+    .nav-afix.affix {
+        position: static;
     }
 
     .nav-main {

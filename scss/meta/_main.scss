@@ -235,8 +235,28 @@ header.main{
 }
 
 nav.main{
+  // margin-bottom: 30px;
+  background: $color-black;
+}
+
+.affix-wrap{
+  height: 50px;
   margin-bottom: 30px;
   background: $color-black;
+}
+
+.nav-afix{
+  &.affix{
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    @media(max-width: 992px){
+      position: static;
+      // position: static !important;
+    }
+  }
 }
 
 .nav-main{
@@ -265,7 +285,7 @@ nav.main{
   &__link{
     border-top: 2px solid transparent;
     font-size: 15px;
-    padding: 14px 19px 16px 10px;
+    padding: 14px 18px 13px 10px;
     color: white(1);
     position: relative;
     &:hover{
@@ -471,11 +491,11 @@ nav.main{
     }
   }
   &__find{
-    padding: 12px 4px 11px;
+    padding: 11px 4px 9px;
     font-size: 20px;
   }
   &__login{
-    padding: 14px 20px 16px;
+    padding: 13px 20px 14px;
     font-size: 15px;
   }
 }
@@ -561,50 +581,48 @@ nav.main{
 
 .search-form{
   padding: 10px 15px;
-}
+  &__form{
 
-.search-form__form{
-
-}
-.search-form__ico{
-  color: white(1);
-  font-size: 20px;
-  position: absolute;
-  top: 6px;
-  left: 10px;
-}
-
-.search-form__field{
-  height: 40px;
-  background: transparent;
-  border: 1px $color-orange solid;
-  color: white(1);
-  padding-left: 40px;
-  &::placeholder {
+  }
+  &__ico{
     color: white(1);
+    font-size: 20px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
   }
-  &::-ms-clear {
-    display: none;
+  &__field{
+    height: 40px;
+    background: transparent;
+    border: 1px $color-orange solid;
+    color: white(1);
+    padding-left: 40px;
+    &::placeholder {
+      color: white(1);
+    }
+    &::-ms-clear {
+      display: none;
+    }
+  }
+  &__submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #192637;
+    // border-width: 0 0 0 1px;
+    border: 1px $color-orange solid;
+    color: white(1);
+    padding: 0 30px;
+    &:hover{
+      background: $color-orange;
+    }
+    @media(min-width:992px){
+      background: transparent;
+    }
   }
 }
 
-.search-form__submit{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #192637;
-  // border-width: 0 0 0 1px;
-  border: 1px $color-orange solid;
-  color: white(1);
-  padding: 0 30px;
-  &:hover{
-    background: $color-orange;
-  }
-  @media(min-width:992px){
-    background: transparent;
-  }
-}
 
 .nav-main__button-label,
 .login-form__button-label{
@@ -622,52 +640,41 @@ footer.main{
   margin-top: 45px;
   border: 1px $color-black solid;
   padding: 6px 28px 14px;
-}
+  &__title{
+    font-size: 16px;
+    color: $color-orange;
+  }
+  &__description{
 
-.footer-subs__title{
-  font-size: 16px;
-  color: $color-orange;
-}
-
-.footer-subs__description{
-
-}
-
-.footer-subs__input{
-  height: 34px;
-  margin-top: 25px;
-  padding-left: 20px;
-  border: 1px #d9d9d9 solid;
-}
-
-.footer-subs__btn{
-  margin-top: 25px;
+  }
+  &__input{
+    height: 34px;
+    margin-top: 25px;
+    padding-left: 20px;
+    border: 1px #d9d9d9 solid;
+  }
+  &__btn{
+    margin-top: 25px;
+  }
 }
 
 .footer-social{
-
-}
-
-.footer-social__title{
-  margin-bottom: 0;
-  margin-top: 8px;
-  font-family: $light;
-  font-size: 13px;
-}
-
-.footer-social__item{
-  padding-top: 37px;
-  border-bottom: 1px $color-black solid;
-  padding-bottom: 10px;
+  &__title{
+    margin-bottom: 0;
+    margin-top: 8px;
+    font-family: $light;
+    font-size: 13px;
+  }
+  &__item{
+    padding-top: 37px;
+    border-bottom: 1px $color-black solid;
+    padding-bottom: 10px;
+  }
 }
 
 .footer-last-user,
 .footer-tags{
   margin-bottom: 20px;
-}
-
-.footer-last-user{
-  padding-top: 45px;
 }
 
 .footer-last-user__title,
@@ -684,28 +691,28 @@ footer.main{
   }
 }
 
-.footer-last-user__img{
-  margin-bottom: 20px;
-}
-
-.footer-last-user__text{
-  font-size: 10px;
-  font-family: $light;
-  margin-bottom: 4px;
-  color: #ccc;
-}
-
-.footer-last-user__status{
-  color: #25CE56;
-  margin-left: 5px;
-  &.off{
-    color: #FB3131;
+.footer-last-user{
+  padding-top: 45px;
+  &__img{
+    margin-bottom: 20px;
   }
-}
-
-.footer-last-user__title{
-  font-size: 16px;
-  // margin-bottom: 0;
+  &__text{
+    font-size: 10px;
+    font-family: $light;
+    margin-bottom: 4px;
+    color: #ccc;
+  }
+  &__status{
+    color: #25CE56;
+    margin-left: 5px;
+    &.off{
+      color: #FB3131;
+    }
+  }
+  &__title{
+    font-size: 16px;
+    // margin-bottom: 0;
+  }
 }
 
 .footer-tags{
@@ -962,6 +969,7 @@ footer.main{
     margin-bottom: 15px;
     color: $color-orange;
     border-bottom: 1px #f1f1f1 solid;
+    // font-size: 24px;
   }
   &__text{
     font-size: 13px;
@@ -992,7 +1000,7 @@ section.forums-answer{
   &__item{
     border-bottom: 1px #f1f1f1 solid;
     margin-bottom: 14px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
   }
   &__text{
     font-size: 13px;
@@ -1000,12 +1008,12 @@ section.forums-answer{
   }
   &__title{
     font-size: 18px;
-    // font-weight: $open-sans-bold;
     color: #192637;
     margin-bottom: 10px;
     // font-family: $open-sans;
   }
   &__footer{
+    margin-bottom: 1px;
     &__text{
       font-size: 12px;
       color: #B1B2B7;
@@ -1043,13 +1051,15 @@ section.forums-answer{
   }
   &__item{
     border-bottom: 1px #f1f1f1 solid;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 13px;
+    padding-bottom: 14px;
   }
   &__title{
     font-size: 18px;
     color: #192637;
     margin-bottom: 12px;
+    margin-top: 3px;
+    line-height: 22px;
     // font-family: $open-sans;
   }
   &__img{
@@ -1072,5 +1082,35 @@ section.forums-answer{
     &--link{
       // color: $color-orange;
     }
+  }
+}
+
+.sidebar-login-form{
+  &__input{
+    border:1px #d9d9d9 solid;
+    font-size: 12px;
+    height: 40px;
+    margin-bottom: 20px;
+    background: #F7F7F7;
+    padding: 0 20px;
+    &::placeholder{
+      color: #999;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:hover{
+      border-color: darken(#d9d9d9, 15%);
+      // @extend %outline-none;
+    }
+  }
+  &__forgot{
+
+  }
+  &__enter{
+    padding: 14px 0;
+  }
+  &__register{
+    padding: 14px 0;
   }
 }
