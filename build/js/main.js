@@ -12,6 +12,7 @@ $(function() {
         $('html').attr("class", '');
     });
 
+    //don't click menu block
     $('.search-form, .login-form').on('click', function(event){
       var events = $._data(document, 'events') || {};
       events = events.click || [];
@@ -33,4 +34,3 @@ $(function() {
       event.stopPropagation(); //Always stop propagation
     });
 });
-

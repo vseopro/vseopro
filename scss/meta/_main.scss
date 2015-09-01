@@ -977,16 +977,12 @@ footer.main{
   }
 }
 
-section.welcome-block{
+.welcome-block{
   .white-block{
     &__title{
       font-size: 30px;
     }
   }
-}
-
-section.forums-answer{
-
 }
 
 .forums-answer{
@@ -1030,7 +1026,8 @@ section.forums-answer{
 
   }
   &__img{
-    width: 100%;
+    // width: 100%;
+    @extend %fluid;
     margin-top: 14px;
   }
   &__text{
@@ -1112,5 +1109,43 @@ section.forums-answer{
   }
   &__register{
     padding: 14px 0;
+  }
+}
+
+.sidebar-subscribe{
+  &__image{
+
+  }
+  &__button{
+    padding: 14px;
+  }
+}
+
+.sidebar-comments{
+  &__avatar{
+    @extend %fluid;
+  }
+  &__item{
+    border-bottom: 1px #eee solid;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  &__autor,
+  &__time,
+  &__demo-comment{
+    font-size: 12px;
+  }
+  &__autor{
+
+  }
+  &__time{
+
+  }
+  &__demo-comment{
+
+  }
+  &__text{
+    color: #192637;
   }
 }

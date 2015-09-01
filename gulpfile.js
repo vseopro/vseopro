@@ -11,13 +11,18 @@ var csso                 = require('gulp-csso');
 var csscomb              = require('gulp-csscomb');
 var cssbeautify          = require('gulp-cssbeautify');
 
+// post css plugin
 var postcss              = require('gulp-postcss');
 var autoprefixer         = require('autoprefixer-core');
 var postcssPseudoContent = require('postcss-pseudo-elements-content');
 var rucksack             = require('rucksack-css');
 var pxtorem              = require('postcss-pxtorem');
-var selector             = require('postcss-custom-selectors')
+var selector             = require('postcss-custom-selectors');
 var mqpacker             = require("css-mqpacker");
+
+// js compile
+var concat               = require('gulp-concat');
+var uglify               = require('gulp-uglify');
 
 var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
@@ -109,8 +114,27 @@ gulp.task('sass', function () {
         .pipe(reload({stream:true}));
 });
 
+gulp.task('uglify', function() {
+  return gulp.src('./build/js/app.js')
+    .pipe(uglify())
+     .pipe(gulp.dest('./build/js/'))
+});
+
+gulp.task('concat', function() {
+  return gulp.src(
+        ['./build/js/jquery.min.js',
+        './build/js/bootstrap.min.js',
+        './build/js/goodshare.js',
+        './build/js/main.js'])
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('./build/js/'))
+});
+
+gulp.task('js', ['concat', 'uglify'])
+
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
+    gulp.watch('./build/js/**/*.js', ['reload']);
     gulp.watch(['./jade/**/*.jade', './json/**/*.json'], ['jade']);
 });
 
