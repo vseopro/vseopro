@@ -68,8 +68,7 @@
 }
 
 .fluid,
-.editors-choice__img,
-.sidebar-comments__avatar {
+.editors-choice__img {
     width: 100%;
 }
 
@@ -195,7 +194,15 @@ h3,
 h4,
 h5,
 h6,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
 h1,
+.h1,
+b,
+strong,
 .text-bold {
     font-family: 'opensans-bold',sans-serif;
 }
@@ -261,25 +268,21 @@ h1,
 .jq-radio {
     top: -1px;
     vertical-align: middle;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     margin: 0 4px 0 0;
-    border: 1px solid #c3c3c3;
+    border: 1px solid #d9d9d9;
     border-radius: 50%;
-    background: #f5f5f5;
-    background: -webkit-linear-gradient(#fff,#e6e6e6);
-    background: linear-gradient(#fff,#e6e6e6);
-    box-shadow: 0 1px 1px rgba(0,0,0,.05),inset -1px -1px #fff,inset 1px -1px #fff;
+    background: #fff;
     cursor: pointer;
 }
 
 .jq-radio.checked .jq-radio__div {
-    width: 10px;
-    height: 10px;
-    margin: 3px 0 0 3px;
+    width: 8px;
+    height: 8px;
+    margin: 5px;
     border-radius: 50%;
-    background: #777;
-    box-shadow: inset 1px 1px 1px rgba(0,0,0,.7);
+    background: #d9d9d9;
 }
 
 .jq-radio.focused {
@@ -490,6 +493,7 @@ h1,
 .jq-selectbox {
     vertical-align: middle;
     cursor: pointer;
+    width: 100%;
 }
 
 .jq-selectbox__select {
@@ -497,25 +501,17 @@ h1,
     padding: 0 45px 0 10px;
     border: 1px solid #ccc;
     border-bottom-color: #b3b3b3;
-    border-radius: 4px;
     background: #f5f5f5;
-    background: -webkit-linear-gradient(#fff,#e6e6e6);
-    background: linear-gradient(#fff,#e6e6e6);
-    box-shadow: inset 1px -1px #f1f1f1,inset -1px 0 #f1f1f1,0 1px 2px rgba(0,0,0,.1);
     color: #333;
-    text-shadow: 1px 1px #fff;
 }
 
 .jq-selectbox__select:hover,
 .jq-selectbox__select:focus {
     background: #e6e6e6;
-    background: -webkit-linear-gradient(#f6f6f6,#e6e6e6);
-    background: linear-gradient(#f6f6f6,#e6e6e6);
 }
 
 .jq-selectbox__select:active {
     background: #f5f5f5;
-    box-shadow: inset 1px 1px 3px #ddd;
 }
 
 .jq-selectbox.focused .jq-selectbox__select {
@@ -535,6 +531,8 @@ h1,
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
+    height: 32px;
+    line-height: 2.28571rem;
 }
 
 .jq-selectbox .placeholder {
@@ -573,12 +571,10 @@ h1,
 .jq-selectbox__dropdown {
     box-sizing: border-box;
     width: 100%;
-    margin: 2px 0 0;
+    margin: -1px 0 0;
     padding: 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
     background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,.2);
 }
 
 .jq-selectbox__search {
@@ -667,9 +663,7 @@ h1,
     padding: 1px;
     border: 1px solid #ccc;
     border-bottom-color: #b3b3b3;
-    border-radius: 4px;
     background: #fff;
-    box-shadow: inset 1px 1px #f1f1f1,0 1px 2px rgba(0,0,0,.1);
     color: #333;
     cursor: default;
 }
@@ -1022,33 +1016,43 @@ main {
     background: #f1f1f1;
 }
 
-h1 {
+h1,
+.h1 {
     font-size: 2.14286rem;
 }
 
-h2 {
+h2,
+.h2 {
     font-size: 1.28571rem;
 }
 
-h3 {
+h3,
+.h3 {
     font-size: 1.57143rem;
 }
 
-h4 {
+h4,
+.h4 {
     font-size: 1.71429rem;
 }
 
-h5 {
-    font-size: 1.28571rem;
+h5,
+.h5 {
+    font-size: 1.42857rem;
 }
 
-h6 {
+h6,
+.h6 {
     font-size: 1.14286rem;
 }
 
 a {
     color: #ff690b;
-    font-size: 1rem;
+}
+
+a:hover,
+a:focus {
+    color: #ff690b;
 }
 
 a,
@@ -1072,6 +1076,10 @@ a.link:focus {
 
 p {
     font-size: 1rem;
+}
+
+p.lead {
+    font-size: 1.28571rem;
 }
 
 .dark-blue-link {
@@ -1104,7 +1112,12 @@ p {
     font-family: 'opensans-light',sans-serif;
 }
 
+blockquote {
+    border-color: #6c707c!important;
+}
+
 .btn {
+    border-radius: 0;
     color: #fff;
 }
 
@@ -1184,6 +1197,19 @@ p {
 .btn-odnoklassniki:hover,
 .btn-odnoklassniki:focus {
     background: #d26f04;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.checkbox label,
+.radio label {
+    padding-left: 0;
 }
 
 #mobile-menu .panel {
@@ -2010,7 +2036,6 @@ footer.main {
 }
 
 .white-block__text {
-    font-size: .92857rem;
     color: #6c707c;
 }
 
@@ -2129,6 +2154,19 @@ footer.main {
     border-color: #b3b3b3;
 }
 
+.sidebar-login-form__link-text {
+    margin-bottom: 18px;
+}
+
+.sidebar-login-form__forgot {
+    font-size: .85714rem;
+    margin-top: 1px;
+}
+
+.sidebar-login-form__label {
+    font-size: .85714rem;
+}
+
 .sidebar-login-form__enter,
 .sidebar-login-form__register {
     padding: 14px 0;
@@ -2145,15 +2183,28 @@ footer.main {
 
 .sidebar-comments__item {
     border-bottom: 1px #eee solid;
+    margin-top: 21px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .sidebar-comments__item:last-child {
     border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .sidebar-comments__autor,
 .sidebar-comments__time,
 .sidebar-comments__demo-comment {
+    font-size: .85714rem;
+}
+
+.sidebar-comments__autor {
+    margin-top: -4px;
+}
+
+.sidebar-comments__link {
     font-size: .85714rem;
 }
 
@@ -2239,27 +2290,30 @@ footer.main {
         font-size: 16px;
     }
 
-    h1 {
+    h1,
+    .h1 {
         font-size: 1.71429rem;
     }
 
-    h2 {
+    h2,
+    .h2 {
         font-size: 1.14286rem;
     }
 
-    h3 {
+    h3,
+    .h3 {
         font-size: 1.42857rem;
     }
 
-    h4 {
+    h4,
+    .h4,
+    h5,
+    .h5 {
         font-size: 1.28571rem;
     }
 
-    h5 {
-        font-size: 1.14286rem;
-    }
-
-    h6 {
+    h6,
+    .h6 {
         font-size: 1rem;
     }
 

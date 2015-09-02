@@ -981,7 +981,7 @@ footer.main{
     // font-size: 24px;
   }
   &__text{
-    font-size: 13px;
+    // font-size: 13px;
     color: #6C707C;
   }
 }
@@ -1110,8 +1110,15 @@ footer.main{
       // @extend %outline-none;
     }
   }
+  &__link-text{
+    margin-bottom: 18px;
+  }
   &__forgot{
-
+    font-size: 12px;
+    margin-top: 1px;
+  }
+  &__label{
+    font-size: 12px;
   }
   &__enter{
     padding: 14px 0;
@@ -1133,12 +1140,17 @@ footer.main{
 
 .sidebar-comments{
   &__avatar{
-    @extend %fluid;
+    // @extend %fluid;
   }
   &__item{
     border-bottom: 1px #eee solid;
+    margin-top: 21px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
     &:last-child{
       border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
   &__autor,
@@ -1147,6 +1159,7 @@ footer.main{
     font-size: 12px;
   }
   &__autor{
+    margin-top: -4px;
 
   }
   &__time{
@@ -1154,6 +1167,9 @@ footer.main{
   }
   &__demo-comment{
 
+  }
+  &__link{
+    font-size: 12px;
   }
   &__text{
     color: #192637;

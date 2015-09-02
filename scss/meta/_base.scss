@@ -20,7 +20,7 @@ main{
   @extend %text-bold;
 }
 
-h1{
+h1, .h1{
   font-size: 30px;
   @extend %text-bold;
   @media(max-width:768px){
@@ -28,35 +28,35 @@ h1{
   }
 }
 
-h2{
+h2, .h2{
   font-size: 18px;
   @media(max-width:768px){
     font-size: 16px;
   }
 }
 
-h3{
+h3, .h3{
   font-size: 22px;
   @media(max-width:768px){
     font-size: 20px;
   }
 }
 
-h4{
+h4, .h4{
   font-size: 24px;
   @media(max-width:768px){
     font-size: 18px;
   }
 }
 
-h5{
-  font-size: 18px;
+h5, .h5{
+  font-size: 20px;
   @media(max-width:768px){
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
-h6{
+h6, .h6{
   font-size: 16px;
   @media(max-width:768px){
     font-size: 14px;
@@ -65,7 +65,10 @@ h6{
 
 a{
   color: $color-orange;
-  font-size: 14px;
+  // font-size: 14px;
+  &:hover{
+    color: $color-orange;
+  }
 }
 
 a,
@@ -86,6 +89,9 @@ a.link{
 
 p{
   font-size: 14px;
+  &.lead{
+    font-size: 18px;
+  }
 }
 
 .dark-blue-link{
@@ -112,8 +118,16 @@ p{
   font-family: $light;
 }
 
-.text-bold{
+b, strong, .text-bold{
   @extend %text-bold;
+}
+
+small, .small{
+  // font-size: 12px;
+}
+
+blockquote{
+  border-color: #6C707C !important;
 }
 
 .hover-transform-before{
@@ -122,4 +136,79 @@ p{
 
 .hover-transform-after{
   @extend %hover-transform-after;
+}
+
+.container{
+  // outline: 1px solid red;
+}
+
+.btn{
+  border-radius: 0;
+  color: white(1);
+  &:hover{
+    color: white(1);
+    box-shadow: none;
+  }
+  &-orange{
+    background: $color-orange;
+    &:hover{
+      background: darken($color-orange, 10%);
+    }
+  }
+  &-red{
+    // width: 100%;
+    background: $color-red;
+    &:hover{
+      background: darken($color-red, 10%);
+    }
+  }
+  &-vk{
+    background: $color-vk;
+    &:hover{
+      background: darken($color-vk, 10%);
+    }
+  }
+  &-facebook{
+    background: $color-facebook;
+    &:hover{
+      background: darken($color-facebook, 10%);
+    }
+  }
+  &-google{
+    background: $color-google;
+    &:hover{
+      background: darken($color-google, 10%);
+    }
+  }
+  &-mail{
+    background: $color-mail;
+    &:hover{
+      background: darken($color-mail, 10%);
+    }
+  }
+  &-yandex{
+    background: $color-yandex;
+    &:hover{
+      background: darken($color-yandex, 10%);
+    }
+  }
+  &-odnoklassniki{
+    background: $color-odnoklassniki;
+    &:hover{
+      background: darken($color-odnoklassniki, 10%);
+    }
+  }
+}
+
+.form-control{
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.checkbox label,
+.radio label{
+  padding-left: 0;
 }

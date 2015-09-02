@@ -34,5 +34,7 @@ $(function() {
       event.stopPropagation(); //Always stop propagation
     });
 
-    $('input, select').styler();
+    $('input, select:not(.form-control)').styler();
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover()
 });

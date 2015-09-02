@@ -45,9 +45,10 @@ html(lang="ru")
     block style
 
   body
-    include _debug
-    .mobile-overlay.dn.cur
-    .top-line-decorator
+    block debug
+      include _debug
+      .mobile-overlay.dn.cur
+      .top-line-decorator
 
     block header
       include _header
