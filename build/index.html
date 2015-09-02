@@ -5,7 +5,7 @@
     <title>Vseopro</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no maximum-scale=1">
     <meta name="keywords" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -40,7 +40,7 @@
                     <span
                     class="icon-user-2"></span><span class="icon-users-1"></span>
     </div>
-    <div class="mobile-overlay dn"></div>
+    <div class="mobile-overlay dn cur"></div>
     <div class="top-line-decorator"></div>
     <header class="main">
         <div class="container">
@@ -67,12 +67,16 @@
             <div class="container pr open-menu-position">
                 <div class="row open-menu-position">
                     <div class="hidden-md hidden-lg pull-left">
-                        <button type="button" data-show="left-menu" class="open-menu__button no-outline no-select pull-left"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span>
-                        </button><span class="nav-main__button-label text-white">Меню</span>
+                        <button type="button" data-show="left-menu" class="open-menu__button no-outline no-select pull-left">
+                            <div class="dib"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span>
+                            </div><span class="nav-main__button-label text-white">Меню</span>
+                        </button>
                     </div>
                     <div class="hidden-md hidden-lg pull-right">
-                        <button type="button" data-show="right-menu" class="open-menu__button no-outline no-select pull-right"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span>
-                        </button><span class="login-form__button-label text-white">Вход</span>
+                        <button type="button" data-show="right-menu" class="open-menu__button no-outline no-select pull-right"><span class="login-form__button-label text-white">Вход</span>
+                            <div class="dib"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span>
+                            </div>
+                        </button>
                     </div>
                     <!-- основное меню видно везде кроме мобильных устройств -->
                     <div class="nav-main clearfix visible-md visible-lg">
@@ -264,7 +268,7 @@
                         <h4 class="white-block__title mt0"><span class="icon-lightbulb"></span> Ответы с форума</h4>
                         <div class="forums-answer__wrap">
                             <div class="forums-answer__item">
-                                <h2 class="forums-answer__title text-overflow text-bold"><a href="#" class="dark-blue-link">Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты</a></h2>
+                                <h2 class="forums-answer__title text-overflow"><a href="#" class="dark-blue-link">Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты</a></h2>
                                 <div class="row">
                                     <div class="col-md-3"><a href="#" class="link text-overflow text-light forums-answer__text"><span class="icon-user forums-answer__ico"></span> Admin</a>
                                     </div>
@@ -275,7 +279,7 @@
                                 </div>
                             </div>
                             <div class="forums-answer__item">
-                                <h2 class="forums-answer__title text-overflow text-bold"><a href="#" class="dark-blue-link">Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты</a></h2>
+                                <h2 class="forums-answer__title text-overflow"><a href="#" class="dark-blue-link">Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты</a></h2>
                                 <div class="row">
                                     <div class="col-md-3"><a href="#" class="link text-overflow text-light forums-answer__text"><span class="icon-user forums-answer__ico"></span> Admin</a>
                                     </div>
@@ -286,7 +290,7 @@
                                 </div>
                             </div>
                             <div class="forums-answer__item">
-                                <h2 class="forums-answer__title text-overflow text-bold"><a href="#" class="dark-blue-link">Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты</a></h2>
+                                <h2 class="forums-answer__title text-overflow"><a href="#" class="dark-blue-link">Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты</a></h2>
                                 <div class="row">
                                     <div class="col-md-3"><a href="#" class="link text-overflow text-light forums-answer__text"><span class="icon-user forums-answer__ico"></span> Admin</a>
                                     </div>
@@ -564,12 +568,12 @@
                         <form class="sidebar-login-form pr">
                             <input type="text" placeholder="Логин" class="fluid sidebar-login-form__input no-outline">
                             <input type="password" placeholder="Логин" class="fluid sidebar-login-form__input no-outline">
-                            <div class="row">
-                                <div class="col-xs-6">
+                            <div class="clearfix">
+                                <div class="pull-left">
                                     <input type="checkbox" id="another-computer">
                                     <label for="another-computer" class="no-select">Чужой компьютер</label>
                                 </div>
-                                <div class="col-xs-6"><a href="#" class="link text-line db pull-right sidebar-login-form__forgot">Забыли пароль</a>
+                                <div class="pull-right"><a href="#" class="link text-line db pull-right sidebar-login-form__forgot">Забыли пароль</a>
                                 </div>
                             </div>
                             <div class="row">
@@ -585,7 +589,7 @@
                 <section class="sidebar-subscribe">
                     <div class="white-block">
                         <h5 class="white-block__title mt0"><span class="icon-mail-alt"></span> Подписка</h5>
-                        <img src="img/img_sidebar_subscribe.jpg" alt="sidebar subscribe img" class="sidebar-subscribe__image table-center"><a href="#" class="btn btn-orange fluid sidebar-subscribe__button">Войти</a>
+                        <img src="img/img_sidebar_subscribe.jpg" alt="sidebar subscribe img" class="sidebar-subscribe__image table-center"><a href="#" class="btn btn-orange fluid sidebar-subscribe__button">Подписаться на рассылку</a>
                     </div>
                 </section>
                 <section class="sidebar-comments">
@@ -1023,6 +1027,7 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/goodshare.js"></script>
     <script src="js/main.js"></script>
 </body>

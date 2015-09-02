@@ -1,5 +1,8 @@
 html{
   background: #192637;
+  @media(max-width:768px){
+    font-size: 16px;
+  }
 }
 
 body{
@@ -14,30 +17,55 @@ main{
 }
 
 :--heading{
-  font-family: $roboto;
+  @extend %text-bold;
 }
 
 h1{
-
+  font-size: 30px;
+  @extend %text-bold;
+  @media(max-width:768px){
+    font-size: 24px;
+  }
 }
+
 h2{
-
+  font-size: 18px;
+  @media(max-width:768px){
+    font-size: 16px;
+  }
 }
+
 h3{
-
+  font-size: 22px;
+  @media(max-width:768px){
+    font-size: 20px;
+  }
 }
+
 h4{
   font-size: 24px;
+  @media(max-width:768px){
+    font-size: 18px;
+  }
 }
+
 h5{
   font-size: 18px;
+  @media(max-width:768px){
+    font-size: 16px;
+  }
 }
-h6{
 
+h6{
+  font-size: 16px;
+  @media(max-width:768px){
+    font-size: 14px;
+  }
 }
 
 a{
   color: $color-orange;
+  font-size: 14px;
 }
 
 a,
@@ -57,7 +85,7 @@ a.link{
 }
 
 p{
-
+  font-size: 14px;
 }
 
 .dark-blue-link{
@@ -85,7 +113,7 @@ p{
 }
 
 .text-bold{
-  font-family: $bold;
+  @extend %text-bold;
 }
 
 .hover-transform-before{

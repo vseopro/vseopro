@@ -33,4 +33,6 @@ $(function() {
       }
       event.stopPropagation(); //Always stop propagation
     });
+
+    $('input, select').styler();
 });

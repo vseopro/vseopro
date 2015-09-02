@@ -7,7 +7,9 @@ html(lang="ru")
 
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    //- user-scalable=no maximum-scale=1 нужны для того чтоб левое меню не скролились
+    meta(name="viewport", content="width=device-width, initial-scale=1 user-scalable=no maximum-scale=1")
 
     meta(name="keywords", content="")
     meta(name="author", content="")
@@ -44,7 +46,7 @@ html(lang="ru")
 
   body
     include _debug
-    .mobile-overlay.dn
+    .mobile-overlay.dn.cur
     .top-line-decorator
 
     block header
@@ -71,6 +73,7 @@ html(lang="ru")
 
     script(src="js/jquery.min.js")
     script(src="js/bootstrap.min.js")
+    script(src="js/jquery.formstyler.min.js")
     script(src="js/goodshare.js")
     script(src="js/main.js")
 

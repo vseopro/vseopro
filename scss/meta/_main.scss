@@ -179,7 +179,8 @@
 
 .open-menu__button{
   position: relative;
-  padding: 10px;
+  // padding: 10px;
+  padding: 6px;
   margin-top: 8px;
   margin-bottom: 8px;
   background: white(0);
@@ -200,13 +201,18 @@
 }
 
 .nav-main__button-label{
-  float: left;
-  margin-top: 15px;
+  // float: left;
+  // margin-top: 15px;
+  margin-left: 15px;
 }
 
 .login-form__button-label{
-  float: right;
-  margin-top: 15px;
+  margin-right: 15px;
+  // float: right;
+  // margin-top: 15px;
+  // float: left;
+  // margin-top: -4px;
+  // margin-right: 15px;
 }
 
 header.main{
@@ -964,6 +970,9 @@ footer.main{
   box-shadow: 0px 0px 7px 0px black(.17);
   padding: 26px 30px 30px 30px;
   margin-bottom: 32px;
+  @media(max-width:768px){
+    padding: 20px;
+  }
   &__title{
     padding-bottom: 12px;
     margin-bottom: 15px;
@@ -980,7 +989,7 @@ footer.main{
 .welcome-block{
   .white-block{
     &__title{
-      font-size: 30px;
+      // font-size: 30px;
     }
   }
 }
@@ -1003,7 +1012,7 @@ footer.main{
     color: $color-orange;
   }
   &__title{
-    font-size: 18px;
+    // font-size: 18px;
     color: #192637;
     margin-bottom: 10px;
     // font-family: $open-sans;
@@ -1052,7 +1061,7 @@ footer.main{
     padding-bottom: 14px;
   }
   &__title{
-    font-size: 18px;
+    // font-size: 18px;
     color: #192637;
     margin-bottom: 12px;
     margin-top: 3px;
@@ -1114,7 +1123,8 @@ footer.main{
 
 .sidebar-subscribe{
   &__image{
-
+    margin-top: 31px;
+    margin-bottom: 31px;
   }
   &__button{
     padding: 14px;

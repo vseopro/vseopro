@@ -33,7 +33,7 @@ block content
             .forums-answer__wrap
               -for(var i = 0; i < 3; i++)
                 .forums-answer__item
-                  h2.forums-answer__title.text-overflow.text-bold
+                  h2.forums-answer__title.text-overflow
                     a(href="#").dark-blue-link Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты
                   .row
                     .col-md-3
@@ -94,11 +94,11 @@ block content
             form.sidebar-login-form.pr
               input(type="text" placeholder="Логин").fluid.sidebar-login-form__input.no-outline
               input(type="password" placeholder="Логин").fluid.sidebar-login-form__input.no-outline
-              .row
-                .col-xs-6
+              .clearfix
+                .pull-left
                   input(type="checkbox")#another-computer
                   label(for="another-computer").no-select Чужой компьютер
-                .col-xs-6
+                .pull-right
                   a(href="#").link.text-line.db.pull-right.sidebar-login-form__forgot Забыли пароль
               .row
                 .col-xs-6
@@ -110,7 +110,7 @@ block content
           .white-block
             h5.white-block__title.mt0 <span class="icon-mail-alt"></span> Подписка
             img(src="img/img_sidebar_subscribe.jpg" alt="sidebar subscribe img").sidebar-subscribe__image.table-center
-            a(href="#").btn.btn-orange.fluid.sidebar-subscribe__button Войти
+            a(href="#").btn.btn-orange.fluid.sidebar-subscribe__button Подписаться на рассылку
 
         section.sidebar-comments
           .white-block

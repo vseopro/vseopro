@@ -20,3 +20,7 @@
     transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
   }
 }
+
+%text-bold{
+  font-family: $bold;
+}
