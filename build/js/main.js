@@ -36,5 +36,9 @@ $(function() {
 
     $('input, select:not(.form-control)').styler();
     $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover()
+    $('[data-toggle="popover"]').popover();
+
+    $('a.disabled').on('click', function () {
+        return false;
+    })
 });

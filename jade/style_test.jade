@@ -379,9 +379,9 @@ block content
             br
       // Headings
       .row
-        .col-lg-4
+        .col-lg-6
           .bs-component
-            h2 Заголовки
+            h2 Заголовки (open sans)
             table.table
               tbody
                 tr
@@ -408,7 +408,36 @@ block content
                   td
                     h6 Heading 6
                   td(style="vertical-align: middle;") 16px
-        .col-lg-4
+        .col-lg-6
+          .bs-component
+            h2 Заголовки (roboto)
+            table.table
+              tbody
+                tr
+                  td
+                    h1(style="font-family: 'roboto-slab-bold',sans-serif;") Heading 1
+                  td(style="vertical-align: middle;") 30px
+                tr
+                  td
+                    h2(style="font-family: 'roboto-slab-bold',sans-serif;") Heading 2
+                  td(style="vertical-align: middle;") 18px
+                tr
+                  td
+                    h3(style="font-family: 'roboto-slab-bold',sans-serif;") Heading 3
+                  td(style="vertical-align: middle;") 22px
+                tr
+                  td
+                    h4(style="font-family: 'roboto-slab-bold',sans-serif;") Heading 4
+                  td(style="vertical-align: middle;") 24px
+                tr
+                  td
+                    h5(style="font-family: 'roboto-slab-bold',sans-serif;") Heading 5
+                  td(style="vertical-align: middle;") 20px
+                tr
+                  td
+                    h6(style="font-family: 'roboto-slab-bold',sans-serif;") Heading 6
+                  td(style="vertical-align: middle;") 16px
+        .col-lg-6
           .bs-component
             h2 Пример текста
             h6 lead текст 18px
@@ -426,7 +455,7 @@ block content
               em  rendered as italicized text
             p An abbreviation of the word attribute is
               abbr(title='attribute') attr
-        .col-lg-4
+        .col-lg-6
           .bs-component
             h2 Выделение текта
             p.text-muted Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
@@ -1015,6 +1044,33 @@ block content
     //
       Dialogs
       ==================================================
+    .bs-docs-section
+      .row
+        .col-lg-12
+          .page-header
+            h1.text-center Пагинация
+            br
+            br
+        .col-lg-12
+          nav.last-news__pagination.pr
+            a(href="#").pagination-previous__button.db.disabled
+            ul.pagination-list.lsn.mb0.clearfix.table-center
+              li.pull-left.pagination-list__item.active
+                a(href='#').pagination-list__link.db 1
+              li.pull-left.pagination-list__item
+                a(href='#').pagination-list__link.db 2
+              li.pull-left.pagination-list__item
+                a(href='#').pagination-list__link.db 3
+              li.pull-left.pagination-list__item
+                a(href='#').pagination-list__link.db 4
+              li.pull-left.pagination-list__item
+                a(href='#').pagination-list__link.db 5
+              li.pull-left.pagination-list__item
+                span.pagination-list__link.db ...
+              li.pull-left.pagination-list__item
+                a(href='#').pagination-list__link.db 100
+            a(href="#").pagination-next__button.db
+
     .bs-docs-section
       .row
         .col-lg-12

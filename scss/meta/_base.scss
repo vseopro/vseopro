@@ -69,6 +69,19 @@ a{
   &:hover{
     color: $color-orange;
   }
+  &.link{
+    color: $color-orange;
+    text-decoration: none;
+    &:hover{
+      color: $color-orange;
+      text-decoration: underline;
+    }
+  }
+  &.disabled{
+    user-select: none;
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 a,
@@ -78,14 +91,6 @@ a,
   transition: all 0.17s ease-in-out;
 }
 
-a.link{
-  color: $color-orange;
-  text-decoration: none;
-  &:hover{
-    color: $color-orange;
-    text-decoration: underline;
-  }
-}
 
 p{
   font-size: 14px;
@@ -143,7 +148,7 @@ blockquote{
 }
 
 .btn{
-  border-radius: 0;
+  // border-radius: 0;
   color: white(1);
   &:hover{
     color: white(1);
@@ -201,7 +206,7 @@ blockquote{
 }
 
 .form-control{
-  border-radius: 0;
+  // border-radius: 0;
 }
 
 textarea {

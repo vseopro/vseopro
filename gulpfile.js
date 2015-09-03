@@ -27,6 +27,16 @@ var uglify               = require('gulp-uglify');
 var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
 
+// less
+var less                 = require('gulp-less');
+
+gulp.task('less', function () {
+  return gulp.src('./less/bootstrap.less')
+    .pipe(less())
+    // .pipe(csso())
+    .pipe(gulp.dest('./build/css'));
+});
+
 var postCSSFocus = function (css, opts) {
     css.walkRules(function (rule) {
         if ( rule.selector.indexOf(':hover') !== -1 ) {
@@ -134,6 +144,7 @@ gulp.task('js', ['concat', 'uglify'])
 
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
+    gulp.watch('./less/**/*.less', ['less']);
     gulp.watch('./build/js/**/*.js', ['reload']);
     gulp.watch(['./jade/**/*.jade', './json/**/*.json'], ['jade']);
 });
@@ -142,6 +153,7 @@ gulp.task('default',
     [
         'watch',
         'sass',
+        'less',
         'jade',
         'browser-sync'
     ]
