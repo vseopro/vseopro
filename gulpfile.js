@@ -30,11 +30,23 @@ var reload               = browserSync.reload;
 // less
 var less                 = require('gulp-less');
 
+var imagemin = require('gulp-imagemin');
+
 gulp.task('less', function () {
   return gulp.src('./less/bootstrap.less')
     .pipe(less())
     // .pipe(csso())
     .pipe(gulp.dest('./build/css'));
+});
+
+gulp.task('imagemin', function () {
+    return gulp.src('./images/*')
+        .pipe(imagemin({
+            progressive: true,
+            // svgoPlugins: [{removeViewBox: false}],
+            // use: [pngquant()]
+        }))
+        .pipe(gulp.dest('build/img/'));
 });
 
 var postCSSFocus = function (css, opts) {
@@ -111,7 +123,7 @@ gulp.task('sass', function () {
         postCSSFocus
     ];
 
-    gulp.src(['./scss/style.scss'])
+    gulp.src(['./scss/**/*.scss'])
         .pipe(sass({
             outputStyle: 'nested',
             errLogToConsole: true
