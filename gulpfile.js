@@ -42,9 +42,7 @@ gulp.task('less', function () {
 gulp.task('imagemin', function () {
     return gulp.src('./images/*')
         .pipe(imagemin({
-            progressive: true,
-            // svgoPlugins: [{removeViewBox: false}],
-            // use: [pngquant()]
+            progressive: true
         }))
         .pipe(gulp.dest('build/img/'));
 });

@@ -48,15 +48,9 @@
     position: static;
 }
 
-.no-outline,
-.no-outline:hover,
 .no-outline:active,
-.no-outline:hover:active,
-.no-outline:hover:focus,
-.no-outline:active:focus,
 .no-outline:focus,
-.no-outline:focus:active,
-.no-outline:focus:focus {
+.no-outline:active:focus {
     outline: none;
 }
 
@@ -101,6 +95,10 @@
 
 .footer-ico {
     float: right;
+}
+
+.text-smoothing {
+    text-shadow: -1px -1px 1px rgba(255,255,255,.2),1px 1px 1px rgba(255,255,255,.2),1px 1px 1px rgba(0,0,0,.7);
 }
 
 html {
