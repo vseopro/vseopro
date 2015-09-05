@@ -16,8 +16,8 @@
   "author": "vaeum",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
-    "browser-sync": "^2.6.4",
+    "autoprefixer-core": "^6.0.0",
+    "browser-sync": "^2.9.1",
     "css-mqpacker": "^4.0.0",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.6.0",
