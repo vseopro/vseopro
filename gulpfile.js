@@ -8,8 +8,7 @@ var prettify             = require('gulp-html-prettify');
 // css compile
 var sass                 = require('gulp-sass');
 var csso                 = require('gulp-csso');
-var csscomb              = require('gulp-csscomb');
-var cssbeautify          = require('gulp-cssbeautify');
+var perfectionist        = require('perfectionist');
 
 // post css plugin
 var postcss              = require('gulp-postcss');
@@ -128,8 +127,11 @@ gulp.task('sass', function () {
         }))
         .pipe(postcss(processors))
         .pipe(csso())
-        .pipe(cssbeautify())
-        .pipe(csscomb())
+        .pipe(postcss([perfectionist({
+            maxValueLength: false,
+            maxAtRuleLength: false,
+            maxSelectorLength: true
+        })]))
         .pipe(gulp.dest('./build/css'))
         .pipe(reload({stream:true}));
 });
