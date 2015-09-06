@@ -981,6 +981,14 @@ footer.main{
     // font-size: 24px;
     font-family: $roboto;
   }
+  &__sidebar-title{
+    padding-bottom: 16px;
+    margin-bottom: 15px;
+    color: $color-red;
+    border-bottom: 1px #f1f1f1 solid;
+    // font-size: 24px;
+    font-family: $roboto;
+  }
   &__text{
     // font-size: 13px;
     color: #6C707C;
@@ -1020,6 +1028,7 @@ footer.main{
   }
   &__footer{
     margin-bottom: 1px;
+    margin-top: 21px;
     &__text{
       font-size: 12px;
       color: #B1B2B7;

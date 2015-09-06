@@ -2032,10 +2032,19 @@ footer.main {
 
 .white-block__title {
     padding-bottom: 12px;
-    margin-bottom: 15px;
     color: #ff690b;
+}
+
+.white-block__title,
+.white-block__sidebar-title {
+    margin-bottom: 15px;
     border-bottom: 1px #f1f1f1 solid;
     font-family: "roboto-slab-bold",sans-serif;
+}
+
+.white-block__sidebar-title {
+    padding-bottom: 16px;
+    color: #ef4628;
 }
 
 .white-block__text {
@@ -2065,6 +2074,7 @@ footer.main {
 
 .forums-answer__footer {
     margin-bottom: 1px;
+    margin-top: 21px;
 }
 
 .forums-answer__footer__text {
