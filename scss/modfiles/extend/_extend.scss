@@ -45,7 +45,7 @@
 }
 
 %outline-none{
-  outline: none;
+  outline: none !important;
 }
 
 %user-select-none{
@@ -77,4 +77,8 @@
   text-shadow:-1px -1px 1px rgba(255,255,255,0.2), // наверх и влево
   1px 1px 1px rgba(255,255,255,0.2), // вниз и вправо
   1px 1px 1px rgba(0,0,0,0.7); // тёмная тень
+}
+
+%float-none{
+  float: none;
 }

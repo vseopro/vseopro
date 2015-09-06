@@ -51,7 +51,7 @@
 .no-outline:active,
 .no-outline:focus,
 .no-outline:active:focus {
-    outline: none;
+    outline: none!important;
 }
 
 .no-select {
@@ -99,6 +99,10 @@
 
 .text-smoothing {
     text-shadow: -1px -1px 1px rgba(255,255,255,.2),1px 1px 1px rgba(255,255,255,.2),1px 1px 1px rgba(0,0,0,.7);
+}
+
+.fn {
+    float: none;
 }
 
 html {
@@ -1345,6 +1349,10 @@ header.main {
     padding-top: 12px;
 }
 
+.click-block__section {
+    margin-bottom: 32px;
+}
+
 nav.main,
 .affix-wrap {
     background: #192637;
@@ -2345,6 +2353,22 @@ footer.main {
     background: #ef4628;
 }
 
+.sidebar-chat__message {
+    padding: 9px;
+    margin-top: 10px;
+    background: #f7f7f7;
+    border-radius: 4px;
+    border: #d9d9d9 1px solid;
+}
+
+.sidebar-chat__text {
+    line-height: 1.28571rem;
+}
+
+.sidebar-chat__button {
+    padding: 14px;
+}
+
 .debug-select-ico {
     position: fixed;
     bottom: 10px;
@@ -2439,10 +2463,13 @@ footer.main {
     }
 
     h4,
-    .h4,
+    .h4 {
+        font-size: 1.28571rem;
+    }
+
     h5,
     .h5 {
-        font-size: 1.28571rem;
+        font-size: 1.07143rem;
     }
 
     h6,

@@ -12,7 +12,7 @@ var perfectionist        = require('perfectionist');
 
 // post css plugin
 var postcss              = require('gulp-postcss');
-var autoprefixer         = require('autoprefixer-core');
+var autoprefixer         = require('autoprefixer');
 var postcssPseudoContent = require('postcss-pseudo-elements-content');
 var rucksack             = require('rucksack-css');
 var pxtorem              = require('postcss-pxtorem');
