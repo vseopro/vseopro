@@ -2226,6 +2226,10 @@ footer.main {
     color: #192637;
 }
 
+.pagination {
+    margin-top: 20px;
+}
+
 .pagination-previous__button,
 .pagination-next__button {
     width: 50px;
@@ -2318,13 +2322,13 @@ footer.main {
     margin-right: 0;
 }
 
-.pagination-list__item.active .pagination-list__link {
+.pagination-list__item.active-list__link {
     background: #ef4628;
     color: #fff;
 }
 
-.pagination-list__item.active .pagination-list__link:hover,
-.pagination-list__item.active .pagination-list__link:focus {
+.pagination-list__item.active-list__link:hover,
+.pagination-list__item.active-list__link:focus {
     background: #d42d10;
 }
 
@@ -2454,7 +2458,7 @@ footer.main {
         padding: 20px;
     }
 
-    .last-news__pagination {
+    .pagination {
         text-align: center;
     }
 
