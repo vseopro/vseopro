@@ -981,15 +981,15 @@ footer.main{
     margin-bottom: 15px;
     color: $color-orange;
     border-bottom: 1px #f1f1f1 solid;
-    // font-size: 24px;
+    font-size: 24px;
     font-family: $roboto;
   }
   &__sidebar-title{
-    padding-bottom: 16px;
+    padding-bottom: 19px;
     margin-bottom: 15px;
     color: $color-red;
     border-bottom: 1px #f1f1f1 solid;
-    // font-size: 24px;
+    font-size: 18px;
     font-family: $roboto;
   }
   &__text{
@@ -1024,7 +1024,7 @@ footer.main{
     color: $color-orange;
   }
   &__title{
-    // font-size: 18px;
+    font-size: 18px;
     color: #192637;
     margin-bottom: 10px;
     // font-family: $open-sans;
@@ -1074,7 +1074,7 @@ footer.main{
     padding-bottom: 14px;
   }
   &__title{
-    // font-size: 18px;
+    font-size: 18px;
     color: #192637;
     margin-bottom: 12px;
     margin-top: 3px;
@@ -1286,16 +1286,18 @@ footer.main{
 
 .sidebar-chat{
   &__message{
-    padding: 9px;
+    padding: 4px 10px;
     margin-top: 10px;
     background: #f7f7f7;
-    border-radius: 4px;
+    border-radius: 6px;
     border: #d9d9d9 1px solid;
+    line-height: 20px;
   }
   &__text{
     line-height: 18px;
   }
   &__button{
     padding: 14px;
+    margin-top: 30px;
   }
 }

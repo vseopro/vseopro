@@ -22,6 +22,7 @@ var mqpacker             = require("css-mqpacker");
 // js compile
 var concat               = require('gulp-concat');
 var uglify               = require('gulp-uglify');
+var babel                = require('gulp-babel');
 
 var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
@@ -29,7 +30,7 @@ var reload               = browserSync.reload;
 // less
 var less                 = require('gulp-less');
 
-var imagemin = require('gulp-imagemin');
+var imagemin             = require('gulp-imagemin');
 
 gulp.task('less', function () {
   return gulp.src('./less/bootstrap.less')
@@ -154,10 +155,18 @@ gulp.task('concat', function() {
 
 gulp.task('js', ['concat', 'uglify'])
 
+gulp.task('babel', function() {
+  return gulp.src(
+        ['./babel/**/*.js'])
+    .pipe(babel())
+    .pipe(gulp.dest('./build/js/'))
+    .pipe(reload({stream:true}));
+});
+
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./less/**/*.less', ['less']);
-    gulp.watch('./build/js/**/*.js', ['reload']);
+    gulp.watch('./babel/**/*.js', ['babel']);
     gulp.watch(['./jade/**/*.jade', './json/**/*.json'], ['jade']);
 });
 
@@ -166,6 +175,7 @@ gulp.task('default',
         'watch',
         'sass',
         'less',
+        'babel',
         'jade',
         'browser-sync'
     ]
