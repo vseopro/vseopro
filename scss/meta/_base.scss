@@ -229,3 +229,8 @@ textarea {
     padding-right: 2px;
   }
 }
+
+::selection {
+  background: $color-orange;
+  color: #fff;
+}

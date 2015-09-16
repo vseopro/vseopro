@@ -106,12 +106,12 @@ block content
             img(src="img/img_750_150.png" alt="click image").click-block__image.img-responsive
 
         -for(var i = 0; i < 3; i++)
-          section.last-news
+          section.tab-news
             .white-block
               h4.white-block__title.mt0 <span class="icon-bookmark"></span> Последнее из Datalife Engine
 
               // Nav tabs
-              ul.nav.nav-tabs(role='tablist')
+              ul.nav.nav-tabs.tabs-red(role='tablist')
                 li.active(role='presentation')
                   a(href='#tab-teplate#{i+1}', aria-controls='tab-teplate#{i+1}', role='tab', data-toggle='tab') Шаблоны
                 li(role='presentation')
@@ -124,30 +124,16 @@ block content
                   a(href='#tab-relize#{i+1}', aria-controls='tab-forums#{i+1}', role='tab', data-toggle='tab') Релизы
 
               // Tab panes
-              .tab-content
+              .tab-content.tabs-red__content
                 each wer, ter in ['tab-teplate','tab-modules','tab-hacks','tab-forums','tab-relize']
-                  div(role='tabpanel' id="#{wer}#{i + 1}" class="tab-pane #{ter === 0 ? 'active' : ''}")
+                  div(role='tabpanel' id="#{wer}#{i + 1}" class="tab-pane #{ter === 0 ? 'active' : 'fade'}")
+                    //- p #{wer}#{i + 1}
                     .row
-                      .col-xs-6
-                        img(src="img/Img_tab_news.jpg" alt="tab news image")
-                        h2.text-bold.db.last-news__title
-                          a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс. Рефераты.
-                        .row-mini
-                          .col-sm-4.col-md-4
-                            a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-user last-news__ico"></span> Admin
-                          .col-sm-4.col-md-4
-                            a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
-                          .col-sm-4.col-md-4
-                            a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").link.last-news__text.text-light.text-overflow <span class="icon-folder-open last-news__ico"></span> photoshop
-                        p Дная затоплен служба Яндекс. ываыдвшао,  <br> Рефераты предназначена  затоплен служба <br> затоплен служба  ..фывфывфыв фывфы. <br> Рефераты предназначена  затоплен Яндекс.
-                        a(href="#" role="button").btn.btn-red.fluid.db.btn-lg Читать подробнее
-                      .col-xs-6
-                        -for(var e = 0; e < 3; e++)
-                          .row
-                            .col-xs-6
-                              img(src="img/Img_tab_news2.jpg" alt="tab news image")
-                            .col-xs-6
-                              p Горячие капеция <br> дня затоплен цукцукв  <br> ук  право <br> на репост выавыа ыв <br> выапвалпо <br> вавыаываы
+                      .col-md-6
+                        .tab-grand-news
+                          img(src="img/img_tab_news.jpg" alt="tab news image").tab-grand-news__img.img-responsive
+                          h2.text-bold.db.tab-grand-news__title
+                            a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс.
                           .row-mini
                             .col-sm-4.col-md-4
                               a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-user last-news__ico"></span> Admin
@@ -155,6 +141,23 @@ block content
                               a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
                             .col-sm-4.col-md-4
                               a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").link.last-news__text.text-light.text-overflow <span class="icon-folder-open last-news__ico"></span> photoshop
+                          p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекс.
+                          a(href="#" role="button").btn.btn-red.fluid.db.btn-lg Читать подробнее
+                      .col-md-6
+                        -for(var e = 0; e < 3; e++)
+                          .tab-mini-news
+                            .row
+                              .col-lg-6
+                                img(src="img/img_tab_news2.jpg" alt="tab news image").tab-mini-news__img.img-responsive
+                              .col-lg-6
+                                span.db.tab-mini-news__description Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы
+                            .row-mini
+                              .col-sm-4.col-md-4
+                                a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-user last-news__ico"></span> Admin
+                              .col-sm-4.col-md-4
+                                a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
+                              .col-sm-4.col-md-4
+                                a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").link.last-news__text.text-light.text-overflow <span class="icon-folder-open last-news__ico"></span> photoshop
 
           -if(i === 1)
             .click-block__section
@@ -224,9 +227,22 @@ block content
                     small.sidebar-chat__text К новости: 3XLOVE - Скрипт <br> сайта знакомств бла бла капе <br> херово тут сидеть
             a(href="#").btn.btn-red.fluid.sidebar-chat__button Написать сообщение
 
-        section
+        section.popular-news
           .white-block
             h5.white-block__sidebar-title.mt0 <span class="icon-network"></span> Популярные новости
+            .popular-news__wrap
+              -for(var i = 0; i < 5; i++)
+                .popular-news__item
+                  .row
+                    .col-xs-4
+                      img(src="img/img_popular_news.jpg" alt="popular news image")
+                    .col-xs-8
+                      span.db.text-uppercase 3XLOVE - Скрипт сайта знакомств бла бла капе
+                      .row-mini
+                        .col-xs-6
+                          a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-user last-news__ico"></span> Admin
+                        .col-xs-6
+                          a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
 
         section.editors-choice
           .white-block

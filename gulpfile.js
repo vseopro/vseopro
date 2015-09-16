@@ -167,6 +167,7 @@ gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./less/**/*.less', ['less']);
     gulp.watch('./babel/**/*.js', ['babel']);
+    gulp.watch(['./images/*.jpg', './images/*.png'], ['imagemin']);
     gulp.watch(['./jade/**/*.jade', './json/**/*.json'], ['jade']);
 });
 
@@ -174,6 +175,7 @@ gulp.task('default',
     [
         'watch',
         'sass',
+        'imagemin',
         'less',
         'babel',
         'jade',
