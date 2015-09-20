@@ -12,7 +12,7 @@ var perfectionist        = require('perfectionist');
 
 // post css plugin
 var postcss              = require('gulp-postcss');
-var autoprefixer         = require('autoprefixer');
+// var autoprefixer         = require('autoprefixer');
 var postcssPseudoContent = require('postcss-pseudo-elements-content');
 var rucksack             = require('rucksack-css');
 var pxtorem              = require('postcss-pxtorem');
@@ -36,7 +36,7 @@ gulp.task('less', function () {
   return gulp.src('./less/bootstrap.less')
     .pipe(less())
     // .pipe(csso())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./app/css'));
 });
 
 gulp.task('imagemin', function () {
@@ -44,10 +44,10 @@ gulp.task('imagemin', function () {
         .pipe(imagemin({
             progressive: true
         }))
-        .pipe(gulp.dest('build/img/'));
+        .pipe(gulp.dest('app/img/'));
 });
 
-var postCSSFocus = function (css, opts) {
+var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
         if ( rule.selector.indexOf(':hover') !== -1 ) {
             var focuses = [];
@@ -78,7 +78,7 @@ var postCSSFocus = function (css, opts) {
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "./build/"
+            baseDir: "./app/"
         },
         open: false
     });
@@ -100,20 +100,20 @@ gulp.task('jade', function(){
 
         .pipe(prettify({indent_char: '  ', indent_size: 2}))
         .on('error', console.log)
-        .pipe(gulp.dest('./build/'))
+        .pipe(gulp.dest('./app/'))
         .pipe(reload({stream:true}));
 });
 
 gulp.task('sass', function () {
     var processors = [
-        autoprefixer({browsers: ['ie >= 8', 'last 3 versions', '> 2%']}),
+        // autoprefixer({browsers: ['ie >= 8', 'last 3 versions', '> 2%']}),
         pxtorem({
             root_value: 14,
             selector_black_list: ['html'],
         }),
         rucksack({
             fallbacks: false,
-            autoprefixer: false
+            autoprefixer: true
         }),
         postcssPseudoContent,
         mqpacker,
@@ -133,24 +133,24 @@ gulp.task('sass', function () {
             maxAtRuleLength: false,
             maxSelectorLength: true
         })]))
-        .pipe(gulp.dest('./build/css'))
+        .pipe(gulp.dest('./app/css'))
         .pipe(reload({stream:true}));
 });
 
 gulp.task('uglify', function() {
-  return gulp.src('./build/js/app.js')
+  return gulp.src('./app/js/app.js')
     .pipe(uglify())
-     .pipe(gulp.dest('./build/js/'))
+     .pipe(gulp.dest('./app/js/'))
 });
 
 gulp.task('concat', function() {
   return gulp.src(
-        ['./build/js/jquery.min.js',
-        './build/js/bootstrap.min.js',
-        './build/js/goodshare.js',
-        './build/js/main.js'])
+        ['./app/js/jquery.min.js',
+        './app/js/bootstrap.min.js',
+        './app/js/goodshare.js',
+        './app/js/main.js'])
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('./build/js/'))
+    .pipe(gulp.dest('./app/js/'))
 });
 
 gulp.task('js', ['concat', 'uglify'])
@@ -159,7 +159,7 @@ gulp.task('babel', function() {
   return gulp.src(
         ['./babel/**/*.js'])
     .pipe(babel())
-    .pipe(gulp.dest('./build/js/'))
+    .pipe(gulp.dest('./app/js/'))
     .pipe(reload({stream:true}));
 });
 

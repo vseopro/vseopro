@@ -1384,3 +1384,27 @@ footer.main{
     margin-bottom: 12px;
   }
 }
+
+.popular-news{
+  &__wrap{
+
+  }
+  &__item{
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    &:last-child{
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  &__image{
+
+  }
+  &__text{
+    margin-top: -4px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+}

@@ -2508,6 +2508,24 @@ footer.main {
     margin-bottom: 12px;
 }
 
+.popular-news__item {
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.popular-news__item:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.popular-news__text {
+    margin-top: -4px;
+    line-height: 1.14286rem;
+    margin-bottom: 8px;
+}
+
 .debug-select-ico {
     position: fixed;
     bottom: 10px;
