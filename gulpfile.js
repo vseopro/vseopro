@@ -1,16 +1,10 @@
 var gulp                 = require('gulp');
 var fs                   = require('fs');
-
-// html compile
 var jade                 = require('gulp-jade');
 var prettify             = require('gulp-html-prettify');
-
-// css compile
 var sass                 = require('gulp-sass');
 var csso                 = require('gulp-csso');
 var perfectionist        = require('perfectionist');
-
-// post css plugin
 var postcss              = require('gulp-postcss');
 // var autoprefixer         = require('autoprefixer');
 var postcssPseudoContent = require('postcss-pseudo-elements-content');
@@ -18,34 +12,13 @@ var rucksack             = require('rucksack-css');
 var pxtorem              = require('postcss-pxtorem');
 var selector             = require('postcss-custom-selectors');
 var mqpacker             = require("css-mqpacker");
-
-// js compile
-var concat               = require('gulp-concat');
-var uglify               = require('gulp-uglify');
+//var concat               = require('gulp-concat');
+//var uglify               = require('gulp-uglify');
 var babel                = require('gulp-babel');
-
 var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
-
-// less
 var less                 = require('gulp-less');
-
 var imagemin             = require('gulp-imagemin');
-
-gulp.task('less', function () {
-  return gulp.src('./less/bootstrap.less')
-    .pipe(less())
-    // .pipe(csso())
-    .pipe(gulp.dest('./app/css'));
-});
-
-gulp.task('imagemin', function () {
-    return gulp.src('./images/*')
-        .pipe(imagemin({
-            progressive: true
-        }))
-        .pipe(gulp.dest('app/img/'));
-});
 
 var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
@@ -74,6 +47,43 @@ var postCSSFocus = function (css) {
         }
     });
 };
+
+var PROCESSORS = [
+    // autoprefixer({browsers: ['ie >= 8', 'last 3 versions', '> 2%']}),
+    pxtorem({
+        root_value: 14,
+        selector_black_list: ['html']
+    }),
+    rucksack({
+        fallbacks: false,
+        autoprefixer: true
+    }),
+    postcssPseudoContent,
+    mqpacker,
+    selector,
+    postCSSFocus
+];
+
+var PERFECTIONIST_CONFIG = {
+    maxValueLength: false,
+    maxAtRuleLength: false,
+    maxSelectorLength: true
+};
+
+gulp.task('less', function () {
+  return gulp.src('./less/bootstrap.less')
+    .pipe(less())
+    //.pipe(csso())
+    .pipe(gulp.dest('./app/css'));
+});
+
+gulp.task('imagemin', function () {
+    return gulp.src('./images/*')
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest('app/img/'));
+});
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -105,80 +115,29 @@ gulp.task('jade', function(){
 });
 
 gulp.task('sass', function () {
-    var processors = [
-        // autoprefixer({browsers: ['ie >= 8', 'last 3 versions', '> 2%']}),
-        pxtorem({
-            root_value: 14,
-            selector_black_list: ['html'],
-        }),
-        rucksack({
-            fallbacks: false,
-            autoprefixer: true
-        }),
-        postcssPseudoContent,
-        mqpacker,
-        selector,
-        postCSSFocus
-    ];
-
-    gulp.src(['./scss/**/*.scss'])
+        gulp.src(['./scss/**/*.scss'])
         .pipe(sass({
             outputStyle: 'nested',
             errLogToConsole: true
         }))
-        .pipe(postcss(processors))
+        .pipe(postcss(PROCESSORS))
         .pipe(csso())
-        .pipe(postcss([perfectionist({
-            maxValueLength: false,
-            maxAtRuleLength: false,
-            maxSelectorLength: true
-        })]))
+        .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
         .pipe(gulp.dest('./app/css'))
-        .pipe(reload({stream:true}));
+        .pipe(reload({stream:true}))
 });
-
-gulp.task('uglify', function() {
-  return gulp.src('./app/js/app.js')
-    .pipe(uglify())
-     .pipe(gulp.dest('./app/js/'))
-});
-
-gulp.task('concat', function() {
-  return gulp.src(
-        ['./app/js/jquery.min.js',
-        './app/js/bootstrap.min.js',
-        './app/js/goodshare.js',
-        './app/js/main.js'])
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest('./app/js/'))
-});
-
-gulp.task('js', ['concat', 'uglify'])
 
 gulp.task('babel', function() {
-  return gulp.src(
-        ['./babel/**/*.js'])
+  return gulp.src(['./babel/**/*.js'])
     .pipe(babel())
     .pipe(gulp.dest('./app/js/'))
     .pipe(reload({stream:true}));
 });
 
-gulp.task('watch', function () {
-    gulp.watch('./scss/**/*.scss', ['sass']);
-    gulp.watch('./less/**/*.less', ['less']);
-    gulp.watch('./babel/**/*.js', ['babel']);
-    gulp.watch(['./images/*.jpg', './images/*.png'], ['imagemin']);
-    gulp.watch(['./jade/**/*.jade', './json/**/*.json'], ['jade']);
+gulp.task('default', ['sass', 'imagemin', 'less', 'babel', 'jade', 'browser-sync'], function(){
+    gulp.watch('scss/**/*.scss', ['sass']);
+    gulp.watch('less/**/*.less', ['less']);
+    gulp.watch('babel/**/*.js', ['babel']);
+    gulp.watch(['images/*.jpg', 'images/*.png'], ['imagemin']);
+    gulp.watch(['jade/**/*.jade', 'json/**/*.json'], ['jade']);
 });
-
-gulp.task('default',
-    [
-        'watch',
-        'sass',
-        'imagemin',
-        'less',
-        'babel',
-        'jade',
-        'browser-sync'
-    ]
-);
