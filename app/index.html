@@ -183,9 +183,9 @@
                         <div class="dropdown"><a data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="login-form__label" class="nav-search__login db no-underline no-select"><span class="icon-login"></span> Профиль</a>
                             <div aria-labelledby="login-form__label" class="login-form hover-transform-before dropdown-menu no-select">
                                 <div class="container-fluid">
-                                    <div class="row">
+                                    <div class="row-responsive">
                                         <div class="col-md-2">
-                                            <img src="http://placehold.it/160" alt="avatar" class="profile-info__avatar"><a href="#" class="btn btn-red fluid">Админ панель</a>
+                                            <img src="http://placehold.it/160" alt="avatar" class="profile-info__avatar img-responsive"><a href="#" class="btn btn-red fluid">Админпанель</a>
                                         </div>
                                         <div class="col-md-4"><span class="db profile-info__title puple">Информация</span>
                                             <ul class="lsn pl0 mb0 profile-info__list">
@@ -220,7 +220,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-md-4"><span class="db profile-info__title orange">Панель управления</span>
-                                            <div class="row">
+                                            <div class="row-responsive">
                                                 <div class="col-md-6"><a href="#" class="btn btn-orange fluid profile-info__fun-button">Добавить новость</a><a href="#" class="btn btn-orange fluid profile-info__fun-button">Мой профиль</a><a href="#" class="btn btn-orange fluid profile-info__fun-button">Сообщения (0 | 0)</a>
                                                     <a
                                                     href="#" class="btn btn-orange fluid profile-info__fun-button">Мои закладки</a>
@@ -230,6 +230,49 @@
                                                     href="#" class="btn btn-orange fluid profile-info__fun-button">Выход</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown"><a data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="login-form__label" class="nav-search__login db no-underline no-select"><span class="icon-login"></span> Вход</a>
+                            <div aria-labelledby="login-form__label" class="login-form hover-transform-before dropdown-menu no-select">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-4 login-form__col">
+                                            <h3 class="login-form__title text-center mt0">Вход на сайт</h3>
+                                            <form>
+                                                <input type="text" placeholder="Логин или email" class="fluid login-form__login no-outline">
+                                                <input type="password" placeholder="Пароль" class="fluid login-form__password no-outline">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <button type="submit" class="btn btn-orange fluid login-form__btn mb0">Войти</button>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="http://google.com" class="login-form__restore text-underline db">Восстановить пароль</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-4 login-form__col">
+                                            <h3 class="login-form__title text-center mt0">Войти через</h3>
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-vk fluid">Вконтакте</a>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-google fluid">Google</a>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-odnoklassniki fluid">Одноклассники</a>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-mail fluid">Mail.ru</a>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-facebook fluid mb0">Facebook</a>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-yandex fluid mb0">Яндекс</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 login-form__col">
+                                            <h3 class="login-form__title text-center mt0">Я новый пользователь</h3>
+                                            <p class="login-form__description">Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.</p><a href="#" class="btn btn-red login-form__register fluid mb0">Зарегистрироваться</a>
                                         </div>
                                     </div>
                                 </div>
@@ -635,10 +678,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -653,10 +696,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -671,10 +714,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -712,10 +755,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -730,10 +773,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -748,10 +791,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -789,10 +832,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -807,10 +850,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -825,10 +868,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -866,10 +909,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -884,10 +927,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -902,10 +945,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -943,10 +986,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -961,10 +1004,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -979,10 +1022,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1041,10 +1084,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1059,10 +1102,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1077,10 +1120,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1118,10 +1161,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1136,10 +1179,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1154,10 +1197,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1195,10 +1238,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1213,10 +1256,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1231,10 +1274,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1272,10 +1315,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1290,10 +1333,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1308,10 +1351,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1349,10 +1392,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1367,10 +1410,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1385,10 +1428,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1452,10 +1495,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1470,10 +1513,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1488,10 +1531,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1529,10 +1572,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1547,10 +1590,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1565,10 +1608,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1606,10 +1649,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1624,10 +1667,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1642,10 +1685,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1683,10 +1726,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1701,10 +1744,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1719,10 +1762,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1760,10 +1803,10 @@
                                     <div class="col-md-6">
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1778,10 +1821,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1796,10 +1839,10 @@
                                         </div>
                                         <div class="tab-mini-news">
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-md-6">
                                                     <img src="img/img_tab_news2.jpg" alt="tab news image" class="tab-mini-news__img img-responsive">
                                                 </div>
-                                                <div class="col-lg-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
+                                                <div class="col-md-6"><a href="#" class="dark-blue-link db tab-mini-news__description">Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы</a>
                                                 </div>
                                             </div>
                                             <div class="row-mini">
@@ -1864,54 +1907,54 @@
                         <h5 class="white-block__sidebar-title mt0"><span class="icon-comment-1"></span> Комментарии</h5>
                         <div class="sidebar-comments__wrap">
                             <div class="sidebar-comments__item">
-                                <div class="row">
+                                <div class="row-mini">
                                     <div class="col-xs-4">
-                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
+                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar img-responsive">
                                     </div>
                                     <div class="col-xs-8"><span class="db sidebar-comments__autor">Написал(а) <a href="#" class="link sidebar-comments__link">admin</a></span><span class="db sidebar-comments__time">Дата: Вчера в 23:18:12</span><span class="db sidebar-comments__demo-comment">К новости: <span class="sidebar-comments__text cur" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба">3XLOVE - Скрипт сайта знакомств сайта знакомств</span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="sidebar-comments__item">
-                                <div class="row">
+                                <div class="row-mini">
                                     <div class="col-xs-4">
-                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
+                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar img-responsive">
                                     </div>
                                     <div class="col-xs-8"><span class="db sidebar-comments__autor">Написал(а) <a href="#" class="link sidebar-comments__link">admin</a></span><span class="db sidebar-comments__time">Дата: Вчера в 23:18:12</span><span class="db sidebar-comments__demo-comment">К новости: <span class="sidebar-comments__text cur" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба">3XLOVE - Скрипт сайта знакомств сайта знакомств</span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="sidebar-comments__item">
-                                <div class="row">
+                                <div class="row-mini">
                                     <div class="col-xs-4">
-                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
+                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar img-responsive">
                                     </div>
                                     <div class="col-xs-8"><span class="db sidebar-comments__autor">Написал(а) <a href="#" class="link sidebar-comments__link">admin</a></span><span class="db sidebar-comments__time">Дата: Вчера в 23:18:12</span><span class="db sidebar-comments__demo-comment">К новости: <span class="sidebar-comments__text cur" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба">3XLOVE - Скрипт сайта знакомств сайта знакомств</span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="sidebar-comments__item">
-                                <div class="row">
+                                <div class="row-mini">
                                     <div class="col-xs-4">
-                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
+                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar img-responsive">
                                     </div>
                                     <div class="col-xs-8"><span class="db sidebar-comments__autor">Написал(а) <a href="#" class="link sidebar-comments__link">admin</a></span><span class="db sidebar-comments__time">Дата: Вчера в 23:18:12</span><span class="db sidebar-comments__demo-comment">К новости: <span class="sidebar-comments__text cur" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба">3XLOVE - Скрипт сайта знакомств сайта знакомств</span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="sidebar-comments__item">
-                                <div class="row">
+                                <div class="row-mini">
                                     <div class="col-xs-4">
-                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
+                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar img-responsive">
                                     </div>
                                     <div class="col-xs-8"><span class="db sidebar-comments__autor">Написал(а) <a href="#" class="link sidebar-comments__link">admin</a></span><span class="db sidebar-comments__time">Дата: Вчера в 23:18:12</span><span class="db sidebar-comments__demo-comment">К новости: <span class="sidebar-comments__text cur" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба">3XLOVE - Скрипт сайта знакомств сайта знакомств</span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="sidebar-comments__item">
-                                <div class="row">
+                                <div class="row-mini">
                                     <div class="col-xs-4">
-                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
+                                        <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar img-responsive">
                                     </div>
                                     <div class="col-xs-8"><span class="db sidebar-comments__autor">Написал(а) <a href="#" class="link sidebar-comments__link">admin</a></span><span class="db sidebar-comments__time">Дата: Вчера в 23:18:12</span><span class="db sidebar-comments__demo-comment">К новости: <span class="sidebar-comments__text cur" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба">3XLOVE - Скрипт сайта знакомств сайта знакомств</span></span>
                                     </div>
@@ -1925,7 +1968,7 @@
                         <h5 class="white-block__sidebar-title mt0"><span class="icon-chat-empty"></span> Чат пользователей</h5>
                         <div class="sidebar-comments__wrap">
                             <div class="sidebar-comments__item">
-                                <div class="row media">
+                                <div class="row-mini media">
                                     <div class="col-xs-4 media-body fn">
                                         <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
                                     </div>
@@ -1936,7 +1979,7 @@
                                 </div>
                             </div>
                             <div class="sidebar-comments__item">
-                                <div class="row media">
+                                <div class="row-mini media">
                                     <div class="col-xs-4 media-body fn">
                                         <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
                                     </div>
@@ -1947,7 +1990,7 @@
                                 </div>
                             </div>
                             <div class="sidebar-comments__item">
-                                <div class="row media">
+                                <div class="row-mini media">
                                     <div class="col-xs-4 media-body fn">
                                         <img src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar" class="sidebar-comments__avatar">
                                     </div>

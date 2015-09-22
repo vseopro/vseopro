@@ -240,6 +240,9 @@ header.main{
   }
   &__section{
     margin-bottom: 30px;
+    @media(max-width: 1100px){
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -980,8 +983,9 @@ footer.main{
   box-shadow: 0 0 7px 0 black(.17);
   padding: 30px;
   margin-bottom: 30px;
-  @media(max-width:768px){
-    padding: 20px;
+  @media(max-width:1100px){
+    padding: 15px;
+    margin-bottom: 20px;
   }
   &__title{
     padding-bottom: 12px;
@@ -1178,6 +1182,7 @@ footer.main{
   &__time,
   &__demo-comment{
     font-size: 12px;
+    padding-left: 15px;
   }
   &__autor{
     // margin-top: -4px;
@@ -1187,7 +1192,7 @@ footer.main{
 
   }
   &__demo-comment{
-    margin-top: 6px;
+    // margin-top: 6px;
     line-height: 15px;
   }
   &__link{
@@ -1297,7 +1302,7 @@ footer.main{
     padding: 4px 10px;
     margin-top: 10px;
     background: #f7f7f7;
-    border-radius: 6px;
+    // border-radius: 6px;
     border: #d9d9d9 1px solid;
     line-height: 20px;
   }

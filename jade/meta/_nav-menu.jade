@@ -74,10 +74,10 @@
             a(data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")#login-form__label.nav-search__login.db.no-underline.no-select <span class="icon-login"></span> Профиль
             .login-form.hover-transform-before.dropdown-menu.no-select(aria-labelledby="login-form__label")
               .container-fluid
-                .row
+                .row-responsive
                   .col-md-2
-                    img(src="http://placehold.it/160", alt="avatar").profile-info__avatar
-                    a(href="#").btn.btn-red.fluid Админ панель
+                    img(src="http://placehold.it/160", alt="avatar").profile-info__avatar.img-responsive
+                    a(href="#").btn.btn-red.fluid Админпанель
                   .col-md-4
                     span.db.profile-info__title.puple Информация
                     ul.lsn.pl0.mb0.profile-info__list
@@ -102,7 +102,7 @@
                       li.profile-info__item: <span class="profile-info__icon icon-mail-1"></span> <a href="#" class="white-link">Почта</a>
                   .col-md-4
                     span.db.profile-info__title.orange Панель управления
-                    .row
+                    .row-responsive
                       .col-md-6
                         a(href="#").btn.btn-orange.fluid.profile-info__fun-button Добавить новость
                         a(href="#").btn.btn-orange.fluid.profile-info__fun-button Мой профиль
@@ -113,7 +113,7 @@
                         a(href="#").btn.btn-orange.fluid.profile-info__fun-button Новые материалы
                         a(href="#").btn.btn-orange.fluid.profile-info__fun-button Статистика
                         a(href="#").btn.btn-orange.fluid.profile-info__fun-button Выход
-          //- .dropdown
+          .dropdown
             a(data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")#login-form__label.nav-search__login.db.no-underline.no-select <span class="icon-login"></span> Вход
             .login-form.hover-transform-before.dropdown-menu.no-select(aria-labelledby="login-form__label")
               .container-fluid
