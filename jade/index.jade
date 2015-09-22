@@ -141,7 +141,7 @@ block content
                               a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
                             .col-sm-4.col-md-4
                               a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").link.last-news__text.text-light.text-overflow <span class="icon-folder-open last-news__ico"></span> photoshop
-                          p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекс.
+                          p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекс. Рефераты предназначена  затоплен Яндекс.
                           a(href="#" role="button").btn.btn-red.fluid.db.btn-lg Читать подробнее
                       .col-md-6
                         -for(var e = 0; e < 3; e++)
@@ -150,7 +150,7 @@ block content
                               .col-lg-6
                                 img(src="img/img_tab_news2.jpg" alt="tab news image").tab-mini-news__img.img-responsive
                               .col-lg-6
-                                span.db.tab-mini-news__description Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы
+                                a(href="#").dark-blue-link.db.tab-mini-news__description Горячие капеция дня затоплен цукцукв  ук  право на репост выавыа ыв выапвалпо вавыаываы
                             .row-mini
                               .col-sm-4.col-md-4
                                 a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-user last-news__ico"></span> Admin
@@ -249,41 +249,95 @@ block content
             h5.white-block__sidebar-title.mt0 <span class="icon-award"></span> Мы рекомендуем
             .editors-choice__wrap.pr
               img(src="img/img_demo_sidebar_image.jpg" alt="editors choice img").editors-choice__img
-              span.editors-choice__text.text-owerflow Ай фон на запчасти подходи Ай фон на запчасти подходи Ай фон на запчасти подходи
+              span.editors-choice__text Ай фон на запчасти подходи Ай фон на запчасти подходи Ай фон на запчасти подходи
 
         section.user-online
           .white-block
             h5.white-block__sidebar-title.mt0 <span class="icon-users"></span> Пользователи онлайн
             .row
-              .col-xs-3
-                span.icon-users
+              .col-xs-2
+                span.icon-eye.user-online__icon
               .col-xs-9
-                span Всего на сайте: <span class="">22</span>
+                span.db.user-online__text Всего на сайте: <span class="user-online__label">22</span>
             .row
-              .col-xs-3
-                span.icon-users
+              .col-xs-2
+                span.icon-eye-off.user-online__icon
               .col-xs-9
-                span Невидимок: <span class="">22</span>
+                span.db.user-online__text Невидимок: <span class="user-online__label">22</span>
             .row
-              .col-xs-3
-                span.icon-users
+              .col-xs-2
+                span.icon-user-2.user-online__icon
               .col-xs-9
-                span Пользователей: <span class="">22</span>
+                span.db.user-online__text Пользователей: <span class="user-online__label">22</span>
             .row
-              .col-xs-3
-                span.icon-users
+              .col-xs-2
+                span.icon-github.user-online__icon
               .col-xs-9
-                span Роботов: <span class="">22</span>
+                span.db.user-online__text Роботов: <span class="user-online__label">22</span>
 
-        section
+        section.site-statistic
           .white-block
             h5.white-block__sidebar-title.mt0 <span class="icon-chart-pie"></span> Статистика сайта
+            .row
+              .col-xs-7
+                p.site-statistic__text Новостей: <span class="site-statistic__count">5106</span>
+              .col-xs-5
+                p.text-right.site-statistic__label +0
+            .row
+              .col-xs-7
+                p.site-statistic__text Комментариев: <span class="site-statistic__count">1950</span>
+              .col-xs-5
+                p.text-right.site-statistic__label +50
+            .row
+              .col-xs-7
+                p.site-statistic__text Пользователей: <span class="site-statistic__count">5106</span>
+              .col-xs-5
+                p.text-right.site-statistic__label +360
 
-        section
+            p.site-statistic__group-title Из них
+            p.site-statistic__text Администраторов: <span class="site-statistic__count">5</span>
+            p.site-statistic__text Модераторов: <span class="site-statistic__count">5</span>
+            p.site-statistic__text Журналистов: <span class="site-statistic__count">5</span>
+            p.site-statistic__text Проверенных: <span class="site-statistic__count">5</span>
+            p.site-statistic__text Потребителей: <span class="site-statistic__count">5000</span>
+
+            p.site-statistic__group-title Зарегистрировались
+            p.site-statistic__text Сегодня: <span class="site-statistic__count">5</span>
+            p.site-statistic__text Вчера: <span class="site-statistic__count">5</span>
+            p.site-statistic__text За неделю: <span class="site-statistic__count">5</span>
+            p.site-statistic__text За месяц: <span class="site-statistic__count">5</span>
+
+        section.updates
           .white-block
             h5.white-block__sidebar-title.mt0 <span class="icon-chart-bar"></span> Апдейты
+            .media.updates__media
+              .media-left.media-middle
+                span.updates__ya-color.updates__big-font Я
+              .media-body
+                span.db.updates__text Апдейты <span class="updates__ya-color">Я</span>ndex ТИЦ
+                small.db.updates__time <span class="updates__time-orange">09.05.2205</span> < <span class="updates__time-orange">05.06.2155</span> < <span class="updates__time-orange">06.08.5136</span>
+            .media.updates__media
+              .media-left.media-middle
+                span.updates__ya-color.updates__big-font Я
+              .media-body
+                span.db.updates__text Апдейты <span class="updates__ya-color">Я</span>ndex ТИЦ
+                small.db.updates__time <span class="updates__time-orange">09.05.2205</span> < <span class="updates__time-orange">05.06.2155</span> < <span class="updates__time-orange">06.08.5136</span>
+            .media.updates__media
+              .media-left.media-middle
+                span.updates__ya-color.updates__big-font Я
+              .media-body
+                span.db.updates__text Апдейты <span class="updates__ya-color">Я</span>ndex ТИЦ
+                small.db.updates__time <span class="updates__time-orange">09.05.2205</span> < <span class="updates__time-orange">05.06.2155</span> < <span class="updates__time-orange">06.08.5136</span>
+            .media.updates__media
+              .media-left.media-middle
+                span.updates__google-color.updates__big-font G
+              .media-body
+                span.db.updates__text Апдейты <span class="updates__google-color">G</span>oogle ТИЦ
+                small.db.updates__time <span class="updates__time-orange">09.05.2205</span> < <span class="updates__time-orange">05.06.2155</span> < <span class="updates__time-orange">06.08.5136</span>
+
 
         section
           .white-block
             h5.white-block__sidebar-title.mt0 <span class="icon-globe-inv"></span> География сайта
+            img(src="img/img_map.jpg" alt="image map")
 
