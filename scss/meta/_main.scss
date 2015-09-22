@@ -524,6 +524,7 @@ nav.main{
 
 .login-form{
   color: white(1);
+  padding: 15px 0;
   &__login,
   &__password{
     border: 2px #6c707c solid;
@@ -563,6 +564,9 @@ nav.main{
   &__register{
     margin-bottom: 20px;
     padding: 12px;
+    &.mb0{
+      margin-bottom: 0 !important;
+    }
     @media(min-width: 992px){
       position: absolute;
       bottom: 0;
@@ -574,6 +578,9 @@ nav.main{
   &__btn{
     margin-bottom: 20px;
     padding: 12px;
+    &.mb0{
+      margin-bottom: 0 !important;
+    }
   }
   &__restore{
     margin-top: 11px;
@@ -1467,5 +1474,57 @@ footer.main{
   }
   &__media{
     margin-top: 5px;
+  }
+}
+
+.profile-info{
+  &__avatar{
+    margin-bottom: 42px;
+    @media(max-width: 992px){
+      display: table;
+      margin: 0 auto 20px;
+    }
+  }
+  &__title{
+    text-align: center;
+    font-size: 20px;
+    font-family: $roboto;
+    padding: 1px;
+    margin-bottom: 20px;
+    @media(max-width: 992px){
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    &.puple{
+      background: #5669B7;
+    }
+    &.green{
+      background: #399f53;
+    }
+    &.orange{
+      background: $color-orange;
+    }
+  }
+  &__icon{
+    margin-right: 10px;
+  }
+  &__list{
+    @media(max-width: 992px){
+      margin-bottom: 20px;
+    }
+  }
+  &__item{
+    margin-bottom: 4px;
+  }
+  &__fun-button{
+    margin-bottom: 16px;
+    &:last-child{
+      @media(min-width: 992px){
+        margin-bottom: 0;
+      }
+    }
+    &.mb0{
+      // margin-bottom: 0 !important;
+    }
   }
 }
