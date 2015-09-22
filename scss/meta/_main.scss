@@ -1437,6 +1437,21 @@ footer.main{
 .site-statistic{
   &__text{
     color: #192637;
+    &.red{
+      color: #ff0000;
+    }
+    &.blue{
+      color: rgb(0, 0, 255);
+    }
+    &.green{
+      color: rgb(0, 128, 0);
+    }
+    &.light-blue{
+      color: rgb(36, 139, 255);
+    }
+    &.orange{
+      color: rgb(255, 120, 0);
+    }
   }
   &__label{
     color: $color-orange;

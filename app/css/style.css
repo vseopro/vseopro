@@ -2605,6 +2605,26 @@ footer.main {
     color: #192637;
 }
 
+.site-statistic__text.red {
+    color: red;
+}
+
+.site-statistic__text.blue {
+    color: #00f;
+}
+
+.site-statistic__text.green {
+    color: green;
+}
+
+.site-statistic__text.light-blue {
+    color: #248bff;
+}
+
+.site-statistic__text.orange {
+    color: #ff7800;
+}
+
 .site-statistic__label,
 .site-statistic__count {
     color: #ff690b;
