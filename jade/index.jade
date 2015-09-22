@@ -28,7 +28,7 @@ block content
               small Текстами рефератов можно пользоваться совершенно бесплатно, однако при транслировании и предоставлении текстов в массовое пользование ссылка на Яндекс.Рефераты обязательна.
 
   .container
-    .row
+    .row.pr
       // основные блоки
       .col-md-8
         section.forums-answer
@@ -165,7 +165,7 @@ block content
                 img(src="img/img_750_150.png" alt="click image").click-block__image.img-responsive
 
       // сайдбар
-      .col-xs-4.visible-md.visible-lg
+      .col-xs-4.visible-md.visible-lg.sidebar
         section.editors-choice
           .white-block
             h5.white-block__sidebar-title.mt0 <span class="icon-award"></span> Выбор редакции
@@ -237,7 +237,7 @@ block content
                     .col-xs-4
                       img(src="img/img_popular_news.jpg" alt="popular news image").popular-news__image
                     .col-xs-8
-                      span.db.text-uppercase.popular-news__text 3XLOVE - Скрипт сайта знакомств бла бла капе
+                      span.db.popular-news__text 3XLOVE - Скрипт сайта знакомств бла бла капе
                       .row-mini
                         .col-xs-6
                           a(href="#").link.last-news__text.text-light.text-overflow <span class="icon-user last-news__ico"></span> Admin
@@ -279,19 +279,19 @@ block content
           .white-block
             h5.white-block__sidebar-title.mt0 <span class="icon-chart-pie"></span> Статистика сайта
             .row
-              .col-xs-7
+              .col-xs-9
                 p.site-statistic__text Новостей: <span class="site-statistic__count">5106</span>
-              .col-xs-5
+              .col-xs-3
                 p.text-right.site-statistic__label +0
             .row
-              .col-xs-7
+              .col-xs-9
                 p.site-statistic__text Комментариев: <span class="site-statistic__count">1950</span>
-              .col-xs-5
+              .col-xs-3
                 p.text-right.site-statistic__label +50
             .row
-              .col-xs-7
+              .col-xs-9
                 p.site-statistic__text Пользователей: <span class="site-statistic__count">5106</span>
-              .col-xs-5
+              .col-xs-3
                 p.text-right.site-statistic__label +360
 
             p.site-statistic__group-title Из них
