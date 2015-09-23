@@ -2249,7 +2249,7 @@ footer.main {
     font-size: 1.28571rem;
 }
 
-.white-block__text {
+.welcome-block__text {
     color: #6C707C;
 }
 
@@ -2698,32 +2698,32 @@ footer.main {
     margin-bottom: 4px;
 }
 
-.updates__ya-color {
+.sidebar-updates__ya-color {
     color: red;
 }
 
-.updates__google-color {
+.sidebar-updates__google-color {
     color: #0c00ff;
 }
 
-.updates__big-font {
+.sidebar-updates__big-font {
     font-size: 2.14286rem;
     line-height: 3.21429rem;
 }
 
-.updates__text {
+.sidebar-updates__text {
     color: #192637;
 }
 
-.updates__time {
+.sidebar-updates__time {
     color: #919191;
 }
 
-.updates__time-orange {
+.sidebar-updates__time-orange {
     color: #ff690b;
 }
 
-.updates__media {
+.sidebar-updates__media {
     margin-top: 5px;
 }
 

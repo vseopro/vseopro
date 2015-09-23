@@ -987,6 +987,9 @@ footer.main{
     padding: 15px;
     margin-bottom: 20px;
   }
+  &.mb0{
+    // margin-bottom: 0 !important;
+  }
   &__title{
     padding-bottom: 12px;
     margin-bottom: 15px;
@@ -1003,24 +1006,16 @@ footer.main{
     font-size: 18px;
     font-family: $roboto;
   }
+}
+
+.welcome-block{
   &__text{
     // font-size: 13px;
     color: #6C707C;
   }
 }
 
-.welcome-block{
-  .white-block{
-    &__title{
-      // font-size: 30px;
-    }
-  }
-}
-
 .forums-answer{
-  &__wrap{
-
-  }
   &__ico{
     font-size: 20px;
     color: #B1B2B7;
@@ -1056,10 +1051,7 @@ footer.main{
 }
 
 .editors-choice{
-  &__wrap{
-
-  }
-  &__img{
+    &__img{
     // width: 100%;
     @extend %fluid;
     // margin-top: 14px;
@@ -1402,9 +1394,6 @@ footer.main{
 }
 
 .popular-news{
-  &__wrap{
-
-  }
   &__item{
     border-bottom: 1px solid #f1f1f1;
     margin-bottom: 20px;
@@ -1473,7 +1462,7 @@ footer.main{
   }
 }
 
-.updates{
+.sidebar-updates{
   &__ya-color{
     color: #ff0000;
   }
