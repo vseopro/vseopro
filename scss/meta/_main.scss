@@ -549,7 +549,7 @@ nav.main{
 
   }
   &__description{
-    font-family: $light;
+    // font-family: $light;
   }
   &__col{
     @media(min-width: 992px){
@@ -681,7 +681,7 @@ footer.main{
   &__title{
     margin-bottom: 0;
     margin-top: 8px;
-    font-family: $light;
+    // font-family: $light;
     font-size: 13px;
   }
   &__item{
@@ -717,7 +717,7 @@ footer.main{
   }
   &__text{
     font-size: 10px;
-    font-family: $light;
+    // font-family: $light;
     margin-bottom: 4px;
     color: #ccc;
   }
@@ -749,7 +749,7 @@ footer.main{
     margin-bottom: 3px;
     margin-right: 3px;
     float: left;
-    font-family: $light;
+    // font-family: $light;
     &:hover{
       text-decoration: none;
       color: white(1);
@@ -990,20 +990,20 @@ footer.main{
   &.mb0{
     // margin-bottom: 0 !important;
   }
-  &__title{
-    padding-bottom: 12px;
-    margin-bottom: 15px;
-    color: $color-orange;
-    border-bottom: 1px #f1f1f1 solid;
-    font-size: 24px;
-    font-family: $roboto;
-  }
   &__sidebar-title{
     padding-bottom: 19px;
     margin-bottom: 15px;
     color: $color-red;
     border-bottom: 1px #f1f1f1 solid;
     font-size: 18px;
+    font-family: $roboto;
+  }
+  &__title{
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    color: $color-orange;
+    border-bottom: 1px #f1f1f1 solid;
+    font-size: 24px;
     font-family: $roboto;
   }
 }

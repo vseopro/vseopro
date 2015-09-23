@@ -227,14 +227,6 @@ strong,
 }
 
 @font-face {
-    font-family: 'opensans-light';
-    src: url("../font/opensans-light.eot");
-    src: url("../font/opensans-light.eot?#iefix") format("embedded-opentype"), url("../font/opensans-light.woff") format("woff"), url("../font/opensans-light.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'opensans-regular';
     src: url("../font/opensans-regular.eot");
     src: url("../font/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../font/opensans-regular.woff") format("woff"), url("../font/opensans-regular.ttf") format("truetype");
@@ -1162,10 +1154,6 @@ p.lead {
     height: 3px;
 }
 
-.text-light {
-    font-family: "opensans-light", sans-serif;
-}
-
 blockquote {
     border-color: #6C707C !important;
 }
@@ -1819,10 +1807,6 @@ nav.main,
     border-color: #fff;
 }
 
-.login-form__description {
-    font-family: "opensans-light", sans-serif;
-}
-
 .login-form__title {
     margin-bottom: 25px;
 }
@@ -1940,7 +1924,6 @@ footer.main {
 .footer-social__title {
     margin-bottom: 0;
     margin-top: 8px;
-    font-family: "opensans-light", sans-serif;
     font-size: .92857rem;
 }
 
@@ -1982,7 +1965,6 @@ footer.main {
 
 .footer-last-user__text {
     font-size: .71429rem;
-    font-family: "opensans-light", sans-serif;
     margin-bottom: 4px;
     color: #ccc;
 }
@@ -2016,7 +1998,6 @@ footer.main {
     margin-bottom: 3px;
     margin-right: 3px;
     float: left;
-    font-family: "opensans-light", sans-serif;
 }
 
 .footer-tags__item:hover,
@@ -2230,23 +2211,23 @@ footer.main {
     margin-bottom: 30px;
 }
 
-.white-block__title {
-    padding-bottom: 12px;
-    color: #ff690b;
-    font-size: 1.71429rem;
+.white-block__sidebar-title {
+    padding-bottom: 19px;
+    color: #ef4628;
+    font-size: 1.28571rem;
 }
 
-.white-block__title,
-.white-block__sidebar-title {
+.white-block__sidebar-title,
+.white-block__title {
     margin-bottom: 15px;
     border-bottom: 1px #f1f1f1 solid;
     font-family: "roboto-slab-bold", sans-serif;
 }
 
-.white-block__sidebar-title {
-    padding-bottom: 19px;
-    color: #ef4628;
-    font-size: 1.28571rem;
+.white-block__title {
+    padding-bottom: 12px;
+    color: #ff690b;
+    font-size: 1.71429rem;
 }
 
 .welcome-block__text {
