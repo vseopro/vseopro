@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?17376829');
-  src: url('../font/fontello.eot?17376829#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff?17376829') format('woff'),
-       url('../font/fontello.ttf?17376829') format('truetype'),
-       url('../font/fontello.svg?17376829#fontello') format('svg');
+  src: url('../font/fontello.eot?73106135');
+  src: url('../font/fontello.eot?73106135#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?73106135') format('woff'),
+       url('../font/fontello.ttf?73106135') format('truetype'),
+       url('../font/fontello.svg?73106135#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?17376829#fontello') format('svg');
+    src: url('../font/fontello.svg?73106135#fontello') format('svg');
   }
 }
 */
@@ -97,3 +97,4 @@
 .icon-venus-mars:before { content: '\e828'; } /* '' */
 .icon-user-1:before { content: '\e829'; } /* '' */
 .icon-graduation-cap:before { content: '\e82a'; } /* '' */
+.icon-angle-left:before { content: '\e82b'; } /* '' */

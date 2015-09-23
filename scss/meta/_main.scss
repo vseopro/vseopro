@@ -1397,6 +1397,7 @@ footer.main{
      margin-top: -3px;
     line-height: 18px;
     margin-bottom: 15px;
+    // height: 102px;
   }
 }
 
@@ -1547,4 +1548,15 @@ footer.main{
       // margin-bottom: 0 !important;
     }
   }
+}
+
+.sidebar{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.grand-content{
+  // height: 7000px;
+  // background: #333;
 }
