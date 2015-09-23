@@ -1264,8 +1264,8 @@ textarea {
 }
 
 .row-mini {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .row-mini .col-xs-1,
@@ -1316,8 +1316,8 @@ textarea {
 .row-mini .col-sm-12,
 .row-mini .col-md-12,
 .row-mini .col-lg-12 {
-    padding-left: 0;
-    padding-right: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 .row-responsive:after {
@@ -2838,10 +2838,6 @@ footer.main {
 }
 
 @media (max-width:768px) {
-    html {
-        font-size: 16px;
-    }
-
     h1 .h1 {
         font-size: 1.71429rem;
     }
