@@ -1825,10 +1825,6 @@ nav.main,
     padding: 12px;
 }
 
-.login-form__btn.mb0 {
-    margin-bottom: 0 !important;
-}
-
 .login-form__restore {
     margin-top: 11px;
     color: #ef4628;
@@ -2819,6 +2815,10 @@ footer.main {
         width: auto;
     }
 
+    .login-form__btn.mb0 {
+        margin-bottom: 0 !important;
+    }
+
     .search-form__submit {
         background: 0 0;
     }
@@ -3102,6 +3102,7 @@ footer.main {
     .login-form__restore {
         margin-top: 0;
         text-align: center;
+        margin-bottom: 11px;
     }
 
     .hot-news__button {

@@ -582,7 +582,9 @@ nav.main{
     margin-bottom: 20px;
     padding: 12px;
     &.mb0{
-      margin-bottom: 0 !important;
+      @media(min-width: 992px){
+        margin-bottom: 0 !important;
+      }
     }
   }
   &__restore{
@@ -594,6 +596,7 @@ nav.main{
     @media(max-width: 992px){
       margin-top: 0;
       text-align: center;
+      margin-bottom: 11px;
     }
   }
 }
