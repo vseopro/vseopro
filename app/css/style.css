@@ -3212,7 +3212,7 @@ footer.main {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:993px) {
     .pagination-list {
         display: table;
     }
