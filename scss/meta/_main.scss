@@ -1201,6 +1201,7 @@ footer.main{
 .pagination{
   margin-top: 20px;
   // margin-bottom: 3px;
+  min-height: 40px;
   @media(max-width: 768px){
     text-align: center;
   }
@@ -1260,7 +1261,7 @@ footer.main{
   &-list{
     padding: 0 50px;
     display: none;
-    @media(min-width: 993px){
+    @media(min-width: 769px){
       display: table;
     }
   }

@@ -2404,6 +2404,7 @@ footer.main {
 
 .pagination {
     margin-top: 20px;
+    min-height: 40px;
 }
 
 .pagination-previous__button,
@@ -3212,7 +3213,7 @@ footer.main {
     }
 }
 
-@media (min-width:993px) {
+@media (min-width:769px) {
     .pagination-list {
         display: table;
     }
