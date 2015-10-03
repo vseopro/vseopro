@@ -1708,6 +1708,13 @@ nav.main,
     color: #ff690b;
 }
 
+.browser-mobile .first-menu__has-menu:hover>.second-menu__list,
+.browser-mobile .first-menu__has-menu:focus>.second-menu__list,
+.browser-mobile .second-menu__has-menu:hover>.third-menu__list,
+.browser-mobile .second-menu__has-menu:focus>.third-menu__list {
+    display: none;
+}
+
 .nav-search {
     float: right;
 }

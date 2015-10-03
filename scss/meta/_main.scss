@@ -99,6 +99,8 @@
   }
 }
 
+/* [[section: mobile menu]] */
+
 #mobile-menu{
   @media(min-width: 992px){
     display: none;
@@ -215,6 +217,8 @@
   // margin-right: 15px;
 }
 
+/* [[section: header]] */
+
 header.main{
   padding-bottom: 28px;
   padding-top: 22px;
@@ -245,6 +249,8 @@ header.main{
     }
   }
 }
+
+/* [[section: nav.main]] */
 
 nav.main{
   // margin-bottom: 30px;
@@ -460,6 +466,29 @@ nav.main{
    }
   }
 }
+
+/* [[section: browser-mobile]] */
+
+.browser-mobile{
+  .first-menu__has-menu{
+    &:hover{
+      > .second-menu__list{
+        // display: none !important;
+        display: none;
+      }
+    }
+  }
+  .second-menu__has-menu{
+    &:hover{
+      > .third-menu__list{
+        // display: none !important;
+        display: none;
+      }
+    }
+  }
+}
+
+/* [[section: nav-search]] */
 
 .nav-search{
   float: right;

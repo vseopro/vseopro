@@ -19,26 +19,26 @@ var imagemin             = require('gulp-imagemin');
 
 var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
-        if ( rule.selector.indexOf(':hover') !== -1 ) {
+        if (rule.selector.indexOf(':hover') !== -1) {
             var focuses = [];
             rule.selectors.forEach(function (selector) {
-                if ( selector.indexOf(':hover') !== -1 ) {
+                if (selector.indexOf(':hover') !== -1) {
                     focuses.push(selector.replace(/:hover/g, ':focus'));
                 }
             });
-            if ( focuses.length ) {
+            if (focuses.length) {
                 rule.selectors = rule.selectors.concat(focuses);
             }
         }
 
-        if ( rule.selector.indexOf(':only-hover') !== -1 ) {
+        if (rule.selector.indexOf(':only-hover') !== -1) {
             var hovered = [];
             rule.selectors.forEach(function (selector) {
-                if ( selector.indexOf(':only-hover') !== -1 ) {
+                if (selector.indexOf(':only-hover') !== -1) {
                     hovered.push(selector.replace(/:only-hover/g, ':hover'));
                 }
             });
-            if ( hovered.length ) {
+            if (hovered.length) {
                 rule.selectors = hovered;
             }
         }
@@ -68,10 +68,10 @@ var PERFECTIONIST_CONFIG = {
 };
 
 gulp.task('less', function () {
-  return gulp.src('./less/bootstrap.less')
-    .pipe(less())
-    //.pipe(csso())
-    .pipe(gulp.dest('./app/css'));
+    return gulp.src('./less/bootstrap.less')
+        .pipe(less())
+        //.pipe(csso())
+        .pipe(gulp.dest('./app/css'));
 });
 
 gulp.task('imagemin', function () {
@@ -82,7 +82,7 @@ gulp.task('imagemin', function () {
         .pipe(gulp.dest('app/img/'));
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
     browserSync({
         server: {
             baseDir: "./app/"
@@ -95,9 +95,9 @@ gulp.task('reload', function () {
     browserSync.reload();
 });
 
-gulp.task('jade', function(){
-    var dataJSON = JSON.parse(fs.readFileSync('./json/config.json', 'utf-8'));
+gulp.task('jade', function () {
 
+    var dataJSON = JSON.parse(fs.readFileSync('./json/config.json', 'utf-8'));
     gulp.src('./jade/!(_)*.jade')
 
         .pipe(jade({
@@ -108,30 +108,32 @@ gulp.task('jade', function(){
         .pipe(prettify({indent_char: '  ', indent_size: 2}))
         .on('error', console.log)
         .pipe(gulp.dest('./app/'))
-        .pipe(reload({stream:true}));
+        .pipe(reload({stream: true}));
 });
 
 gulp.task('sass', function () {
-        gulp.src(['./scss/**/*.scss'])
+    gulp.src(['./scss/**/*.scss'])
+
         .pipe(sass({
             outputStyle: 'nested',
             errLogToConsole: true
         }))
+
         .pipe(postcss(PROCESSORS))
         .pipe(csso())
         .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
         .pipe(gulp.dest('./app/css'))
-        .pipe(reload({stream:true}))
+        .pipe(reload({stream: true}))
 });
 
-gulp.task('babel', function() {
-  return gulp.src(['./babel/**/*.js'])
-    .pipe(babel())
-    .pipe(gulp.dest('./app/js/'))
-    .pipe(reload({stream:true}));
+gulp.task('babel', function () {
+    return gulp.src(['./babel/**/*.js'])
+        .pipe(babel())
+        .pipe(gulp.dest('./app/js/'))
+        .pipe(reload({stream: true}));
 });
 
-gulp.task('default', ['sass', 'imagemin', 'less', 'babel', 'jade', 'browser-sync'], function(){
+gulp.task('default', ['sass', 'imagemin', 'less', 'babel', 'jade', 'browser-sync'], function () {
     gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('less/**/*.less', ['less']);
     gulp.watch('babel/**/*.js', ['babel']);

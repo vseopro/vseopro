@@ -42,19 +42,24 @@ $(function() {
 });
 
 $(function() {
-    $(window).on('scroll', function (e) {
+    $(window).on('scroll', (e) => {
         if ($('.grand-content').height() > $('.sidebar').height()) {
 
+            // вычисляем высоту верхних блоков
             var headerHeight = $('header.main').outerHeight() + $('.affix-wrap').outerHeight() + $('.hot-news').outerHeight() + $('.welcome-block').outerHeight();
+
+            // вычисляем разницу между .grand-content и .sidebar
             var heigthResult = $('.grand-content').height() - $('.sidebar').height();
-            var cofi = heigthResult / $('.grand-content').height();
+
+            // вычисляем постоянную константу
+            var constant = heigthResult / $('.grand-content').height();
+
+            // заносим в переменную высоту окна
             var windowHeight = $(window).height();
 
             if ($(window).scrollTop() > headerHeight && $(window).scrollTop() < headerHeight + $('.grand-content').height() - windowHeight * 2) {
-                // console.log(headerHeight);
-                console.log(cofi);
                 $('.sidebar').css({
-                    "top": ($(window).scrollTop() - headerHeight) * cofi,
+                    "top": ($(window).scrollTop() - headerHeight) * constant,
                     "bottom": "auto"
                 });
             } else if($(window).scrollTop() < headerHeight){
@@ -63,16 +68,37 @@ $(function() {
                     "bottom": "auto"
                 })
             } else if($(window).scrollTop() > headerHeight + ($('.grand-content').height() - $(window).height() * 2)){
-                console.log("sd");
                 $('.sidebar').css({
                     "top": "auto",
                     "bottom": 0
                 })
             }
-            // console.log($(window).scrollTop());
-            // console.log($('.grand-content').height());
-            // console.log($('.sidebar').height());
         };
-
     })
+});
+
+$(function() {
+    if(device.ipad() ||
+        device.androidTablet() ||
+        device.blackberryTablet() ||
+        device.windowsTablet() ||
+        device.fxosTablet() ||
+        device.tablet()){
+
+        $('body').addClass("browser-mobile");
+
+        $('.first-menu__has-menu').on('click', () => {
+            var _this = $(this);
+            _this.find('.second-menu__list').css({
+                'display': 'block'
+            });
+        });
+
+        $('.second-menu__has-menu').on('click', () => {
+            var _this = $(this);
+            _this.find('.third-menu__list').css({
+                'display': 'block'
+            });
+        });
+    }
 });
