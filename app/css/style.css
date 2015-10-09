@@ -2776,8 +2776,8 @@ footer.main {
         -webkit-transform-origin: 0 0;
             -ms-transform-origin: 0 0;
                  transform-origin: 0 0;
-        -webkit-transform: perspective(600px)rotateX(-90deg);
-                transform: perspective(600px)rotateX(-90deg);
+        -webkit-transform: perspective(600px) rotateX(-90deg);
+                transform: perspective(600px) rotateX(-90deg);
         -webkit-transition: -webkit-transform .5s ease, opacity .6s ease, max-height .6s step-end, max-width .6s;
                 transition: transform .5s ease, opacity .6s ease, max-height .6s step-end, max-width .6s;
     }
@@ -2790,9 +2790,9 @@ footer.main {
     .second-menu__has-menu:focus>.third-menu__list {
         max-width: 5000px;
         max-height: 5000px;
-        -webkit-transform: perspective(600px)rotateX(0);
-                transform: perspective(600px)rotateX(0);
-        -webkit-transition: -webkit-transform .5s ease, opacity .2s ease, max-height 0 step-end, max-width 0 step-end, padding 0 step-end;
+        -webkit-transform: perspective(600px) rotateX(0deg);
+                transform: perspective(600px) rotateX(0deg);
+        -webkit-transition: -webkit-transform .5s ease, opacity .2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
                 transition: transform .5s ease, opacity .2s ease, max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
     }
 

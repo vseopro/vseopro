@@ -1,7 +1,7 @@
 var gulp                 = require('gulp');
 var fs                   = require('fs');
 var jade                 = require('gulp-jade');
-var prettify             = require('gulp-html-prettify');
+var prettify             = require('gulp-prettify');
 var sass                 = require('gulp-sass');
 var csso                 = require('gulp-csso');
 var perfectionist        = require('perfectionist');
@@ -71,6 +71,7 @@ gulp.task('less', function () {
     return gulp.src('./less/bootstrap.less')
         .pipe(less())
         //.pipe(csso())
+        .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
         .pipe(gulp.dest('./app/css'));
 });
 
@@ -105,7 +106,7 @@ gulp.task('jade', function () {
             pretty: true
         }))
 
-        .pipe(prettify({indent_char: '  ', indent_size: 2}))
+        .pipe(prettify({indent_size: 4}))
         .on('error', console.log)
         .pipe(gulp.dest('./app/'))
         .pipe(reload({stream: true}));
