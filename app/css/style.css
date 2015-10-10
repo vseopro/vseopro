@@ -2766,6 +2766,30 @@ footer.main {
     max-width: 300px;
 }
 
+.pages-menu {
+    text-align: center;
+}
+
+.pages-menu li {
+    display: inline-block;
+    border-right: 1px #ddd solid;
+    border-left: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    border-top: 1px #ddd solid;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.pages-menu a {
+    display: block;
+    padding: 10px 15px;
+}
+
+.pages-menu a:hover,
+.pages-menu a:focus {
+    background: #dadada;
+}
+
 @media (min-width:992px) {
     .hover-transform-before,
     .second-menu__list,

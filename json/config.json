@@ -2,7 +2,7 @@
   "navMenu": [
     {
       "text": "Главная",
-      "url": "#"
+      "url": "index.html"
     },{
       "text": "Популярные CMS",
       "url": "#"

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <title>Vseopro | test</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no maximum-scale=1">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="test url">
+        <meta property="og:title" content="test title">
+        <meta property="og:description" content="test description">
+        <meta property="og:image" content="image_url">
+        <meta name="twitter:card" content="">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:creator" content="">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head>
+
+    <body>
+        <div class="pages-menu">
+            <ul class="clearfix lsn pl0 mb0">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index_enter.html">Главная (вход)</a></li>
+                <li><a href="registration1.html">Рег. 1 экран</a></li>
+                <li><a href="registration2.html">Рег. 2 экран</a></li>
+                <li><a href="registration3.html">Рег. 3 экран</a></li>
+            </ul>
+        </div>
+        <div class="mobile-overlay dn cur"></div>
+        <div class="top-line-decorator"></div>
+        <header class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="#" class="header-logo__link db no-underline"><img src="img/img_header_logo.svg" alt="logo image" class="header-logo__image img-responsive"></a><span class="header-logo__description db">Всё для веб-мастера! Всё для создания сайта!</span> </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="click-block">
+                            <a href="#" class="db"><img src="img/img_750_70.png" alt="click image" class="click-block__image img-responsive"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="affix-wrap">
+            <nav data-spy="affix" data-offset-top="134" data-offset-bottom="200" class="main open-menu-position nav-afix">
+                <div class="container pr open-menu-position">
+                    <div class="row open-menu-position">
+                        <div class="hidden-md hidden-lg pull-left">
+                            <button type="button" data-show="left-menu" class="open-menu__button no-outline no-select pull-left"><span class="dib"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span></span><span class="nav-main__button-label text-white">Меню</span></button>
+                        </div>
+                        <div class="hidden-md hidden-lg pull-right">
+                            <button type="button" data-show="right-menu" class="open-menu__button no-outline no-select pull-right"><span class="login-form__button-label text-white">Вход</span><span class="dib"><span class="open-menu__span"></span><span class="open-menu__span"></span><span class="open-menu__span"></span></span>
+                            </button>
+                        </div>
+                        <!-- основное меню видно везде кроме мобильных устройств-->
+                        <div class="nav-main clearfix visible-md visible-lg">
+                            <ul class="lsn pl0 mb0 clearfix first-menu__list">
+                                <li class="first-menu__item"><a href="index.html" class="db no-underline cur no-select first-menu__link">Главная</a></li>
+                                <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Популярные CMS</a></li>
+                                <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Другие</a></li>
+                                <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Веб-мастеру</a></li>
+                                <li class="first-menu__item first-menu__has-menu"><a class="db no-underline cur no-select first-menu__link">Игры</a>
+                                    <ul class="second-menu__list pl0 mb0">
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item second-menu__has-menu"><a class="second-menu__link db no-underline cur no-select">Браузерные игры</a>
+                                            <ul class="third-menu__list pl0 mb0">
+                                                <li class="third-menu__item"><a href="#" class="third-menu__link db no-underline cur no-select">submenu3</a></li>
+                                                <li class="third-menu__item"><a href="#" class="third-menu__link db no-underline cur no-select">submenu3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                    </ul>
+                                </li>
+                                <li class="first-menu__item first-menu__has-menu"><a class="db no-underline cur no-select first-menu__link">Сервисы</a>
+                                    <ul class="second-menu__list pl0 mb0">
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item second-menu__has-menu"><a class="second-menu__link db no-underline cur no-select">Браузерные игры</a>
+                                            <ul class="third-menu__list pl0 mb0">
+                                                <li class="third-menu__item"><a href="#" class="third-menu__link db no-underline cur no-select">submenu3</a></li>
+                                                <li class="third-menu__item"><a href="#" class="third-menu__link db no-underline cur no-select">submenu3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                    </ul>
+                                </li>
+                                <li class="first-menu__item first-menu__has-menu"><a class="db no-underline cur no-select first-menu__link">Платное</a>
+                                    <ul class="second-menu__list pl0 mb0">
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item second-menu__has-menu"><a class="second-menu__link db no-underline cur no-select">Браузерные игры</a>
+                                            <ul class="third-menu__list pl0 mb0">
+                                                <li class="third-menu__item"><a href="#" class="third-menu__link db no-underline cur no-select">submenu3</a></li>
+                                                <li class="third-menu__item"><a href="#" class="third-menu__link db no-underline cur no-select">lorem ipsum</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                        <li class="second-menu__item"><a href="#" class="second-menu__link db no-underline cur no-select">Браузерные игры</a></li>
+                                    </ul>
+                                </li>
+                                <li class="first-menu__item"><a href="#" class="db no-underline cur no-select first-menu__link">Форум</a></li>
+                            </ul>
+                        </div>
+                        <!-- мобильное меню видно на всех устройств меньше 992px-->
+                        <div id="mobile-menu" class="nav-main clearfix">
+                            <div class="list-group panel"><a href="#" class="list-group-item mobile__link__first">Главная</a><a href="#" class="list-group-item mobile__link__first">Популярные CMS</a><a href="#" class="list-group-item mobile__link__first">Другие</a><a href="#" class="list-group-item mobile__link__first">Веб-мастеру</a>
+                                <a
+                                href="#target-menu4" data-toggle="collapse" data-parent="#mobile-menu" class="list-group-item mobile__link__first mobile__has-menu">Игры</a>
+                                    <div id="target-menu4" class="collapse"><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#target-submenu41" data-toggle="collapse" data-parent="#SubMenu1" class="list-group-item mobile__link__second mobile__has-menu">Браузерные игры</a>
+                                        <div id="target-submenu41" class="collapse list-group-submenu"><a href="#" class="list-group-item mobile__link__third">submenu3</a><a href="#" class="list-group-item mobile__link__third">submenu3</a> </div><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a>
+                                        <a
+                                        href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a> </div><a href="#target-menu5" data-toggle="collapse" data-parent="#mobile-menu" class="list-group-item mobile__link__first mobile__has-menu">Сервисы</a>
+                                    <div id="target-menu5" class="collapse"><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#target-submenu51" data-toggle="collapse" data-parent="#SubMenu1" class="list-group-item mobile__link__second mobile__has-menu">Браузерные игры</a>
+                                        <div id="target-submenu51" class="collapse list-group-submenu"><a href="#" class="list-group-item mobile__link__third">submenu3</a><a href="#" class="list-group-item mobile__link__third">submenu3</a> </div><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a>
+                                        <a
+                                        href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a> </div><a href="#target-menu6" data-toggle="collapse" data-parent="#mobile-menu" class="list-group-item mobile__link__first mobile__has-menu">Платное</a>
+                                    <div id="target-menu6" class="collapse"><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#target-submenu61" data-toggle="collapse" data-parent="#SubMenu1" class="list-group-item mobile__link__second mobile__has-menu">Браузерные игры</a>
+                                        <div id="target-submenu61" class="collapse list-group-submenu"><a href="#" class="list-group-item mobile__link__third">submenu3</a><a href="#" class="list-group-item mobile__link__third">lorem ipsum</a> </div><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a>
+                                        <a
+                                        href="#" class="list-group-item mobile__link__second">Браузерные игры</a><a href="#" class="list-group-item mobile__link__second">Браузерные игры</a> </div><a href="#" class="list-group-item mobile__link__first">Форум</a> </div>
+                        </div>
+                        <div class="nav-search">
+                            <div class="dropdown"><a data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="search-form__label" class="nav-search__find db no-underline no-select"><span class="icon-search"></span></a>
+                                <div aria-labelledby="search-form__label"
+                                class="search-form hover-transform-before dropdown-menu no-select">
+                                    <form class="search-form__form pr"><span class="icon-search search-form__ico"></span>
+                                        <input type="text" placeholder="Введите текст для поиска" class="search-form__field fluid no-outline">
+                                        <button type="submit" class="search-form__submit no-outline"><span class="icon-right"></span></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="dropdown"><a data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="login-form__label" class="nav-search__login db no-underline no-select"><span class="icon-login"></span> Профиль</a>
+                                <div
+                                aria-labelledby="login-form__label" class="login-form hover-transform-before dropdown-menu no-select">
+                                    <div class="container-fluid">
+                                        <div class="row-responsive">
+                                            <div class="col-md-2"><img src="http://placehold.it/160" alt="avatar" class="profile-info__avatar img-responsive"><a href="#" class="btn btn-red fluid">Админпанель</a></div>
+                                            <div class="col-md-4"><span class="db profile-info__title puple">Информация</span>
+                                                <ul class="lsn pl0 mb0 profile-info__list">
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-graduation-cap"></span> Ник: Админ</li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-user"></span> Имя: Саня</li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-venus-mars"></span> Пол: мужской</li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-location"></span> Город: Краснодар</li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-calendar"></span> Дата рождения: 02.01.2015 (Козерог)</li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-users-1"></span> Группа: Администраторы</li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-comment"></span> Публикаций: 129 [ <a href="#" class="white-link">Смотреть</a> ]</li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-comment-empty"></span> Комментариев: 13 [ <a href="#" class="white-link">Смотреть</a> ]</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2"><span class="db profile-info__title green">Контакты</span>
+                                                <ul class="lsn pl0 mb0 profile-info__list">
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-vk"></span> <a href="#" class="white-link">Вконтакте</a></li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-odnoklassniki"></span> <a href="#" class="white-link">Одноклассники</a></li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-gplus"></span> <a href="#" class="white-link">Google +</a></li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-facebook"></span> <a href="#" class="white-link">Facebook</a></li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-twitter"></span> <a href="#" class="white-link">Twitter</a></li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-skype"></span> <a href="#" class="white-link">Skype</a></li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-paper-plane"></span> <a href="#" class="white-link">Telegram</a></li>
+                                                    <li class="profile-info__item"><span class="profile-info__icon icon-mail-1"></span> <a href="#" class="white-link">Почта</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4"><span class="db profile-info__title orange">Панель управления</span>
+                                                <div class="row-responsive">
+                                                    <div class="col-md-6"><a href="#" class="btn btn-red fluid profile-info__fun-button">Добавить новость</a><a href="#" class="btn btn-red fluid profile-info__fun-button">Мой профиль</a><a href="#" class="btn btn-red fluid profile-info__fun-button">Сообщения (0 | 0)</a>
+                                                        <a
+                                                        href="#" class="btn btn-red fluid profile-info__fun-button">Мои закладки</a>
+                                                    </div>
+                                                    <div class="col-md-6"><a href="#" class="btn btn-red fluid profile-info__fun-button">Все комментарии</a><a href="#" class="btn btn-red fluid profile-info__fun-button">Новые материалы</a><a href="#" class="btn btn-red fluid profile-info__fun-button">Статистика</a>
+                                                        <a
+                                                        href="#" class="btn btn-red fluid profile-info__fun-button">Выход</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </nav>
+        </div>
+        <p>Registratoin 2</p>
+        <footer class="main visible-lg visible-md">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="footer-subs">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h3 class="text-uppercase footer-subs__title">Подписаться на наши еженедельные новости</h3>
+                                    <p class="footer-subs__description text-white">Введите Ваш E-Mail и выберети категорию в открывшимся окне.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-xs-8">
+                                                <input type="text" placeholder="Email" class="fluid footer-subs__input no-outline"> </div>
+                                            <div class="col-xs-4">
+                                                <button type="submit" class="btn btn-orange footer-subs__btn fluid no-outline">ОK</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="footer-social__item">
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <p class="text-white footer-social__title">Мы в твиттере</p>
+                                    </div>
+                                    <div class="col-xs-5"><a href="#" class="btn btn-orange pull-right">Перейти</a></div>
+                                </div>
+                            </div>
+                            <div class="footer-social__block"><img src="img/img_270_330.png" alt="social img" class="img-responsive"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="footer-social__item">
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <p class="text-white footer-social__title">Мы в Facebook</p>
+                                    </div>
+                                    <div class="col-xs-5"><a href="#" class="btn btn-orange pull-right">Перейти</a></div>
+                                </div>
+                            </div>
+                            <div class="footer-social__block"><img src="img/img_270_330.png" alt="social img" class="img-responsive"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="footer-social__item">
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <p class="text-white footer-social__title">Мы Вконтакте</p>
+                                    </div>
+                                    <div class="col-xs-5"><a href="#" class="btn btn-orange pull-right">Перейти</a></div>
+                                </div>
+                            </div>
+                            <div class="footer-social__block"><img src="img/img_270_330.png" alt="social img" class="img-responsive"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="footer-social__item">
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <p class="text-white footer-social__title">Мы в Одноклассниках</p>
+                                    </div>
+                                    <div class="col-xs-5"><a href="#" class="btn btn-orange pull-right">Перейти</a></div>
+                                </div>
+                            </div>
+                            <div class="footer-social__block"><img src="img/img_270_330.png" alt="social img" class="img-responsive"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="footer-last-user">
+                            <p class="footer-last-user__title text-white"><span class="icon-users-1"></span> Последние посетители</p>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status off">OFF</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="footer-last-user__img"><img src="img/img_67_67.png" alt="last user img" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-xs-6"><span class="db footer-last-user__text">сейчас<span class="footer-last-user__status ">ON</span></span><span class="db footer-last-user__text">Ник Test</span><span class="db footer-last-user__text">Пользователи</span>
+                                            <span
+                                            class="db footer-last-user__text">Был в 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="footer-tags clearfix">
+                            <p class="footer-tags__title text-white"><span class="icon-tag"></span> Теги сайта</p><a href="#" class="db footer-tags__item">Страница 0</a><a href="#" class="db footer-tags__item">Страница 33</a><a href="#" class="db footer-tags__item">Страница 66</a><a href="#"
+                            class="db footer-tags__item">Страница 99</a><a href="#" class="db footer-tags__item">Страница 132</a><a href="#" class="db footer-tags__item">Страница 165</a><a href="#" class="db footer-tags__item">Страница 198</a><a href="#"
+                            class="db footer-tags__item">Страница 231</a><a href="#" class="db footer-tags__item">Страница 264</a><a href="#" class="db footer-tags__item">Страница 297</a><a href="#" class="db footer-tags__item">Страница 330</a><a href="#"
+                            class="db footer-tags__item">Страница 363</a><a href="#" class="db footer-tags__item">Страница 396</a><a href="#" class="db footer-tags__item">Страница 429</a><a href="#" class="db footer-tags__item">Страница 462</a><a href="#"
+                            class="db footer-tags__item">Страница 495</a><a href="#" class="db footer-tags__item">Страница 528</a><a href="#" class="db footer-tags__item">Страница 561</a><a href="#" class="db footer-tags__item">Страница 594</a><a href="#"
+                            class="db footer-tags__item">Страница 627</a><a href="#" class="db footer-tags__item">Страница 660</a><a href="#" class="db footer-tags__item">Страница 693</a><a href="#" class="db footer-tags__item">Страница 726</a><a href="#"
+                            class="db footer-tags__item">Страница 759</a><a href="#" class="db footer-tags__item">Страница 792</a><a href="#" class="db footer-tags__item">Страница 825</a><a href="#" class="db footer-tags__item">Страница 858</a><a href="#"
+                            class="db footer-tags__item">Страница 891</a><a href="#" class="db footer-tags__item">Страница 924</a><a href="#" class="db footer-tags__item">Страница 957</a><a href="#" class="db footer-tags__item">Страница 990</a><a href="#"
+                            class="db footer-tags__item">Страница 1023</a><a href="#" class="db footer-tags__item">Страница 1056</a><a href="#" class="db footer-tags__item">Страница 1089</a><a href="#" class="db footer-tags__item">Страница 1122</a>
+                            <a
+                            href="#" class="db footer-tags__item">Страница 1155</a><a href="#" class="db footer-tags__item">Страница 1188</a><a href="#" class="db footer-tags__item">Страница 1221</a><a href="#" class="db footer-tags__item">Страница 1254</a><a href="#" class="db footer-tags__item">Страница 1287</a>
+                                <a
+                                href="#" class="db footer-tags__item">Страница 1320</a><a href="#" class="db footer-tags__item">Страница 1353</a><a href="#" class="db footer-tags__item">Страница 1386</a><a href="#" class="db footer-tags__item">Страница 1419</a><a href="#" class="db footer-tags__item">Страница 1452</a>
+                                    <a
+                                    href="#" class="db footer-tags__item">Страница 1485</a><a href="#" class="db footer-tags__item">Страница 1518</a><a href="#" class="db footer-tags__item">Страница 1551</a><a href="#" class="db footer-tags__item">Страница 1584</a><a href="#" class="db footer-tags__item">Страница 1617</a>                                        </div>
+                        <div class="show-all-tags"><a href="" class="btn btn-orange">Показать все теги</a> </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="site-working clearfix"><span class="pull-left site-working__title text-white">Сайт работает в</span>
+                            <ul class="pl0 mb0 lsn clearfix pull-left">
+                                <li class="pull-left"><span class="icon-firefox text-white site-working__icon"></span></li>
+                                <li class="pull-left"><span class="icon-chrome text-white site-working__icon"></span></li>
+                                <li class="pull-left"><span class="icon-opera text-white site-working__icon"></span></li>
+                                <li class="pull-left"><span class="icon-ie text-white site-working__icon"></span></li>
+                            </ul>
+                        </div>
+                        <ul class="lsn pl0 mb0 copyright-text">
+                            <li class="text-white copyright-text__item">Copyright 2015 г.</li>
+                            <li class="text-white copyright-text__item">«Vseopro.ru»</li>
+                        </ul>
+                        <ul class="lsn pl0 mb0 footer-link clearfix">
+                            <li class="footer-link__item"><a href="#" class="footer-link__link db">Карта сайта</a></li>
+                            <li class="footer-link__item"><a href="#" class="footer-link__link db">Обратная связь</a></li>
+                            <li class="footer-link__item"><a href="#" class="footer-link__link db">Правообладателям</a></li>
+                            <li class="footer-link__item"><a href="#" class="footer-link__link db">Заказ рекламы</a></li>
+                        </ul>
+                        <ul class="lsn pl0 mb0 footer-ico">
+                            <li class="pull-left footer-ico__item"><a href="#" class="footer-ico__link db vk"><span class="icon-vk"></span></a></li>
+                            <li class="pull-left footer-ico__item"><a href="#" class="footer-ico__link db odnoklassniki"><span class="icon-odnoklassniki"></span></a></li>
+                            <li class="pull-left footer-ico__item"><a href="#" class="footer-ico__link db twitter"><span class="icon-twitter"></span></a></li>
+                            <li class="pull-left footer-ico__item"><a href="#" class="footer-ico__link db google"><span class="icon-gplus"></span></a></li>
+                            <li class="pull-left footer-ico__item"><a href="#" class="footer-ico__link db facebook"><span class="icon-facebook"></span></a></li>
+                            <li class="pull-left footer-ico__item"><a href="#" class="footer-ico__link db rss"><span class="icon-rss"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.formstyler.min.js"></script>
+        <script src="js/goodshare.js"></script>
+        <script src="js/device.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
