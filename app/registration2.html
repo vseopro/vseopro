@@ -33,7 +33,7 @@
         <div class="pages-menu">
             <ul class="clearfix lsn pl0 mb0">
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="index_enter.html">Главная (вход)</a></li>
+                <li><a href="index_profile.html">Главная (профиль)</a></li>
                 <li><a href="registration1.html">Рег. 1 экран</a></li>
                 <li><a href="registration2.html">Рег. 2 экран</a></li>
                 <li><a href="registration3.html">Рег. 3 экран</a></li>
@@ -147,56 +147,46 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="dropdown"><a data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="login-form__label" class="nav-search__login db no-underline no-select"><span class="icon-login"></span> Профиль</a>
-                                <div
-                                aria-labelledby="login-form__label" class="login-form hover-transform-before dropdown-menu no-select">
+                            <div class="dropdown"><a data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="login-form__label" class="nav-search__login db no-underline no-select"><span class="icon-login"></span> Вход</a>
+                                <div aria-labelledby="login-form__label"
+                                class="login-form hover-transform-before dropdown-menu no-select">
                                     <div class="container-fluid">
-                                        <div class="row-responsive">
-                                            <div class="col-md-2"><img src="http://placehold.it/160" alt="avatar" class="profile-info__avatar img-responsive"><a href="#" class="btn btn-red fluid">Админпанель</a></div>
-                                            <div class="col-md-4"><span class="db profile-info__title puple">Информация</span>
-                                                <ul class="lsn pl0 mb0 profile-info__list">
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-graduation-cap"></span> Ник: Админ</li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-user"></span> Имя: Саня</li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-venus-mars"></span> Пол: мужской</li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-location"></span> Город: Краснодар</li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-calendar"></span> Дата рождения: 02.01.2015 (Козерог)</li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-users-1"></span> Группа: Администраторы</li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-comment"></span> Публикаций: 129 [ <a href="#" class="white-link">Смотреть</a> ]</li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-comment-empty"></span> Комментариев: 13 [ <a href="#" class="white-link">Смотреть</a> ]</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-2"><span class="db profile-info__title green">Контакты</span>
-                                                <ul class="lsn pl0 mb0 profile-info__list">
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-vk"></span> <a href="#" class="white-link">Вконтакте</a></li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-odnoklassniki"></span> <a href="#" class="white-link">Одноклассники</a></li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-gplus"></span> <a href="#" class="white-link">Google +</a></li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-facebook"></span> <a href="#" class="white-link">Facebook</a></li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-twitter"></span> <a href="#" class="white-link">Twitter</a></li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-skype"></span> <a href="#" class="white-link">Skype</a></li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-paper-plane"></span> <a href="#" class="white-link">Telegram</a></li>
-                                                    <li class="profile-info__item"><span class="profile-info__icon icon-mail-1"></span> <a href="#" class="white-link">Почта</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-4"><span class="db profile-info__title orange">Панель управления</span>
-                                                <div class="row-responsive">
-                                                    <div class="col-md-6"><a href="#" class="btn btn-red fluid profile-info__fun-button">Добавить новость</a><a href="#" class="btn btn-red fluid profile-info__fun-button">Мой профиль</a><a href="#" class="btn btn-red fluid profile-info__fun-button">Сообщения (0 | 0)</a>
-                                                        <a
-                                                        href="#" class="btn btn-red fluid profile-info__fun-button">Мои закладки</a>
+                                        <div class="row">
+                                            <div class="col-md-4 login-form__col">
+                                                <h3 class="login-form__title text-center mt0">Вход на сайт</h3>
+                                                <form>
+                                                    <input type="text" placeholder="Логин или email" class="fluid login-form__login no-outline">
+                                                    <input type="password" placeholder="Пароль" class="fluid login-form__password no-outline">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <button type="submit" class="btn btn-orange fluid login-form__btn mb0">Войти</button>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="http://google.com" class="login-form__restore text-underline db">Восстановить пароль</a></div>
                                                     </div>
-                                                    <div class="col-md-6"><a href="#" class="btn btn-red fluid profile-info__fun-button">Все комментарии</a><a href="#" class="btn btn-red fluid profile-info__fun-button">Новые материалы</a><a href="#" class="btn btn-red fluid profile-info__fun-button">Статистика</a>
-                                                        <a
-                                                        href="#" class="btn btn-red fluid profile-info__fun-button">Выход</a>
-                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 login-form__col">
+                                                <h3 class="login-form__title text-center mt0">Войти через</h3>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-vk fluid">Вконтакте</a></div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-google fluid">Google</a></div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-odnoklassniki fluid">Одноклассники</a></div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-mail fluid">Mail.ru</a></div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-facebook fluid mb0">Facebook</a></div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="login-form__btn btn btn-yandex fluid mb0">Яндекс</a></div>
                                                 </div>
                                             </div>
+                                            <div class="col-md-4 login-form__col">
+                                                <h3 class="login-form__title text-center mt0">Я новый пользователь</h3>
+                                                <p class="login-form__description">Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.</p><a href="#" class="btn btn-red login-form__register fluid mb0">Зарегистрироваться</a>                                                </div>
                                         </div>
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-        </div>
-        </nav>
+            </nav>
         </div>
         <p>Registratoin 2</p>
         <footer class="main visible-lg visible-md">

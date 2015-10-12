@@ -71,46 +71,38 @@
 
           //- выпадающее меню
           .dropdown
-            a(data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")#login-form__label.nav-search__login.db.no-underline.no-select <span class="icon-login"></span> Профиль
+            a(data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")#login-form__label.nav-search__login.db.no-underline.no-select <span class="icon-login"></span> Вход
             .login-form.hover-transform-before.dropdown-menu.no-select(aria-labelledby="login-form__label")
               .container-fluid
-                .row-responsive
-                  .col-md-2
-                    img(src="http://placehold.it/160", alt="avatar").profile-info__avatar.img-responsive
-                    a(href="#").btn.btn-red.fluid Админпанель
-                  .col-md-4
-                    span.db.profile-info__title.puple Информация
-                    ul.lsn.pl0.mb0.profile-info__list
-                      li.profile-info__item: <span class="profile-info__icon icon-graduation-cap"></span> Ник: Админ
-                      li.profile-info__item: <span class="profile-info__icon icon-user"></span> Имя: Саня
-                      li.profile-info__item: <span class="profile-info__icon icon-venus-mars"></span> Пол: мужской
-                      li.profile-info__item: <span class="profile-info__icon icon-location"></span> Город: Краснодар
-                      li.profile-info__item: <span class="profile-info__icon icon-calendar"></span> Дата рождения: 02.01.2015 (Козерог)
-                      li.profile-info__item: <span class="profile-info__icon icon-users-1"></span> Группа: Администраторы
-                      li.profile-info__item: <span class="profile-info__icon icon-comment"></span> Публикаций: 129 [ <a href="#" class="white-link">Смотреть</a> ]
-                      li.profile-info__item: <span class="profile-info__icon icon-comment-empty"></span> Комментариев: 13 [ <a href="#" class="white-link">Смотреть</a> ]
-                  .col-md-2
-                    span.db.profile-info__title.green Контакты
-                    ul.lsn.pl0.mb0.profile-info__list
-                      li.profile-info__item: <span class="profile-info__icon icon-vk"></span> <a href="#" class="white-link">Вконтакте</a>
-                      li.profile-info__item: <span class="profile-info__icon icon-odnoklassniki"></span> <a href="#" class="white-link">Одноклассники</a>
-                      li.profile-info__item: <span class="profile-info__icon icon-gplus"></span> <a href="#" class="white-link">Google +</a>
-                      li.profile-info__item: <span class="profile-info__icon icon-facebook"></span> <a href="#" class="white-link">Facebook</a>
-                      li.profile-info__item: <span class="profile-info__icon icon-twitter"></span> <a href="#" class="white-link">Twitter</a>
-                      li.profile-info__item: <span class="profile-info__icon icon-skype"></span> <a href="#" class="white-link">Skype</a>
-                      li.profile-info__item: <span class="profile-info__icon icon-paper-plane"></span> <a href="#" class="white-link">Telegram</a>
-                      li.profile-info__item: <span class="profile-info__icon icon-mail-1"></span> <a href="#" class="white-link">Почта</a>
-                  .col-md-4
-                    span.db.profile-info__title.orange Панель управления
-                    .row-responsive
-                      .col-md-6
-                        a(href="#").btn.btn-red.fluid.profile-info__fun-button Добавить новость
-                        a(href="#").btn.btn-red.fluid.profile-info__fun-button Мой профиль
-                        a(href="#").btn.btn-red.fluid.profile-info__fun-button Сообщения (0 | 0)
-                        a(href="#").btn.btn-red.fluid.profile-info__fun-button Мои закладки
-                      .col-md-6
-                        a(href="#").btn.btn-red.fluid.profile-info__fun-button Все комментарии
-                        a(href="#").btn.btn-red.fluid.profile-info__fun-button Новые материалы
-                        a(href="#").btn.btn-red.fluid.profile-info__fun-button Статистика
-                        a(href="#").btn.btn-red.fluid.profile-info__fun-button Выход
+                .row
+                  .col-md-4.login-form__col
+                    h3.login-form__title.text-center.mt0 Вход на сайт
+                    form
+                      input(type="text" placeholder="Логин или email").fluid.login-form__login.no-outline
+                      input(type="password" placeholder="Пароль").fluid.login-form__password.no-outline
+                      .row
+                        .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                          button(type="submit").btn.btn-orange.fluid.login-form__btn.mb0 Войти
+                        .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                          a(href="http://google.com").login-form__restore.text-underline.db Восстановить пароль
 
+                  .col-md-4.login-form__col
+                    h3.login-form__title.text-center.mt0 Войти через
+                    .row
+                      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                        a(href="#").login-form__btn.btn.btn-vk.fluid Вконтакте
+                      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                        a(href="#").login-form__btn.btn.btn-google.fluid Google
+                      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                        a(href="#").login-form__btn.btn.btn-odnoklassniki.fluid Одноклассники
+                      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                        a(href="#").login-form__btn.btn.btn-mail.fluid Mail.ru
+                      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                        a(href="#").login-form__btn.btn.btn-facebook.fluid.mb0 Facebook
+                      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                        a(href="#").login-form__btn.btn.btn-yandex.fluid.mb0 Яндекс
+
+                  .col-md-4.login-form__col
+                    h3.login-form__title.text-center.mt0 Я новый пользователь
+                    p.login-form__description Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.
+                    a(href="#").btn.btn-red.login-form__register.fluid.mb0 Зарегистрироваться
