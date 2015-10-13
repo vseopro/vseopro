@@ -2748,12 +2748,6 @@ footer.main {
     margin-bottom: 16px;
 }
 
-.sidebar {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
 .debug-select-ico {
     font-size: 1.14286rem;
     position: fixed;

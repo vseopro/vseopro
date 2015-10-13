@@ -129,7 +129,9 @@ gulp.task('sass', function () {
 
 gulp.task('babel', function () {
     return gulp.src(['./babel/**/*.js'])
-        .pipe(babel())
+        .pipe(babel({
+            comments: false
+        }))
         .pipe(gulp.dest('./app/js/'))
         .pipe(reload({stream: true}));
 });

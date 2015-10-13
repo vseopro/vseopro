@@ -14,26 +14,21 @@ $(function () {
         $('html').attr("class", '');
     });
 
-    //don't click menu block
     $('.search-form, .login-form').on('click', function (event) {
         var events = $._data(document, 'events') || {};
         events = events.click || [];
         for (var i = 0; i < events.length; i++) {
             if (events[i].selector) {
-
-                //Check if the clicked element matches the event selector
                 if ($(event.target).is(events[i].selector)) {
                     events[i].handler.call(event.target, event);
                 }
 
-                // Check if any of the clicked element parents matches the
-                // delegated event selector (Emulating propagation)
                 $(event.target).parents(events[i].selector).each(function () {
                     events[i].handler.call(this, event);
                 });
             }
         }
-        event.stopPropagation(); //Always stop propagation
+        event.stopPropagation();
     });
 
     $('input, select:not(.form-control)').styler();
@@ -42,42 +37,6 @@ $(function () {
 
     $('a.disabled').on('click', function () {
         return false;
-    });
-});
-
-$(function () {
-    $(window).on('scroll', function (e) {
-        if ($('.grand-content').height() > $('.sidebar').height()) {
-
-            // вычисляем высоту верхних блоков
-            var headerHeight = $('header.main').outerHeight() + $('.affix-wrap').outerHeight() + $('.hot-news').outerHeight() + $('.welcome-block').outerHeight();
-
-            // вычисляем разницу между .grand-content и .sidebar
-            var heigthResult = $('.grand-content').height() - $('.sidebar').height();
-
-            // вычисляем постоянную константу
-            var constant = heigthResult / $('.grand-content').height();
-
-            // заносим в переменную высоту окна
-            var windowHeight = $(window).height();
-
-            if ($(window).scrollTop() > headerHeight && $(window).scrollTop() < headerHeight + $('.grand-content').height() - windowHeight * 2) {
-                $('.sidebar').css({
-                    "top": ($(window).scrollTop() - headerHeight) * constant,
-                    "bottom": "auto"
-                });
-            } else if ($(window).scrollTop() < headerHeight) {
-                $('.sidebar').css({
-                    "top": 0,
-                    "bottom": "auto"
-                });
-            } else if ($(window).scrollTop() > headerHeight + ($('.grand-content').height() - $(window).height() * 2)) {
-                $('.sidebar').css({
-                    "top": "auto",
-                    "bottom": 0
-                });
-            }
-        };
     });
 });
 

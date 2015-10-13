@@ -41,41 +41,41 @@ $(function() {
     $('a.disabled').on('click', () => {return false;})
 });
 
-$(function() {
-    $(window).on('scroll', (e) => {
-        if ($('.grand-content').height() > $('.sidebar').height()) {
+// $(function() {
+//     $(window).on('scroll', (e) => {
+//         if ($('.grand-content').height() > $('.sidebar').height()) {
 
-            // вычисляем высоту верхних блоков
-            var headerHeight = $('header.main').outerHeight() + $('.affix-wrap').outerHeight() + $('.hot-news').outerHeight() + $('.welcome-block').outerHeight();
+//             // вычисляем высоту верхних блоков
+//             var headerHeight = $('header.main').outerHeight() + $('.affix-wrap').outerHeight() + $('.hot-news').outerHeight() + $('.welcome-block').outerHeight();
 
-            // вычисляем разницу между .grand-content и .sidebar
-            var heigthResult = $('.grand-content').height() - $('.sidebar').height();
+//             // вычисляем разницу между .grand-content и .sidebar
+//             var heigthResult = $('.grand-content').height() - $('.sidebar').height();
 
-            // вычисляем постоянную константу
-            var constant = heigthResult / $('.grand-content').height();
+//             // вычисляем постоянную константу
+//             var constant = heigthResult / $('.grand-content').height();
 
-            // заносим в переменную высоту окна
-            var windowHeight = $(window).height();
+//             // заносим в переменную высоту окна
+//             var windowHeight = $(window).height();
 
-            if ($(window).scrollTop() > headerHeight && $(window).scrollTop() < headerHeight + $('.grand-content').height() - windowHeight * 2) {
-                $('.sidebar').css({
-                    "top": ($(window).scrollTop() - headerHeight) * constant,
-                    "bottom": "auto"
-                });
-            } else if($(window).scrollTop() < headerHeight){
-                $('.sidebar').css({
-                    "top": 0,
-                    "bottom": "auto"
-                })
-            } else if($(window).scrollTop() > headerHeight + ($('.grand-content').height() - $(window).height() * 2)){
-                $('.sidebar').css({
-                    "top": "auto",
-                    "bottom": 0
-                })
-            }
-        };
-    })
-});
+//             if ($(window).scrollTop() > headerHeight && $(window).scrollTop() < headerHeight + $('.grand-content').height() - windowHeight * 2) {
+//                 $('.sidebar').css({
+//                     "top": ($(window).scrollTop() - headerHeight) * constant,
+//                     "bottom": "auto"
+//                 });
+//             } else if($(window).scrollTop() < headerHeight){
+//                 $('.sidebar').css({
+//                     "top": 0,
+//                     "bottom": "auto"
+//                 })
+//             } else if($(window).scrollTop() > headerHeight + ($('.grand-content').height() - $(window).height() * 2)){
+//                 $('.sidebar').css({
+//                     "top": "auto",
+//                     "bottom": 0
+//                 })
+//             }
+//         };
+//     })
+// });
 
 $(function() {
     if(device.ipad() ||
