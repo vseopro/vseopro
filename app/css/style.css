@@ -1149,11 +1149,6 @@ p.lead {
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .32);
 }
 
-.top-line-decorator {
-    background: url(../img/img_top_line_decorator.jpg) top center repeat-Y;
-    height: 3px;
-}
-
 blockquote {
     border-color: #6C707C !important;
 }
