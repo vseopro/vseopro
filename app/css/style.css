@@ -2743,6 +2743,26 @@ footer.main {
     margin-bottom: 16px;
 }
 
+.term-conditions__text {
+    margin-bottom: 30px;
+}
+
+.term-conditions__text,
+.term-conditions__list-item {
+    font-size: 1.14286rem;
+    line-height: 1.85714rem;
+}
+
+.term-conditions__bold {
+    font-size: 1.28571rem;
+    font-family: "roboto-slab-bold", sans-serif;
+}
+
+.term-conditions__button {
+    padding: 14px;
+    margin-bottom: 20px;
+}
+
 .debug-select-ico {
     font-size: 1.14286rem;
     position: fixed;

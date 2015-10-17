@@ -1582,3 +1582,25 @@ footer.main{
   // height: 7000px;
   // background: #333;
 }
+
+.term-conditions{
+  &__text{
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+  &__list{
+    &-item{
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+  &__bold{
+    font-size: 18px;
+    font-family: $roboto;
+  }
+  &__button{
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+}

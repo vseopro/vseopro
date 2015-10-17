@@ -109,7 +109,8 @@ gulp.task('jade', function () {
         .pipe(prettify({indent_size: 4}))
         .on('error', console.log)
         .pipe(gulp.dest('./app/'))
-        .pipe(reload({stream: true}));
+        .on('end', browserSync.reload)
+        // .pipe(reload({stream: true}));
 });
 
 gulp.task('sass', function () {
