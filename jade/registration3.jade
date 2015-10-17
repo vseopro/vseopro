@@ -1,4 +1,13 @@
 extends meta/_layout
 
 block content
-  p Registratoin 3
+  .container
+    .white-block
+      h4.white-block__title.mt0 <span class="icon-lightbulb"></span> Отправлен запрос на активацию
+
+      .term-conditions
+        p.term-conditions__text <strong class="term-conditions__bold">Запрос на регистрацию принят.</strong>
+        p.term-conditions__text Администрация сайта требует реальности всех вводимых e-mail-адресов. <strong class="term-conditions__bold">Через 10 минут (возможно и раньше)</strong> Вы получите письмо с инструкциями для следующего шага. Ещё немного, и Вы будете зарегистрированы на сайте. Если в течении этого времени Вы не получили письма с подтверждением, то возможно, оно попало в папку со спамом. Пожалуйста, проверьте содержимое этой папки. В противном случае повторите попытку, используя другой e-mail адрес или обратитесь к администратору сайта.
+        .row
+          .col-xs-6.col-md-4.col-md-offset-4.col-xs-offset-3
+            a(href="#").btn.btn-orange.fluid.term-conditions__button Закрыть
