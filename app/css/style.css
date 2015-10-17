@@ -2757,6 +2757,18 @@ footer.main {
 
 .pages-menu {
     text-align: center;
+    position: relative;
+    padding-right: 50px;
+}
+
+.pages-menu .pages-menu__close {
+    position: absolute;
+    width: 40px;
+    background: #333;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    bottom: 5px;
 }
 
 .pages-menu li {

@@ -101,4 +101,8 @@ $(function() {
             });
         });
     }
+
+    $(".pages-menu__close").on('click', () =>{
+        $(".pages-menu").empty();
+    })
 });

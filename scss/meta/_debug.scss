@@ -14,6 +14,18 @@
 
 .pages-menu{
   text-align: center;
+  position: relative;
+  padding-right: 50px;
+  .pages-menu__close{
+    position: absolute;
+    width: 40px;
+    // height: 50px;
+    background: #333;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    bottom: 5px;
+  }
   li{
     display: inline-block;
     border-right: 1px #ddd solid;

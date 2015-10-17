@@ -61,4 +61,8 @@ $(function () {
             });
         });
     }
+
+    $(".pages-menu__close").on('click', function () {
+        $(".pages-menu").empty();
+    });
 });
