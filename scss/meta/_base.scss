@@ -275,3 +275,32 @@ textarea {
 .dropdown-menu{
   // padding: 15px 0;
 }
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  border:1px #d9d9d9 solid;
+  height: 40px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  background: #F7F7F7;
+  padding: 0 20px;
+  &::placeholder{
+    color: #999;
+  }
+  &:hover{
+    border-color: darken(#d9d9d9, 15%);
+    // @extend %outline-none;
+  }
+}

@@ -1,4 +1,54 @@
 extends meta/_layout
 
 block content
-  p Registratoin 2
+  .container
+    .white-block
+      h4.white-block__title.mt0 <span class="icon-lightbulb"></span> Регистрация нового пользователя
+
+      form.term-conditions
+        p.term-conditions__text <strong class="term-conditions__bold">Здравствуйте, уважаемый посетитель нашего сайта!</strong>
+        p.term-conditions__text Регистрация на нашем сайте позволит Вам быть его полноценным участником. Вы сможете добавлять новости на сайт, оставлять свои комментарии, просматривать скрытый текст и многое другое. В случае возникновения проблем с регистрацией, обратитесь к <a href="#" target="_blank">администратору</a> сайта.
+        .row
+          .col-md-6
+            .row
+              .col-xs-4
+                .term-conditions__label-wrap
+                  label(for="term-conditions__form-login").transform-middle Логин:<sup>*</sup>
+              .col-xs-8
+                input(type="text" placeholder="Логин").fluid#term-conditions__form-login
+            .row
+              .col-xs-4
+                .term-conditions__label-wrap
+                  label(for="term-conditions__form-password").transform-middle Пароль:<sup>*</sup>
+              .col-xs-8
+                input(type="text" placeholder="Пароль").fluid#term-conditions__form-password
+            .row
+              .col-xs-4
+                .term-conditions__label-wrap
+                  label(for="term-conditions__form-doble-password").transform-middle Повторить пароль:<sup>*</sup>
+              .col-xs-8
+                input(type="text" placeholder="Повтор пароля").fluid#term-conditions__form-doble-password
+          .col-md-6
+            .row
+              .col-xs-4
+                .term-conditions__label-wrap
+                  label(for="term-conditions__form-email").transform-middle Ваш e-mail:<sup>*</sup>
+              .col-xs-8
+                input(type="text" placeholder="Логин").fluid#term-conditions__form-email
+            .row
+              .col-xs-4
+                .term-conditions__label-wrap
+                  label.transform-middle Вопрос:
+              .col-xs-8
+                .term-conditions__label-wrap
+                  p.transform-middle Сколько будет 17+5=?
+            .row
+              .col-xs-4
+                .term-conditions__label-wrap
+                  label(for="term-conditions__form-answer").transform-middle Ответ:<sup>*</sup>
+              .col-xs-8
+                input(type="text" placeholder="Повтор пароля").fluid#term-conditions__form-answer
+        .row
+          .col-xs-6.col-md-4.col-md-offset-4.col-xs-offset-3
+            button(type="submit").btn.btn-orange.fluid.term-conditions__button Отправить
+
