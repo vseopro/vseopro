@@ -564,8 +564,9 @@ nav.main{
     height: 46px;
     padding-left: 20px;
     margin-bottom: 20px;
+    color: #fff;
     &::placeholder {
-      color: white(1);
+      color: #fff;
     }
     &:--enter{
       border-color: white(1);
@@ -647,8 +648,8 @@ nav.main{
     background: transparent;
     border: 1px $color-orange solid;
     color: white(1);
-    padding-left: 40px !important;
-    margin-bottom: 0 !important;
+    padding-left: 40px;
+    margin-bottom: 0;
     &::placeholder {
       color: white(1);
     }

@@ -825,213 +825,6 @@ input[type='submit'].styler[disabled] {
     color: #888;
 }
 
-@font-face {
-    font-family: 'fontello';
-    src: url("../font/fontello.eot?30246108");
-    src: url("../font/fontello.eot?30246108#iefix") format("embedded-opentype"), url("../font/fontello.woff?30246108") format("woff"), url("../font/fontello.ttf?30246108") format("truetype"), url("../font/fontello.svg?30246108#fontello") format("svg");
-    font-weight: 400;
-    font-style: normal;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: 400;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: .2em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-login:before {
-    content: '\e800';
-}
-
-.icon-search:before {
-    content: '\e801';
-}
-
-.icon-right:before {
-    content: '\e802';
-}
-
-.icon-firefox:before {
-    content: '\e803';
-}
-
-.icon-chrome:before {
-    content: '\e804';
-}
-
-.icon-opera:before {
-    content: '\e805';
-}
-
-.icon-ie:before {
-    content: '\e806';
-}
-
-.icon-vk:before {
-    content: '\e807';
-}
-
-.icon-facebook:before {
-    content: '\e808';
-}
-
-.icon-gplus:before {
-    content: '\e809';
-}
-
-.icon-rss:before {
-    content: '\e80a';
-}
-
-.icon-odnoklassniki:before {
-    content: '\e80b';
-}
-
-.icon-twitter:before {
-    content: '\e80c';
-}
-
-.icon-tag:before {
-    content: '\e80d';
-}
-
-.icon-user:before {
-    content: '\e80e';
-}
-
-.icon-home:before {
-    content: '\e80f';
-}
-
-.icon-lightbulb:before {
-    content: '\e810';
-}
-
-.icon-award:before {
-    content: '\e811';
-}
-
-.icon-calendar:before {
-    content: '\e812';
-}
-
-.icon-comment:before {
-    content: '\e813';
-}
-
-.icon-bookmark:before {
-    content: '\e814';
-}
-
-.icon-folder-open:before {
-    content: '\e815';
-}
-
-.icon-mail-alt:before {
-    content: '\e816';
-}
-
-.icon-comment-1:before {
-    content: '\e817';
-}
-
-.icon-chat-empty:before {
-    content: '\e818';
-}
-
-.icon-network:before {
-    content: '\e819';
-}
-
-.icon-users:before {
-    content: '\e81a';
-}
-
-.icon-github:before {
-    content: '\e81b';
-}
-
-.icon-globe-inv:before {
-    content: '\e81c';
-}
-
-.icon-eye:before {
-    content: '\e81d';
-}
-
-.icon-eye-off:before {
-    content: '\e81e';
-}
-
-.icon-chart-pie:before {
-    content: '\e81f';
-}
-
-.icon-chart-bar:before {
-    content: '\e820';
-}
-
-.icon-user-2:before {
-    content: '\e821';
-}
-
-.icon-users-1:before {
-    content: '\e822';
-}
-
-.icon-skype:before {
-    content: '\e823';
-}
-
-.icon-paper-plane:before {
-    content: '\e824';
-}
-
-.icon-mail-1:before {
-    content: '\e825';
-}
-
-.icon-comment-empty:before {
-    content: '\e826';
-}
-
-.icon-location:before {
-    content: '\e827';
-}
-
-.icon-venus-mars:before {
-    content: '\e828';
-}
-
-.icon-user-1:before {
-    content: '\e829';
-}
-
-.icon-graduation-cap:before {
-    content: '\e82a';
-}
-
-.icon-angle-left:before {
-    content: '\e82b';
-}
-
-.icon-at:before {
-    content: '\e82c';
-}
-
 html {
     background: #192637;
 }
@@ -1383,20 +1176,7 @@ textarea {
     color: #fff;
 }
 
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"] {
+input.input {
     border: 1px #d9d9d9 solid;
     height: 40px;
     font-size: .85714rem;
@@ -1406,103 +1186,232 @@ input[type="week"] {
     color: #333;
 }
 
-input[type="color"]::-webkit-input-placeholder,
-input[type="date"]::-webkit-input-placeholder,
-input[type="datetime"]::-webkit-input-placeholder,
-input[type="datetime-local"]::-webkit-input-placeholder,
-input[type="email"]::-webkit-input-placeholder,
-input[type="month"]::-webkit-input-placeholder,
-input[type="number"]::-webkit-input-placeholder,
-input[type="password"]::-webkit-input-placeholder,
-input[type="search"]::-webkit-input-placeholder,
-input[type="tel"]::-webkit-input-placeholder,
-input[type="text"]::-webkit-input-placeholder,
-input[type="time"]::-webkit-input-placeholder,
-input[type="url"]::-webkit-input-placeholder,
-input[type="week"]::-webkit-input-placeholder {
+input.input::-webkit-input-placeholder {
     color: #999;
 }
 
-input[type="color"]::-moz-placeholder,
-input[type="date"]::-moz-placeholder,
-input[type="datetime"]::-moz-placeholder,
-input[type="datetime-local"]::-moz-placeholder,
-input[type="email"]::-moz-placeholder,
-input[type="month"]::-moz-placeholder,
-input[type="number"]::-moz-placeholder,
-input[type="password"]::-moz-placeholder,
-input[type="search"]::-moz-placeholder,
-input[type="tel"]::-moz-placeholder,
-input[type="text"]::-moz-placeholder,
-input[type="time"]::-moz-placeholder,
-input[type="url"]::-moz-placeholder,
-input[type="week"]::-moz-placeholder {
+input.input::-moz-placeholder {
     color: #999;
 }
 
-input[type="color"]:-ms-input-placeholder,
-input[type="date"]:-ms-input-placeholder,
-input[type="datetime"]:-ms-input-placeholder,
-input[type="datetime-local"]:-ms-input-placeholder,
-input[type="email"]:-ms-input-placeholder,
-input[type="month"]:-ms-input-placeholder,
-input[type="number"]:-ms-input-placeholder,
-input[type="password"]:-ms-input-placeholder,
-input[type="search"]:-ms-input-placeholder,
-input[type="tel"]:-ms-input-placeholder,
-input[type="text"]:-ms-input-placeholder,
-input[type="time"]:-ms-input-placeholder,
-input[type="url"]:-ms-input-placeholder,
-input[type="week"]:-ms-input-placeholder {
+input.input:-ms-input-placeholder {
     color: #999;
 }
 
-input[type="color"]::placeholder,
-input[type="date"]::placeholder,
-input[type="datetime"]::placeholder,
-input[type="datetime-local"]::placeholder,
-input[type="email"]::placeholder,
-input[type="month"]::placeholder,
-input[type="number"]::placeholder,
-input[type="password"]::placeholder,
-input[type="search"]::placeholder,
-input[type="tel"]::placeholder,
-input[type="text"]::placeholder,
-input[type="time"]::placeholder,
-input[type="url"]::placeholder,
-input[type="week"]::placeholder {
+input.input::placeholder {
     color: #999;
 }
 
-input[type="color"]:hover,
-input[type="date"]:hover,
-input[type="datetime"]:hover,
-input[type="datetime-local"]:hover,
-input[type="email"]:hover,
-input[type="month"]:hover,
-input[type="number"]:hover,
-input[type="password"]:hover,
-input[type="search"]:hover,
-input[type="tel"]:hover,
-input[type="text"]:hover,
-input[type="time"]:hover,
-input[type="url"]:hover,
-input[type="week"]:hover,
-input[type="color"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="email"]:focus,
-input[type="month"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus {
+input.input:hover,
+input.input:focus {
     border-color: #b3b3b3;
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url("../font/fontello.eot?30246108");
+    src: url("../font/fontello.eot?30246108#iefix") format("embedded-opentype"), url("../font/fontello.woff?30246108") format("woff"), url("../font/fontello.ttf?30246108") format("truetype"), url("../font/fontello.svg?30246108#fontello") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-login:before {
+    content: '\e800';
+}
+
+.icon-search:before {
+    content: '\e801';
+}
+
+.icon-right:before {
+    content: '\e802';
+}
+
+.icon-firefox:before {
+    content: '\e803';
+}
+
+.icon-chrome:before {
+    content: '\e804';
+}
+
+.icon-opera:before {
+    content: '\e805';
+}
+
+.icon-ie:before {
+    content: '\e806';
+}
+
+.icon-vk:before {
+    content: '\e807';
+}
+
+.icon-facebook:before {
+    content: '\e808';
+}
+
+.icon-gplus:before {
+    content: '\e809';
+}
+
+.icon-rss:before {
+    content: '\e80a';
+}
+
+.icon-odnoklassniki:before {
+    content: '\e80b';
+}
+
+.icon-twitter:before {
+    content: '\e80c';
+}
+
+.icon-tag:before {
+    content: '\e80d';
+}
+
+.icon-user:before {
+    content: '\e80e';
+}
+
+.icon-home:before {
+    content: '\e80f';
+}
+
+.icon-lightbulb:before {
+    content: '\e810';
+}
+
+.icon-award:before {
+    content: '\e811';
+}
+
+.icon-calendar:before {
+    content: '\e812';
+}
+
+.icon-comment:before {
+    content: '\e813';
+}
+
+.icon-bookmark:before {
+    content: '\e814';
+}
+
+.icon-folder-open:before {
+    content: '\e815';
+}
+
+.icon-mail-alt:before {
+    content: '\e816';
+}
+
+.icon-comment-1:before {
+    content: '\e817';
+}
+
+.icon-chat-empty:before {
+    content: '\e818';
+}
+
+.icon-network:before {
+    content: '\e819';
+}
+
+.icon-users:before {
+    content: '\e81a';
+}
+
+.icon-github:before {
+    content: '\e81b';
+}
+
+.icon-globe-inv:before {
+    content: '\e81c';
+}
+
+.icon-eye:before {
+    content: '\e81d';
+}
+
+.icon-eye-off:before {
+    content: '\e81e';
+}
+
+.icon-chart-pie:before {
+    content: '\e81f';
+}
+
+.icon-chart-bar:before {
+    content: '\e820';
+}
+
+.icon-user-2:before {
+    content: '\e821';
+}
+
+.icon-users-1:before {
+    content: '\e822';
+}
+
+.icon-skype:before {
+    content: '\e823';
+}
+
+.icon-paper-plane:before {
+    content: '\e824';
+}
+
+.icon-mail-1:before {
+    content: '\e825';
+}
+
+.icon-comment-empty:before {
+    content: '\e826';
+}
+
+.icon-location:before {
+    content: '\e827';
+}
+
+.icon-venus-mars:before {
+    content: '\e828';
+}
+
+.icon-user-1:before {
+    content: '\e829';
+}
+
+.icon-graduation-cap:before {
+    content: '\e82a';
+}
+
+.icon-angle-left:before {
+    content: '\e82b';
+}
+
+.icon-at:before {
+    content: '\e82c';
 }
 
 #mobile-menu .panel {
@@ -1905,6 +1814,7 @@ nav.main,
     height: 46px;
     padding-left: 20px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .login-form__login::-webkit-input-placeholder,
@@ -1979,8 +1889,8 @@ nav.main,
     background: 0 0;
     border: 1px #ff690b solid;
     color: #fff;
-    padding-left: 40px !important;
-    margin-bottom: 0 !important;
+    padding-left: 40px;
+    margin-bottom: 0;
 }
 
 .search-form__field::-webkit-input-placeholder {
