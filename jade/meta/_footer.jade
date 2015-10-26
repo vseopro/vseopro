@@ -5,15 +5,19 @@ footer.main.visible-lg.visible-md
         .footer-subs
           .row
             .col-md-8
-              h3.text-uppercase.footer-subs__title Подписаться на наши еженедельные новости
-              p.footer-subs__description.text-white Введите Ваш E-Mail и выберети категорию в открывшимся окне.
+              .footer-subs__wrap
+                .transform-middle
+                  span.db.text-uppercase.footer-subs__title Подписаться на наши еженедельные новости
+                  p.footer-subs__description.text-white Введите Ваш E-Mail и выберети категорию в открывшимся окне.
             .col-md-4
-              form
-                .row
-                  .col-xs-8
-                    input(type="text" placeholder="Email").fluid.footer-subs__input.no-outline
-                  .col-xs-4
-                    button(type="submit").btn.btn-orange.footer-subs__btn.fluid.no-outline ОK
+              .footer-subs__wrap
+                .transform-middle
+                  form
+                    .row
+                      .col-xs-8
+                        input(type="text" placeholder="Email").fluid.footer-subs__input.no-outline
+                      .col-xs-4
+                        button(type="submit").btn.btn-orange.footer-subs__btn.fluid.no-outline ОK
 
   .footer-social
     .container

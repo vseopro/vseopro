@@ -1937,23 +1937,24 @@ footer.main {
 .footer-subs {
     margin-top: 45px;
     border: 1px #192637 solid;
-    padding: 6px 28px 14px;
+    padding: 10px 30px;
+}
+
+.footer-subs__wrap {
+    height: 80px;
 }
 
 .footer-subs__title {
     font-size: 1.14286rem;
     color: #ff690b;
+    font-family: "roboto-slab-bold", sans-serif;
+    margin-bottom: 10px;
 }
 
 .footer-subs__input {
     height: 34px;
-    margin-top: 25px;
     padding-left: 20px;
     border: 1px #d9d9d9 solid;
-}
-
-.footer-subs__btn {
-    margin-top: 25px;
 }
 
 .footer-social__title {
