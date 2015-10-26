@@ -1209,8 +1209,8 @@ input.input:focus {
 
 @font-face {
     font-family: 'fontello';
-    src: url("../font/fontello.eot?30246108");
-    src: url("../font/fontello.eot?30246108#iefix") format("embedded-opentype"), url("../font/fontello.woff?30246108") format("woff"), url("../font/fontello.ttf?30246108") format("truetype"), url("../font/fontello.svg?30246108#fontello") format("svg");
+    src: url("../font/fontello.eot?97025916");
+    src: url("../font/fontello.eot?97025916#iefix") format("embedded-opentype"), url("../font/fontello.woff?97025916") format("woff"), url("../font/fontello.ttf?97025916") format("truetype"), url("../font/fontello.svg?97025916#fontello") format("svg");
     font-weight: 400;
     font-style: normal;
 }
@@ -1396,10 +1396,6 @@ input.input:focus {
 
 .icon-venus-mars:before {
     content: '\e828';
-}
-
-.icon-user-1:before {
-    content: '\e829';
 }
 
 .icon-graduation-cap:before {
