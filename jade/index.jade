@@ -160,186 +160,37 @@ block content
       .col-xs-4.visible-md.visible-lg
 
         // Выбор редакции
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-award"></span> Выбор редакции
-          .editors-choice.pr
-            img(src="img/img_demo_sidebar_image.jpg" alt="editors choice img").editors-choice__img
-            span.editors-choice__text.text-owerflow Ай фон на запчасти подходи Ай фон на запчасти подходи Ай фон на запчасти подходи
+        include widgets/_editors-choice
 
         // Комментарии
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-comment-1"></span> Комментарии
-          .sidebar-comments
-            -for(var i = 0; i < 6; i++)
-              .sidebar-comments__item
-                .row-mini
-                  .col-xs-4
-                    img(src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar").sidebar-comments__avatar.img-responsive
-                  .col-xs-8
-                    span.db.sidebar-comments__autor <strong>Написал(а):</strong> <a href="#" class="link sidebar-comments__link">admin</a>
-                    span.db.sidebar-comments__time <strong>Дата:</strong> Вчера в 23:18:12
-                    span.db.sidebar-comments__demo-comment <strong>К новости:</strong> <span class="sidebar-comments__text cur" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба">3XLOVE - Скрипт сайта знакомств сайта знакомств</span>
+        include widgets/_sidebar-comments
 
         // Выбор редакции
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-award"></span> Выбор редакции
-          .editors-choice.pr
-            img(src="img/img_demo_sidebar_image.jpg" alt="editors choice img").editors-choice__img
-            span.editors-choice__text.text-owerflow Ай фон на запчасти подходи Ай фон на запчасти подходи Ай фон на запчасти подходи
+        include widgets/_editors-choice
 
         // Панель управления
-        //- .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-login"></span> Панель управления
-          form.sidebar-login-form
-            input(type="text" placeholder="Логин").fluid.sidebar-login-form__input.no-outline
-            input(type="password" placeholder="Пароль").fluid.sidebar-login-form__input.no-outline
-            .clearfix.sidebar-login-form__link-text
-              .pull-left
-                input(type="checkbox")#another-computer
-                label(for="another-computer").no-select.sidebar-login-form__label Чужой компьютер
-              .pull-right
-                a(href="#").link.text-line.db.sidebar-login-form__forgot Забыли пароль
-            .row
-              .col-xs-6
-                button(type="submit").btn.btn-orange.fluid.sidebar-login-form__enter Войти
-              .col-xs-6
-                a(href="#" role="button").btn.btn-red.fluid.db.sidebar-login-form__register Регистрация
+        //- include widgets/_sidebar-login-form
 
         // Чат пользователей
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-chat-empty"></span> Чат пользователей
-          .sidebar-comments
-            -for(var i = 0; i < 3; i++)
-              .sidebar-comments__item
-                .row-mini.media
-                  .col-xs-4.media-body.fn
-                    img(src="img/img_sidebar_comment_avatar.jpg" alt="img sidebar comment avatar").sidebar-comments__avatar
-                  .col-xs-8.media-right.media-middle.fn
-                    span.db.sidebar-comments__autor <strong>Написал(а):</strong> <a href="#" class="link sidebar-comments__link">admin</a>
-                    span.db.sidebar-comments__time <strong>Дата:</strong> Вчера в 23:18:12
-                .sidebar-chat__message
-                  small.sidebar-chat__text К новости: 3XLOVE - Скрипт <br> сайта знакомств бла бла капе <br> херово тут сидеть
-          a(href="#").btn.btn-red.fluid.sidebar-chat__button Написать сообщение
+        include widgets/_sidebar-chat
 
         // Подписка
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-mail-alt"></span> Подписка
-          .sidebar-subscribe
-            img(src="img/img_sidebar_subscribe.jpg" alt="sidebar subscribe img").sidebar-subscribe__image.table-center.img-responsive
-            a(href="#").btn.btn-orange.fluid.sidebar-subscribe__button Подписаться на рассылку
+        include widgets/_sidebar-subscribe
 
         // Популярные новости
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-network"></span> Популярные новости
-          .popular-news
-            -for(var i = 0; i < 5; i++)
-              .popular-news__item
-                .row
-                  .col-xs-4
-                    img(src="img/img_popular_news.jpg" alt="popular news image").popular-news__image
-                  .col-xs-8
-                    span.db.popular-news__text 3XLOVE - Скрипт сайта знакомств бла бла капе
-                    .row-mini
-                      .col-xs-6
-                        a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
-                      .col-xs-6
-                        a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
+        include widgets/_popular-news
 
         // Мы рекомендуем
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-award"></span> Мы рекомендуем
-          .editors-choice.pr
-            img(src="img/img_demo_sidebar_image.jpg" alt="editors choice img").editors-choice__img
-            span.editors-choice__text Ай фон на запчасти подходи Ай фон на запчасти подходи Ай фон на запчасти подходи
+        include widgets/_editors-choice
 
         // Пользователи онлайн
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-users"></span> Пользователи онлайн
-          .user-online
-            .row
-              .col-xs-2
-                span.icon-eye.user-online__icon
-              .col-xs-9
-                span.db.user-online__text Всего на сайте: <span class="user-online__label">22</span>
-            .row
-              .col-xs-2
-                span.icon-eye-off.user-online__icon
-              .col-xs-9
-                span.db.user-online__text Невидимок: <span class="user-online__label">22</span>
-            .row
-              .col-xs-2
-                span.icon-user-2.user-online__icon
-              .col-xs-9
-                span.db.user-online__text Пользователей: <span class="user-online__label">22</span>
-            .row
-              .col-xs-2
-                span.icon-github.user-online__icon
-              .col-xs-9
-                span.db.user-online__text Роботов: <span class="user-online__label">22</span>
+        include widgets/_user-online
 
         // Статистика сайта
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-chart-pie"></span> Статистика сайта
-          .site-statistic
-            .row
-              .col-xs-9
-                p.site-statistic__text Новостей: <span class="site-statistic__count">5106</span>
-              .col-xs-3
-                p.text-right.site-statistic__label +0
-            .row
-              .col-xs-9
-                p.site-statistic__text Комментариев: <span class="site-statistic__count">1950</span>
-              .col-xs-3
-                p.text-right.site-statistic__label +50
-            .row
-              .col-xs-9
-                p.site-statistic__text Пользователей: <span class="site-statistic__count">5106</span>
-              .col-xs-3
-                p.text-right.site-statistic__label +360
-
-            span.db.site-statistic__group-title Из них
-            span.db.site-statistic__text.red <span class="icon-user"></span> Администраторов: <span class="site-statistic__count">5</span>
-            span.db.site-statistic__text.blue <span class="icon-user"></span> Модераторов: <span class="site-statistic__count">5</span>
-            span.db.site-statistic__text.green <span class="icon-user"></span> Журналистов: <span class="site-statistic__count">5</span>
-            span.db.site-statistic__text.light-blue <span class="icon-user"></span> Проверенных: <span class="site-statistic__count">5</span>
-            span.db.site-statistic__text.orange <span class="icon-user"></span> Потребителей: <span class="site-statistic__count">5000</span>
-
-            span.db.site-statistic__group-title Зарегистрировались
-            span.db.site-statistic__text Сегодня: <span class="site-statistic__count">5</span>
-            span.db.site-statistic__text Вчера: <span class="site-statistic__count">5</span>
-            span.db.site-statistic__text За неделю: <span class="site-statistic__count">5</span>
-            span.db.site-statistic__text За месяц: <span class="site-statistic__count">5</span>
+        include widgets/_site-statistic
 
         // Апдейты
-        .white-block
-          h5.white-block__sidebar-title.mt0 <span class="icon-chart-bar"></span> Апдейты
-          .sidebar-updates
-            .media.sidebar-updates__media
-              .media-left.media-middle
-                span.sidebar-updates__ya-color.sidebar-updates__big-font Я
-              .media-body
-                span.db.sidebar-updates__text Апдейты <span class="sidebar-updates__ya-color">Я</span>ndex ТИЦ
-                small.db.sidebar-updates__time <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
-            .media.sidebar-updates__media
-              .media-left.media-middle
-                span.sidebar-updates__ya-color.sidebar-updates__big-font Я
-              .media-body
-                span.db.sidebar-updates__text Апдейты <span class="sidebar-updates__ya-color">Я</span>ndex ТИЦ
-                small.db.sidebar-updates__time <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
-            .media.sidebar-updates__media
-              .media-left.media-middle
-                span.sidebar-updates__ya-color.sidebar-updates__big-font Я
-              .media-body
-                span.db.sidebar-updates__text Апдейты <span class="sidebar-updates__ya-color">Я</span>ndex ТИЦ
-                small.db.sidebar-updates__time <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
-            .media.sidebar-updates__media
-              .media-left.media-middle
-                span.sidebar-updates__google-color.sidebar-updates__big-font G
-              .media-body
-                span.db.sidebar-updates__text Апдейты <span class="sidebar-updates__google-color">G</span>oogle ТИЦ
-                small.db.sidebar-updates__time <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
+        include widgets/_sidebar-updates
 
         // География сайта
-        .white-block.mb0
-          h5.white-block__sidebar-title.mt0 <span class="icon-globe-inv"></span> География сайта
-          img(src="img/img_map.jpg" alt="image map").img-responsive
+        include widgets/_sidebar-geography

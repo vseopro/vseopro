@@ -1,0 +1,15 @@
+.white-block
+  h5.white-block__sidebar-title.mt0 <span class="icon-network"></span> Популярные новости
+  .popular-news
+    -for(var i = 0; i < 5; i++)
+      .popular-news__item
+        .row
+          .col-xs-4
+            img(src="img/img_popular_news.jpg" alt="popular news image").popular-news__image
+          .col-xs-8
+            span.db.popular-news__text 3XLOVE - Скрипт сайта знакомств бла бла капе
+            .row-mini
+              .col-xs-6
+                a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
+              .col-xs-6
+                a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
