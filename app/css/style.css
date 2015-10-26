@@ -1845,6 +1845,8 @@ nav.main,
 
 .login-form__title {
     margin-bottom: 25px;
+    font-size: 1.57143rem;
+    font-family: "opensans-bold", sans-serif;
 }
 
 .login-form__register {

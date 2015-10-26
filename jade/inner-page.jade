@@ -1,0 +1,29 @@
+extends meta/_layout
+
+block content
+  .container
+    .row
+      .col-md-8
+        .white-block
+          h4.white-block__title.mt0 <span class="icon-lightbulb"></span> Ответы с форума
+
+      .col-xs-4.visible-md.visible-lg
+
+        // Мы рекомендуем
+        include widgets/_editors-choice
+
+        // Популярные новости
+        include widgets/_popular-news
+
+        // Чат пользователей
+        include widgets/_sidebar-chat
+
+        // Комментарии
+        include widgets/_sidebar-comments
+
+        // Пользователи онлайн
+        include widgets/_user-online
+
+        // Статистика сайта
+        include widgets/_site-statistic
+
