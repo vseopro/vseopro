@@ -2607,6 +2607,8 @@ footer.main {
     margin-top: -3px;
     line-height: 1.28571rem;
     margin-bottom: 15px;
+    font-size: 1rem;
+    font-family: "opensans-regular", sans-serif;
 }
 
 .popular-news__item {
