@@ -1498,7 +1498,7 @@ input.input:focus {
 
 .open-menu__button {
     position: relative;
-    padding: 6px;
+    padding: 6px 10px;
     margin-top: 8px;
     margin-bottom: 8px;
     background: rgba(255, 255, 255, 0);
@@ -1606,6 +1606,8 @@ nav.main,
     width: 7px;
     top: 50%;
     right: 8px;
+    -webkit-transition: all .17s ease-in-out;
+            transition: all .17s ease-in-out;
 }
 
 .first-menu__has-menu>.first-menu__link:before {
@@ -1683,6 +1685,8 @@ nav.main,
     top: 50%;
     right: 10px;
     margin-top: -2px;
+    -webkit-transition: all .17s ease-in-out;
+            transition: all .17s ease-in-out;
 }
 
 .second-menu__has-menu>.second-menu__link::before {
