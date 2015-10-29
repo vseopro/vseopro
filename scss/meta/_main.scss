@@ -1136,6 +1136,15 @@ footer.main{
       margin: 0 auto 20px;
     }
   }
+  &__demo-text{
+    margin-top: 20px;
+    &--link{
+      // color: $color-orange;
+    }
+  }
+}
+
+.news-metadata{
   &__text{
     // color: $color-orange;
     font-size: 12px;
@@ -1144,13 +1153,8 @@ footer.main{
     font-size: 20px;
     color: #919191;
   }
-  &__demo-text{
-    margin-top: 20px;
-    &--link{
-      // color: $color-orange;
-    }
-  }
 }
+
 
 .sidebar-login-form{
   &__input{

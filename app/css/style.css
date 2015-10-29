@@ -2342,17 +2342,17 @@ footer.main {
     line-height: 1.57143rem;
 }
 
-.last-news__text {
+.last-news__demo-text {
+    margin-top: 20px;
+}
+
+.news-metadata__text {
     font-size: .85714rem;
 }
 
-.last-news__ico {
+.news-metadata__ico {
     font-size: 1.42857rem;
     color: #919191;
-}
-
-.last-news__demo-text {
-    margin-top: 20px;
 }
 
 .sidebar-login-form__input:last-child {
