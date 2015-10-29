@@ -71,18 +71,34 @@ footer.main.visible-lg.visible-md
                     .footer-last-user__img
                       img(src="img/img_67_67.png" alt="last user img").img-responsive
                   .col-xs-6
-                    span.db.footer-last-user__text сейчас
-                      span(class="footer-last-user__status #{ i % 2 == 0 ? 'off' : ''}") #{ i % 2 == 0 ? 'OFF' : 'ON'}
-                    span.db.footer-last-user__text.text-overflow Ник #{user[Math.floor(Math.random() * ((user.length - 1) - 0 + 1)) + 0]}
+                    if dev
+                      span.db.footer-last-user__text сейчас
+                        span(class="footer-last-user__status #{ i % 2 == 0 ? 'off' : ''}") #{ i % 2 == 0 ? 'OFF' : 'ON'}
+                    else
+                      span.db.footer-last-user__text сейчас
+                        span(class="footer-last-user__status #{ i == 4 ? 'off' : ''}") #{ i == 4 ? 'OFF' : 'ON'}
+
+                    if dev
+                      span.db.footer-last-user__text.text-overflow Ник #{user[Math.floor(Math.random() * ((user.length - 1) - 0 + 1)) + 0]}
+                    else
+                      span.db.footer-last-user__text.text-overflow Ник Admin
+
                     span.db.footer-last-user__text Пользователи
-                    span.db.footer-last-user__text Был в #{Math.floor(Math.random() * (24 - 1 + 1)) + 1}:#{Math.floor(Math.random() * (60 - 1 + 1)) + 1}
+
+                    if dev
+                      span.db.footer-last-user__text Был в 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}:0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}
+                    else
+                      span.db.footer-last-user__text Был в 10:10
 
       .col-xs-12.col-sm-6.col-md-6.col-lg-6
         -var tag = ['Фотошоп', 'Photohop', 'Илюстратор', 'Длинный текст', 'Очень длинный текст', "Кряки", "SEO", "Site", "Продвижение", "Wordpress", "DLE"]
         .footer-tags.clearfix
           p.footer-tags__title.text-white <span class="icon-tag"></span> Теги сайта
           -for(var i = 0; i < 50; i++)
-            a(href="#").db.footer-tags__item #{tag[Math.floor(Math.random() * ((tag.length - 1) - 0 + 1)) + 0]}
+            if dev
+              a(href="#").db.footer-tags__item #{tag[Math.floor(Math.random() * ((tag.length - 1) - 0 + 1)) + 0]}
+            else
+              a(href="#").db.footer-tags__item Страница #{i * 13}
         .show-all-tags
           a(href="").btn.btn-orange Показать все теги
 

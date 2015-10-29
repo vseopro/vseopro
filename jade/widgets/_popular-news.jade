@@ -1,3 +1,5 @@
+-var user = ['Administrator', 'TDSko', 'Pasha', 'Sasha', 'SuperMegaDuperUser']
+
 .white-block
   h5.white-block__sidebar-title.mt0 <span class="icon-network"></span> Популярные новости
   .popular-news
@@ -10,6 +12,6 @@
             span.db.popular-news__text 3XLOVE - Скрипт сайта знакомств бла бла капе
             .row-mini
               .col-xs-6
-                a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
+                a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> #{user[Math.floor(Math.random() * ((user.length - 1) - 0 + 1)) + 0]}
               .col-xs-6
-                a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
+                a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (2100 - 2000 + 1)) + 2000}
