@@ -35,7 +35,10 @@ block content
                   .col-md-3
                     a(href="#").link.text-overflow.forums-answer__text <span class="icon-user forums-answer__ico"></span> Admin
                   .col-md-3
-                    a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (2100 - 2000 + 1)) + 2000}
+                    if dev
+                      a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (2100 - 2000 + 1)) + 2000}
+                    else
+                      a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 02.03.2010
                   .col-md-6
                     a(href="#" data-toggle="tooltip" data-placement="top" title="Тестовый текст").link.text-overflow.forums-answer__text <span class="icon-comment-1 forums-answer__ico"></span> Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао
 
@@ -43,13 +46,22 @@ block content
             .row-mini
               .col-md-3
                 span.forums-answer__footer__text Кол-во тем:
-                  span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+                  if dev
+                    span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+                  else
+                    span.forums-answer__footer__count 133
               .col-md-4
                 span.forums-answer__footer__text Кол-во сообщений:
-                  span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+                  if dev
+                    span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+                  else
+                    span.forums-answer__footer__count 133
               .col-md-5
                 span.forums-answer__footer__text Кол-во пользователей:
-                  span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+                  if dev
+                    span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+                  else
+                    span.forums-answer__footer__count 133
 
         .white-block
           h4.white-block__title.mt0 <span class="icon-bookmark"></span> Последние новости

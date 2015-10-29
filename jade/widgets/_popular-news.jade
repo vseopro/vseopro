@@ -12,6 +12,12 @@
             span.db.popular-news__text 3XLOVE - Скрипт сайта знакомств бла бла капе
             .row-mini
               .col-xs-6
-                a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> #{user[Math.floor(Math.random() * ((user.length - 1) - 0 + 1)) + 0]}
+                if dev
+                  a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> #{user[Math.floor(Math.random() * ((user.length - 1) - 0 + 1)) + 0]}
+                else
+                  a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
               .col-xs-6
-                a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (2100 - 2000 + 1)) + 2000}
+                if dev
+                  a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (2100 - 2000 + 1)) + 2000}
+                else
+                  a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 02.03.2010
