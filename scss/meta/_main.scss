@@ -1186,7 +1186,7 @@ footer.main{
     margin-bottom: 23px;
   }
   &__button{
-    padding: 14px;
+    padding: 14px 0;
   }
 }
 
@@ -1400,6 +1400,9 @@ footer.main{
     line-height: 25px;
     margin-bottom: 25px;
   }
+  &__button{
+    padding: 14px 0;
+  }
 }
 
 .tab-mini-news{
@@ -1612,5 +1615,12 @@ footer.main{
     padding: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+}
+
+.col-table{
+  display: table !important;
+  .col-cell{
+    float: none !important;
   }
 }

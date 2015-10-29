@@ -2383,7 +2383,7 @@ footer.main {
 }
 
 .sidebar-subscribe__button {
-    padding: 14px;
+    padding: 14px 0;
 }
 
 .sidebar-comments__item {
@@ -2601,6 +2601,10 @@ footer.main {
     margin-bottom: 25px;
 }
 
+.tab-grand-news__button {
+    padding: 14px 0;
+}
+
 .tab-mini-news {
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -2782,6 +2786,14 @@ footer.main {
     padding: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.col-table {
+    display: table !important;
+}
+
+.col-table .col-cell {
+    float: none !important;
 }
 
 .debug-select-ico {

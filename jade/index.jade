@@ -95,15 +95,15 @@ block content
               .tab-content.tabs-red__content
                 each wer, ter in ['tab-teplate','tab-modules','tab-hacks','tab-forums','tab-relize']
                   div(role='tabpanel' id="#{wer}#{i + 1}" class="tab-pane #{ter === 0 ? 'active' : 'fade'}")
-                    .row
+                    .row.col-table
                       .col-md-6
                         .tab-grand-news
                           img(src="img/img_tab_news.jpg" alt="tab news image").tab-grand-news__img.img-responsive
                           h2.text-bold.db.tab-grand-news__title
                             a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс.
                           include components/_news-metadata
-                          p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекс. Рефераты предназначена  затоплен Яндекс.
-                          a(href="#" role="button").btn.btn-orange.fluid.db.btn-lg Читать подробнее
+                          p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекс.
+                          a(href="#" role="button").btn.btn-orange.fluid.db.tab-grand-news__button Читать подробнее
                       .col-md-6
                         -for(var e = 0; e < 3; e++)
                           .tab-mini-news
