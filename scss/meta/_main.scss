@@ -693,7 +693,7 @@ footer.main{
 
 .footer-subs{
   margin-top: 45px;
-  border: 2px $color-black solid;
+  border: 1px black(1) solid;
   padding: 10px 30px;
   &__wrap{
     height: 80px;
@@ -729,7 +729,7 @@ footer.main{
   }
   &__item{
     padding-top: 37px;
-    border-bottom: 2px $color-black solid;
+    border-bottom: 1px black(1) solid;
     padding-bottom: 10px;
     margin-bottom: 10px;
   }
@@ -748,9 +748,9 @@ footer.main{
     position: absolute;
     left: 0;
     bottom: -17px;
-    background: $color-black;
+    background: black(1);
     width: 68px;
-    height: 2px;
+    height: 1px;
   }
 }
 
