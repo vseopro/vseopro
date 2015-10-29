@@ -30,26 +30,26 @@ block content
             -for(var i = 0; i < 3; i++)
               .forums-answer__item
                 //- h2.forums-answer__title.text-overflow(data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба")
-                a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").forums-answer__title.dark-blue-link.h2.text-overflow Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты
+                a(href="#" data-toggle="tooltip" data-placement="top" title="Тестовый текст").forums-answer__title.dark-blue-link.h2.text-overflow Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты
                 .row-mini
                   .col-md-3
                     a(href="#").link.text-overflow.forums-answer__text <span class="icon-user forums-answer__ico"></span> Admin
                   .col-md-3
-                    a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 03.05.2510
+                    a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> #{Math.floor(Math.random() * (31 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (12 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (2100 - 2000 + 1)) + 2000}
                   .col-md-6
-                    a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").link.text-overflow.forums-answer__text <span class="icon-comment-1 forums-answer__ico"></span> Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао
+                    a(href="#" data-toggle="tooltip" data-placement="top" title="Тестовый текст").link.text-overflow.forums-answer__text <span class="icon-comment-1 forums-answer__ico"></span> Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао
 
           .forums-answer__footer
             .row-mini
               .col-md-3
                 span.forums-answer__footer__text Кол-во тем:
-                  span.forums-answer__footer__count 523564
+                  span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
               .col-md-4
                 span.forums-answer__footer__text Кол-во сообщений:
-                  span.forums-answer__footer__count 8255
+                  span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
               .col-md-5
                 span.forums-answer__footer__text Кол-во пользователей:
-                  span.forums-answer__footer__count 62364
+                  span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
 
         .white-block
           h4.white-block__title.mt0 <span class="icon-bookmark"></span> Последние новости
@@ -62,34 +62,11 @@ block content
                   .col-md-8
                     h2.text-bold.db.last-news__title
                       a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс. Рефераты.
-                    .row-mini
-                      .col-sm-4.col-md-4
-                        a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
-                      .col-sm-4.col-md-4
-                        a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
-                      .col-sm-4.col-md-4
-                        a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").link.last-news__text.text-overflow <span class="icon-folder-open last-news__ico"></span> photoshop
-
+                    include components/_counter-block
                     .last-news__demo-text
                       p.mb0 Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена  ываыва ываыва ываыва ываываварв ываыва затоплен служба  затоплен служба  <br> фывф ывфыв фывфы <a href="#" class="last-news__demo-text--link link">Читать далее...</a>
-          nav.pagination.pr.db
-            a(href="#").pagination-previous__button.db.disabled
-            ul.pagination-list.lsn.mb0.clearfix.table-center
-              li.pull-left.pagination-list__item.active
-                a(href='#').pagination-list__link.db 1
-              li.pull-left.pagination-list__item
-                a(href='#').pagination-list__link.db 2
-              li.pull-left.pagination-list__item
-                a(href='#').pagination-list__link.db 3
-              li.pull-left.pagination-list__item
-                a(href='#').pagination-list__link.db 4
-              li.pull-left.pagination-list__item
-                a(href='#').pagination-list__link.db 5
-              li.pull-left.pagination-list__item
-                span.pagination-list__link.db ...
-              li.pull-left.pagination-list__item
-                a(href='#').pagination-list__link.db 100
-            a(href="#").pagination-next__button.db
+
+          include components/_pagination
 
         .click-block__section
           a(href="#").db
@@ -118,20 +95,13 @@ block content
               .tab-content.tabs-red__content
                 each wer, ter in ['tab-teplate','tab-modules','tab-hacks','tab-forums','tab-relize']
                   div(role='tabpanel' id="#{wer}#{i + 1}" class="tab-pane #{ter === 0 ? 'active' : 'fade'}")
-                    //- p #{wer}#{i + 1}
                     .row
                       .col-md-6
                         .tab-grand-news
                           img(src="img/img_tab_news.jpg" alt="tab news image").tab-grand-news__img.img-responsive
                           h2.text-bold.db.tab-grand-news__title
                             a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс.
-                          .row-mini
-                            .col-sm-4.col-md-4
-                              a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
-                            .col-sm-4.col-md-4
-                              a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
-                            .col-sm-4.col-md-4
-                              a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").link.last-news__text.text-overflow <span class="icon-folder-open last-news__ico"></span> photoshop
+                          include components/_counter-block
                           p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекс. Рефераты предназначена  затоплен Яндекс.
                           a(href="#" role="button").btn.btn-orange.fluid.db.btn-lg Читать подробнее
                       .col-md-6
@@ -143,13 +113,7 @@ block content
                               .col-md-6
                                 h3.mt0.tab-mini-news__description
                                   a(href="#").dark-blue-link Горячие капеция дня затоплен цукцукв ук право на репост выавыа ыв выапвалпо вавыаываы
-                            .row-mini
-                              .col-sm-4.col-md-4
-                                a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
-                              .col-sm-4.col-md-4
-                                a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 03.05.2510
-                              .col-sm-4.col-md-4
-                                a(href="#" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба").link.last-news__text.text-overflow <span class="icon-folder-open last-news__ico"></span> photoshop
+                            include components/_counter-block
 
           -if(i === 1)
             .click-block__section
