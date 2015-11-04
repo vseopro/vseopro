@@ -296,3 +296,11 @@ input.input {
     @extend %outline-none;
   }
 }
+
+.col-table{
+  display: table !important;
+  .col-cell{
+    float: none !important;
+    display: table-cell !important;
+  }
+}

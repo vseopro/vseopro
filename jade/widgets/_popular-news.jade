@@ -1,5 +1,3 @@
--var user = ['Administrator', 'TDSko', 'Pasha', 'Sasha', 'SuperMegaDuperUser']
-
 .white-block
   h5.white-block__sidebar-title.mt0 <span class="icon-network"></span> Популярные новости
   .popular-news
@@ -13,11 +11,11 @@
             .row-mini
               .col-xs-6
                 if dev
-                  a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> #{user[Math.floor(Math.random() * ((user.length - 1) - 0 + 1)) + 0]}
+                  a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
                 else
                   a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
               .col-xs-6
                 if dev
-                  a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (2100 - 2000 + 1)) + 2000}
+                  a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
                 else
                   a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 02.03.2010

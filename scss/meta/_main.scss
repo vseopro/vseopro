@@ -1144,7 +1144,7 @@ footer.main{
   }
 }
 
-.news-metadata{
+.metadata{
   &__text{
     // color: $color-orange;
     font-size: 12px;
@@ -1343,6 +1343,17 @@ footer.main{
   }
 }
 
+.tab-content{
+  &__table-col{
+    width: 50%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    float: none;
+  }
+}
+
 .tabs-red{
   border-bottom: 1px solid #f1f1f1;
   margin-top: 30px;
@@ -1398,10 +1409,14 @@ footer.main{
   &__description{
     margin-top: 20px;
     line-height: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
   }
   &__button{
     padding: 14px 0;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
   }
 }
 
@@ -1615,12 +1630,5 @@ footer.main{
     padding: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-}
-
-.col-table{
-  display: table !important;
-  .col-cell{
-    float: none !important;
   }
 }

@@ -1210,6 +1210,15 @@ input.input:focus {
     color: #555;
 }
 
+.col-table {
+    display: table !important;
+}
+
+.col-table .col-cell {
+    float: none !important;
+    display: table-cell !important;
+}
+
 @font-face {
     font-family: 'fontello';
     src: url("../font/fontello.eot?97025916");
@@ -2346,11 +2355,11 @@ footer.main {
     margin-top: 20px;
 }
 
-.news-metadata__text {
+.metadata__text {
     font-size: .85714rem;
 }
 
-.news-metadata__ico {
+.metadata__ico {
     font-size: 1.42857rem;
     color: #919191;
 }
@@ -2554,6 +2563,15 @@ footer.main {
     margin-top: 30px;
 }
 
+.tab-content__table-col {
+    width: 50%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    float: none;
+}
+
 .tabs-red {
     border-bottom: 1px solid #f1f1f1;
     margin-top: 30px;
@@ -2598,11 +2616,15 @@ footer.main {
 .tab-grand-news__description {
     margin-top: 20px;
     line-height: 1.78571rem;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
 }
 
 .tab-grand-news__button {
     padding: 14px 0;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
 }
 
 .tab-mini-news {
@@ -2786,14 +2808,6 @@ footer.main {
     padding: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.col-table {
-    display: table !important;
-}
-
-.col-table .col-cell {
-    float: none !important;
 }
 
 .debug-select-ico {

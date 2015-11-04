@@ -1,5 +1,3 @@
-'use strict';
-
 $(function () {
     $('.open-menu__button').on('click', function () {
         var targetAction = $(this).data('show');
@@ -10,7 +8,7 @@ $(function () {
         }
     });
 
-    $('.mobile-overlay').on('click', function () {
+    $('.mobile-overlay').on('click', () => {
         $('html').attr("class", '');
     });
 
@@ -35,34 +33,32 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
 
-    $('a.disabled').on('click', function () {
+    $('a.disabled').on('click', () => {
         return false;
     });
 });
 
 $(function () {
-    var _this2 = this;
-
     if (device.ipad() || device.androidTablet() || device.blackberryTablet() || device.windowsTablet() || device.fxosTablet() || device.tablet()) {
 
         $('body').addClass("browser-mobile");
 
-        $('.first-menu__has-menu').on('click', function () {
-            var _this = $(_this2);
+        $('.first-menu__has-menu').on('click', () => {
+            var _this = $(this);
             _this.find('.second-menu__list').css({
                 'display': 'block'
             });
         });
 
-        $('.second-menu__has-menu').on('click', function () {
-            var _this = $(_this2);
+        $('.second-menu__has-menu').on('click', () => {
+            var _this = $(this);
             _this.find('.third-menu__list').css({
                 'display': 'block'
             });
         });
     }
 
-    $(".pages-menu__close").on('click', function () {
+    $(".pages-menu__close").on('click', () => {
         $(".pages-menu").empty();
     });
 });

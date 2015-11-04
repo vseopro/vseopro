@@ -33,10 +33,13 @@ block content
                 a(href="#" data-toggle="tooltip" data-placement="top" title="Тестовый текст").forums-answer__title.dark-blue-link.h2.text-overflow Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты
                 .row-mini
                   .col-md-3
-                    a(href="#").link.text-overflow.forums-answer__text <span class="icon-user forums-answer__ico"></span> Admin
+                    if dev
+                      a(href="#").link.text-overflow.forums-answer__text <span class="icon-user forums-answer__ico"></span> #{users[Math.floor(Math.random() * ((users.length - 1) - 0 + 1)) + 0]}
+                    else
+                      a(href="#").link.text-overflow.forums-answer__text <span class="icon-user forums-answer__ico"></span> Admin
                   .col-md-3
                     if dev
-                      a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}.#{Math.floor(Math.random() * (2100 - 2000 + 1)) + 2000}
+                      a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
                     else
                       a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 02.03.2010
                   .col-md-6
@@ -108,15 +111,15 @@ block content
                 each wer, ter in ['tab-teplate','tab-modules','tab-hacks','tab-forums','tab-relize']
                   div(role='tabpanel' id="#{wer}#{i + 1}" class="tab-pane #{ter === 0 ? 'active' : 'fade'}")
                     .row.col-table
-                      .col-md-6
+                      .col-md-6.tab-content__table-col
                         .tab-grand-news
-                          img(src="img/img_tab_news.jpg" alt="tab news image").tab-grand-news__img.img-responsive
-                          h2.text-bold.db.tab-grand-news__title
-                            a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс.
-                          include components/_news-metadata
-                          p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекс.
-                          a(href="#" role="button").btn.btn-orange.fluid.db.tab-grand-news__button Читать подробнее
-                      .col-md-6
+                        img(src="img/img_tab_news.jpg" alt="tab news image").tab-grand-news__img.img-responsive
+                        h2.text-bold.db.tab-grand-news__title
+                          a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс.
+                        include components/_news-metadata
+                        p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекспре дназначена  затоплен Яндекс.
+                        a(href="#" role="button").btn.btn-orange.db.tab-grand-news__button Читать подробнее
+                      .col-md-6.tab-content__table-col
                         -for(var e = 0; e < 3; e++)
                           .tab-mini-news
                             .row
