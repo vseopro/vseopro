@@ -6,6 +6,56 @@ block content
       .col-md-8
         .white-block
           h4.white-block__title.mt0 <span class="icon-lightbulb"></span> Ответы с форума
+          article.article
+            header.article__header
+              include components/_article-metadata
+
+            img(src="img/img_article_demo_image.png" alt="article demo image").article__head-image
+            p <strong>ClipBucket v.2.7.5</strong> Rus является наиболее динамично развивающимся скриптом, который впервые был запущен как Youtube Clone, но теперь особенности и усовершенствования делают его наиболее универсальным, надежным и масштабируемым скриптом с новейшими функциями социальных сетей. Clipbucket v.2.7.3 Rus сочетает в себе гибкость, быстроту и удобство для посетителей портала.
+            p <strong>Возможности :</strong>
+            ul
+              li Легкая настройка и интеграция
+              li Поддержка изменений HQ видео и оптимизация
+              li Web 2.0 и Ajaxified
+              li Полностью настраиваемый
+              li Социальная сеть
+              li Высоко управляемая панель администрация
+              li Пользовательские группы и категории
+              li Много утилит для изменения видео (замедление,ускорение и пр.)
+              li Лучшая система комментариев
+              li Поддержка интегрирования Gravatar и jFusion
+
+            p <strong> В комплекте:</strong>
+            ul
+              li Скрипт
+              li Шаблоны
+              li Плагины
+
+            p <strong>Username: demo</strong>
+            p <strong>Password: demo</strong>
+
+            footer.article__footer
+
+        .click-block__section
+          a(href="#").db
+            img(src="img/img_750_150.png" alt="click image").click-block__image.img-responsive
+
+        .white-block
+          h4.white-block__title.mt0 <span class="icon-bookmark"></span> Похожие новости в этой категории
+          .row
+            -for(var i = 0; i < 4; i++)
+              .col-xs-12.col-md-6.col-lg-3
+                a(href="#").db.text-center
+                  img(src="img/img_demo_similar_news.png" alt="img demo similar news").table-center
+                  | Clipbucket V2.7.3
+
+        .white-block
+          h4.white-block__title.mt0 <span class="icon-comment-1"></span> Комментарии
+          -for(var i = 0; i < 5; i++)
+            include components/_article-metadata
+
+        .white-block
+          h4.white-block__title.mt0 <span class="icon-comment-1"></span> Добавить комментарий
 
       .col-xs-4.visible-md.visible-lg
 

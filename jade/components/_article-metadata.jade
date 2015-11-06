@@ -1,0 +1,16 @@
+.row-mini.metadata
+  .col-sm-4.col-md-4
+    if dev
+      a(href="#").link.metadata__text.text-overflow <span class="icon-user metadata__ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
+    else
+      a(href="#").link.metadata__text.text-overflow <span class="icon-user metadata__ico"></span> Admin
+  .col-sm-4.col-md-4
+    if dev
+      a(href="#").link.metadata__text.text-overflow <span class="icon-calendar metadata__ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
+    else
+      a(href="#").link.metadata__text.text-overflow <span class="icon-calendar metadata__ico"></span> 01.02.2010
+  .col-sm-4.col-md-4
+    if dev
+      a(href="#" data-toggle="tooltip" data-placement="top" title="Тестовый текст").link.metadata__text.text-overflow <span class="icon-folder-open metadata__ico"></span> #{tags[Math.floor(Math.random() * ((tags.length - 1) - 0 + 1)) + 0]}
+    else
+      a(href="#" data-toggle="tooltip" data-placement="top" title="Тестовый текст").link.metadata__text.text-overflow <span class="icon-folder-open metadata__ico"></span> Photoshop
