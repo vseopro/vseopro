@@ -1,0 +1,41 @@
+extends meta/_layout
+
+block content
+  include components/_hot-news
+
+  .container
+    .row.pr
+      // основные блоки
+      .col-md-8
+        .white-block
+          h4.white-block__title.mt0 <span class="icon-bookmark"></span> Последние новости
+          .last-news
+            -for(var i = 0; i < 10; i++)
+              .last-news__item
+                .row
+                  .col-md-4
+                    img(src="img/img_demo_last-news.jpg" alt="last news img").img-responsive.last-news__img
+                  .col-md-8
+                    h2.text-bold.db.last-news__title
+                      a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс. Рефераты.
+                    include components/_news-metadata
+                    .last-news__demo-text
+                      p.mb0 Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена  ываыва ываыва ываыва ываываварв ываыва затоплен служба  затоплен служба  <br> фывф ывфыв фывфы <a href="#" class="last-news__demo-text--link link">Читать далее...</a>
+
+          include components/_pagination
+
+      // сайдбар
+      .col-xs-4.visible-md.visible-lg
+
+        // Выбор редакции
+        include widgets/_editors-choice
+
+        // Популярные новости
+        include widgets/_popular-news
+
+        // Комментарии
+        include widgets/_sidebar-comments
+
+        // Статистика сайта
+        include widgets/_site-statistic
+
