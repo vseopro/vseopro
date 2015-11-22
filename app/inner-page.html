@@ -201,10 +201,18 @@
             <div class="row">
                 <div class="col-sm-12 col-sm-3 col-md-3 col-lg-2"><a href="#" class="hot-news__button btn btn-red fluid">Горячие новости</a></div>
                 <div class="col-sm-12 col-sm-9 col-md-9 col-lg-10">
-                    <div class="hot-news__render pr"><a href="#" class="hot-news__text text-overflow transform-middle">Горячие новости дня затоплен служба Яндекс. Рефераты предназначена  Полнофункциональная Система Управления пользо...</a>
-                        <button type="button" class="btn hot-news__prev no-outline"></button>
-                        <button type="button" class="btn hot-news__next no-outline"></button>
-                    </div>
+                    <div id="hot-news-slider" data-ride="carousel" class="carousel slide">
+                        <!-- Wrapper for slides-->
+                        <div role="listbox" class="carousel-inner">
+                            <div class="item active">
+                                <div class="hot-news__render pr"><a href="#" class="hot-news__text text-overflow transform-middle">Горячие новости дня затоплен служба Яндекс. Рефераты предназначена  Полнофункциональная Система Управления пользо...</a></div>
+                            </div>
+                            <div class="item">
+                                <div class="hot-news__render pr"><a href="#" class="hot-news__text text-overflow transform-middle">Горячие новости дня затоплен служба Яндекс. Рефераты предназначена  Полнофункциональная Система Управления пользо...</a></div>
+                            </div>
+                        </div>
+                        <!-- Controls--><a href="#hot-news-slider" role="button" data-slide="prev" class="btn hot-news__prev no-outline"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a><a href="#hot-news-slider" role="button" data-slide="next"
+                        class="btn hot-news__next no-outline"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a> </div>
                 </div>
             </div>
         </div>
@@ -457,22 +465,22 @@
                         <div class="user-online">
                             <div class="row">
                                 <div class="col-xs-2"><span class="icon-eye user-online__icon"></span></div>
-                                <div class="col-xs-9"><span class="db user-online__text">Всего на сайте: <span class="user-online__label">498</span></span>
+                                <div class="col-xs-9"><span class="db user-online__text">Всего на сайте: <span class="user-online__label">1005</span></span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-2"><span class="icon-eye-off user-online__icon"></span></div>
-                                <div class="col-xs-9"><span class="db user-online__text">Невидимок: <span class="user-online__label">1039</span></span>
+                                <div class="col-xs-9"><span class="db user-online__text">Невидимок: <span class="user-online__label">1174</span></span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-2"><span class="icon-user-2 user-online__icon"></span></div>
-                                <div class="col-xs-9"><span class="db user-online__text">Пользователей: <span class="user-online__label">548</span></span>
+                                <div class="col-xs-9"><span class="db user-online__text">Пользователей: <span class="user-online__label">1135</span></span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-2"><span class="icon-github user-online__icon"></span></div>
-                                <div class="col-xs-9"><span class="db user-online__text">Роботов: <span class="user-online__label">175</span></span>
+                                <div class="col-xs-9"><span class="db user-online__text">Роботов: <span class="user-online__label">462</span></span>
                                 </div>
                             </div>
                         </div>
@@ -483,32 +491,32 @@
                         <div class="site-statistic">
                             <div class="row">
                                 <div class="col-xs-9">
-                                    <p class="site-statistic__text">Новостей: <span class="site-statistic__count">867</span></p>
+                                    <p class="site-statistic__text">Новостей: <span class="site-statistic__count">545</span></p>
                                 </div>
                                 <div class="col-xs-3">
-                                    <p class="text-right site-statistic__label">+433</p>
+                                    <p class="text-right site-statistic__label">+985</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-9">
-                                    <p class="site-statistic__text">Комментариев: <span class="site-statistic__count">761</span></p>
+                                    <p class="site-statistic__text">Комментариев: <span class="site-statistic__count">632</span></p>
                                 </div>
                                 <div class="col-xs-3">
-                                    <p class="text-right site-statistic__label">+243</p>
+                                    <p class="text-right site-statistic__label">+927</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-9">
-                                    <p class="site-statistic__text">Пользователей: <span class="site-statistic__count">254</span></p>
+                                    <p class="site-statistic__text">Пользователей: <span class="site-statistic__count">630</span></p>
                                 </div>
                                 <div class="col-xs-3">
-                                    <p class="text-right site-statistic__label">+229</p>
+                                    <p class="text-right site-statistic__label">+961</p>
                                 </div>
-                            </div><span class="db site-statistic__group-title">Из них</span><span class="db site-statistic__text red"><span class="icon-user"></span> Администраторов: <span class="site-statistic__count">844</span></span><span class="db site-statistic__text blue"><span class="icon-user"></span>                            Модераторов: <span class="site-statistic__count">1043</span></span><span class="db site-statistic__text green"><span class="icon-user"></span> Журналистов: <span class="site-statistic__count">673</span></span><span class="db site-statistic__text light-blue"><span class="icon-user"></span>                            Проверенных: <span class="site-statistic__count">321</span></span><span class="db site-statistic__text orange"><span class="icon-user"></span> Потребителей: <span class="site-statistic__count">697</span></span><span class="db site-statistic__group-title">Зарегистрировались</span>
+                            </div><span class="db site-statistic__group-title">Из них</span><span class="db site-statistic__text red"><span class="icon-user"></span> Администраторов: <span class="site-statistic__count">981</span></span><span class="db site-statistic__text blue"><span class="icon-user"></span>                            Модераторов: <span class="site-statistic__count">329</span></span><span class="db site-statistic__text green"><span class="icon-user"></span> Журналистов: <span class="site-statistic__count">746</span></span><span class="db site-statistic__text light-blue"><span class="icon-user"></span>                            Проверенных: <span class="site-statistic__count">393</span></span><span class="db site-statistic__text orange"><span class="icon-user"></span> Потребителей: <span class="site-statistic__count">1232</span></span><span class="db site-statistic__group-title">Зарегистрировались</span>
                             <span
-                            class="db site-statistic__text">Сегодня: <span class="site-statistic__count">179</span></span><span class="db site-statistic__text">Вчера: <span class="site-statistic__count">292</span></span><span class="db site-statistic__text">За неделю: <span class="site-statistic__count">1238</span></span>
+                            class="db site-statistic__text">Сегодня: <span class="site-statistic__count">1211</span></span><span class="db site-statistic__text">Вчера: <span class="site-statistic__count">607</span></span><span class="db site-statistic__text">За неделю: <span class="site-statistic__count">159</span></span>
                                 <span
-                                class="db site-statistic__text">За месяц: <span class="site-statistic__count">428</span></span>
+                                class="db site-statistic__text">За месяц: <span class="site-statistic__count">567</span></span>
                         </div>
                     </div>
                 </div>
