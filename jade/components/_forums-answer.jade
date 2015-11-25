@@ -1,0 +1,41 @@
+.white-block
+  h4.white-block__title.mt0 <span class="icon-lightbulb"></span> Ответы с форума
+  .forums-answer
+    -for(var i = 0; i < 3; i++)
+      .forums-answer__item
+        //- h2.forums-answer__title.text-overflow(data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба")
+        a(href="#" data-toggle="tooltip" data-placement="top" title="Тестовый текст").forums-answer__title.dark-blue-link.h2.text-overflow Горячие новости дня затоплен служба Яндекс. Рефераты Горячие новости дня затоплен служба Яндекс. РефератыГорячие новости дня затоплен служба Яндекс. Рефераты
+        .row-mini
+          .col-md-3
+            if dev
+              a(href="#").link.text-overflow.forums-answer__text <span class="icon-user forums-answer__ico"></span> #{users[Math.floor(Math.random() * ((users.length - 1) - 0 + 1)) + 0]}
+            else
+              a(href="#").link.text-overflow.forums-answer__text <span class="icon-user forums-answer__ico"></span> Admin
+          .col-md-3
+            if dev
+              a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
+            else
+              a(href="#").link.text-overflow.forums-answer__text <span class="icon-calendar forums-answer__ico"></span> 02.03.2010
+          .col-md-6
+            a(href="#" data-toggle="tooltip" data-placement="top" title="Тестовый текст").link.text-overflow.forums-answer__text <span class="icon-comment-1 forums-answer__ico"></span> Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао Дная затоплен служба Яндекс. ываыдвшао
+
+  .forums-answer__footer
+    .row-mini
+      .col-md-3
+        span.forums-answer__footer__text Кол-во тем:
+          if dev
+            span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+          else
+            span.forums-answer__footer__count 133
+      .col-md-4
+        span.forums-answer__footer__text Кол-во сообщений:
+          if dev
+            span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+          else
+            span.forums-answer__footer__count 133
+      .col-md-5
+        span.forums-answer__footer__text Кол-во пользователей:
+          if dev
+            span.forums-answer__footer__count #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+          else
+            span.forums-answer__footer__count 133
