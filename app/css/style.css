@@ -3219,6 +3219,14 @@ footer.main {
         margin: 0 auto;
     }
 
+    .tab-grand-news__description {
+        margin-bottom: 10px;
+    }
+
+    .tab-grand-news__button {
+        position: static;
+    }
+
     .tab-mini-news {
         margin-top: 30px;
     }
@@ -3315,5 +3323,12 @@ footer.main {
 @media (min-width:769px) {
     .pagination-list {
         display: table;
+    }
+}
+
+@media all and (max-width:992px) {
+    .tab-content__table-col {
+        display: block;
+        width: auto;
     }
 }

@@ -1351,6 +1351,10 @@ footer.main{
     vertical-align: top;
     position: relative;
     float: none;
+    @media all and (max-width:992px){
+      display: block;
+      width: auto;
+    }
   }
 }
 
@@ -1410,6 +1414,9 @@ footer.main{
     margin-top: 20px;
     line-height: 25px;
     margin-bottom: 60px;
+    @media(max-width: 992px){
+      margin-bottom: 10px;
+    }
   }
   &__button{
     padding: 14px 0;
@@ -1417,6 +1424,9 @@ footer.main{
     left: 15px;
     right: 15px;
     bottom: 0;
+    @media(max-width: 992px){
+      position: static;
+    }
   }
 }
 
