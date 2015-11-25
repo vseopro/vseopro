@@ -14,7 +14,6 @@ var mqpacker             = require("css-mqpacker");
 var babel                = require('gulp-babel');
 var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
-var less                 = require('gulp-less');
 var imagemin             = require('gulp-imagemin');
 
 var postCSSFocus = function (css) {
@@ -66,14 +65,6 @@ var PERFECTIONIST_CONFIG = {
     maxAtRuleLength: false,
     maxSelectorLength: true
 };
-
-gulp.task('less', function () {
-    return gulp.src('./less/bootstrap.less')
-        .pipe(less())
-        //.pipe(csso())
-        .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
-        .pipe(gulp.dest('./app/css'));
-});
 
 gulp.task('imagemin', function () {
     return gulp.src('./images/*')
@@ -137,9 +128,8 @@ gulp.task('babel', function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('default', ['sass', 'imagemin', 'less', 'babel', 'jade', 'browser-sync'], function () {
+gulp.task('default', ['sass', 'imagemin', 'babel', 'jade', 'browser-sync'], function () {
     gulp.watch('scss/**/*.scss', ['sass']);
-    gulp.watch('less/**/*.less', ['less']);
     gulp.watch('babel/**/*.js', ['babel']);
     gulp.watch(['images/*.jpg', 'images/*.png'], ['imagemin']);
     gulp.watch(['jade/**/*.jade', 'json/**/*.json'], ['jade']);

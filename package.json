@@ -23,7 +23,6 @@
     "gulp-csso": "^1.0.1",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
-    "gulp-less": "^3.0.5",
     "gulp-postcss": "^6.0.0",
     "gulp-prettify": "^0.3.0",
     "gulp-sass": "^2.1.0",
