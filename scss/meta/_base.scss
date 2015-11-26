@@ -304,3 +304,7 @@ input.input {
     display: table-cell !important;
   }
 }
+
+input[type="search"]{
+  box-sizing: border-box;
+}

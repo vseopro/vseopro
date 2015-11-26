@@ -1219,6 +1219,10 @@ input.input:focus {
     display: table-cell !important;
 }
 
+input[type="search"] {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'fontello';
     src: url("../font/fontello.eot?6283293");
