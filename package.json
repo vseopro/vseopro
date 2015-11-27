@@ -24,12 +24,14 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
     "gulp-postcss": "^6.0.0",
+    "gulp-posthtml": "^1.5.2",
     "gulp-prettify": "^0.3.0",
     "gulp-sass": "^2.1.0",
     "perfectionist": "^2.1.0",
     "postcss-custom-selectors": "^3.0.0",
     "postcss-pseudo-elements-content": "^1.0.0",
     "postcss-pxtorem": "^3.0.0",
+    "posthtml-bem": "^0.2.2",
     "rucksack-css": "^0.8.5"
   }
 }

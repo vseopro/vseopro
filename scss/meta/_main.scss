@@ -1237,8 +1237,8 @@ footer.main{
   @media(max-width: 768px){
     text-align: center;
   }
-  &-previous__button,
-  &-next__button{
+  &__prev-button,
+  &__next-button{
     width: 50px;
     height: 40px;
     background: $color-red;
@@ -1277,10 +1277,10 @@ footer.main{
       display: inline-block;
     }
   }
-  &-previous__button{
+  &__prev-button{
     left: 0;
   }
-  &-next__button{
+  &__next-button{
     right: 0;
     &:before{
       transform: rotate(-45deg);
@@ -1290,14 +1290,14 @@ footer.main{
       // margin-top: 5px;
     }
   }
-  &-list{
+  &__list{
     padding: 0 50px;
     display: none;
     @media(min-width: 769px){
       display: table;
     }
   }
-  &-list__item{
+  &__item{
     margin-right: 10px;
     &:last-child{
       margin-right: 0;
@@ -1312,8 +1312,9 @@ footer.main{
       }
     }
   }
-  &-list__link{
+  &__link{
     // background: #fff;
+    height: 40px;
     color: #394553;
     background: #f1f1f1;
     padding: 10px 15px;

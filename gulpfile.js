@@ -15,6 +15,7 @@ var babel                = require('gulp-babel');
 var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
 var imagemin             = require('gulp-imagemin');
+var posthtml             = require('gulp-posthtml');
 
 var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
@@ -88,20 +89,24 @@ gulp.task('reload', function () {
 });
 
 gulp.task('jade', function () {
-
     var dataJSON = JSON.parse(fs.readFileSync('./json/config.json', 'utf-8'));
-    gulp.src('./jade/!(_)*.jade')
 
+    return gulp.src('./jade/!(_)*.jade')
         .pipe(jade({
+            pretty: true,
             locals: dataJSON,
-            pretty: true
         }))
-
+        .pipe(posthtml([
+            require('posthtml-bem')({
+                elemPrefix: '__',
+                modPrefix: '_',
+                modDlmtr: '--'
+            })
+        ]))
         .pipe(prettify({indent_size: 4}))
         .on('error', console.log)
         .pipe(gulp.dest('./app/'))
         .on('end', browserSync.reload)
-        // .pipe(reload({stream: true}));
 });
 
 gulp.task('sass', function () {

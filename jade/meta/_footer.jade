@@ -90,58 +90,42 @@ footer.main.visible-lg.visible-md
                       span.db.footer-last-user__text Был в 10:10
 
       .col-xs-12.col-sm-6.col-md-6.col-lg-6
-        .footer-tags.clearfix
-          p.footer-tags__title.text-white <span class="icon-tag"></span> Теги сайта
+        .clearfix(block="footer-tags")
+          p(elem="title").text-white <span class="icon-tag"></span> Теги сайта
           -for(var i = 0; i < 50; i++)
             if dev
-              a(href="#").db.footer-tags__item #{tags[Math.floor(Math.random() * ((tags.length - 1) - 0 + 1)) + 0]}
+              a(href="#" elem="item").db #{tags[Math.floor(Math.random() * ((tags.length - 1) - 0 + 1)) + 0]}
             else
-              a(href="#").db.footer-tags__item Страница #{i * 13}
+              a(href="#" elem="item").db Страница #{i * 13}
         .show-all-tags
           a(href="").btn.btn-orange Показать все теги
 
-.footer-copyright
+.footer-copyright.text-white
   .container
-    .site-working.clearfix
-      span.pull-left.site-working__title.text-white Сайт работает в
-      ul.pl0.mb0.lsn.clearfix.pull-left
-        li.pull-left: span.icon-firefox.text-white.site-working__icon
-        li.pull-left: span.icon-chrome.text-white.site-working__icon
-        li.pull-left: span.icon-opera.text-white.site-working__icon
-        li.pull-left: span.icon-ie.text-white.site-working__icon
+    .clearfix(block="site-working")
+      span.pull-left(elem="title") Сайт работает в
+      ul.menu-list.pull-left(elem="list")
+        li(elem="item"): span.icon-windows(elem="icon")
+        li(elem="item"): span.icon-android(elem="icon")
+        li(elem="item"): span.icon-apple(elem="icon")
+        //- li.pull-left: span.icon-ie.text-white.site-working__icon
 
-    ul.lsn.pl0.mb0.copyright-text
-      li.text-white.copyright-text__item Copyright 2015 г.
-      li.text-white.copyright-text__item «Vseopro.ru»
+    ul.menu-list(block="copyright-text")
+      li(elem="item") Copyright 2015 г.
+      li(elem="item") «Vseopro.ru»
       //- li.text-white.copyright-text__item Яндекс.метрика
       //- li.text-white.copyright-text__item.text-uppercase Анализ сайта
 
-    ul.lsn.pl0.mb0.footer-link.clearfix
-      li.footer-link__item
-        a(href="#").footer-link__link.db Карта сайта
-      li.footer-link__item
-        a(href="#").footer-link__link.db Обратная связь
-      li.footer-link__item
-        a(href="#").footer-link__link.db Правообладателям
-      li.footer-link__item
-        a(href="#").footer-link__link.db Заказ рекламы
+    ul.menu-list(block="footer-link")
+      li(elem="item"): a(href="#" elem="link") Карта сайта
+      li(elem="item"): a(href="#" elem="link") Обратная связь
+      li(elem="item"): a(href="#" elem="link") Правообладателям
+      li(elem="item"): a(href="#" elem="link") Заказ рекламы
 
-    ul.lsn.pl0.mb0.footer-ico
-      li.pull-left.footer-ico__item
-        a(href="#").footer-ico__link.db.vk
-          span.icon-vk
-      li.pull-left.footer-ico__item
-        a(href="#").footer-ico__link.db.odnoklassniki
-          span.icon-odnoklassniki
-      li.pull-left.footer-ico__item
-        a(href="#").footer-ico__link.db.twitter
-          span.icon-twitter
-      li.pull-left.footer-ico__item
-        a(href="#").footer-ico__link.db.google
-          span.icon-gplus
-      li.pull-left.footer-ico__item
-        a(href="#").footer-ico__link.db.facebook
-          span.icon-facebook
-      li.pull-left.footer-ico__item
-        a(href="#").footer-ico__link.db.rss
-          span.icon-rss
+    ul.menu-list(block="footer-ico")
+      li(elem="item"): a(href="#" elem="link").vk: span.icon-vk
+      li(elem="item"): a(href="#" elem="link").odnoklassniki: span.icon-odnoklassniki
+      li(elem="item"): a(href="#" elem="link").twitter: span.icon-twitter
+      li(elem="item"): a(href="#" elem="link").google: span.icon-gplus
+      li(elem="item"): a(href="#" elem="link").facebook: span.icon-facebook
+      li(elem="item"): a(href="#" elem="link").rss: span.icon-rss
