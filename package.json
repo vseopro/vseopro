@@ -19,7 +19,7 @@
     "browser-sync": "^2.10.0",
     "css-mqpacker": "^4.0.0",
     "gulp": "^3.9.0",
-    "gulp-babel": "^6.1.0",
+    "gulp-babel": "^6.1.1",
     "gulp-csso": "^1.0.1",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",

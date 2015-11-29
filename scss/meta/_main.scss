@@ -1643,3 +1643,23 @@ footer.main{
     margin-bottom: 20px;
   }
 }
+
+.article__header{
+  margin-bottom: 0;
+  &__list{
+    margin-bottom: 0;
+    @media all and (max-width:992px){
+      text-align: center;
+    }
+  }
+  &__item{
+    margin-bottom: 0;
+  }
+  &__icon{
+    font-size: 20px;
+    color: #919191;
+  }
+  &__link{
+    font-size: 12px;
+  }
+}

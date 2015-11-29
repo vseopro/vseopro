@@ -329,3 +329,8 @@ input.input {
 input[type="search"]{
   box-sizing: border-box;
 }
+
+.hideShowPassword-wrapper{
+  display: block !important;
+  width: 100% !important;
+}

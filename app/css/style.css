@@ -1237,6 +1237,11 @@ input[type="search"] {
     box-sizing: border-box;
 }
 
+.hideShowPassword-wrapper {
+    display: block !important;
+    width: 100% !important;
+}
+
 @font-face {
     font-family: 'fontello';
     src: url("../font/fontello.eot?6283293");
@@ -2837,6 +2842,21 @@ footer.main {
     margin-bottom: 20px;
 }
 
+.article__header,
+.article__header__list,
+.article__header__item {
+    margin-bottom: 0;
+}
+
+.article__header__icon {
+    font-size: 1.42857rem;
+    color: #919191;
+}
+
+.article__header__link {
+    font-size: .85714rem;
+}
+
 .debug-select-ico {
     font-size: 1.14286rem;
     position: fixed;
@@ -3357,5 +3377,9 @@ footer.main {
     .tab-content__table-col {
         display: block;
         width: auto;
+    }
+
+    .article__header__list {
+        text-align: center;
     }
 }

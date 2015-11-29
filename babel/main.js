@@ -12,6 +12,9 @@ $(function() {
         $('html').attr("class", '');
     });
 
+    //hideShowPassword
+    $('.hideShowPassword').hidePassword(true);
+
     //don't click menu block
     $('.search-form, .login-form').on('click', function(event){
       var events = $._data(document, 'events') || {};
