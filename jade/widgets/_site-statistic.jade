@@ -1,31 +1,31 @@
-.white-block
-  h5.white-block__sidebar-title.mt0 <span class="icon-chart-pie"></span> Статистика сайта
-  .site-statistic
+div(block="white-block")
+  h5(elem="sidebar-title").mt0 <span class="icon-chart-pie"></span> Статистика сайта
+  div(block="site-statistic")
     .row
       .col-xs-9
-        p.site-statistic__text Новостей: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+        p(elem="text") Новостей: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
       .col-xs-3
-        p.text-right.site-statistic__label +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
+        p(elem="label").text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
     .row
       .col-xs-9
-        p.site-statistic__text Комментариев: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+        p(elem="text") Комментариев: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
       .col-xs-3
-        p.text-right.site-statistic__label +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
+        p(elem="label").text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
     .row
       .col-xs-9
-        p.site-statistic__text Пользователей: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+        p(elem="text") Пользователей: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
       .col-xs-3
-        p.text-right.site-statistic__label +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
+        p(elem="label").text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
 
-    span.db.site-statistic__group-title Из них
-    span.db.site-statistic__text.red <span class="icon-user"></span> Администраторов: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    span.db.site-statistic__text.blue <span class="icon-user"></span> Модераторов: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    span.db.site-statistic__text.green <span class="icon-user"></span> Журналистов: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    span.db.site-statistic__text.light-blue <span class="icon-user"></span> Проверенных: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    span.db.site-statistic__text.orange <span class="icon-user"></span> Потребителей: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    span.db(elem="group-title") Из них
+    span.db(elem="text") <span class="icon-user"></span> Администраторов: <span elem="count">#{Math.floor(Math.random() * (-15 - 1300) + 1300)}</span>
+    span.db(elem="text") <span class="icon-user"></span> Модераторов: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    span.db(elem="text") <span class="icon-user"></span> Журналистов: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    span.db(elem="text") <span class="icon-user"></span> Проверенных: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    span.db(elem="text") <span class="icon-user"></span> Потребителей: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
 
-    span.db.site-statistic__group-title Зарегистрировались
-    span.db.site-statistic__text Сегодня: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    span.db.site-statistic__text Вчера: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    span.db.site-statistic__text За неделю: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    span.db.site-statistic__text За месяц: <span class="site-statistic__count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    span.db(elem="group-title") Зарегистрировались
+    span.db(elem="text") Сегодня: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    span.db(elem="text") Вчера: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    span.db(elem="text") За неделю: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    span.db(elem="text") За месяц: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
