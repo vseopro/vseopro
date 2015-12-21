@@ -16,7 +16,7 @@ var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
 var imagemin             = require('gulp-imagemin');
 var posthtml             = require('gulp-posthtml');
-var ftp                  = require( 'vinyl-ftp' );
+var ftp                  = require('vinyl-ftp');
 
 var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
@@ -147,8 +147,8 @@ gulp.task( 'deploy', function () {
         'app/**'
     ];
 
-
-    return gulp.src( globs, { base: '.', buffer: false } )
+    return gulp.src( globs, { base: './app', buffer: false } )
+        // .pipe( conn.newer( '/' ) ) // only upload newer files
         .pipe( conn.dest( '/' ) );
 
 } );
