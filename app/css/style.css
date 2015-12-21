@@ -3424,17 +3424,21 @@ footer.main {
 }
 
 @media (max-width:1200px) {
-    .site-working,
-    .copyright-text {
+    .site-working {
         display: table;
         margin: 0 auto 20px;
         float: none;
     }
 
+    .copyright-text {
+        display: table;
+        margin: 10px auto !important;
+        float: none;
+    }
+
     .footer-link {
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
+        display: table;
+        margin: 10px auto 20px !important;
         float: none;
     }
 
