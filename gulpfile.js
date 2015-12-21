@@ -16,6 +16,7 @@ var browserSync          = require('browser-sync');
 var reload               = browserSync.reload;
 var imagemin             = require('gulp-imagemin');
 var posthtml             = require('gulp-posthtml');
+var ftp                  = require( 'vinyl-ftp' );
 
 var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
@@ -132,6 +133,25 @@ gulp.task('babel', function () {
         .pipe(gulp.dest('./app/js/'))
         .pipe(reload({stream: true}));
 });
+
+gulp.task( 'deploy', function () {
+
+    var conn = ftp.create( {
+        host:     'ftp44.hostland.ru',
+        user:     'host1339720_test',
+        password: '8242332812',
+        parallel: 1
+    } );
+
+    var globs = [
+        'app/**'
+    ];
+
+
+    return gulp.src( globs, { base: '.', buffer: false } )
+        .pipe( conn.dest( '/' ) );
+
+} );
 
 gulp.task('default', ['sass', 'imagemin', 'babel', 'jade', 'browser-sync'], function () {
     gulp.watch('scss/**/*.scss', ['sass']);

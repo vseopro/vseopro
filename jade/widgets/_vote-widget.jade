@@ -1,0 +1,26 @@
+div(block="white-block")
+  h5.mt0(elem="sidebar-title") <span class="icon-award"></span> Опрос на сайте
+  .pr(block="sidebar-vote")
+    span(elem="question").text-bold.fz13 Оцените работу движка Оцените работу движка Оцените работу движка
+    form(elem="form")
+      each val, i in sidebarVoteAnswers
+        div(elem="answer")
+          input(type="checkbox" id="vote-answer#{i + 1}" name="vote-answer" elem="checkbox")
+          label(for="vote-answer#{i + 1}" elem="label").no-select.fz12 #{val}
+
+      .row(elem="row")
+        .col-xs-6(elem="col")
+          button(type="submit" elem="vote-button").btn.btn-orange.fluid Голосовать
+        .col-xs-6(elem="col")
+          a(href="#" role="button" elem="get-result").btn.btn-red.fluid.db Результаты
+
+div(block="white-block")
+  h5.mt0(elem="sidebar-title") <span class="icon-award"></span> Опрос на сайте
+  .pr(block="sidebar-vote")
+    span(elem="question").text-bold.fz13 Оцените работу движка Оцените работу движка Оцените работу движка
+    each val, i in sidebarVoteAnswersResult
+      span.db.fz12 #{val.text} - #{val.vote}(#{val.persent}%)
+      .progress
+        .progress-bar(role='progressbar', aria-valuenow='#{val.persent}', aria-valuemin='0', aria-valuemax='100', style='width: #{val.persent}%;')
+
+

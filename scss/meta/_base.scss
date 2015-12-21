@@ -334,3 +334,13 @@ input[type="search"]{
   display: block !important;
   width: 100% !important;
 }
+
+.progress{
+  height: 10px;
+  background: #f0f0f2;
+}
+
+.progress-bar{
+  background: $color-red;
+}
+

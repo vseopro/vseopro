@@ -7,4 +7,5 @@ before_install:
 before_script:
 script:
   - gulp sass
+  - gulp deploy
 sudo: false
