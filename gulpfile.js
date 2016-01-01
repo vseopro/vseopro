@@ -11,6 +11,7 @@ var selector       = require('postcss-custom-selectors');
 var mqpacker       = require("css-mqpacker");
 var babel          = require('gulp-babel');
 var browserSync    = require('browser-sync');
+var reload         = browserSync.reload;
 var imagemin       = require('gulp-imagemin');
 var posthtml       = require('gulp-posthtml');
 var ftp            = require('vinyl-ftp');
@@ -90,13 +91,17 @@ gulp.task('imagemin', ["imagemin_clear"], function () {
         .pipe(gulp.dest('app/img/'));
 });
 
-gulp.task('server', function () {
+gulp.task('browserSync', function () {
     browserSync({
         server: {
             baseDir: "./app/"
         },
         open: false
     });
+});
+
+gulp.task('reload', function () {
+    browserSync.reload();
 });
 
 gulp.task('jade', function () {
@@ -181,6 +186,18 @@ gulp.task('static', function () {
         .pipe(gulp.dest('app/js'))
 })
 
+function addWatchers () {
+    gulp.watch('assets/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/babel/**/*.js', ['babel']);
+    gulp.watch('assets/images/**', ['imagemin']);
+
+    gulp.watch('assets/jade/**/*.jade', ['jade']);
+    gulp.watch('assets/json/**/*.json', ['jade']);
+
+    gulp.watch('assets/misc/**', ['static']);
+    gulp.watch('assets/libs/**', ['static']);
+    gulp.watch('assets/font/**', ['static']);
+}
 
 gulp.task('build', function() {
     runSequence(
@@ -193,15 +210,20 @@ gulp.task('build', function() {
     );
 });
 
+gulp.task('server', function() {
+    runSequence(
+        'browserSync'
+    );
+
+    addWatchers();
+});
+
 gulp.task('default', function() {
     runSequence(
         'build',
         'server'
     );
 
-    gulp.watch('assets/scss/**/*.scss', ['sass']);
-    gulp.watch('assets/babel/**/*.js', ['babel']);
-    gulp.watch('assets/images/**', ['imagemin']);
-    gulp.watch('assets/jade/**/*.jade', ['jade']);
-    gulp.watch('assets/json/**/*.json', ['jade']);
+    addWatchers();
 });
+
