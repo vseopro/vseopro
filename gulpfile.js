@@ -1,5 +1,4 @@
 var gulp                 = require('gulp');
-var fs                   = require('fs');
 var jade                 = require('gulp-jade');
 var prettify             = require('gulp-prettify');
 var sass                 = require('gulp-sass');
@@ -17,6 +16,7 @@ var reload               = browserSync.reload;
 var imagemin             = require('gulp-imagemin');
 var posthtml             = require('gulp-posthtml');
 var ftp                  = require('vinyl-ftp');
+var clean                = require('gulp-clean');
 
 var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
@@ -68,8 +68,13 @@ var PERFECTIONIST_CONFIG = {
     maxSelectorLength: true
 };
 
-gulp.task('imagemin', function () {
-    return gulp.src('./images/*')
+gulp.task('imagemin_clear', function () {
+    return gulp.src('app/img')
+        .pipe(clean())
+})
+
+gulp.task('imagemin', ["imagemin_clear"], function () {
+    return gulp.src('./assets/images/**')
         .pipe(imagemin({
             progressive: true
         }))
@@ -90,12 +95,12 @@ gulp.task('reload', function () {
 });
 
 gulp.task('jade', function () {
-    var dataJSON = JSON.parse(fs.readFileSync('./json/config.json', 'utf-8'));
+    var data = require('./assets/json/data.json');
 
-    return gulp.src('./jade/!(_)*.jade')
+    return gulp.src('./assets/jade/!(_)*.jade')
         .pipe(jade({
             pretty: true,
-            locals: dataJSON,
+            locals: data,
         }))
         .pipe(posthtml([
             require('posthtml-bem')({
@@ -111,7 +116,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('sass', function () {
-    gulp.src(['./scss/**/*.scss'])
+    gulp.src(['./assets/scss/**/*.scss'])
 
         .pipe(sass({
             outputStyle: 'nested',
@@ -126,7 +131,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('babel', function () {
-    return gulp.src(['./babel/**/*.js'])
+    return gulp.src(['./assets/babel/**/*.js'])
         .pipe(babel({
             comments: false
         }))
@@ -153,9 +158,23 @@ gulp.task( 'deploy', function () {
 
 } );
 
-gulp.task('default', ['sass', 'imagemin', 'babel', 'jade', 'browser-sync'], function () {
-    gulp.watch('scss/**/*.scss', ['sass']);
-    gulp.watch('babel/**/*.js', ['babel']);
-    gulp.watch(['images/*.jpg', 'images/*.png'], ['imagemin']);
-    gulp.watch(['jade/**/*.jade', 'json/**/*.json'], ['jade']);
+gulp.task("misc_files", function () {
+    gulp.src(['assets/misc/**'])
+        .pipe(gulp.dest('app/'))
+})
+
+gulp.task('static', ["misc_files"], function () {
+    gulp.src(['assets/libs/**'])
+        .pipe(gulp.dest('app/js'))
+
+    gulp.src(['assets/font/**'])
+        .pipe(gulp.dest('app/font'))
+})
+
+gulp.task('default', ['sass', 'imagemin', 'babel', 'jade', 'browser-sync', 'static'], function () {
+    gulp.watch('assets/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/babel/**/*.js', ['babel']);
+    gulp.watch('assets/images/**', ['imagemin']);
+    gulp.watch('assets/jade/**/*.jade', ['jade']);
+    gulp.watch('assets/json/**/*.json', ['jade']);
 });
