@@ -12,6 +12,5 @@ script:
   - gulp babel
   - gulp jade
   - gulp static
-  - gulp browser-sync
   - gulp deploy
 sudo: false
