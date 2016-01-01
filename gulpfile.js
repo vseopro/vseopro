@@ -11,7 +11,6 @@ var selector       = require('postcss-custom-selectors');
 var mqpacker       = require("css-mqpacker");
 var babel          = require('gulp-babel');
 var browserSync    = require('browser-sync');
-var reload         = browserSync.reload;
 var imagemin       = require('gulp-imagemin');
 var posthtml       = require('gulp-posthtml');
 var ftp            = require('vinyl-ftp');
@@ -50,7 +49,6 @@ var postCSSFocus = function (css) {
 };
 
 var PROCESSORS = [
-    // autoprefixer({browsers: ['ie >= 8', 'last 3 versions', '> 2%']}),
     pxtorem({
         root_value: 14,
         selector_black_list: ['html']
@@ -79,34 +77,26 @@ var BOWER_MAIN_FILES_CONFIG = {
 }
 
 gulp.task('APP_DIR_CLEAR', function () {
-    return gulp.src('app')
-        .pipe(clean())
+    gulp.src('app').pipe(clean())
 })
 
 gulp.task('imagemin_clear', function () {
-    return gulp.src('app/img')
-        .pipe(clean())
+    gulp.src('app/img').pipe(clean())
 })
 
 gulp.task('imagemin', ["imagemin_clear"], function () {
-    return gulp.src('./assets/images/**')
-        .pipe(imagemin({
-            progressive: true
-        }))
+    gulp.src('./assets/images/**')
+        .pipe(imagemin({progressive: true}))
         .pipe(gulp.dest('app/img/'));
 });
 
-gulp.task('browser-sync', function () {
+gulp.task('server', function () {
     browserSync({
         server: {
             baseDir: "./app/"
         },
         open: false
     });
-});
-
-gulp.task('reload', function () {
-    browserSync.reload();
 });
 
 gulp.task('jade', function () {
@@ -155,8 +145,7 @@ gulp.task('babel', function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task( 'deploy', function () {
-
+gulp.task('deploy', function () {
     var conn = ftp.create( {
         host:     'ftp44.hostland.ru',
         user:     'host1339720_test',
@@ -171,7 +160,6 @@ gulp.task( 'deploy', function () {
     return gulp.src( globs, { base: './app', buffer: false } )
         // .pipe( conn.newer( '/' ) ) // only upload newer files
         .pipe( conn.dest( '/' ) );
-
 } );
 
 gulp.task('static', function () {
@@ -194,15 +182,21 @@ gulp.task('static', function () {
 })
 
 
-gulp.task('default', function() {
+gulp.task('build', function() {
     runSequence(
         'APP_DIR_CLEAR',
         'sass',
         'imagemin',
         'babel',
         'jade',
-        'static',
-        'browser-sync'
+        'static'
+    );
+});
+
+gulp.task('default', function() {
+    runSequence(
+        'build',
+        'server'
     );
 
     gulp.watch('assets/scss/**/*.scss', ['sass']);

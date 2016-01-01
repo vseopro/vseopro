@@ -6,11 +6,6 @@ before_install:
   - npm install -g gulp
 before_script:
 script:
-  - gulp APP_DIR_CLEAR
-  - gulp sass
-  - gulp imagemin
-  - gulp babel
-  - gulp jade
-  - gulp static
+  - gulp build
   - gulp deploy
 sudo: false
