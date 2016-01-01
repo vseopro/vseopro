@@ -744,7 +744,8 @@ footer.main{
 .footer-tags__title{
   position: relative;
   margin-bottom: 37px;
-  &:after-c{
+  &:after{
+    content:'';
     position: absolute;
     left: 0;
     bottom: -17px;

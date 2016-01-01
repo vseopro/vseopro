@@ -1,22 +1,25 @@
-var gulp                 = require('gulp');
-var jade                 = require('gulp-jade');
-var prettify             = require('gulp-prettify');
-var sass                 = require('gulp-sass');
-var csso                 = require('gulp-csso');
-var perfectionist        = require('perfectionist');
-var postcss              = require('gulp-postcss');
-var postcssPseudoContent = require('postcss-pseudo-elements-content');
-var rucksack             = require('rucksack-css');
-var pxtorem              = require('postcss-pxtorem');
-var selector             = require('postcss-custom-selectors');
-var mqpacker             = require("css-mqpacker");
-var babel                = require('gulp-babel');
-var browserSync          = require('browser-sync');
-var reload               = browserSync.reload;
-var imagemin             = require('gulp-imagemin');
-var posthtml             = require('gulp-posthtml');
-var ftp                  = require('vinyl-ftp');
-var clean                = require('gulp-clean');
+var gulp           = require('gulp');
+var jade           = require('gulp-jade');
+var prettify       = require('gulp-prettify');
+var sass           = require('gulp-sass');
+var csso           = require('gulp-csso');
+var perfectionist  = require('perfectionist');
+var postcss        = require('gulp-postcss');
+var rucksack       = require('rucksack-css');
+var pxtorem        = require('postcss-pxtorem');
+var selector       = require('postcss-custom-selectors');
+var mqpacker       = require("css-mqpacker");
+var babel          = require('gulp-babel');
+var browserSync    = require('browser-sync');
+var reload         = browserSync.reload;
+var imagemin       = require('gulp-imagemin');
+var posthtml       = require('gulp-posthtml');
+var ftp            = require('vinyl-ftp');
+var clean          = require('gulp-clean');
+var uglify         = require('gulp-uglify');
+var mainBowerFiles = require('main-bower-files');
+var gulpFilter     = require('gulp-filter');
+var runSequence    = require('run-sequence');
 
 var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
@@ -56,7 +59,6 @@ var PROCESSORS = [
         fallbacks: false,
         autoprefixer: true
     }),
-    postcssPseudoContent,
     mqpacker,
     selector,
     postCSSFocus
@@ -67,6 +69,19 @@ var PERFECTIONIST_CONFIG = {
     maxAtRuleLength: false,
     maxSelectorLength: true
 };
+
+var BOWER_MAIN_FILES_CONFIG = {
+    includeDev: true,
+    paths:{
+        bowerDirectory: './bower_components',
+        bowerJson: './bower.json'
+    }
+}
+
+gulp.task('APP_DIR_CLEAR', function () {
+    return gulp.src('app')
+        .pipe(clean())
+})
 
 gulp.task('imagemin_clear', function () {
     return gulp.src('app/img')
@@ -133,7 +148,8 @@ gulp.task('sass', function () {
 gulp.task('babel', function () {
     return gulp.src(['./assets/babel/**/*.js'])
         .pipe(babel({
-            comments: false
+            comments: false,
+            presets: ['es2015']
         }))
         .pipe(gulp.dest('./app/js/'))
         .pipe(reload({stream: true}));
@@ -158,20 +174,37 @@ gulp.task( 'deploy', function () {
 
 } );
 
-gulp.task("misc_files", function () {
+gulp.task('static', function () {
     gulp.src(['assets/misc/**'])
         .pipe(gulp.dest('app/'))
-})
 
-gulp.task('static', ["misc_files"], function () {
     gulp.src(['assets/libs/**'])
         .pipe(gulp.dest('app/js'))
 
     gulp.src(['assets/font/**'])
         .pipe(gulp.dest('app/font'))
+
+    var jsFilter = gulpFilter('**/*.js')
+    var cssFilter = gulpFilter('**/*.css')
+
+    gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
+        .pipe(jsFilter)
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'))
 })
 
-gulp.task('default', ['sass', 'imagemin', 'babel', 'jade', 'browser-sync', 'static'], function () {
+
+gulp.task('default', function() {
+    runSequence(
+        'APP_DIR_CLEAR',
+        'sass',
+        'imagemin',
+        'babel',
+        'jade',
+        'static',
+        'browser-sync'
+    );
+
     gulp.watch('assets/scss/**/*.scss', ['sass']);
     gulp.watch('assets/babel/**/*.js', ['babel']);
     gulp.watch('assets/images/**', ['imagemin']);
