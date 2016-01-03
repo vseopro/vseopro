@@ -7,57 +7,13 @@ block content
     .row
       .col-md-8
         .white-block
-          h4.white-block__title.mt0 Ответы с форума
+          h1.white-block__title.mt0 ClipBucket v.2.7.5 Rus + All Plugins + All
           article.article
-            header(block="article__header")
-              ul(elem="list").lsn.pl0.mb0
-                li(elem="item").dib
-                  span(elem="icon").icon-user
-                  a(href="#" elem="link") Admin
-                li(elem="item").dib
-                  span(elem="icon").icon-calendar
-                  a(href="#" elem="link") 03.05.2510
-                li(elem="item").dib
-                  span(elem="icon").icon-eye
-                  a(href="#" elem="link") 1233
-                li(elem="item").dib
-                  span(elem="icon").icon-comment
-                  a(href="#" elem="link") 1312
-                li(elem="item").dib
-                  span(elem="icon").icon-folder-open
-                  a(href="#" elem="link") Другие CMS
-                  span.icon-angle-right
-                  a(href="#" elem="link") Мультимедиа
+            include components/_article-header
+            include components/_article-content
+            include components/_article-footer
 
-            img(src="img/img_article_demo_image.png" alt="article demo image").article__head-image.img-responsive
-            p <strong>ClipBucket v.2.7.5</strong> Rus является наиболее динамично развивающимся скриптом, который впервые был запущен как Youtube Clone, но теперь особенности и усовершенствования делают его наиболее универсальным, надежным и масштабируемым скриптом с новейшими функциями социальных сетей. Clipbucket v.2.7.3 Rus сочетает в себе гибкость, быстроту и удобство для посетителей портала.
-            p <strong>Возможности :</strong>
-            ul
-              li Легкая настройка и интеграция
-              li Поддержка изменений HQ видео и оптимизация
-              li Web 2.0 и Ajaxified
-              li Полностью настраиваемый
-              li Социальная сеть
-              li Высоко управляемая панель администрация
-              li Пользовательские группы и категории
-              li Много утилит для изменения видео (замедление,ускорение и пр.)
-              li Лучшая система комментариев
-              li Поддержка интегрирования Gravatar и jFusion
-
-            p <strong> В комплекте:</strong>
-            ul
-              li Скрипт
-              li Шаблоны
-              li Плагины
-
-            p <strong>Username: demo</strong>
-            p <strong>Password: demo</strong>
-
-            footer.article__footer
-
-        .click-block__section
-          a(href="#").db
-            img(src="img/img_750_150.png" alt="click image").click-block__image.img-responsive
+        include components/_click-block
 
         .white-block
           h4.white-block__title.mt0 <span class="icon-bookmark"></span> Похожие новости в этой категории

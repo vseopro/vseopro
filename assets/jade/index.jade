@@ -39,9 +39,7 @@ block content
 
           include components/_pagination
 
-        .click-block__section
-          a(href="#" style="height:150px;").db
-            img(src="http://placehold.it/750x150" alt="click image").click-block__image.img-responsive
+        include components/_click-block
 
         -for(var i = 0; i < 3; i++)
           .white-block
@@ -86,9 +84,7 @@ block content
                             include components/_news-metadata
 
           -if(i === 1)
-            .click-block__section
-              a(href="#" style="height:150px;").db
-                img(src="http://placehold.it/750x150" alt="click image").click-block__image.img-responsive
+            include components/_click-block
 
       // сайдбар
       .col-xs-4.visible-md.visible-lg.sidebar

@@ -1656,8 +1656,10 @@ footer.main{
   }
 }
 
-.article__header{
-  margin-bottom: 0;
+.article-header{
+  border-bottom: 1px #f1f1f1 solid;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   &__list{
     margin-bottom: 0;
     @media all and (max-width:992px){
@@ -1666,13 +1668,37 @@ footer.main{
   }
   &__item{
     margin-bottom: 0;
+    margin-right: 20px;
+    &:lat-child{
+      margin-right: 0;
+    }
   }
   &__icon{
-    font-size: 20px;
+    font-size: 19px;
     color: #919191;
+    display: inline-block;
+    vertical-align: middle;
   }
   &__link{
     font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.article-content{
+  img{
+    margin-bottom: 20px;
+  }
+  strong{
+    font-size: 16px;
+  }
+  p{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  li{
+    line-height: 24px;
   }
 }
 
