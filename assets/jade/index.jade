@@ -6,7 +6,7 @@ block content
   .container
     .row.pr
       // основные блоки
-      .col-md-8
+      .col-md-8.grand-content
         //- include components/_forums-answer
 
         .white-block
@@ -40,8 +40,8 @@ block content
           include components/_pagination
 
         .click-block__section
-          a(href="#").db
-            img(src="http://placehold.it/750x200" alt="click image").click-block__image.img-responsive
+          a(href="#" style="height:150px;").db
+            img(src="http://placehold.it/750x150" alt="click image").click-block__image.img-responsive
 
         -for(var i = 0; i < 3; i++)
           .white-block
@@ -82,16 +82,16 @@ block content
                                 img(src="img/img_tab_news2.jpg" alt="tab news image").tab-mini-news__img.img-responsive
                               .col-md-6
                                 h3.mt0.tab-mini-news__description
-                                  a(href="#").dark-blue-link Горячие капеция дня затоплен цукцукв ук право на репост выавыа ыв выапвалпо вавыаываы
+                                  a(href="#").dark-blue-link.text-bold Горячие капеция дня затоплен цукцукв ук право на репост выавыа ыв выапвалпо вавыаываы
                             include components/_news-metadata
 
           -if(i === 1)
             .click-block__section
-              a(href="#").db
-                img(src="http://placehold.it/750x200" alt="click image").click-block__image.img-responsive
+              a(href="#" style="height:150px;").db
+                img(src="http://placehold.it/750x150" alt="click image").click-block__image.img-responsive
 
       // сайдбар
-      .col-xs-4.visible-md.visible-lg
+      .col-xs-4.visible-md.visible-lg.sidebar
 
         // Выбор редакции
         include widgets/_editors-choice

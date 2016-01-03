@@ -1157,7 +1157,6 @@ footer.main{
   }
 }
 
-
 .sidebar-login-form{
   &__input{
     &:last-child{
@@ -1401,7 +1400,7 @@ footer.main{
 
 .tab-grand-news{
   &__img{
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     @media(max-width: 992px){
       display: table;
       margin: 0 auto;
@@ -1409,12 +1408,12 @@ footer.main{
   }
   &__title{
     font-size: 18px;
-    margin-top: 16px;
-    margin-bottom: 22px;
+    margin-top: 15px;
+    margin-bottom: 20px;
     line-height: 23px;
   }
   &__description{
-    margin-top: 20px;
+    margin-top: 10px;
     line-height: 25px;
     margin-bottom: 60px;
     @media(max-width: 992px){
@@ -1434,7 +1433,7 @@ footer.main{
 }
 
 .tab-mini-news{
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   margin-bottom: 20px;
   border-bottom: 1px solid #f1f1f1;
   @media(max-width: 992px){
@@ -1446,7 +1445,7 @@ footer.main{
     padding-bottom: 0;
   }
   &__img{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     @media(max-width: 1200px){
       display: table;
       margin: 0 auto 12px;
@@ -1501,6 +1500,7 @@ footer.main{
 .site-statistic{
   &__text{
     color: #6c707c;
+    margin-bottom: 5px;
     &.red{
       // color: #ff0000;
     }
@@ -1534,13 +1534,17 @@ footer.main{
 .sidebar-updates{
   &__ya-color{
     color: #ff0000;
+    &_big{
+      font-size: 30px;
+      line-height: 45px;
+    }
   }
   &__google-color{
     color: #0c00ff;
-  }
-  &__big-font{
-    font-size: 30px;
-    line-height: 45px;
+    &_big{
+      font-size: 30px;
+      line-height: 45px;
+    }
   }
   &__text{
     color: #192637;
@@ -1553,6 +1557,12 @@ footer.main{
   }
   &__media{
     margin-top: 5px;
+  }
+  &__media-body{
+    // margin-bottom: 0;
+  }
+  &__media{
+    margin-bottom: 15px;
   }
 }
 

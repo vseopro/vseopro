@@ -62,6 +62,37 @@ $(function() {
     })
 });
 
+$(function() {
+    $(".sidebar").children().css({"margin-bottom": "30px"});
+
+    function setMargin() {
+        var sidebar = $(".sidebar").outerHeight();
+        var content = $(".grand-content").outerHeight();
+        var childrenCoount = $(".sidebar").children().length;
+
+        if (content > sidebar) {
+            var childrenCoount = $(".sidebar").children().length;
+            var targetElement = $(".sidebar").children().splice(1, childrenCoount).splice(0, childrenCoount - 2);
+
+            targetElement.map(function (item) {
+                $(item).css({
+                    "margin-bottom": (((content - sidebar)/targetElement.length) + 30) + "px"
+                })
+            })
+        };
+    }
+
+    if ($(window).width() > 992) {
+        setMargin();
+    };
+
+    $(window).resize(function () {
+        if ($(window).width() > 992) {
+            setMargin();
+        };
+    })
+});
+
 // $(function() {
 //     $(window).on('scroll', (e) => {
 //         if ($('.grand-content').height() > $('.sidebar').height()) {

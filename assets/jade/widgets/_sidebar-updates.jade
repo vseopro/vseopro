@@ -1,27 +1,17 @@
 .white-block
   h5.white-block__sidebar-title <span class="icon-chart-bar"></span> Апдейты
-  .sidebar-updates
-    .media.sidebar-updates__media
-      .media-left.media-middle
-        span.sidebar-updates__ya-color.sidebar-updates__big-font Я
-      .media-body
-        span.db.sidebar-updates__text Апдейты <span class="sidebar-updates__ya-color">Я</span>ndex ТИЦ
-        small.db.sidebar-updates__time <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
-    .media.sidebar-updates__media
-      .media-left.media-middle
-        span.sidebar-updates__ya-color.sidebar-updates__big-font Я
-      .media-body
-        span.db.sidebar-updates__text Апдейты <span class="sidebar-updates__ya-color">Я</span>ndex ТИЦ
-        small.db.sidebar-updates__time <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
-    .media.sidebar-updates__media
-      .media-left.media-middle
-        span.sidebar-updates__ya-color.sidebar-updates__big-font Я
-      .media-body
-        span.db.sidebar-updates__text Апдейты <span class="sidebar-updates__ya-color">Я</span>ndex ТИЦ
-        small.db.sidebar-updates__time <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
-    .media.sidebar-updates__media
-      .media-left.media-middle
-        span.sidebar-updates__google-color.sidebar-updates__big-font G
-      .media-body
-        span.db.sidebar-updates__text Апдейты <span class="sidebar-updates__google-color">G</span>oogle ТИЦ
-        small.db.sidebar-updates__time <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
+  div(block="sidebar-updates")
+    -for(var i = 0; i < 3; i++)
+      .media(elem="media")
+        .media-left.media-middle(elem="media-left")
+          span(elem="ya-color" mods="big") Я
+        .media-body.media-middle(elem="media-body")
+          span.db(elem="text") Апдейты <span class="sidebar-updates__ya-color">Я</span>ndex ТИЦ
+          small.db(elem="time") <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
+
+    .media(elem="media")
+      .media-left.media-middle(elem="media-left")
+        span(elem="google-color" mods="big") G
+      .media-body.media-middle(elem="media-body")
+        span.db(elem="text") Апдейты <span class="sidebar-updates__google-color">G</span>oogle ТИЦ
+        small.db(elem="time") <span class="sidebar-updates__time-orange">09.05.2205</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">05.06.2155</span> <span class="icon-angle-left"></span> <span class="sidebar-updates__time-orange">06.08.5136</span>
