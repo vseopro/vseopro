@@ -219,6 +219,11 @@ blockquote{
       background: darken($color-odnoklassniki, 10%);
     }
   }
+  &-getMoreComments{
+    margin-bottom: 30px;
+    // padding-left: 30px;
+    // padding-right: 30px;
+  }
 }
 
 .form-control{

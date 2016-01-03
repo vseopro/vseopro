@@ -1,0 +1,11 @@
+.read-more-block{
+  @media all and (min-width:992px){
+    border-bottom: #FF672B 1px solid;
+  }
+}
+
+.btn-read-more{
+  display: table !important;
+  width: 170px !important;
+  padding: 10px;
+}

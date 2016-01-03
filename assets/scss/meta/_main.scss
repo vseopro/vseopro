@@ -1794,45 +1794,94 @@ footer.main{
   }
 }
 
-.read-more-block{
-  @media all and (min-width:992px){
-    border-bottom: #FF672B 1px solid;
+.similar-news{
+  &__img{
+    margin-bottom: 5px;
+  }
+  &__link{
+    padding-top: 15px;
+  }
+  &__text{
+
   }
 }
 
-.btn-read-more{
-  display: table !important;
-  width: 170px !important;
-  padding: 10px;
-}
-
-.hideShowPassword-toggle{
-  background-color: transparent;
-  background-image: url('../img/wink.svg'), none;
-  background-position: 0 center;
-  background-repeat: no-repeat;
-  border: 2px solid transparent;
-  border-radius: 0.25em;
-  cursor: pointer;
-  font-size: 100%;
-  height: 44px;
-  margin: 0;
-  max-height: 100%;
-  padding: 0;
-  overflow: 'hidden';
-  text-indent: -999em;
-  width: 46px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  &:focus{
-    outline: none;
+.comment-block{
+  &__item{
+    border-bottom: 1px #f1f1f1 solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    &:last-child{
+      border-bottom: none;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+    }
   }
 }
 
-.hideShowPassword-toggle-hide{
-
+.comment-meta{
+  margin-bottom: 20px;
+  @media all and (max-width: 992px){
+    // text-align: center;
+  }
+  &__avatar{
+    @media all and (max-width: 992px){
+      // display: table;
+      // margin: 0 auto;
+      margin-left: 10%;
+      display: inline-block;
+    }
+    @media all and (max-width: 400px){
+      margin-left: 40%;
+    }
+  }
+  &__icon{
+    font-size: 20px;
+    color: #919191;
+    margin-right: 5px;
+  }
+  &__item{
+    margin-right: 25px;
+    @media all and (max-width: 992px){
+      margin-left: 40%;
+      margin-bottom: 10px;
+      display: block;
+    }
+    @media all and (max-width: 400px){
+      margin-left: 0;
+    }
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
 }
 
-.hideShowPassword-toggle-show{
-  background-position: -44px center;
+.article-footer-meta{
+  border-top: 1px #f1f1f1 solid;
+  margin-top: 20px;
+  padding-top: 20px;
+  &__item{
+    margin-right: 10px;
+    @media all and (max-width: 992px){
+      display: block;
+    }
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+  &__link{
+    margin-right: 5px;
+    font-size: 13px;
+    @media all and (max-width: 992px){
+      font-size: 15px;
+    }
+  }
+  &__icon{
+    color: #919191;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  &__text{
+    color: #919191;
+  }
 }
