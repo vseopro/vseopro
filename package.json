@@ -11,7 +11,8 @@
     "url": "https://github.com/iVaeum/new.page"
   },
   "scripts": {
-    "preinstall": "bower install"
+    "preinstall": "bower install",
+    "build": "rm -r app && gulp build"
   },
   "author": "vaeum",
   "license": "ISC",

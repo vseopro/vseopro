@@ -125,8 +125,22 @@ gulp.task('jade', function () {
         .on('end', browserSync.reload)
 });
 
+gulp.task('bootstrap', function () {
+    gulp.src(['./assets/scss/**/bootstrap.scss'])
+
+        .pipe(sass({
+            outputStyle: 'nested',
+            errLogToConsole: true
+        }))
+
+        .pipe(postcss(PROCESSORS))
+        .pipe(csso())
+        .pipe(gulp.dest('./app/css'))
+        .pipe(reload({stream: true}))
+});
+
 gulp.task('sass', function () {
-    gulp.src(['./assets/scss/**/*.scss'])
+    gulp.src(['./assets/scss/**/style.scss'])
 
         .pipe(sass({
             outputStyle: 'nested',
@@ -188,6 +202,7 @@ gulp.task('static', function () {
 
 function addWatchers () {
     gulp.watch('assets/scss/**/*.scss', ['sass']);
+
     gulp.watch('assets/babel/**/*.js', ['babel']);
     gulp.watch('assets/images/**', ['imagemin']);
 
@@ -202,6 +217,7 @@ function addWatchers () {
 gulp.task('build', function() {
     runSequence(
         'APP_DIR_CLEAR',
+        'bootstrap',
         'sass',
         'imagemin',
         'babel',

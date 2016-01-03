@@ -1,12 +1,12 @@
 div(block="white-block")
-  h5.mt0(elem="sidebar-title") <span class="icon-award"></span> Опрос на сайте
+  h5(elem="sidebar-title") <span class="icon-chart-area"></span> Опрос на сайте
   .pr(block="sidebar-vote")
     span(elem="question").text-bold.fz13 Оцените работу движка Оцените работу движка Оцените работу движка
     form(elem="form")
       each val, i in sidebarVoteAnswers
         div(elem="answer")
           input(type="checkbox" id="vote-answer#{i + 1}" name="vote-answer" elem="checkbox")
-          label(for="vote-answer#{i + 1}" elem="label").no-select.fz12 #{val}
+          label(for="vote-answer#{i + 1}" elem="label").no-select.fz12.cur #{val}
 
       .row(elem="row")
         .col-xs-6(elem="col")
@@ -14,13 +14,13 @@ div(block="white-block")
         .col-xs-6(elem="col")
           a(href="#" role="button" elem="get-result").btn.btn-red.fluid.db Результаты
 
-div(block="white-block")
-  h5.mt0(elem="sidebar-title") <span class="icon-award"></span> Опрос на сайте
+//- div(block="white-block")
+  h5(elem="sidebar-title") <span class="icon-chart-area"></span> Опрос на сайте
   .pr(block="sidebar-vote")
     span(elem="question").text-bold.fz13 Оцените работу движка Оцените работу движка Оцените работу движка
     each val, i in sidebarVoteAnswersResult
-      span.db.fz12 #{val.text} - #{val.vote}(#{val.persent}%)
-      .progress
-        .progress-bar(role='progressbar', aria-valuenow='#{val.persent}', aria-valuemin='0', aria-valuemax='100', style='width: #{val.persent}%;')
+      span.db.fz12(elem="progress-label") #{val.text} - #{val.vote}(#{val.persent}%)
+      .progress(elem="progress")
+        .progress-bar(role='progressbar', elem='progressbar', aria-valuenow='#{val.persent}', aria-valuemin='0', aria-valuemax='100', style='width: #{val.persent}%;')
 
-    span(elem="total") Всего проголосовало: 169
+    span.db.fz12(elem="total-count") Всего проголосовало: <strong>169</strong>

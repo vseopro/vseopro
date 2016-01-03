@@ -42,6 +42,24 @@ $(function() {
     $('[data-toggle="popover"]').popover();
 
     $('a.disabled').on('click', () => {return false;})
+
+
+    var readmoreSettings = {
+        speed: 75,
+        moreLink: '<a href="#" class="btn btn-orange btn-read-more table-center">Подробнее</a>',
+        lessLink: '<a href="#" class="btn btn-orange btn-read-more table-center">Свернуть</a>',
+        collapsedHeight: $('.read-more-block').data("collapsed-height"),
+    }
+
+    $('.read-more-block').readmore(readmoreSettings);
+
+    $(window).resize(function () {
+        if ($(window).width() < 992) {
+            $('.read-more-block').readmore('destroy');
+        } else {
+            $('.read-more-block').readmore(readmoreSettings);
+        };
+    })
 });
 
 // $(function() {
