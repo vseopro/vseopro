@@ -5,7 +5,7 @@ div(block="white-block")
     form(elem="form")
       each val, i in sidebarVoteAnswers
         div(elem="answer")
-          input(type="checkbox" id="vote-answer#{i + 1}" name="vote-answer" elem="checkbox")
+          input(type="radio" id="vote-answer#{i + 1}" name="vote-answer" elem="checkbox")
           label(for="vote-answer#{i + 1}" elem="label").no-select.fz12.cur #{val}
 
       .row(elem="row")
