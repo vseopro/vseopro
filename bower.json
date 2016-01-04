@@ -20,7 +20,7 @@
     "hideshowpassword": "hideShowPassword#~2.0.8",
     "device.js": "devicejs#~0.2.7",
     "bootstrap": "~3.3.6",
-    "jquery-form-styler": "jquery.formstyler#~1.7.4",
+    "jquery-form-styler": "jquery.formstyler#1.7.4",
     "Readmore.js": "readmore#~2.1.0",
     "goodshare": "~3.2.4"
   }

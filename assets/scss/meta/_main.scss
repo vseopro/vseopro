@@ -74,7 +74,8 @@
       .dropdown-menu{
         opacity: 1;
         position: static;
-        width: 100%;
+        // width: 100%;
+        @extend %fluid;
         box-shadow: none;
       }
     }
@@ -1097,20 +1098,30 @@ footer.main{
 }
 
 .editors-choice{
-    &__img{
+  overflow: hidden;
+  &:hover{
+    .editors-choice__text{
+      // transition: all 0.5s ease;
+      bottom: 0;
+    }
+  }
+  &__img{
+      @extend %fluid;
     // width: 100%;
-    @extend %fluid;
     // margin-top: 14px;
   }
   &__text{
+    transition: all 0.5s ease;
+    z-index: 1;
+    padding: 14px 20px;
+    height: 100px;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -100px;
     color: #192637;
     background: white(.7);
     font-size: 16px;
-    padding: 14px 20px;
   }
 }
 
@@ -1918,7 +1929,8 @@ footer.main{
     }
   }
   &__image{
-    width: 100%;
+    @extend %fluid;
+    // width: 100%;
     @media all and (max-width: 992px){
       width: auto;
       display: table;
