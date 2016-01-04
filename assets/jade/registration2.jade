@@ -2,12 +2,12 @@ extends meta/_layout
 
 block content
   .container
-    .white-block
-      h4.white-block__title.mt0 <span class="icon-user"></span> Регистрация нового пользователя
+    div(block="white-block")
+      h4(elem="title") <span class="icon-user"></span> Регистрация нового пользователя
 
-      form.term-conditions
-        p.term-conditions__text <strong class="term-conditions__bold">Здравствуйте, уважаемый посетитель нашего сайта!</strong>
-        p.term-conditions__text Регистрация на нашем сайте позволит Вам быть его полноценным участником. Вы сможете добавлять новости на сайт, оставлять свои комментарии, просматривать скрытый текст и многое другое. В случае возникновения проблем с регистрацией, обратитесь к <a href="#" target="_blank">администратору</a> сайта.
+      form(block="term-conditions")
+        p(elem="text") <strong class="term-conditions__bold">Здравствуйте, уважаемый посетитель нашего сайта!</strong>
+        p(elem="text") Регистрация на нашем сайте позволит Вам быть его полноценным участником. Вы сможете добавлять новости на сайт, оставлять свои комментарии, просматривать скрытый текст и многое другое. В случае возникновения проблем с регистрацией, обратитесь к <a href="#" target="_blank">администратору</a> сайта.
         .row
           .col-md-6
             .row
@@ -15,7 +15,11 @@ block content
                 .term-conditions__label-wrap
                   label(for="term-conditions__form-login").transform-middle Логин:<sup>*</sup>
               .col-xs-8
-                input(type="text" placeholder="Логин").fluid#term-conditions__form-login.input
+                .row-mini
+                  .col-xs-7
+                    input(type="text" placeholder="Логин").fluid#term-conditions__form-login.input
+                  .col-xs-5
+                    button(type="button").btn.btn-orange.fluid.term-conditions__check-login Проверить
             .row
               .col-xs-4
                 .term-conditions__label-wrap
