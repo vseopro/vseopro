@@ -2,11 +2,10 @@ header.main
   .container
     .row
       .col-md-4
-        .header-logo
-          //- a(href="#").header-logo__link.db.no-underline.ico__logo.img-responsive
-          a(href="index.html").header-logo__link.db.no-underline
-            img(src="img/img_header_logo.svg" alt="logo image").header-logo__image.img-responsive
-          span.header-logo__description.db Всё для веб-мастера! Всё для создания сайта!
+        div(block="header-logo")
+          a(href="index.html" elem="link").db.no-underline
+            img(src="img/img_header_logo.svg" alt="logo image" elem="image").img-responsive
+          span(elem="description").db Всё для веб-мастера! Всё для создания сайта!
       .col-md-8
         .click-block
           a(href="#").db
