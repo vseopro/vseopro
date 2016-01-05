@@ -229,10 +229,15 @@ header.main{
     margin-bottom: 14px;
   }
   &__image{
-
+    height: 50px;
+    max-height: 50px;
+    width: 100%;
   }
-  &__description{
+  &__slogan{
     font-size: 15px;
+    @media all and (max-width:992px){
+      text-align: center;
+    }
   }
 }
 
@@ -1949,7 +1954,7 @@ footer.main{
   &__item{
     // padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
     border-bottom: #f1f1f1 1px solid;
     &:last-child{
       border-bottom: none;
