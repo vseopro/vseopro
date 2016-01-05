@@ -1163,6 +1163,9 @@ footer.main{
 }
 
 .metadata{
+  @media all and (max-width: 992px){
+    // text-align: center;
+  }
   &__text{
     // color: $color-orange;
     font-size: 12px;
@@ -1170,6 +1173,14 @@ footer.main{
   &__ico{
     font-size: 20px;
     color: #919191;
+  }
+  &__col{
+    @media all and (max-width: 992px){
+      width: auto;
+      float: none;
+      display: inline-block;
+      margin: 0 10px;
+    }
   }
 }
 

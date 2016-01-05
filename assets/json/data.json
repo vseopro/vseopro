@@ -1,11 +1,12 @@
 {
-  "dev" : false,
+  "dev" : true,
   "users": [
     "Administrator",
     "TDSko",
     "Pasha",
     "Sasha",
-    "SuperMegaDuperUser"
+    "SuperMegaDuperUser",
+    "TumboUmbo"
   ],
   "time": [
     "01.12.2010",

@@ -70,33 +70,17 @@ footer.main.visible-lg.visible-md
                     .footer-last-user__img
                       img(src="http://placehold.it/67x67" alt="user avatar").img-responsive
                   .col-xs-6
-                    if dev
-                      span.db.footer-last-user__text сейчас
-                        span(class="footer-last-user__status #{ i % 2 == 0 ? 'off' : ''}") #{ i % 2 == 0 ? 'OFF' : 'ON'}
-                    else
-                      span.db.footer-last-user__text сейчас
-                        span(class="footer-last-user__status #{ i == 4 ? 'off' : ''}") #{ i == 4 ? 'OFF' : 'ON'}
-
-                    if dev
-                      span.db.footer-last-user__text.text-overflow Ник #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
-                    else
-                      span.db.footer-last-user__text.text-overflow Ник Admin
-
+                    span.db.footer-last-user__text сейчас
+                      span(class="footer-last-user__status #{ i % 2 == 0 ? 'off' : ''}") #{ i % 2 == 0 ? 'OFF' : 'ON'}
+                    span.db.footer-last-user__text.text-overflow Ник #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
                     span.db.footer-last-user__text Пользователи
-
-                    if dev
-                      span.db.footer-last-user__text Был в 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}:0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}
-                    else
-                      span.db.footer-last-user__text Был в 10:10
+                    span.db.footer-last-user__text Был в 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}:0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}
 
       .col-xs-12.col-sm-6.col-md-6.col-lg-6
         .clearfix(block="footer-tags")
           p(elem="title").text-white <span class="icon-tag"></span> Теги сайта
           -for(var i = 0; i < 50; i++)
-            if dev
-              a(href="#" elem="item").db #{tags[Math.floor(Math.random() * ((tags.length - 1) - 0 + 1)) + 0]}
-            else
-              a(href="#" elem="item").db Страница #{i * 13}
+            a(href="#" elem="item").db #{tags[Math.floor(Math.random() * ((tags.length - 1) - 0 + 1)) + 0]}
         .show-all-tags
           a(href="").btn.btn-orange Показать все теги
 

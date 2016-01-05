@@ -1,21 +1,15 @@
 div(block="white-block")
   h5(elem="sidebar-title") <span class="icon-network"></span> Популярные новости
-  .popular-news
+  div(block="popular-news")
     -for(var i = 0; i < 10; i++)
-      .popular-news__item
-        .row
-          .col-xs-4
-            img(src="img/img_popular_news.jpg" alt="popular news image").popular-news__image
-          .col-xs-8
+      div(elem="item")
+        .row(elem="row")
+          .col-xs-4(elem="col")
+            img(src="img/img_popular_news.jpg" alt="popular news image" elem="image")
+          .col-xs-8(elem="col")
             span.db.popular-news__text 3XLOVE - Скрипт сайта знакомств бла бла капе
-            .row-mini
-              .col-xs-6
-                if dev
-                  a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
-                else
-                  a(href="#").link.last-news__text.text-overflow <span class="icon-user last-news__ico"></span> Admin
-              .col-xs-6
-                if dev
-                  a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
-                else
-                  a(href="#").link.last-news__text.text-overflow <span class="icon-calendar last-news__ico"></span> 02.03.2010
+            .row-mini(elem="row")
+              .col-xs-6(elem="col")
+                a(href="#" elem="text").link.text-overflow <span class="icon-user" elem="ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
+              .col-xs-6(elem="col")
+                a(href="#" elem="text").link.text-overflow <span class="icon-calendar" elem="ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
