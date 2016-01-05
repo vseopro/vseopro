@@ -1,8 +1,8 @@
 html{
   background: #192637;
-  // @media(max-width:768px){
-  //   font-size: 16px;
-  // }
+  @media(max-width:768px){
+    font-size: 15px;
+  }
 }
 
 body{
@@ -334,16 +334,12 @@ input.input {
   .col-cell{
     float: none !important;
     display: table-cell !important;
+    vertical-align: top;
   }
 }
 
 input[type="search"]{
   box-sizing: border-box;
-}
-
-.hideShowPassword-wrapper{
-  display: block !important;
-  width: 100% !important;
 }
 
 .progress{
