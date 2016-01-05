@@ -31,7 +31,7 @@ block content
             -for(var i = 0; i < 5; i++)
               div(elem="item")
                 include components/_comment-meta
-                span(elem="text") Шаблон построен на основе блочной сетки (CSS Grid), что позволяет без особых усилий менять структуру страницы (при необходимости), а так же задавать более сложный каркас для сайта, чем сквозные 2х, 3х колоночные макеты.
+                span(elem="text") #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
 
         a(href="#").btn.btn-orange.btn-getMoreComments.table-center Показать предыдущие комментарии
 

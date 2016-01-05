@@ -17,7 +17,7 @@ block content
                 img(src="img/img_important_news.png" alt="tab news image" elem="img").img-responsive
               .col-md-6(elem="col")
                 h2.text-bold.db(elem="title")
-                  a(href="#" elem="link").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс.
+                  a(href="#" elem="link").dark-blue-link #{title[Math.floor(Math.random() * ((title.length-1) - 0 + 1)) + 0]}
                 include components/_news-metadata
                 p(elem="description") Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекспре дназначена  затоплен Яндекс.
                 a(href="#" role="button" elem="button").btn.btn-orange.db Читать подробнее
@@ -32,10 +32,10 @@ block content
                     img(src="img/img_demo_last-news.jpg" alt="last news img").img-responsive.last-news__img
                   .col-md-8
                     h2.text-bold.db.last-news__title
-                      a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс. Рефераты.
+                      a(href="#").dark-blue-link #{title[Math.floor(Math.random() * ((title.length-1) - 0 + 1)) + 0]}
                     include components/_news-metadata
                     .last-news__demo-text
-                      p.mb0 Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена  ываыва ываыва ываыва ываываварв ываыва затоплен служба  затоплен служба  <br> фывф ывфыв фывфы <a href="#" class="last-news__demo-text--link link">Читать далее...</a>
+                      p.mb0 #{textSecond[Math.floor(Math.random() * ((textSecond.length-1) - 0 + 1)) + 0]} <a href="#" class="last-news__demo-text--link link">Читать далее...</a>
 
           include components/_pagination
 
@@ -68,9 +68,9 @@ block content
                         .tab-grand-news
                         img(src="img/img_tab_news.jpg" alt="tab news image").tab-grand-news__img.img-responsive
                         h2.text-bold.db.tab-grand-news__title
-                          a(href="#").dark-blue-link Горячие новости дня затоплен цукцук ук служба Яндекс.
+                          a(href="#").dark-blue-link #{title[Math.floor(Math.random() * ((title.length-1) - 0 + 1)) + 0]}
                         include components/_news-metadata
-                        p.tab-grand-news__description Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекспре дназначена  затоплен Яндекс.
+                        p.tab-grand-news__description #{textSecond[Math.floor(Math.random() * ((textSecond.length-1) - 0 + 1)) + 0]}
                         a(href="#" role="button").btn.btn-orange.db.tab-grand-news__button Читать подробнее
                       .col-md-6.tab-content__table-col
                         -for(var e = 0; e < 3; e++)

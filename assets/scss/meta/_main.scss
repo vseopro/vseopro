@@ -273,7 +273,7 @@ nav.main{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 101;
     @media(max-width: 992px){
       position: static;
       // position: static !important;
@@ -1173,6 +1173,10 @@ footer.main{
   &__ico{
     font-size: 20px;
     color: #919191;
+
+    margin-top: -1px;
+    display: inline-block;
+    vertical-align: middle;
   }
   &__col{
     @media all and (max-width: 992px){
@@ -1873,7 +1877,7 @@ footer.main{
     margin-right: 5px;
   }
   &__item{
-    margin-right: 25px;
+    margin-right: 20px;
     @media all and (max-width: 992px){
       margin-left: 40%;
       margin-bottom: 10px;
@@ -1972,5 +1976,9 @@ footer.main{
       padding-bottom: 0px;
       margin-bottom: 0px;
     }
+  }
+  &__section-title{
+    font-size: 18px;
+    color: #192637;
   }
 }

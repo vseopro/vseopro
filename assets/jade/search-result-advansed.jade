@@ -3,21 +3,112 @@ extends meta/_layout
 block content
   .container
     .white-block
-      h4.white-block__title.mt0 <span class="icon-search"></span> Результаты поиска
+      h4.white-block__title.mt0 <span class="icon-search"></span> Поиск по сайту
       div(block="search-result")
         form(elem="form")
-          input(elem="search-field" type="text" placeholder="Поиск").fluid.input
-          button(type="submit" elem="button-submit").btn.btn-red Начать поиск
-          a(href="#" type="submit" elem="more-search").btn.btn-orange Расширенный поиск
-        span(elem="result-text").db По Вашему запросу найдено 1 ответов (Результаты запроса 1 - 1)
+
+          .row(elem="row")
+            .col-xs-6(elem="col")
+
+              span(elem="section-title").db.text-bold Поиск по содержимому
+              .row(elem="row")
+                .col-xs-4(elem="col")
+                  span.db Место жительства:
+                .col-xs-8(elem="col")
+                  input(elem="search-field" type="text" placeholder="Поиск").input.fluid
+              .row(elem="row")
+                .col-xs-5(elem="col")
+                  input(type="checkbox" id="vote-answer" name="vote-answer" elem="checkbox")
+                  label(for="vote-answer" elem="label").no-select.cur Точное совпадение
+                .col-xs-7(elem="col")
+                  select.styler
+                    option adasd
+                    option asdasd
+                    option asdasd
+
+              span(elem="section-title").db.text-bold Найти статьи с
+              .row(elem="row")
+                .col-xs-4(elem="col")
+                  select.styler
+                    option adasd
+                    option asdasd
+                    option asdasd
+                .col-xs-2(elem="col")
+                  input(elem="search-field" type="text" placeholder="0").input.fluid
+                .col-xs-4(elem="col")
+                  span.db комментариями
+
+              span(elem="section-title").db.text-bold Временной переод
+              .row(elem="row")
+                .col-xs-7(elem="col")
+                  select.styler
+                    option adasd
+                    option asdasd
+                    option asdasd
+                .col-xs-5(elem="col")
+                  select.styler
+                    option adasd
+                    option asdasd
+                    option asdasd
+
+              span(elem="section-title").db.text-bold Сортировка результатов поиска
+              .row(elem="row")
+                .col-xs-7(elem="col")
+                  select.styler
+                    option adasd
+                    option asdasd
+                    option asdasd
+                .col-xs-5(elem="col")
+                  select.styler
+                    option adasd
+                    option asdasd
+                    option asdasd
+
+              span(elem="section-title").db.text-bold Показывать результат поиска как
+              .row(elem="row")
+                .col-xs-7(elem="col")
+                  span.db Результат поиска как
+                .col-xs-5(elem="col")
+                  input(type="checkbox" id="vote-answer" name="vote-answer" elem="checkbox")
+                  label(for="vote-answer" elem="label").no-select.cur Точное совпадение
+                  input(type="checkbox" id="vote-answer" name="vote-answer" elem="checkbox")
+                  label(for="vote-answer" elem="label").no-select.cur Точное совпадение
+
+            .col-xs-6(elem="col")
+
+              span(elem="section-title").db.text-bold Поиск по имени пользователя
+              .row(elem="row")
+                .col-xs-7(elem="col")
+                  input(elem="search-field" type="text" placeholder="Имя пользователя").input.fluid
+                .col-xs-5(elem="col")
+                  input(type="checkbox" id="vote-answer" name="vote-answer" elem="checkbox")
+                  label(for="vote-answer" elem="label").no-select.cur Точное совпадение
+
+              span(elem="section-title").db.text-bold Поиск по разделам
+                select(multiple='', size='9')
+                  option -- Выберите --
+                  optgroup(label='Группа 1')
+                    option Пункт 1.1
+                    option Пункт 1.2
+                    option Пункт 1.3
+                  optgroup(label='Группа 2')
+                    option Пункт 2.1
+                    option(disabled='') Пункт 2.2
+                    option Пункт 2.3
+
+          button(type="submit" elem="button-submit").btn.btn-orange Начать поиск
+          button(type="reset" elem="button-submit").btn.btn-red Сбросить
+          button(type="reset" elem="button-submit").btn.btn-red Вернуть
 
         -for(var i = 0; i < 3; i++)
           div(elem="item")
-            h4(elem="title") Шаблон GhostAnime для DLE 10.3
+            h4(elem="title")
+              a(href="#").dark-blue-link Шаблон GhostAnime для DLE 10.3
             include components/_article-header
             .row(elem="row")
               .col-md-3(elem="col")
-                img(src="img/img_demo_last-news.jpg", alt="search result image" elem="image").img-responsive
+                a(href="#" elem="image-link").db
+                  img(src="img/img_demo_last-news.jpg", alt="search result image" elem="image").img-responsive
               .col-md-9(elem="col")
                 p(elem="text") <strong>ClipBucket v.2.7.5</strong> Rus является наиболее динамично развивающимся скриптом, который впервые был запущен как Youtube Clone, но теперь особенности и усовершенствования делают его наиболее универсальным, надежным и масштабируемым скриптом с новейшими функциями социальных сетей. Clipbucket v.2.7.3 Rus сочетает в себе гибкость, быстроту и удобство для посетителей Gпортала.
                 a(href="#" elem="link").btn.btn-red Перейти к новости
