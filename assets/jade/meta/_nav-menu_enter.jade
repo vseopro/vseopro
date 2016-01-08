@@ -18,27 +18,27 @@
         //- .nav-main.visible-md.visible-lg
 
         // основное меню видно везде кроме мобильных устройств
-        .nav-main.clearfix.visible-md.visible-lg
-          ul.lsn.pl0.mb0.clearfix.first-menu__list
+        .nav-main.visible-md.visible-lg
+          ul.clearfix
             each key in navMenu
               if key.submenu == undefined
-                li.first-menu__item
-                  a(href="#{key.url}").db.no-underline.cur.no-select.first-menu__link #{key.text}
+                li
+                  a(href="#{key.url}") #{key.text}
               if key.submenu !== undefined
-                li.first-menu__item.first-menu__has-menu
-                  a.db.no-underline.cur.no-select.first-menu__link #{key.text}
-                  ul.second-menu__list.pl0.mb0
+                li
+                  a(href="#").has-menu #{key.text}
+                  ul
                     each val in key.submenu
                       if val.submenu == undefined
-                        li.second-menu__item
-                          a(href="#").second-menu__link.db.no-underline.cur.no-select #{val.text}
+                        li
+                          a(href="#") #{val.text}
                       if val.submenu !== undefined
-                        li.second-menu__item.second-menu__has-menu
-                          a.second-menu__link.db.no-underline.cur.no-select #{val.text}
-                          ul.third-menu__list.pl0.mb0
+                        li
+                          a(href="#").has-menu #{val.text}
+                          ul
                             each link in val.submenu
-                              li.third-menu__item
-                                a(href="#").third-menu__link.db.no-underline.cur.no-select #{link.text}
+                              li
+                                a(href="#") #{link.text}
 
         // мобильное меню видно на всех устройств меньше 992px
         .nav-main.clearfix#mobile-menu
