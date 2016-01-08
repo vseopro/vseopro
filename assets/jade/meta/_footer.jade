@@ -1,21 +1,21 @@
 footer.main.visible-lg.visible-md
   .container
-    .footer-subs
-      .row
-        .col-md-8
-          .footer-subs__wrap
-            .transform-middle
-              span.db.text-uppercase.footer-subs__title Подписаться на наши еженедельные новости
-              p.footer-subs__description.text-white Введите Ваш E-Mail и выберети категорию в открывшимся окне.
-        .col-md-4
-          .footer-subs__wrap
-            .transform-middle
-              form
-                .row
-                  .col-xs-8
-                    input(type="text" placeholder="Email").fluid.footer-subs__input.no-outline
-                  .col-xs-4
-                    button(type="submit").btn.btn-orange.footer-subs__btn.fluid.no-outline ОK
+    .div(block="footer-subs")
+      .row(elem="row")
+        .col-md-6(elem="col")
+          div(elem="wrap")
+            .transform-middle(elem="transform")
+              span(elem="title").db.text-uppercase Подписаться на наши еженедельные новости
+              p(elem="description").text-white Введите Ваш E-Mail и выберети категорию в открывшимся окне.
+        .col-md-6(elem="col")
+          div(elem="wrap")
+            .transform-middle(elem="transform")
+              form(elem="form")
+                .row(elem="row")
+                  .col-xs-9(elem="col")
+                    input(type="text" placeholder="Email" elem="input").fluid.no-outline
+                  .col-xs-3(elem="col")
+                    button(type="submit" elem="btn").btn.btn-orange.fluid.no-outline ОK
 
   .footer-social
     .container
