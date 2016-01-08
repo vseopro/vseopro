@@ -408,6 +408,9 @@ nav.main{background: $color-black;}
   height: 50px;
   margin-bottom: 30px;
   background: $color-black;
+
+  position: relative;
+  z-index: 1;
 }
 
 .nav-afix{
