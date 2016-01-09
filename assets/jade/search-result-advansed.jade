@@ -13,7 +13,7 @@ block content
               span(elem="section-title").db.text-bold Поиск по содержимому
               .row(elem="row")
                 .col-lg-4(elem="col")
-                  span.db(elem="label") Место жительства:
+                  span.db(elem="section-label") Место жительства:
                 .col-lg-8(elem="col")
                   input(elem="search-field" type="text" placeholder="Поиск").input.fluid
               .row(elem="row")
@@ -36,7 +36,7 @@ block content
                 .col-lg-2(elem="col")
                   input(elem="search-field" type="text" placeholder="0").input.fluid
                 .col-lg-4(elem="col")
-                  span.db(elem="label") комментариями
+                  span.db(elem="section-label") комментариями
 
               span(elem="section-title").db.text-bold Временной период
               .row(elem="row")
@@ -67,12 +67,15 @@ block content
               span(elem="section-title").db.text-bold Показывать результат поиска как
               .row(elem="row")
                 .col-xs-5(elem="col")
-                  span.db(elem="label") Результат поиска как:
+                  span.db(elem="section-label").mt0 Результат поиска как:
                 .col-xs-7(elem="col")
-                  input(type="checkbox" id="checkbox_article" name="checkbox_article" elem="checkbox")
-                  label(for="checkbox_article" elem="label").no-select.cur Статьи
-                  input(type="checkbox" id="checkbox_title" name="checkbox_title" elem="checkbox")
-                  label(for="checkbox_title" elem="label").no-select.cur Заголовки
+                  .row(elem="row")
+                    .col-xs-6(elem="col")
+                      input(type="checkbox" id="checkbox_article" name="checkbox_article" elem="checkbox")
+                      label(for="checkbox_article" elem="label").mt0.no-select.cur Статьи
+                    .col-xs-6(elem="col")
+                      input(type="checkbox" id="checkbox_title" name="checkbox_title" elem="checkbox")
+                      label(for="checkbox_title" elem="label").mt0.no-select.cur Заголовки
 
             .col-xs-6(elem="col")
 
@@ -97,8 +100,8 @@ block content
                   option Пункт 2.3
 
           button(type="submit" elem="button-submit").btn.btn-orange Начать поиск
-          button(type="reset" elem="button-submit").btn.btn-red Сбросить
-          button(type="reset" elem="button-submit").btn.btn-red Вернуть
+          button(type="reset" elem="button-reset").btn.btn-red Сбросить
+          button(type="reset" elem="button-revert").btn.btn-red Вернуть
 
         -for(var i = 0; i < 3; i++)
           div(elem="item")

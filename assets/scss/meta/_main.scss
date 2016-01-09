@@ -1805,22 +1805,15 @@ footer.main{
 
 .search-result{
   &__form{
-
+    border-bottom: #f1f1f1 1px solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
   &__search-field{
     margin-bottom: 20px;
   }
-  &__button-submit{
-    margin-right: 10px;
-  }
-  &__more-search{
-
-  }
   &__result-text{
-    border-bottom: #f1f1f1 1px solid;
     margin-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
     // color: #6c707c;
   }
   &__title{
@@ -1865,9 +1858,38 @@ footer.main{
   }
   &__label{
     margin-top: 10px;
+    &.mt0{
+      margin-top: 0 !important;
+    }
+  }
+  &__section-label{
+    margin-top: 10px;
+    &.mt0{
+      margin-top: 0 !important;
+    }
   }
   &__select{
     margin-bottom: 20px;
+  }
+  &__button-submit{
+    margin-top: 20px;
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+  &__button-reset{
+    margin-top: 20px;
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+  &__button-revert{
+    margin-top: 20px;
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+  &__more-search{
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
   }
 }
 
