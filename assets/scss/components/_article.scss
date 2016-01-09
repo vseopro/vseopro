@@ -2,11 +2,13 @@
   border-bottom: 1px #f1f1f1 solid;
   margin-bottom: 20px;
   padding-bottom: 10px;
+  position: relative;
   &__list{
     margin-bottom: 0;
     margin-top: -5px;
-    @media all and (max-width:992px){
+    @media all and (max-width:768px){
       text-align: center;
+      margin-top: 30px;
     }
   }
   &__item{
@@ -26,6 +28,14 @@
     font-size: 12px;
     display: inline-block;
     vertical-align: middle;
+  }
+  .admin-edit{
+    // margin-top: 10px;
+    @media all and (max-width: 768px){
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }
 
@@ -220,6 +230,8 @@
     color: #919191;
     font-size: 20px;
     margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
   }
   &__text{
     color: #919191;

@@ -1768,18 +1768,19 @@ footer.main{
 
 .comment-meta{
   margin-bottom: 20px;
+  position: relative;
   @media all and (max-width: 992px){
     // text-align: center;
   }
   &__avatar{
+    float: left;
+    margin-right: 10px;
     @media all and (max-width: 992px){
-      // display: table;
-      // margin: 0 auto;
-      margin-left: 10%;
-      display: inline-block;
-    }
-    @media all and (max-width: 400px){
-      margin-left: 40%;
+      display: table;
+      margin: 0 auto;
+      float: none;
+      // margin-left: 10%;
+      // display: inline-block;
     }
   }
   &__icon{
@@ -1789,18 +1790,22 @@ footer.main{
     display: inline;
     vertical-align: middle;
   }
+  &__list{
+    float: left;
+    margin-top: 10px;
+    @media all and (max-width: 768px){
+      text-align: center;
+    }
+  }
   &__link{
     font-size: 13px;
   }
   &__item{
     margin-right: 10px;
-    @media all and (max-width: 992px){
-      margin-left: 40%;
-      margin-bottom: 10px;
-      display: block;
-    }
-    @media all and (max-width: 400px){
-      margin-left: 0;
+    @media all and (max-width: 768px){
+      // margin-left: 40%;
+      // margin-bottom: 10px;
+      // display: block;
     }
     &:last-child{
       margin-right: 0px;
@@ -1808,6 +1813,11 @@ footer.main{
   }
   .admin-edit{
     margin-top: 10px;
+    @media all and (max-width: 768px){
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }
 

@@ -1,7 +1,8 @@
 div(block="comment-meta").clearfix
-  ul(elem="list").lsn.pl0.mb0.pull-left
-    li(elem="item").dib
-      img(src="img/img_sidebar_comment_avatar.jpg" alt="avatar" elem="avatar" width="50" height="50")
+  div(elem="avatar")
+    img(src="img/img_sidebar_comment_avatar.jpg" alt="avatar" elem="avatar-img" width="50" height="50")
+
+  ul(elem="list").lsn.pl0.mb0
     li(elem="item").dib
       span(elem="icon").icon-user
       a(href="#" elem="link") #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
