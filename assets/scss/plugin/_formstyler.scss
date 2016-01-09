@@ -259,10 +259,10 @@
   width: 100%;
 }
 .jq-selectbox__select {
-  height: 32px;
+  height: 40px;
   padding: 0 45px 0 10px;
-  border: 1px solid #CCC;
-  border-bottom-color: #B3B3B3;
+  border: 1px solid #d9d9d9;
+  // border-bottom-color: #B3B3B3;
   // border-radius: 4px;
   background: #F5F5F5;
   // background: -webkit-linear-gradient(#FFF, #E6E6E6);
@@ -282,7 +282,10 @@
   // box-shadow: inset 1px 1px 3px #DDD;
 }
 .jq-selectbox.focused .jq-selectbox__select {
-  border: 1px solid #5794BF;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+  border-color: #00aeef;
+  background: #effbff;
+  color: #555;
 }
 .jq-selectbox.disabled .jq-selectbox__select {
   border-color: #CCC;
@@ -296,8 +299,8 @@
   width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  height: 32px;
-  line-height: 32px;
+  height: 40px;
+  line-height: 40px;
 }
 .jq-selectbox .placeholder {
   color: #888;
@@ -308,11 +311,11 @@
   right: 0;
   width: 34px;
   height: 100%;
-  border-left: 1px solid #CCC;
+  // border-left: 1px solid #CCC;
 }
 .jq-selectbox__trigger-arrow {
   position: absolute;
-  top: 14px;
+  top: 18px;
   right: 12px;
   width: 0;
   height: 0;
@@ -369,11 +372,8 @@
 }
 .jq-selectbox li {
   min-height: 18px;
-  padding: 5px 10px 6px;
-  // -webkit-user-select: none;
-  //    -moz-user-select: none;
-  //     -ms-user-select: none;
-          user-select: none;
+  padding: 10px;
+  user-select: none;
   white-space: nowrap;
   color: #231F20;
 }

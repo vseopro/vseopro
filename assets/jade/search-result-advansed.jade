@@ -2,8 +2,8 @@ extends meta/_layout
 
 block content
   .container
-    .white-block
-      h4.white-block__title.mt0 <span class="icon-search"></span> Поиск по сайту
+    div(block="white-block")
+      h4(elem="title") <span class="icon-search"></span> Поиск по сайту
       div(block="search-result")
         form(elem="form")
 
@@ -12,67 +12,67 @@ block content
 
               span(elem="section-title").db.text-bold Поиск по содержимому
               .row(elem="row")
-                .col-xs-4(elem="col")
-                  span.db Место жительства:
-                .col-xs-8(elem="col")
+                .col-lg-4(elem="col")
+                  span.db(elem="label") Место жительства:
+                .col-lg-8(elem="col")
                   input(elem="search-field" type="text" placeholder="Поиск").input.fluid
               .row(elem="row")
-                .col-xs-5(elem="col")
-                  input(type="checkbox" id="vote-answer" name="vote-answer" elem="checkbox")
-                  label(for="vote-answer" elem="label").no-select.cur Точное совпадение
-                .col-xs-7(elem="col")
-                  select.styler
-                    option adasd
-                    option asdasd
-                    option asdasd
+                .col-lg-6(elem="col")
+                  input(type="checkbox" id="exact_match_all_words" name="exact_match_all_words" elem="checkbox")
+                  label(for="exact_match_all_words" elem="label").no-select.cur Точное совпадение всех слов
+                .col-lg-6(elem="col")
+                  select.styler(elem="select")
+                    option Искать в статьях
+                    option Искать в статьях
+                    option Искать в статьях
 
               span(elem="section-title").db.text-bold Найти статьи с
               .row(elem="row")
-                .col-xs-4(elem="col")
-                  select.styler
-                    option adasd
-                    option asdasd
-                    option asdasd
-                .col-xs-2(elem="col")
+                .col-lg-6(elem="col")
+                  select.styler(elem="select")
+                    option Не менее, чем
+                    option Не менее, чем
+                    option Не менее, чем
+                .col-lg-2(elem="col")
                   input(elem="search-field" type="text" placeholder="0").input.fluid
-                .col-xs-4(elem="col")
-                  span.db комментариями
+                .col-lg-4(elem="col")
+                  span.db(elem="label") комментариями
 
-              span(elem="section-title").db.text-bold Временной переод
+              span(elem="section-title").db.text-bold Временной период
               .row(elem="row")
                 .col-xs-7(elem="col")
-                  select.styler
-                    option adasd
-                    option asdasd
-                    option asdasd
+                  select.styler(elem="select")
+                    option За все время
+                    option За все время
+                    option За все время
                 .col-xs-5(elem="col")
-                  select.styler
-                    option adasd
-                    option asdasd
-                    option asdasd
+                  select.styler(elem="select")
+                    option и новое
+                    option и новое
+                    option и новое
 
               span(elem="section-title").db.text-bold Сортировка результатов поиска
               .row(elem="row")
                 .col-xs-7(elem="col")
-                  select.styler
-                    option adasd
-                    option asdasd
-                    option asdasd
+                  select.styler(elem="select")
+                    option Дата статьи или комментария
+                    option Дата статьи или комментария
+                    option Дата статьи или комментария
                 .col-xs-5(elem="col")
-                  select.styler
-                    option adasd
-                    option asdasd
-                    option asdasd
+                  select.styler(elem="select")
+                    option По убыванию
+                    option По убыванию
+                    option По убыванию
 
               span(elem="section-title").db.text-bold Показывать результат поиска как
               .row(elem="row")
-                .col-xs-7(elem="col")
-                  span.db Результат поиска как
                 .col-xs-5(elem="col")
-                  input(type="checkbox" id="vote-answer" name="vote-answer" elem="checkbox")
-                  label(for="vote-answer" elem="label").no-select.cur Точное совпадение
-                  input(type="checkbox" id="vote-answer" name="vote-answer" elem="checkbox")
-                  label(for="vote-answer" elem="label").no-select.cur Точное совпадение
+                  span.db(elem="label") Результат поиска как:
+                .col-xs-7(elem="col")
+                  input(type="checkbox" id="checkbox_article" name="checkbox_article" elem="checkbox")
+                  label(for="checkbox_article" elem="label").no-select.cur Статьи
+                  input(type="checkbox" id="checkbox_title" name="checkbox_title" elem="checkbox")
+                  label(for="checkbox_title" elem="label").no-select.cur Заголовки
 
             .col-xs-6(elem="col")
 
@@ -81,8 +81,8 @@ block content
                 .col-xs-7(elem="col")
                   input(elem="search-field" type="text" placeholder="Имя пользователя").input.fluid
                 .col-xs-5(elem="col")
-                  input(type="checkbox" id="vote-answer" name="vote-answer" elem="checkbox")
-                  label(for="vote-answer" elem="label").no-select.cur Точное совпадение
+                  input(type="checkbox" id="exact_match" name="exact_match" elem="checkbox")
+                  label(for="exact_match" elem="label").no-select.cur Точное совпадение
 
               span(elem="section-title").db.text-bold Поиск по разделам
               select(multiple='', size='9').fluid
@@ -104,7 +104,7 @@ block content
           div(elem="item")
             h4(elem="title")
               a(href="#").dark-blue-link Шаблон GhostAnime для DLE 10.3
-            include components/_article-header
+            include components/_search-result-meta
             .row(elem="row")
               .col-md-3(elem="col")
                 a(href="#" elem="image-link").db

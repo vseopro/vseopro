@@ -2,8 +2,8 @@ extends meta/_layout
 
 block content
   .container
-    .white-block
-      h4.white-block__title.mt0 <span class="icon-search"></span> Результаты поиска
+    div(block="white-block")
+      h4(elem="title") <span class="icon-search"></span> Результаты поиска
       div(block="search-result")
         form(elem="form")
           input(elem="search-field" type="text" placeholder="Введите текст для поиска").fluid.input
@@ -15,7 +15,7 @@ block content
           div(elem="item")
             h4(elem="title")
               a(href="#").dark-blue-link Шаблон GhostAnime для DLE 10.3
-            include components/_article-header
+            include components/_search-result-meta
             .row(elem="row")
               .col-md-3(elem="col")
                 a(href="#" elem="image-link").db

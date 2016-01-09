@@ -18,8 +18,8 @@
         //- .nav-main.visible-md.visible-lg
 
         // основное меню видно везде кроме мобильных устройств
-        .nav-main.visible-md.visible-lg
-          ul.clearfix
+        .main-nav.visible-md.visible-lg
+          ul.clearfix.pull-left
             each key in navMenu
               if key.submenu == undefined
                 li
@@ -41,7 +41,7 @@
                                 a(href="#") #{link.text}
 
         // мобильное меню видно на всех устройств меньше 992px
-        .nav-main#mobile-menu.clearfix
+        .nav-main#mobile-menu
           .list-group.panel
             each key, i in navMenu
               if key.submenu == undefined

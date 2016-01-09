@@ -2,22 +2,14 @@ extends meta/_layout
 
 block content
   .container
-    .white-block
-      h4.white-block__title.mt0 <span class="icon-search"></span> Результаты поиска
-      div(block="search-result")
-        form(elem="form")
-          input(elem="search-field" type="text" placeholder="Введите текст для поиска").fluid.input
-          button(type="submit" elem="button-submit").btn.btn-red Начать поиск
-          a(href="#" type="submit" elem="more-search").btn.btn-orange Расширенный поиск
-        span(elem="result-text").db По Вашему запросу найдено 1 ответов (Результаты запроса 1 - 1)
+    div(block="white-block")
+      h4(elem="title") <span class="icon-user"></span> Пользователь: Admin
 
-        -for(var i = 0; i < 3; i++)
-          div(elem="item")
-            h4(elem="title") Шаблон GhostAnime для DLE 10.3
-            include components/_article-header
-            .row(elem="row")
-              .col-md-3(elem="col")
-                img(src="img/img_demo_last-news.jpg", alt="search result image" elem="image").img-responsive
-              .col-md-9(elem="col")
-                p(elem="text") <strong>ClipBucket v.2.7.5</strong> Rus является наиболее динамично развивающимся скриптом, который впервые был запущен как Youtube Clone, но теперь особенности и усовершенствования делают его наиболее универсальным, надежным и масштабируемым скриптом с новейшими функциями социальных сетей. Clipbucket v.2.7.3 Rus сочетает в себе гибкость, быстроту и удобство для посетителей Gпортала.
-                a(href="#" elem="link").btn.btn-red Перейти к новости
+    div(block="white-block")
+      h4(elem="title") <span class="icon-pencil"></span> Редактирование профиля
+
+    div(block="white-block")
+      h4(elem="title") <span class="icon-lightbulb"></span> Информация
+
+    div(block="white-block")
+      h4(elem="title") <span class="icon-paper-plane-empty"></span> Новости ожидающие публикации

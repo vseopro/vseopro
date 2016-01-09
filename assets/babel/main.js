@@ -131,31 +131,54 @@ $(function() {
 // });
 
 $(function() {
-    if(device.ipad() ||
-        device.androidTablet() ||
-        device.blackberryTablet() ||
-        device.windowsTablet() ||
-        device.fxosTablet() ||
-        device.tablet()){
+//     if(device.ipad() ||
+//         device.androidTablet() ||
+//         device.blackberryTablet() ||
+//         device.windowsTablet() ||
+//         device.fxosTablet() ||
+//         device.tablet()){
 
-        $('body').addClass("browser-mobile");
+//         $('.first-menu__has-menu').on('click', () => {
+//             var _this = $(this);
+//             _this.find('.second-menu__list').css({
+//                 'display': 'block'
+//             });
+//         });
 
-        $('.first-menu__has-menu').on('click', () => {
-            var _this = $(this);
-            _this.find('.second-menu__list').css({
-                'display': 'block'
-            });
-        });
-
-        $('.second-menu__has-menu').on('click', () => {
-            var _this = $(this);
-            _this.find('.third-menu__list').css({
-                'display': 'block'
-            });
-        });
-    }
+//         $('.second-menu__has-menu').on('click', () => {
+//             var _this = $(this);
+//             _this.find('.third-menu__list').css({
+//                 'display': 'block'
+//             });
+//         });
+//     }
 
     $(".pages-menu__close").on('click', () =>{
         $(".pages-menu").empty();
     })
 });
+
+// $(() => {
+
+//     let menuJson = [];
+
+//     $(".main-menu").children().children().map((i, item) => {
+//         if ($(item).children('ul').length) {
+//             menuJson.push({
+//                 link: $(item).children('a').text(),
+//                 href: $(item).children('a').attr("href"),
+//                 subMenu: {
+
+//                 }
+//             })
+//         } else {
+//             menuJson.push({
+//                 link: $(item).children('a').text(),
+//                 href: $(item).children('a').attr("href")
+//             })
+//         };
+
+//     })
+
+//     console.log(menuJson);
+// });
