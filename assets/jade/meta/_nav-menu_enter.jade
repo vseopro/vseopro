@@ -15,48 +15,9 @@
             span.dib
               -for(var i = 0; i < 3; i++)
                 span.open-menu__span
-        //- .nav-main.visible-md.visible-lg
 
-        // основное меню видно везде кроме мобильных устройств
-        .nav-main.visible-md.visible-lg
-          ul.clearfix
-            each key in navMenu
-              if key.submenu == undefined
-                li
-                  a(href="#{key.url}") #{key.text}
-              if key.submenu !== undefined
-                li
-                  a(href="#").has-menu #{key.text}
-                  ul
-                    each val in key.submenu
-                      if val.submenu == undefined
-                        li
-                          a(href="#") #{val.text}
-                      if val.submenu !== undefined
-                        li
-                          a(href="#").has-menu #{val.text}
-                          ul
-                            each link in val.submenu
-                              li
-                                a(href="#") #{link.text}
-
-        // мобильное меню видно на всех устройств меньше 992px
-        .nav-main.clearfix#mobile-menu
-          .list-group.panel
-            each key, i in navMenu
-              if key.submenu == undefined
-                a(href="#").list-group-item.mobile__link__first #{key.text}
-              if key.submenu !== undefined
-                a(href="#target-menu#{i}" data-toggle="collapse" data-parent="#mobile-menu").list-group-item.mobile__link__first.mobile__has-menu #{key.text}
-                .collapse(id='target-menu#{i}')
-                  each val,e in key.submenu
-                    if val.submenu == undefined
-                      a(href="#").list-group-item.mobile__link__second #{val.text}
-                    if val.submenu !== undefined
-                      a(href="#target-submenu#{i}#{e}" data-toggle="collapse" data-parent="#SubMenu1").list-group-item.mobile__link__second.mobile__has-menu #{val.text}
-                      .collapse.list-group-submenu(id="target-submenu#{i}#{e}")
-                        each link in val.submenu
-                          a(href="#" class="list-group-item").mobile__link__third #{link.text}
+        include ../components/_main-menu
+        include ../components/_menu-mobile
 
         .nav-search
           .dropdown

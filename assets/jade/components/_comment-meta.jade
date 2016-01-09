@@ -1,15 +1,18 @@
-ul(block="comment-meta").lsn.pl0.mb0
-  li(elem="item").dib
-    img(src="img/img_sidebar_comment_avatar.jpg" alt="avatar" elem="avatar" width="50" height="50")
-  li(elem="item").dib
-    span(elem="icon").icon-user
-    a(href="#" elem="link") #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
-  li(elem="item").dib
-    span(elem="icon").icon-calendar
-    a(href="#" elem="link") #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
-  li(elem="item").dib
-    span(elem="icon").icon-comment
-    a(href="#" elem="link") Сообщений: #{Math.floor(Math.random() * (15 - 1300) + 1300)}
-  li(elem="item").dib
-    span(elem="icon").icon-bookmark
-    a(href="#" elem="link") Новостей: #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+div(block="comment-meta").clearfix
+  ul(elem="list").lsn.pl0.mb0.pull-left
+    li(elem="item").dib
+      img(src="img/img_sidebar_comment_avatar.jpg" alt="avatar" elem="avatar" width="50" height="50")
+    li(elem="item").dib
+      span(elem="icon").icon-user
+      a(href="#" elem="link") #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
+    li(elem="item").dib
+      span(elem="icon").icon-calendar
+      a(href="#" elem="link") #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
+    li(elem="item").dib
+      span(elem="icon").icon-comment
+      a(href="#" elem="link") #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+    li(elem="item").dib
+      span(elem="icon").icon-bookmark
+      a(href="#" elem="link") Новостей: #{Math.floor(Math.random() * (15 - 1300) + 1300)}
+
+  include _admin-edit

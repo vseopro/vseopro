@@ -1,0 +1,17 @@
+// мобильное меню видно на всех устройств меньше 992px
+.nav-main#mobile-menu
+  .list-group.panel
+    each key, i in navMenu
+      if key.submenu == undefined
+        a(href="#").list-group-item.mobile__link__first #{key.text}
+      if key.submenu !== undefined
+        a(href="#target-menu#{i}" data-toggle="collapse" data-parent="#mobile-menu").list-group-item.mobile__link__first.mobile__has-menu #{key.text}
+        .collapse(id='target-menu#{i}')
+          each val,e in key.submenu
+            if val.submenu == undefined
+              a(href="#").list-group-item.mobile__link__second #{val.text}
+            if val.submenu !== undefined
+              a(href="#target-submenu#{i}#{e}" data-toggle="collapse" data-parent="#SubMenu1").list-group-item.mobile__link__second.mobile__has-menu #{val.text}
+              .collapse.list-group-submenu(id="target-submenu#{i}#{e}")
+                each link in val.submenu
+                  a(href="#" class="list-group-item").mobile__link__third #{link.text}

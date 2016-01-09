@@ -1,23 +1,23 @@
-.white-block
-  h5.white-block__sidebar-title <span class="icon-users"></span> Пользователи онлайн
-  .user-online
-    .row
-      .col-xs-2
-        span.icon-eye.user-online__icon
-      .col-xs-9
-        span.db.user-online__text Всего на сайте: <span class="user-online__label">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    .row
-      .col-xs-2
-        span.icon-eye-off.user-online__icon
-      .col-xs-9
-        span.db.user-online__text Невидимок: <span class="user-online__label">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    .row
-      .col-xs-2
-        span.icon-user-2.user-online__icon
-      .col-xs-9
-        span.db.user-online__text Пользователей: <span class="user-online__label">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-    .row
-      .col-xs-2
-        span.icon-github.user-online__icon
-      .col-xs-9
-        span.db.user-online__text Роботов: <span class="user-online__label">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+div(block="white-block")
+  h5(elem="sidebar-title") <span class="icon-users"></span> Пользователи онлайн
+  div(block="user-online")
+    .row(elem="row")
+      .col-xs-2(elem="col")
+        span(elem="icon").icon-eye
+      .col-xs-9(elem="col")
+        span(elem="text").db Всего на сайте: <span elem="label">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    .row(elem="row")
+      .col-xs-2(elem="col")
+        span(elem="icon").icon-eye-off
+      .col-xs-9(elem="col")
+        span(elem="text").db Невидимок: <span elem="label">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    .row(elem="row")
+      .col-xs-2(elem="col")
+        span(elem="icon").icon-user-2
+      .col-xs-9(elem="col")
+        span(elem="text").db Пользователей: <span elem="label">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+    .row(elem="row")
+      .col-xs-2(elem="col")
+        span(elem="icon").icon-github
+      .col-xs-9(elem="col")
+        span(elem="text").db Роботов: <span elem="label">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>

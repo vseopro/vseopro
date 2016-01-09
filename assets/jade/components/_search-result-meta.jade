@@ -1,19 +1,21 @@
+-var dataArticleBreadcrumbs = articleBreadcrumbs[Math.floor(Math.random() * ((articleBreadcrumbs.length-1) - 0 + 1)) + 0];
+
 div(block="search-result-meta")
   ul(elem="list").lsn.pl0.mb0
     li(elem="item").dib
       span(elem="icon").icon-user
-      a(href="#" elem="link") Admin
+      a(href="#" elem="link") #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
     li(elem="item").dib
       span(elem="icon").icon-calendar
-      a(href="#" elem="link") 03.05.2510
+      a(href="#" elem="link") #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
     li(elem="item").dib
       span(elem="icon").icon-eye
-      a(href="#" elem="link") 1233
+      a(href="#" elem="link") #{Math.floor(Math.random() * (15 - 1300) + 1300)}
     li(elem="item").dib
       span(elem="icon").icon-comment
-      a(href="#" elem="link") 1312
+      a(href="#" elem="link") #{Math.floor(Math.random() * (15 - 1300) + 1300)}
     li(elem="item").dib
       span(elem="icon").icon-folder-open
-      a(href="#" elem="link") Другие CMS
-      span.icon-angle-right
-      a(href="#" elem="link") Мультимедиа
+      each val, key in dataArticleBreadcrumbs
+        a(href="#" elem="link" mods="breadcrumbs") #{val}
+

@@ -1471,20 +1471,20 @@ footer.main{
   }
 }
 
-.user-online{
-  &__icon{
-    font-size: 25px;
-  }
-  &__text{
-    //vertical-align: middle;
-    color: #192637;
-    margin-top: 5px;
-  }
-  &__label{
-    color: $color-orange;
-    font-size: 16px;
-  }
-}
+// .user-online{
+//   &__icon{
+//     font-size: 25px;
+//   }
+//   &__text{
+//     //vertical-align: middle;
+//     color: #192637;
+//     margin-top: 5px;
+//   }
+//   &__label{
+//     color: $color-orange;
+//     font-size: 16px;
+//   }
+// }
 
 .site-statistic{
   &__text{
@@ -1786,9 +1786,14 @@ footer.main{
     font-size: 20px;
     color: #919191;
     margin-right: 5px;
+    display: inline;
+    vertical-align: middle;
+  }
+  &__link{
+    font-size: 13px;
   }
   &__item{
-    margin-right: 20px;
+    margin-right: 10px;
     @media all and (max-width: 992px){
       margin-left: 40%;
       margin-bottom: 10px;
@@ -1800,6 +1805,9 @@ footer.main{
     &:last-child{
       margin-right: 0px;
     }
+  }
+  .admin-edit{
+    margin-top: 10px;
   }
 }
 
@@ -1921,5 +1929,17 @@ footer.main{
     font-size: 12px;
     display: inline-block;
     vertical-align: middle;
+    &_breadcrumbs{
+      margin-right: 5px;
+      &:last-child{
+        &:after{
+          content: ""
+        }
+      }
+      &:after{
+        content: " >";
+        color: #6c707c;
+      }
+    }
   }
 }
