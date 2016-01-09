@@ -1,11 +1,11 @@
 .article-header{
   border-bottom: 1px #f1f1f1 solid;
   margin-bottom: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   position: relative;
   &__list{
     margin-bottom: 0;
-    margin-top: -5px;
+    // margin-top: -5px;
     @media all and (max-width:768px){
       text-align: center;
       margin-top: 30px;
@@ -55,29 +55,29 @@
   }
 }
 
-.article-breadcrumbs{
-  padding: 10px 0;
-  border-top: 1px #f1f1f1 solid;
-  &__icon{
-    display: inline-block;
-    font-size: 20px;
-    vertical-align: middle;
-  }
-  &__list{
-    display: inline-block;
-    font-size: 13px;
-  }
-  &__item{
-    &:last-child{
-      &:after{
-        content: ""
-      }
-    }
-    &:after{
-      content: " >";
-    }
-  }
-}
+// .article-breadcrumbs{
+//   padding: 10px 0;
+//   border-top: 1px #f1f1f1 solid;
+//   &__icon{
+//     display: inline-block;
+//     font-size: 20px;
+//     vertical-align: middle;
+//   }
+//   &__list{
+//     display: inline-block;
+//     font-size: 13px;
+//   }
+//   &__item{
+//     &:last-child{
+//       &:after{
+//         content: ""
+//       }
+//     }
+//     &:after{
+//       content: " >";
+//     }
+//   }
+// }
 
 .article-share{
   border-top: 1px #f1f1f1 solid;

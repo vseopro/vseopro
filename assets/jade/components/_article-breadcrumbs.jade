@@ -1,8 +1,0 @@
--var dataArticleBreadcrumbs = articleBreadcrumbs[Math.floor(Math.random() * ((articleBreadcrumbs.length-1) - 0 + 1)) + 0];
-
-div(block="article-breadcrumbs")
-  span(elem="icon").icon-folder-open
-  ul(elem="list").lsn.pl0.mb0
-    each val, key in dataArticleBreadcrumbs
-      li(elem="item").dib
-        a(href="#" elem="link") #{val}

@@ -999,7 +999,7 @@ footer.main{
     font-family: $roboto;
   }
   &__title{
-    padding-bottom: 12px;
+    padding-bottom: 15px;
     margin-bottom: 15px;
     color: $color-orange;
     border-bottom: 1px #f1f1f1 solid;
@@ -1951,5 +1951,11 @@ footer.main{
         color: #6c707c;
       }
     }
+  }
+}
+
+.admin-edit{
+  &__icon{
+    font-size: 20px;
   }
 }
