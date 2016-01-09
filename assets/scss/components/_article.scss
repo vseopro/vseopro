@@ -1,0 +1,227 @@
+.article-header{
+  border-bottom: 1px #f1f1f1 solid;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  &__list{
+    margin-bottom: 0;
+    margin-top: -5px;
+    @media all and (max-width:992px){
+      text-align: center;
+    }
+  }
+  &__item{
+    margin-bottom: 0;
+    margin-right: 20px;
+    &:lat-child{
+      margin-right: 0;
+    }
+  }
+  &__icon{
+    font-size: 19px;
+    color: #919191;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__link{
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.article-content{
+  img{
+    margin-bottom: 20px;
+  }
+  strong{
+    font-size: 16px;
+  }
+  p{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  li{
+    line-height: 24px;
+  }
+}
+
+.article-breadcrumbs{
+  padding: 10px 0;
+  border-top: 1px #f1f1f1 solid;
+  &__icon{
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  &__list{
+    display: inline-block;
+    font-size: 13px;
+  }
+  &__item{
+    &:last-child{
+      &:after{
+        content: ""
+      }
+    }
+    &:after{
+      content: " >";
+    }
+  }
+}
+
+.article-share{
+  border-top: 1px #f1f1f1 solid;
+  padding: 10px 0;
+  &__label{
+    float: left;
+    color: #6d747e;
+    margin-top: 5px;
+    @media all and (max-width:768px){
+      float: none;
+      text-align: center;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  &__list{
+    float: right;
+    @media all and (max-width:768px){
+      float: none;
+      text-align: center;
+    }
+  }
+  &__item{
+    margin-right: 10px;
+    @media all and (max-width:768px){
+      display: inline-block;
+      float: none !important;
+      margin-bottom: 10px;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__link{
+    display: block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #fff;
+    @media all and (max-width:768px){
+      width: 50px;
+      height: 50px;
+    }
+    &:hover{
+      color: #fff;
+    }
+    &.vk{
+      background: #5b7fa6;
+      &:hover{
+        background: darken(#5b7fa6, 5%);
+      }
+    }
+    &.odnoklassniki{
+      background: #fa890f;
+      &:hover{
+        background: darken(#fa890f, 5%);
+      }
+    }
+    &.twitter{
+      background: #0e5dcc;
+      &:hover{
+        background: darken(#0e5dcc, 5%);
+      }
+    }
+    &.gplus{
+      background: #d62408;
+      &:hover{
+        background: darken(#d62408, 5%);
+      }
+    }
+    &.facebook{
+      background: #3b5998;
+      &:hover{
+        background: darken(#3b5998, 5%);
+      }
+    }
+    &.pinterest{
+      background: #cc2028;
+      &:hover{
+        background: darken(#cc2028, 5%);
+      }
+    }
+    &.at{
+      background: #2164ad;
+      &:hover{
+        background: darken(#2164ad, 5%);
+      }
+    }
+    &.blogger{
+      background: #f87f14;
+      &:hover{
+        background: darken(#f87f14, 5%);
+      }
+    }
+    &.tumblr-1{
+      background: #3D5A70;
+      &:hover{
+        background: darken(#3D5A70, 5%);
+      }
+    }
+    &.evernote{
+      background: #5FB336;
+      &:hover{
+        background: darken(#5FB336, 5%);
+      }
+    }
+    &.linkedin{
+      background: #017BB7;
+      &:hover{
+        background: darken(#017BB7, 5%);
+      }
+    }
+    &.reddit{
+      background: #0178D2;
+      &:hover{
+        background: darken(#0178D2, 5%);
+      }
+    }
+  }
+  &__ico{
+    line-height: 30px;
+    @media all and (max-width:768px){
+      line-height: 50px;
+      font-size: 16px;
+    }
+  }
+}
+
+.article-footer{
+  border-top: 1px #f1f1f1 solid;
+  // margin-top: 20px;
+  padding-top: 10px;
+  &__item{
+    margin-right: 10px;
+    @media all and (max-width: 992px){
+      display: block;
+    }
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+  &__link{
+    margin-right: 5px;
+    font-size: 13px;
+    @media all and (max-width: 992px){
+      font-size: 15px;
+    }
+  }
+  &__icon{
+    color: #919191;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  &__text{
+    color: #919191;
+  }
+}

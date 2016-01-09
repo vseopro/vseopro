@@ -7,9 +7,9 @@ div(block="white-block")
           .col-xs-4(elem="col")
             img(src="img/img_popular_news.jpg" alt="popular news image" elem="image")
           .col-xs-8(elem="col")
-            span.db.popular-news__text 3XLOVE - Скрипт сайта знакомств бла бла капе
+            span(elem="title").db #{popularNews[Math.floor(Math.random() * ((popularNews.length-1) - 0 + 1)) + 0]}
             .row-mini(elem="row")
               .col-xs-6(elem="col")
-                a(href="#" elem="text").link.text-overflow <span class="icon-user" elem="ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
+                a(href="#" elem="user").link.text-overflow <span class="icon-user" elem="ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
               .col-xs-6(elem="col")
-                a(href="#" elem="text").link.text-overflow <span class="icon-calendar" elem="ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
+                a(href="#" elem="time").link.text-overflow <span class="icon-calendar" elem="ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}

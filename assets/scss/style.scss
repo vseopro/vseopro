@@ -3,13 +3,18 @@
 
 @import "meta/extends";
 @import "meta/font";
+@import "meta/fontello";
 
+//импорт плагинов
 @import "plugin/formstyler";
 @import "plugin/hideShowPassword";
 @import "plugin/readmoreJS";
 
+//импорт компонентов
+@import "components/article";
+
+//импорт базовых стилей и шрифтов
 @import "meta/base";
-@import "meta/fontello";
 @import "meta/main";
 
 @import "meta/debug";

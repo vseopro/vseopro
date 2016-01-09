@@ -11,6 +11,7 @@ block content
           article.article
             include components/_article-header
             include components/_article-content
+            include components/_article-breadcrumbs
             include components/_article-share
             include components/_article-footer
 
@@ -24,7 +25,7 @@ block content
                 .col-xs-12.col-sm-6.col-md-6.col-lg-3(elem="col")
                   a(href="#" elem="link").db.text-center.text-underline
                     img(src="img/img_demo_similar_news.png" alt="img demo similar news" elem="img").table-center
-                    span(elem="text").text-bold Clipbucket V2.7.3
+                    span(elem="text").text-bold #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]} V2.7.3
 
         div(block="white-block")
           h4(elem="title") <span class="icon-comment-1"></span> Комментарии
