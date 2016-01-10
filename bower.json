@@ -16,7 +16,7 @@
     "tests"
   ],
   "devDependencies": {
-    "jquery": "~2.1.4",
+    "jquery": "~2.2.0",
     "hideshowpassword": "hideShowPassword#~2.0.8",
     "device.js": "devicejs#~0.2.7",
     "bootstrap": "~3.3.6",
