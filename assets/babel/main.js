@@ -15,27 +15,27 @@ $(function() {
     //hideShowPassword
     $('.hideShowPassword').hidePassword(true);
 
-    //don't click menu block
-    $('.search-form, .login-form').on('click', function(event){
-      var events = $._data(document, 'events') || {};
-      events = events.click || [];
-      for(var i = 0; i < events.length; i++) {
-          if(events[i].selector) {
+    // //don't click menu block
+    // $('.search-form, .login-form').on('click', function(event){
+    //   var events = $._data(document, 'events') || {};
+    //   events = events.click || [];
+    //   for(var i = 0; i < events.length; i++) {
+    //       if(events[i].selector) {
 
-              //Check if the clicked element matches the event selector
-              if($(event.target).is(events[i].selector)) {
-                  events[i].handler.call(event.target, event);
-              }
+    //           //Check if the clicked element matches the event selector
+    //           if($(event.target).is(events[i].selector)) {
+    //               events[i].handler.call(event.target, event);
+    //           }
 
-              // Check if any of the clicked element parents matches the
-              // delegated event selector (Emulating propagation)
-              $(event.target).parents(events[i].selector).each(function(){
-                  events[i].handler.call(this, event);
-              });
-          }
-      }
-      event.stopPropagation(); //Always stop propagation
-    });
+    //           // Check if any of the clicked element parents matches the
+    //           // delegated event selector (Emulating propagation)
+    //           $(event.target).parents(events[i].selector).each(function(){
+    //               events[i].handler.call(this, event);
+    //           });
+    //       }
+    //   }
+    //   event.stopPropagation(); //Always stop propagation
+    // });
 
     $('input, select:not(.form-control)').styler();
     $('[data-toggle="tooltip"]').tooltip();
@@ -152,6 +152,10 @@ $(function() {
 //             });
 //         });
 //     }
+
+    $(document).on('click', '.dropdown-menu', function(e) {
+      e.stopPropagation()
+    })
 
     $(".pages-menu__close").on('click', () =>{
         $(".pages-menu").empty();
