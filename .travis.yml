@@ -5,6 +5,5 @@ before_install:
   - npm install
 before_script:
 script:
-  - gulp build
   - gulp deploy
 sudo: false

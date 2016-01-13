@@ -12,6 +12,7 @@
   },
   "scripts": {
     "preinstall": "npm install -g bower && bower install && npm install -g gulp",
+    "postinstall": "npm run build",
     "build": "rm -r app && gulp build"
   },
   "author": "vaeum",
