@@ -39,6 +39,8 @@ $(function() {
         clearMobileClasses();
     })
 
+    $(".login-form").clone().appendTo(".off-canvas.position-right");
+
     //hideShowPassword
     $('.hideShowPassword').hidePassword(true);
 

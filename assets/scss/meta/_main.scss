@@ -1098,21 +1098,6 @@ footer.main{
   &__text{
     color: #6c707c;
     margin-bottom: 5px;
-    &.red{
-      // color: #ff0000;
-    }
-    &.blue{
-      // color: rgb(0, 0, 255);
-    }
-    &.green{
-      // color: rgb(0, 128, 0);
-    }
-    &.light-blue{
-      // color: rgb(36, 139, 255);
-    }
-    &.orange{
-      // color: rgb(255, 120, 0);
-    }
   }
   &__label{
     color: $color-orange;
@@ -1160,58 +1145,6 @@ footer.main{
   }
   &__media{
     margin-bottom: 15px;
-  }
-}
-
-.profile-info{
-  &__avatar{
-    margin-bottom: 42px;
-    @media(max-width: 992px){
-      display: table;
-      margin: 0 auto 20px;
-    }
-  }
-  &__title{
-    text-align: center;
-    font-size: 20px;
-    font-family: $roboto;
-    padding: 1px;
-    margin-bottom: 20px;
-    @media(max-width: 992px){
-      margin-bottom: 20px;
-      margin-top: 20px;
-    }
-    &.puple{
-      background: #5669B7;
-    }
-    &.green{
-      background: #399f53;
-    }
-    &.orange{
-      background: $color-orange;
-    }
-  }
-  &__icon{
-    margin-right: 10px;
-  }
-  &__list{
-    @media(max-width: 992px){
-      margin-bottom: 20px;
-    }
-  }
-  &__item{
-    margin-bottom: 4px;
-  }
-  &__fun-button{
-    margin-bottom: 16px;
-    &:last-child{
-      @media(min-width: 992px){
-        margin-bottom: 0;
-      }
-    }
-    &.mb0{
-      // margin-bottom: 0 !important;
-    }
   }
 }
 

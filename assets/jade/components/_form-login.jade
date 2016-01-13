@@ -1,4 +1,4 @@
-.container-fluid(block="login-form")
+//-.container-fluid(block="login-form")
   .row(elem="row")
     .col-md-4(elem="col")
       span(elem="title").text-center.db Вход на сайт
@@ -31,3 +31,46 @@
       span(elem="title").text-center.db Я новый пользователь
       span(elem="description").db Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.
       a(href="#" elem="register").btn.btn-red.fluid.mb0 Зарегистрироваться
+
+.container-fluid(block="profile-info")
+  .row-responsive(elem="row")
+    .col-md-2(elem="col")
+      img(src="http://placehold.it/160", alt="avatar" elem="avatar").img-responsive
+      a(href="#").btn.btn-red.fluid Админпанель
+    .col-md-4(elem="col")
+      span(elem="title").db.puple Информация
+      ul(elem="list").lsn.pl0.mb0
+        li(elem="item"): <span elem="icon" class="icon-graduation-cap"></span> Ник: Админ
+        li(elem="item"): <span elem="icon" class="icon-user"></span> Имя: Саня
+        li(elem="item"): <span elem="icon" class="icon-venus-mars"></span> Пол: мужской
+        li(elem="item"): <span elem="icon" class="icon-location"></span> Город: Краснодар
+        li(elem="item"): <span elem="icon" class="icon-calendar"></span> Дата рождения: 02.01.2015 (Козерог)
+        li(elem="item"): <span elem="icon" class="icon-users-1"></span> Группа: Администраторы
+        li(elem="item"): <span elem="icon" class="icon-comment"></span> Публикаций: 129 [ <a href="#" class="white-link">Смотреть</a> ]
+        li(elem="item"): <span elem="icon" class="icon-comment-empty"></span> Комментариев: 13 [ <a href="#" class="white-link">Смотреть</a> ]
+    .col-md-2(elem="col")
+      span(elem="title").db.green Контакты
+      ul(elem="list").lsn.pl0.mb0
+        li(elem="item"): <span elem="icon" class="icon-vk"></span> <a href="#" class="white-link">Вконтакте</a>
+        li(elem="item"): <span elem="icon" class="icon-odnoklassniki"></span> <a href="#" class="white-link">Одноклассники</a>
+        li(elem="item"): <span elem="icon" class="icon-gplus"></span> <a href="#" class="white-link">Google +</a>
+        li(elem="item"): <span elem="icon" class="icon-facebook"></span> <a href="#" class="white-link">Facebook</a>
+        li(elem="item"): <span elem="icon" class="icon-twitter"></span> <a href="#" class="white-link">Twitter</a>
+        li(elem="item"): <span elem="icon" class="icon-skype"></span> <a href="#" class="white-link">Skype</a>
+        li(elem="item"): <span elem="icon" class="icon-paper-plane"></span> <a href="#" class="white-link">Telegram</a>
+        li(elem="item"): <span elem="icon" class="icon-mail-1"></span> <a href="#" class="white-link">Почта</a>
+    .col-md-4(elem="col")
+      span(elem="title").db.orange Панель управления
+      .row-responsive(elem="second-row")
+        .col-md-6(elem="second-col")
+          a(href="#" elem="fun-button").btn.btn-red.fluid Добавить новость
+          a(href="#" elem="fun-button").btn.btn-red.fluid Мой профиль
+          a(href="#" elem="fun-button").btn.btn-red.fluid Сообщения (0 | 0)
+          a(href="#" elem="fun-button").btn.btn-red.fluid Мои закладки
+        .col-md-6(elem="second-col")
+          a(href="#" elem="fun-button").btn.btn-red.fluid Все комментарии
+          a(href="#" elem="fun-button").btn.btn-red.fluid Новые материалы
+          a(href="#" elem="fun-button").btn.btn-red.fluid Статистика
+          a(href="#" elem="fun-button").btn.btn-red.fluid Выход
+
+

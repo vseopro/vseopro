@@ -165,14 +165,15 @@ nav.main{
 }
 
 .login-form,
+.profile-info,
 .search-form{
   background: rgba(25,38,55,.8);
   color: white(1);
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .login-form{
-  padding-top: 15px;
-  padding-bottom: 15px;
   &__login,
   &__password{
     border: 2px #6c707c solid;
@@ -250,7 +251,6 @@ nav.main{
 }
 
 .search-form{
-  padding: 15px;
   &__form{
 
   }
@@ -290,6 +290,58 @@ nav.main{
     }
     @media(min-width:992px){
       background: transparent;
+    }
+  }
+}
+
+.profile-info{
+  &__avatar{
+    margin-bottom: 42px;
+    @media(max-width: 992px){
+      display: table;
+      margin: 0 auto 20px;
+    }
+  }
+  &__title{
+    text-align: center;
+    font-size: 20px;
+    font-family: $roboto;
+    padding: 1px;
+    margin-bottom: 20px;
+    @media(max-width: 992px){
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    &.puple{
+      background: #5669B7;
+    }
+    &.green{
+      background: #399f53;
+    }
+    &.orange{
+      background: $color-orange;
+    }
+  }
+  &__icon{
+    margin-right: 10px;
+  }
+  &__list{
+    @media(max-width: 992px){
+      margin-bottom: 20px;
+    }
+  }
+  &__item{
+    margin-bottom: 4px;
+  }
+  &__fun-button{
+    margin-bottom: 16px;
+    &:last-child{
+      @media(min-width: 992px){
+        margin-bottom: 0;
+      }
+    }
+    &.mb0{
+      // margin-bottom: 0 !important;
     }
   }
 }
