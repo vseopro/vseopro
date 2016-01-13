@@ -226,10 +226,20 @@ gulp.task('build', function() {
     );
 });
 
-gulp.task('default', function() {
+gulp.task('server', function() {
     runSequence(
         'browserSync'
     );
 
     addWatchers();
 });
+
+gulp.task('default', function() {
+    runSequence(
+        'build',
+        'server'
+    );
+
+    addWatchers();
+});
+
