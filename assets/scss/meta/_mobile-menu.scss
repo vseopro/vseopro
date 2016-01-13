@@ -14,8 +14,7 @@
 
 .off-canvas-content {
     min-height: 100%;
-    background: #fefefe;
-    transition: -webkit-transform 0.5s ease;
+    // background: #fefefe;
     transition: transform 0.5s ease;
     backface-visibility: hidden;
     z-index: 1;
