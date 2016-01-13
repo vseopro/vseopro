@@ -122,17 +122,6 @@ p{
   }
 }
 
-.mobile-overlay{
-  position: absolute 0;
-  z-index: 1;
-  box-shadow: 0 0px 6px 2px rgba(0, 0, 0, 0.32);
-}
-
-.top-line-decorator{
-  // background: url(../img/img_top_line_decorator.jpg) top center repeat-Y;
-  // height: 3px;
-}
-
 .text-light{
   // font-family: $light;
 }
@@ -159,7 +148,7 @@ blockquote{
 
 .container{
   // outline: 1px solid red;
-  @media screen and(min-width: 992px) and (max-width: 1200px){
+  @media screen and (min-width: 992px) and (max-width: 1200px){
     width: 100%;
   }
 }
@@ -178,7 +167,6 @@ blockquote{
     }
   }
   &-red{
-    // width: 100%;
     background: $color-red;
     &:hover{
       background: darken($color-red, 10%);

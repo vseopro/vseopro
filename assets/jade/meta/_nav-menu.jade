@@ -1,87 +1,39 @@
 .affix-wrap
   .navbar.yamm.navbar-vseopro.nav-afix(data-spy="affix" data-offset-top="135" data-offset-bottom="200")
     .container
-      .hidden-md.hidden-lg.pull-left
-        button(type="button" data-show="left-menu").open-menu__button.no-outline.no-select.pull-left
-          span.dib
+      .hidden-md.hidden-lg.pull-left(block="open-menu")
+        button(type="button" data-show="left-menu" elem="button").no-outline.no-select.pull-left
+          span.dib(elem="dib")
             -for(var i = 0; i < 3; i++)
-              span.open-menu__span
-          span.nav-main__button-label.text-white Меню
+              span(elem="span")
+          span(elem="right-label").text-white Меню
 
-      .hidden-md.hidden-lg.pull-right
-        button(type="button" data-show="right-menu").open-menu__button.no-outline.no-select.pull-right
-          span.login-form__button-label.text-white Вход
-          span.dib
+      .hidden-md.hidden-lg.pull-right(block="open-menu")
+        button(type="button" data-show="right-menu" elem="button").no-outline.no-select.pull-right
+          span(elem="left-label").text-white Вход
+          span.dib(elem="dib")
             -for(var i = 0; i < 3; i++)
-              span.open-menu__span
+              span(elem="span")
 
       .visible-md.visible-lg
         ul.nav.navbar-nav
-          // Classic dropdown
           li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown')
-              | Classic
-              b.caret
+            a.dropdown-toggle(href='#', data-toggle='dropdown') Classic
             ul.dropdown-menu(role='menu')
-              li
-                a(tabindex='-1', href='#')  Action
-              li
-                a(tabindex='-1', href='#')  Another action
-              li
-                a(tabindex='-1', href='#')  Something else here
-              li.divider
-              li
-                a(tabindex='-1', href='#')  Separated link
+              li: a(tabindex='-1', href='#')  Action
+              li: a(tabindex='-1', href='#')  Another action
+              li: a(tabindex='-1', href='#')  Something else here
 
         ul.nav.navbar-nav.pull-right
-          // Pictures
           li.dropdown.yamm-fw
             a.dropdown-toggle(href='#', data-toggle='dropdown')
               span.icon-search
             ul.dropdown-menu
               li
-                div(block="search-form")
-                  form(elem="form").pr
-                    span(elem="ico").icon-search
-                    input(type='search' placeholder="Введите текст для поиска" elem="field").fluid.no-outline
-                    button(type="submit" elem="submit").no-outline
-                      span.icon-right
+                include ../components/_form-search
 
           li.dropdown.yamm-fw
             a.dropdown-toggle(href='#', data-toggle='dropdown') <span class="icon-login"></span> Вход
             ul.dropdown-menu
               li
-                .login-form
-                  .container-fluid
-                    .row
-                      .col-md-4.login-form__col
-                        span.login-form__title.text-center.db Вход на сайт
-                        form
-                          input(type="text" placeholder="Логин или email").fluid.login-form__login.no-outline
-                          input(type="password" placeholder="Пароль").fluid.login-form__password.no-outline.hideShowPassword
-                          .row
-                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
-                              button(type="submit").btn.btn-orange.fluid.login-form__btn.mb0 Войти
-                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
-                              a(href="http://google.com").login-form__restore.text-underline.db Восстановить пароль
-
-                      .col-md-4.login-form__col
-                        span.login-form__title.text-center.db Войти через
-                        .row
-                          .col-md-6.col-lg-6
-                            a(href="#").login-form__btn.btn.btn-vk.fluid Вконтакте
-                          .col-md-6.col-lg-6
-                            a(href="#").login-form__btn.btn.btn-google.fluid Google
-                          .col-md-6.col-lg-6
-                            a(href="#").login-form__btn.btn.btn-odnoklassniki.fluid Одноклассники
-                          .col-md-6.col-lg-6
-                            a(href="#").login-form__btn.btn.btn-mail.fluid Mail.ru
-                          .col-md-6.col-lg-6
-                            a(href="#").login-form__btn.btn.btn-facebook.fluid.mb0 Facebook
-                          .col-md-6.col-lg-6
-                            a(href="#").login-form__btn.btn.btn-yandex.fluid.mb0 Яндекс
-
-                      .col-md-4.login-form__col
-                        span.login-form__title.text-center.db Я новый пользователь
-                        p.login-form__description Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.
-                        a(href="#").btn.btn-red.login-form__register.fluid.mb0 Зарегистрироваться
+                include ../components/_form-login

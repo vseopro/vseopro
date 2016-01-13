@@ -1,0 +1,33 @@
+.container-fluid(block="login-form")
+  .row(elem="row")
+    .col-md-4(elem="col")
+      span(elem="title").text-center.db Вход на сайт
+      form(elem="form")
+        input(type="text" placeholder="Логин или email" elem="login").fluid.no-outline
+        input(type="password" placeholder="Пароль" elem="password").fluid.no-outline.hideShowPassword
+        .row(elem="second-row")
+          .col-md-6.col-lg-6(elem="second-col")
+            button(type="submit" elem="btn").btn.btn-orange.fluid.mb0 Войти
+          .col-md-6.col-lg-6(elem="second-col")
+            a(href="http://google.com" elem="restore").text-underline.db Восстановить пароль
+
+    .col-md-4(elem="col")
+      span(elem="title").text-center.db Войти через
+      .row(elem="second-row")
+        .col-md-6.col-lg-6(elem="second-col")
+          a(href="#" elem="btn").btn.fluid.btn-vk Вконтакте
+        .col-md-6.col-lg-6(elem="second-col")
+          a(href="#" elem="btn").btn.fluid.btn-google Google
+        .col-md-6.col-lg-6(elem="second-col")
+          a(href="#" elem="btn").btn.fluid.btn-odnoklassniki Одноклассники
+        .col-md-6.col-lg-6(elem="second-col")
+          a(href="#" elem="btn").btn.fluid.btn-mail Mail.ru
+        .col-md-6.col-lg-6(elem="second-col")
+          a(href="#" elem="btn").btn.fluid.btn-facebook.mb0 Facebook
+        .col-md-6.col-lg-6(elem="second-col")
+          a(href="#" elem="btn").btn.fluid.btn-yandex.mb0 Яндекс
+
+    .col-md-4(elem="col")
+      span(elem="title").text-center.db Я новый пользователь
+      span(elem="description").db Чтобы полноценно пользоваться нашим сайтом, вам необходимо зарегистрироваться. Это просто и займет всего одну минуту.
+      a(href="#" elem="register").btn.btn-red.fluid.mb0 Зарегистрироваться

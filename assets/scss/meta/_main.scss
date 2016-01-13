@@ -180,43 +180,33 @@
   }
 }
 
-.open-menu__button{
-  position: relative;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  background: white(0);
-  border: 1px solid white(0);
-}
-
-.open-menu__span{
-  background: white(1);
-  display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-  margin-bottom: 3px;
-  &:last-child{
-    margin-bottom: 0;
+.open-menu{
+  &__button{
+    position: relative;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background: white(0);
+    border: 1px solid white(0);
+  }
+  &__span{
+    background: white(1);
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    margin-bottom: 3px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__right-label{
+    margin-left: 15px;
+  }
+  &__left-label{
+    margin-right: 15px;
   }
 }
-
-.nav-main__button-label{
-  // float: left;
-  // margin-top: 15px;
-  margin-left: 15px;
-}
-
-.login-form__button-label{
-  margin-right: 15px;
-  // float: right;
-  // margin-top: 15px;
-  // float: left;
-  // margin-top: -4px;
-  // margin-right: 15px;
-}
-
-/* [[section: header]] */
 
 header.main{
   padding-bottom: 28px;
@@ -253,203 +243,6 @@ header.main{
       margin-bottom: 20px;
     }
   }
-}
-
-
-/* [[section: nav-search]] */
-
-.nav-search{
-  float: right;
-  @media(max-width: 992px){
-    display: none;
-  }
-  .dropdown{
-    float: left;
-    // position: static !important;
-    position: static;
-  }
-  .dropdown-menu{
-    z-index: 1;
-    border: none;
-    margin: -1px 0 0 0;
-    border-radius: 0;
-    display: block !important;
-    @extend %hover-transform-before;
-  }
-  .open{
-    .dropdown-menu{
-      @extend %hover-transform-after;
-    }
-    .nav-search__find,
-    .nav-search__login{
-      border-color: $color-orange;
-      color: $color-orange;
-    }
-  }
-  &__find,
-  &__login{
-    color: white(1);
-    border-top: 2px transparent solid;
-    &:only-hover{
-      color: $color-orange;
-      border-color: $color-orange;
-    }
-    &:focus{
-     color: #fff;
-     border-color: white(0);
-    }
-  }
-  &__find{
-    padding: 11px 4px 9px;
-    font-size: 20px;
-  }
-  &__login{
-    padding: 13px 20px 14px;
-    font-size: 15px;
-  }
-}
-
-.login-form,
-.search-form{
-  background: rgba(25,38,55,.8);
-  // position: absolute;
-  // top: 100%;
-  left: 0px;
-  right: 0px;
-  @media(min-width: 992px){
-    left: 15px;
-    right: 15px;
-  }
-}
-
-.login-form{
-  color: white(1);
-  padding: 15px 0;
-  &__login,
-  &__password{
-    border: 2px #6c707c solid;
-    background: transparent;
-    height: 46px;
-    padding-left: 20px;
-    margin-bottom: 20px;
-    color: #fff;
-    &::placeholder {
-      color: #fff;
-    }
-    &:--enter{
-      border-color: white(1);
-    }
-  }
-  &__login{
-
-  }
-  &__password{
-
-  }
-  &__description{
-    // font-family: $light;
-  }
-  &__col{
-    @media(min-width: 992px){
-      width: 33.333333%;
-      height: 100%;
-      display: table-cell;
-      vertical-align: top;
-      position: relative;
-      float: none;
-    }
-  }
-  &__title{
-    margin-bottom: 25px;
-    font-size: 22px;
-    font-family: $bold;
-  }
-  &__register{
-    margin-bottom: 20px;
-    padding: 12px;
-    &.mb0{
-      margin-bottom: 0 !important;
-    }
-    @media(min-width: 992px){
-      position: absolute;
-      bottom: 0;
-      right: 15px;
-      left: 15px;
-      width: auto;
-    }
-  }
-  &__btn{
-    margin-bottom: 20px;
-    padding: 12px;
-    &.mb0{
-      @media(min-width: 992px){
-        margin-bottom: 0 !important;
-      }
-    }
-  }
-  &__restore{
-    margin-top: 11px;
-    color: $color-red;
-    &:hover{
-      color: $color-red;
-    }
-    @media(max-width: 992px){
-      margin-top: 0;
-      text-align: center;
-      margin-bottom: 11px;
-    }
-  }
-}
-
-.search-form{
-  padding: 10px 15px;
-  &__form{
-
-  }
-  &__ico{
-    color: white(1);
-    font-size: 20px;
-    position: absolute;
-    top: 6px;
-    left: 10px;
-  }
-  &__field{
-    height: 40px;
-    background: transparent;
-    border: 1px $color-orange solid;
-    color: white(1);
-    padding-left: 40px;
-    margin-bottom: 0;
-    &::placeholder {
-      color: white(1);
-    }
-    &::-ms-clear {
-      display: none;
-    }
-  }
-  &__submit{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #192637;
-    // border-width: 0 0 0 1px;
-    border: 1px $color-orange solid;
-    color: white(1);
-    padding: 0 30px;
-    &:hover{
-      background: $color-orange;
-    }
-    @media(min-width:992px){
-      background: transparent;
-    }
-  }
-}
-
-
-.nav-main__button-label,
-.login-form__button-label{
-  // color: white(1);
 }
 
 footer.main{
