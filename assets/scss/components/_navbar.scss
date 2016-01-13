@@ -1,0 +1,160 @@
+.navbar-vseopro{
+  background: #192637;
+}
+
+nav.main{
+  background: $color-black;
+}
+
+.main-nav{
+  > ul {
+    > li{
+      > a {
+        position: relative;
+        &.has-menu{
+          &:after, &:before{
+            position: absolute;
+            content:"";
+            background: white(1);
+            height: 2px;
+            width: 7px;
+            top:50%;
+            // margin-top: -3px;
+            right: 8px;
+            transition: all 0.17s ease-in-out;
+          }
+          &:before{
+            transform: rotate(45deg);
+          }
+          &:after{
+            transform: rotate(-45deg);
+            right: 4px;
+          }
+        }
+      }
+      &:hover{
+        > a{
+          color: $color-orange;
+          border-color: $color-orange;
+          &.has-menu{
+            &:after, &:before{
+              transition: all 0.17s ease-in-out;
+              background: $color-orange;
+            }
+          }
+        }
+      }
+      > ul {
+        a{
+          background: rgba(25, 38, 55, .8);
+          padding: 14px 25px 14px 15px;
+          color: #fff;
+          border-bottom: 1px solid #6c707c;
+        }
+      }
+      > ul{
+        > li{
+          &:hover{
+            > a{
+              color: $color-orange;
+              &.has-menu{
+                &::after, &::before{
+                  transition: all 0.17s ease-in-out;
+                  background: $color-orange;
+                }
+              }
+            }
+          }
+          > a{
+            &.has-menu{
+              position: relative;
+              &::after, &::before{
+                position: absolute;
+                content:"";
+                background: white(1);
+                height: 2px;
+                width: 7px;
+                top:50%;
+                right: 10px;
+                margin-top: -2px;
+                transition: all 0.17s ease-in-out;
+              }
+              &::before{
+                transform: rotate(45deg);
+              }
+              &::after{
+                transform: rotate(-45deg);
+                right: 10px;
+                margin-top: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    // background: #1bc2a2;
+    li{
+      position: relative;
+      float: left;
+      // background: #1bc2a2;
+      a {
+        border-top: 2px solid transparent;
+        font-size: 15px;
+        padding: 14px 18px 13px 15px;
+        color: #fff;
+        position: relative;
+
+        display: block;
+        // padding: 1em;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #fff;
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+  }
+  li {
+    ul {
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .3);
+      position: absolute;
+      z-index: 1;
+      @extend %hover-transform-before;
+    }
+  }
+  li:hover > ul {
+    @extend %hover-transform-after;
+  }
+  li:hover li { float: none; }
+  li:hover a {}
+  ul ul ul {
+    left: 100%;
+    top: 0;
+  }
+}
+
+.affix-wrap{
+  height: 50px;
+  margin-bottom: 30px;
+  background: $color-black;
+}
+
+.nav-afix{
+  &.affix{
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    @media(max-width: 992px){
+      position: static;
+      // position: static !important;
+    }
+  }
+}

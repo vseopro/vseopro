@@ -7,7 +7,8 @@ html(lang="ru")
 
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1 user-scalable=no maximum-scale=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    //- meta(name="viewport", content="width=device-width, initial-scale=1 user-scalable=no maximum-scale=1")
 
     meta(name="keywords", content="")
     meta(name="author", content="")
@@ -62,23 +63,30 @@ html(lang="ru")
     block style
 
   body
-    block debug
-      include _debug
-      include _pages_menu
+    .off-canvas-wrapper
+      .off-canvas-wrapper-inner
+        .off-canvas.position-left
+          include ../components/_menu-mobile-left
 
-    .mobile-overlay.dn.cur
-    //- .top-line-decorator
+        .off-canvas-content
+          //- block debug
+            include _debug
+            include _pages_menu
 
-    block header
-      include _header
+          block header
+            include _header
 
-    block nav-menu
-      include _nav-menu
+          block nav-menu
+            include _nav-menu
 
-    block content
+          block content
 
-    block footer
-      include _footer
+          block footer
+            include _footer
+
+          .js-off-canvas-exit
+        .off-canvas.position-right
+          include ../components/_menu-mobile-right
 
     block modal
 

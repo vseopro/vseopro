@@ -1,16 +1,43 @@
+const istouch = ( !!('ontouchstart' in window)) ? 'touchstart' : 'click';
+
 $(function() {
-    $('.open-menu__button').on('click', function() {
-        var targetAction = $(this).data('show');
+
+    let clearMobileClasses = function () {
+        $(".off-canvas-wrapper-inner")
+            .removeClass("is-off-canvas-open")
+            .removeClass("is-open-right")
+            .removeClass("is-open-left")
+
+        $(".off-canvas.position-left")
+            .removeClass("is-open")
+
+        $(".off-canvas.position-right")
+            .removeClass("is-open")
+    }
+
+    $('.open-menu__button').on(istouch, function() {
+        clearMobileClasses();
+        let targetAction = $(this).data('show');
+        let offCanvasWrapperInner = $(".off-canvas-wrapper-inner");
+
         if (targetAction === 'left-menu') {
-            $('html').toggleClass('open-left-mobile-menu');
+            offCanvasWrapperInner
+                .addClass("is-off-canvas-open")
+                .addClass("is-open-left")
+            $(".off-canvas.position-left")
+                .addClass('is-open')
         } else {
-            $('html').toggleClass('open-right-mobile-menu');
+            offCanvasWrapperInner
+                .addClass("is-off-canvas-open")
+                .addClass("is-open-right")
+            $(".off-canvas.position-right")
+                .addClass('is-open')
         }
     });
 
-    $('.mobile-overlay').on('click', () => {
-        $('html').attr("class", '');
-    });
+    $(".js-off-canvas-exit").on(istouch, function () {
+        clearMobileClasses();
+    })
 
     //hideShowPassword
     $('.hideShowPassword').hidePassword(true);
@@ -61,38 +88,6 @@ $(function() {
         };
     })
 });
-
-
-// $(document).on("ready", function () {
-//     $(".sidebar").children().css({"margin-bottom": "30px"});
-
-//     function setMargin() {
-//         var sidebar = $(".sidebar").outerHeight();
-//         var content = $(".grand-content").outerHeight();
-//         var childrenCoount = $(".sidebar").children().length;
-
-//         if (content > sidebar) {
-//             var childrenCoount = $(".sidebar").children().length;
-//             var targetElement = $(".sidebar").children().splice(1, childrenCoount).splice(0, childrenCoount - 2);
-
-//             targetElement.map(function (item) {
-//                 $(item).css({
-//                     "margin-bottom": (((content - sidebar)/targetElement.length) + 30) + "px"
-//                 })
-//             })
-//         };
-//     }
-
-//     if ($(window).width() > 992) {
-//         setMargin();
-//     };
-
-//     $(window).resize(function () {
-//         if ($(window).width() > 992) {
-//             setMargin();
-//         };
-//     })
-// })
 
 // $(function() {
 //     $(window).on('scroll', (e) => {
@@ -153,7 +148,7 @@ $(function() {
 //         });
 //     }
 
-    $(document).on('click', '.dropdown-menu', function(e) {
+    $(document).on('click', '.yamm .dropdown-menu', (e) => {
       e.stopPropagation()
     })
 
