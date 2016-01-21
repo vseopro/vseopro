@@ -12,7 +12,7 @@
   },
   "scripts": {
     "preinstall": "npm install -g bower && bower install && npm install -g gulp",
-    "build": "rm -r app && gulp build"
+    "build": "rm -rf app && gulp build && gulp"
   },
   "author": "vaeum",
   "license": "ISC",

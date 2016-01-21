@@ -72,7 +72,7 @@ var PERFECTIONIST_CONFIG = {
 var BOWER_MAIN_FILES_CONFIG = {
     includeDev: true,
     paths:{
-        bowerDirectory: './bower_components',
+        bowerDirectory: './assets/bower',
         bowerJson: './bower.json'
     }
 }
