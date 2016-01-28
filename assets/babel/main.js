@@ -129,14 +129,38 @@ $(function() {
 //         });
 //     }
 
-    // $(document).on(istouch, '.yamm .dropdown-menu', (e) => {
-    //     e.stopPropagation()
-    // })
+    $(document).on(istouch, '.yamm .dropdown-menu', (e) => {
+        e.stopPropagation()
+    })
 
     $(".pages-menu__close").on('click', () =>{
         $(".pages-menu").empty();
     })
 });
+
+$(() => {
+    var collapserInit = () =>{
+        let target = $(".truncate-text");
+
+        target.map((val, key) => {
+            // console.log(val);
+            let lineCount = $(key).data("line");
+
+            $(key).collapser({
+                mode: 'lines',
+                truncate: lineCount,
+                showText: ''
+            });
+            // console.log(lineCount);
+        });
+    }
+
+    // $('.truncate-text')
+    if ($(".truncate-text").length) {
+        collapserInit();
+    };
+});
+
 
 // $(() => {
 

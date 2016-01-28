@@ -17,7 +17,8 @@ block content
                 img(src="img/img_important_news.png" alt="tab news image" elem="img").img-responsive
               .col-md-6(elem="col")
                 h2.text-bold.db(elem="title")
-                  a(href="#" elem="link").dark-blue-link #{title[Math.floor(Math.random() * ((title.length-1) - 0 + 1)) + 0]}
+                  a(href="#" elem="link").db.dark-blue-link
+                    .truncate-text(data-line="2") #{title[Math.floor(Math.random() * ((title.length-1) - 0 + 1)) + 0]}
                 include components/_news-metadata
                 p(elem="description") Дная затоплен служба Яндекс. ываыдвшао,  Рефераты предназначена  затоплен служба затоплен служба  ..фывфывфыв фывфы. Рефераты предназначена  затоплен Яндекспре дназначена  затоплен Яндекс. <a href="#" class="link">Читать далее...</a>
                 a(href="#" role="button" elem="button").btn.btn-orange.db Читать подробнее

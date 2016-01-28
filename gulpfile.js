@@ -195,6 +195,12 @@ gulp.task('copyMiscFiles', function () {
         .pipe(gulp.dest('app/'))
 })
 
+gulp.task('copyLibsFiles', function () {
+    return gulp.src(['assets/lib/**'])
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'))
+})
+
 gulp.task('copyFontFiles', function () {
     return gulp.src(['assets/font/**'])
         .pipe(gulp.dest('app/font'))
@@ -218,7 +224,7 @@ gulp.task('buildBowerJS', function () {
 })
 
 gulp.task('static', function () {
-    runSequence('copyMiscFiles', 'copyFontFiles', 'buildBowerCSS', 'buildBowerJS');
+    runSequence('copyMiscFiles', 'copyFontFiles', 'buildBowerCSS', 'buildBowerJS', 'copyLibsFiles');
 })
 
 gulp.task('watch', function(){
