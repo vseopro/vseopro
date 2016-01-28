@@ -1,25 +1,37 @@
 var gulp           = require('gulp');
+var del            = require('del');
+var mainBowerFiles = require('main-bower-files');
+var gulpFilter     = require('gulp-filter');
+var runSequence    = require('run-sequence');
+
+//html compile
 var jade           = require('gulp-jade');
 var prettify       = require('gulp-prettify');
+var posthtml       = require('gulp-posthtml');
+
+//css compile
 var sass           = require('gulp-sass');
 var csso           = require('gulp-csso');
 var perfectionist  = require('perfectionist');
 var postcss        = require('gulp-postcss');
-var rucksack       = require('rucksack-css');
 var pxtorem        = require('postcss-pxtorem');
 var selector       = require('postcss-custom-selectors');
 var mqpacker       = require("css-mqpacker");
+var autoprefixer   = require('autoprefixer');
+
+//js compile
 var babel          = require('gulp-babel');
+var uglify         = require('gulp-uglify');
+
+//img compile
+var imagemin       = require('gulp-imagemin');
+
+//deploy
+var ftp            = require('vinyl-ftp');
+
+//browserSync
 var browserSync    = require('browser-sync');
 var reload         = browserSync.reload;
-var imagemin       = require('gulp-imagemin');
-var posthtml       = require('gulp-posthtml');
-var ftp            = require('vinyl-ftp');
-var clean          = require('gulp-clean');
-var uglify         = require('gulp-uglify');
-var mainBowerFiles = require('main-bower-files');
-var gulpFilter     = require('gulp-filter');
-var runSequence    = require('run-sequence');
 
 var postCSSFocus = function (css) {
     css.walkRules(function (rule) {
@@ -54,10 +66,7 @@ var PROCESSORS = [
         root_value: 14,
         selector_black_list: ['html']
     }),
-    rucksack({
-        fallbacks: false,
-        autoprefixer: true
-    }),
+    autoprefixer({ browsers: ['last 2 versions'] }),
     mqpacker,
     selector,
     postCSSFocus
@@ -77,18 +86,18 @@ var BOWER_MAIN_FILES_CONFIG = {
     }
 }
 
-gulp.task('APP_DIR_CLEAR', function () {
-    gulp.src('app').pipe(clean())
-})
-
 gulp.task('imagemin_clear', function () {
-    gulp.src('app/img').pipe(clean())
+    return del(['app/img/']);
 })
 
-gulp.task('imagemin', ["imagemin_clear"], function () {
+gulp.task('imagemin_build', function () {
     gulp.src('./assets/images/**')
         .pipe(imagemin({progressive: true}))
         .pipe(gulp.dest('app/img/'));
+});
+
+gulp.task('imagemin', function() {
+    runSequence('imagemin_clear', 'imagemin_build');
 });
 
 gulp.task('browserSync', function () {
@@ -181,26 +190,38 @@ gulp.task('deploy', function () {
         .pipe( conn.dest( '/' ) );
 } );
 
-gulp.task('static', function () {
-    gulp.src(['assets/misc/**'])
+gulp.task('copyMiscFiles', function () {
+    return gulp.src(['assets/misc/**'])
         .pipe(gulp.dest('app/'))
+})
 
-    gulp.src(['assets/libs/**'])
-        .pipe(gulp.dest('app/js'))
-
-    gulp.src(['assets/font/**'])
+gulp.task('copyFontFiles', function () {
+    return gulp.src(['assets/font/**'])
         .pipe(gulp.dest('app/font'))
+})
 
-    var jsFilter = gulpFilter('**/*.js')
+gulp.task('buildBowerCSS', function () {
     var cssFilter = gulpFilter('**/*.css')
+    return gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
+        .pipe(cssFilter)
+        .pipe(csso())
+        .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
+        .pipe(gulp.dest('app/css'))
+})
 
-    gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
+gulp.task('buildBowerJS', function () {
+    var jsFilter = gulpFilter('**/*.js')
+    return gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
         .pipe(jsFilter)
         .pipe(uglify())
         .pipe(gulp.dest('app/js'))
 })
 
-function addWatchers () {
+gulp.task('static', function () {
+    runSequence('copyMiscFiles', 'copyFontFiles', 'buildBowerCSS', 'buildBowerJS');
+})
+
+gulp.task('watch', function(){
     gulp.watch('assets/scss/**/*.scss', ['sass']);
 
     gulp.watch('assets/babel/**/*.js', ['babel']);
@@ -212,21 +233,8 @@ function addWatchers () {
     gulp.watch('assets/misc/**', ['static']);
     gulp.watch('assets/libs/**', ['static']);
     gulp.watch('assets/font/**', ['static']);
-}
-
-gulp.task('build', function() {
-    runSequence(
-        'APP_DIR_CLEAR',
-        'bootstrap',
-        'sass',
-        'imagemin',
-        'babel',
-        'jade',
-        'static'
-    );
-});
+})
 
 gulp.task('default', function() {
-    runSequence('browserSync');
-    addWatchers();
+    runSequence('browserSync', 'watch');
 });
