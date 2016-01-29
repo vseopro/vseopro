@@ -8,19 +8,14 @@
 @import "meta/mobile-menu";
 
 //импорт плагинов
-@import "plugin/formstyler";
-@import "plugin/hideShowPassword";
-@import "plugin/readmoreJS";
-@import "plugin/yamm";
+@import "plugin/*";
 
 //импорт компонентов
-@import "components/article";
-@import "components/navbar";
+@import "components/*";
 
 //импорт базовых стилей и шрифтов
 @import "meta/base";
 @import "meta/main";
-
 @import "meta/debug";
 
 @import "../components/**/*";

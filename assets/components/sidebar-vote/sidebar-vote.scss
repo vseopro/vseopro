@@ -1,0 +1,38 @@
+.sidebar-vote{
+  &__question{
+    margin-bottom: 16px;
+    display: block;
+  }
+  &__form{
+
+  }
+  &__answer{
+    margin-bottom: 16px;
+  }
+  &__checkbox{
+
+  }
+  &__label{
+
+  }
+  &__vote-button{
+    margin-top: 19px;
+    padding: 10px;
+  }
+  &__get-result{
+    margin-top: 19px;
+    padding: 10px;
+  }
+  &__progress-label{
+    margin-bottom: 5px;
+  }
+  &__progress{
+    margin-bottom: 15px;
+  }
+  &__progressbar{
+
+  }
+  &__total-count{
+
+  }
+}

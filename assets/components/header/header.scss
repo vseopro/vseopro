@@ -1,0 +1,22 @@
+header.main{
+  padding-bottom: 28px;
+  padding-top: 22px;
+  background: white(1);
+}
+
+.header-logo{
+  &__link{
+    margin-bottom: 14px;
+  }
+  &__image{
+    height: 50px;
+    max-height: 50px;
+    width: 100%;
+  }
+  &__slogan{
+    font-size: 15px;
+    @media all and (max-width:992px){
+      text-align: center;
+    }
+  }
+}

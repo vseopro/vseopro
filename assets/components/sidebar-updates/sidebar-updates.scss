@@ -1,0 +1,34 @@
+.sidebar-updates{
+  &__ya-color{
+    color: #ff0000;
+    &_big{
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+  &__google-color{
+    color: #0c00ff;
+    &_big{
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+  &__text{
+    color: #192637;
+  }
+  &__time{
+    color: #919191;
+    &-orange{
+      color: $color-orange;
+    }
+  }
+  &__media{
+    margin-top: 5px;
+  }
+  &__media-body{
+    // margin-bottom: 0;
+  }
+  &__media{
+    margin-bottom: 15px;
+  }
+}
