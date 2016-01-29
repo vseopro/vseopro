@@ -1,5 +1,6 @@
 div(block="white-block")
   h5(elem="sidebar-title") <span class="icon-award"></span> Выбор редакции
   .pr(block="editors-choice")
-    img(src="img/img_demo_sidebar_image.jpg" alt="editors choice img" elem="img")
-    span(elem="text") Ай фон на запчасти подходи Ай фон на запчасти подходи Ай фон на запчасти подходи
+    img(src="https://unsplash.it/300/263" alt="editors choice img" elem="img")
+    div(elem="text-wrap")
+      span(elem="text").db #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}

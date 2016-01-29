@@ -598,16 +598,18 @@ footer.main{
     // margin-bottom: 0 !important;
   }
   &__sidebar-title{
-    padding-bottom: 19px;
-    margin-bottom: 15px;
+    padding-bottom: 0px + $base-margin;
+    margin-bottom: 0px + $base-margin;
     color: $color-red;
     border-bottom: 1px #f1f1f1 solid;
+    line-height: 0px + $base-line-height;
     font-size: 18px;
     font-family: $roboto;
   }
   &__title{
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    padding-bottom: 0px + $base-margin;
+    margin-bottom: 0px + $base-margin;
+    line-height: 0px + $base-line-height;
     color: $color-orange;
     border-bottom: 1px #f1f1f1 solid;
     font-size: 24px;
@@ -654,34 +656,6 @@ footer.main{
       color: #192637;
       margin-left: 5px;
     }
-  }
-}
-
-.editors-choice{
-  overflow: hidden;
-  &:hover{
-    .editors-choice__text{
-      // transition: all 0.5s ease;
-      bottom: 0;
-    }
-  }
-  &__img{
-      @extend %fluid;
-    // width: 100%;
-    // margin-top: 14px;
-  }
-  &__text{
-    transition: all 0.5s ease;
-    z-index: 1;
-    padding: 14px 20px;
-    height: 100px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -100px;
-    color: #192637;
-    background: white(.7);
-    font-size: 16px;
   }
 }
 

@@ -4,7 +4,7 @@ div(block="white-block")
     -for(var i = 0; i < 10; i++)
       .row-mini(elem="item")
         .col-xs-4(elem="col")
-          img(src="http://loremflickr.com/85/80/all" alt="img sidebar comment avatar" elem="avatar").img-responsive
+          img(src="https://unsplash.it/85/80" alt="img sidebar comment avatar" elem="avatar").img-responsive
         .col-xs-8(elem="col")
           span(elem="autor").db.text-overflow <strong elem="bold">Написал(а):</strong> <a href="#" class="link" elem="link">#{users[Math.floor(Math.random() * ((users.length - 1) - 0 + 1)) + 0]}</a>
           span(elem="time").db <strong elem="bold">Дата:</strong> Вчера в #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}

@@ -1,7 +1,7 @@
 .news-important{
-  border-bottom: 1px solid #f1f1f1;
-  padding-bottom: 20px;
-  margin-bottom: 11px;
+  // border-bottom: 1px solid #f1f1f1;
+  // padding-bottom: 0px + $base-margin;
+  // margin-bottom: 0px + $base-margin;
   &__row{
     @media screen and (min-width: 992px){
       display: table;

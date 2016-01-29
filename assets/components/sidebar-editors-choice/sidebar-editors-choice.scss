@@ -1,0 +1,30 @@
+.editors-choice{
+  overflow: hidden;
+  &:hover{
+    .editors-choice__text-wrap{
+      // transition: all 0.5s ease;
+      bottom: 0;
+    }
+  }
+  &__img{
+      @extend %fluid;
+    // width: 100%;
+    // margin-top: 14px;
+  }
+  &__text-wrap{
+    transition: all 0.5s ease;
+    z-index: 1;
+    padding: 0px + $base-margin;
+    height: 90px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -90px;
+    color: #192637;
+    background: white(.7);
+    font-size: 16px;
+  }
+  &__text{
+    @include ritm(3, false, false, true);
+  }
+}
