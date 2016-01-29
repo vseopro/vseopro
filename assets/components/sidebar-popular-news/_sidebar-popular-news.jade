@@ -1,0 +1,14 @@
+div(block="white-block")
+  h5(elem="sidebar-title") <span class="icon-network"></span> Популярные новости
+  div(block="popular-news")
+    -for(var i = 0; i < 10; i++)
+      .row-mini(elem="item")
+        .col-xs-4(elem="col")
+          img(src="http://loremflickr.com/85/70/all" alt="popular news image" elem="image")
+        .col-xs-8(elem="col")
+          span(elem="title").db #{popularNews[Math.floor(Math.random() * ((popularNews.length-1) - 0 + 1)) + 0]}
+          .row-mini(elem="metadata")
+            .col-xs-6(elem="col")
+              a(href="#" elem="user").link.text-overflow <span class="icon-user" elem="ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
+            .col-xs-6(elem="col")
+              a(href="#" elem="time").link.text-overflow <span class="icon-calendar" elem="ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}

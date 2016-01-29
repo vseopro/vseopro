@@ -1,0 +1,77 @@
+extends _layout
+
+block content
+  include ../components/news-hot/_news-hot
+
+  .container
+    .row
+      // основные блоки
+      .col-md-8
+
+        div(block="white-block")
+          h4(elem="title") <span class="icon-lightbulb"></span> Важные новости
+          include ../components/news-important/_news-important
+
+        div(block="white-block")
+          h4(elem="title") <span class="icon-bookmark"></span> Последние новости
+          include ../components/news-last/_news-last
+          include ../components/news-pagination/_news-pagination
+
+        include ../components/click-block-content/_click-block-content
+        include ../components/news-tab/_news-tab
+        include ../components/news-tab/_news-tab
+        include ../components/click-block-content/_click-block-content
+        include ../components/news-tab/_news-tab
+
+      // сайдбар
+      .col-xs-4.visible-md.visible-lg
+
+        // Выбор редакции
+        include ../components/sidebar-editors-choice/_sidebar-editors-choice
+
+        // Комментарии
+        include ../components/sidebar-comments/_sidebar-comments
+
+        // Выбор редакции
+        include ../components/sidebar-editors-choice/_sidebar-editors-choice
+
+        // Популярные новости
+        include ../components/sidebar-popular-news/_sidebar-popular-news
+
+        // Опрос на сайте
+        include ../components/sidebar-vote/_sidebar-vote
+
+        // Пользователи онлайн
+        include ../components/sidebar-user-online/_sidebar-user-online
+
+        // Статистика сайта
+        include ../components/sidebar-statistic/_sidebar-statistic
+
+        // Апдейты
+        include ../components/sidebar-updates/_sidebar-updates
+
+        //- География сайта
+        //- include widgets/_sidebar-geography
+
+        //- Панель управления
+        //- include widgets/_sidebar-login-form
+
+        //- Чат пользователей
+        //- include widgets/_sidebar-chat
+
+        //- Подписка
+        //- include widgets/_sidebar-subscribe
+
+        //- Мы рекомендуем
+        //- include widgets/_editors-choice
+
+
+  //блок с приветствием
+  .container
+    div(block="white-block")
+      h4(elem="title") <span class="icon-home"></span> Добро пожаловать на сайт
+      div(block="welcome-block")
+        .read-more-block(data-collapsed-height="80")
+          -for(var i = 0; i < 5; i++)
+            p(elem="text") #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
+

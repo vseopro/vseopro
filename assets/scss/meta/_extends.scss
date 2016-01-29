@@ -24,3 +24,11 @@
 %text-bold{
   font-family: $bold;
 }
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -3,6 +3,7 @@ var del            = require('del');
 var mainBowerFiles = require('main-bower-files');
 var gulpFilter     = require('gulp-filter');
 var runSequence    = require('run-sequence');
+var fs             = require('fs');
 
 //html compile
 var jade           = require('gulp-jade');
@@ -18,6 +19,7 @@ var pxtorem        = require('postcss-pxtorem');
 var selector       = require('postcss-custom-selectors');
 var mqpacker       = require("css-mqpacker");
 var autoprefixer   = require('autoprefixer');
+var bulkSass = require('gulp-sass-glob-import');
 
 //js compile
 var babel          = require('gulp-babel');
@@ -114,9 +116,9 @@ gulp.task('reload', function () {
 });
 
 gulp.task('jade', function () {
-    var data = require('./assets/json/data.json');
+    var data = JSON.parse(fs.readFileSync('./assets/json/data.json', 'utf-8'));
 
-    return gulp.src('./assets/jade/!(_)*.jade')
+    return gulp.src('./assets/pages/!(_)*.jade')
         .pipe(jade({
             pretty: true,
             locals: data,
@@ -148,13 +150,11 @@ gulp.task('bootstrap', function () {
         .pipe(reload({stream: true}))
 });
 
-gulp.task('sass', function () {
+gulp.task('scss', function () {
     gulp.src(['./assets/scss/**/style.scss'])
 
-        .pipe(sass({
-            outputStyle: 'nested',
-            errLogToConsole: true
-        }))
+        .pipe(bulkSass())
+        .pipe(sass({includePaths: ['src/stylesheets']}))
 
         .pipe(postcss(PROCESSORS))
         .pipe(csso())
@@ -228,12 +228,14 @@ gulp.task('static', function () {
 })
 
 gulp.task('watch', function(){
-    gulp.watch('assets/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/scss/**/*.scss', ['scss']);
+    gulp.watch('assets/components/**/*.scss', ['scss']);
 
     gulp.watch('assets/babel/**/*.js', ['babel']);
     gulp.watch('assets/images/**', ['imagemin']);
 
-    gulp.watch('assets/jade/**/*.jade', ['jade']);
+    gulp.watch('assets/components/**/*.jade', ['jade']);
+    gulp.watch('assets/pages/**/*.jade', ['jade']);
     gulp.watch('assets/json/**/*.json', ['jade']);
 
     gulp.watch('assets/misc/**', ['static']);

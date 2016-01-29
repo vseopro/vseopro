@@ -1,0 +1,18 @@
+.site-statistic{
+  &__text{
+    color: #6c707c;
+    margin-bottom: 5px;
+  }
+  &__label{
+    color: $color-orange;
+  }
+  &__count{
+    color: $color-orange;
+  }
+  &__group-title{
+    font-size: 16px;
+    color: #919191;
+    margin-top: 0px + $base-margin;
+    margin-bottom: 0px + $base-margin;
+  }
+}

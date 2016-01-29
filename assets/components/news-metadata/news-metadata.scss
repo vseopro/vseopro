@@ -1,0 +1,28 @@
+.news-metadata{
+  margin-top: 0px + $base-margin;
+  margin-bottom: 0px + $base-margin;
+  @media all and (max-width: 992px){
+    text-align: center;
+  }
+  &__text{
+    // color: $color-orange;
+    font-size: 12px;
+    line-height: 0px + $base-line-height;
+  }
+  &__ico{
+    font-size: 20px;
+    color: #919191;
+    line-height: 0px + $base-line-height;
+    margin-top: -1px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__col{
+    @media all and (max-width: 992px){
+      width: auto;
+      float: none;
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}

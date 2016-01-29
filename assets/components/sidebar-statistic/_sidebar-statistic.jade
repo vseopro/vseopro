@@ -1,21 +1,21 @@
 div(block="white-block")
   h5(elem="sidebar-title") <span class="icon-chart-pie"></span> Статистика сайта
   div(block="site-statistic")
-    .row
-      .col-xs-9
-        p(elem="text") Новостей: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-      .col-xs-3
-        p(elem="label").text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
-    .row
-      .col-xs-9
-        p(elem="text") Комментариев: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-      .col-xs-3
-        p(elem="label").text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
-    .row
-      .col-xs-9
-        p(elem="text") Пользователей: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
-      .col-xs-3
-        p(elem="label").text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
+    .row(elem="row")
+      .col-xs-9(elem="col")
+        span(elem="text").db Новостей: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+      .col-xs-3(elem="col")
+        span(elem="label").db.text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
+    .row(elem="row")
+      .col-xs-9(elem="col")
+        span(elem="text").db Комментариев: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+      .col-xs-3(elem="col")
+        span(elem="label").db.text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
+    .row(elem="row")
+      .col-xs-9(elem="col")
+        span(elem="text").db Пользователей: <span elem="count">#{Math.floor(Math.random() * (15 - 1300) + 1300)}</span>
+      .col-xs-3(elem="col")
+        span(elem="label").db.text-right +#{Math.floor(Math.random() * (15 - 1300) + 1300)}
 
     span.db(elem="group-title") Из них
     span.db(elem="text") <span class="icon-user"></span> Администраторов: <span elem="count">#{Math.floor(Math.random() * (-15 - 1300) + 1300)}</span>

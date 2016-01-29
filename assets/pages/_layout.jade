@@ -66,27 +66,27 @@ html(lang="ru")
     .off-canvas-wrapper
       .off-canvas-wrapper-inner
         .off-canvas.position-left
-          include ../components/_menu-mobile-left
+          include ../components/menu-mobile-left/_menu-mobile-left
 
         .off-canvas-content
-          //- block debug
-            include _debug
-            include _pages_menu
+          block debug
+            include ../components//debug/_debug
+            include ../components//debug/_pages_menu
 
           block header
-            include _header
+            include ../components/header/_header
 
           block nav-menu
-            include _nav-menu
+            include ../components/menu-main/_menu-main
 
           block content
 
           block footer
-            include _footer
+            include ../components/footer/_footer
 
           .js-off-canvas-exit
         .off-canvas.position-right
-          //- include ../components/_menu-mobile-right
+          include ../components/menu-mobile-right/_menu-mobile-right
 
     block modal
 
@@ -97,7 +97,6 @@ html(lang="ru")
     script(src="js/readmore.min.js")
     script(src="js/device.js")
     script(src="js/hideShowPassword.js")
-    script(src="js/jquery.collapser.js")
     script(src="js/main.js")
 
     block script

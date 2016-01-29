@@ -1,0 +1,42 @@
+div(block="white-block")
+  h4(elem="title") <span class="icon-bookmark"></span> Последнее из Datalife Engine
+
+  .tab-news
+
+    // Nav tabs
+    ul.nav.nav-tabs.tabs-red(role='tablist')
+      li.active(role='presentation')
+        a(href='#tab-teplate#{i+1}', aria-controls='tab-teplate#{i+1}', role='tab', data-toggle='tab') Шаблоны
+      li(role='presentation')
+        a(href='#tab-modules#{i+1}', aria-controls='tab-modules#{i+1}', role='tab', data-toggle='tab') Модули
+      li(role='presentation')
+        a(href='#tab-hacks#{i+1}', aria-controls='tab-hacks#{i+1}', role='tab', data-toggle='tab') Хаки
+      li(role='presentation')
+        a(href='#tab-forums#{i+1}', aria-controls='tab-forums#{i+1}', role='tab', data-toggle='tab') Форумы
+      li(role='presentation')
+        a(href='#tab-relize#{i+1}', aria-controls='tab-forums#{i+1}', role='tab', data-toggle='tab') Релизы
+
+    // Tab panes
+    .tab-content.tabs-red__content
+      each wer, ter in ['tab-teplate','tab-modules','tab-hacks','tab-forums','tab-relize']
+        div(role='tabpanel' id="#{wer}#{i + 1}" class="tab-pane #{ter === 0 ? 'active' : 'fade'}")
+          .row.col-table
+            .col-md-6.tab-content__table-col
+              .tab-grand-news
+                img(src="http://loremflickr.com/330/180/all" alt="tab news image").tab-grand-news__img.img-responsive
+                h2.text-bold.db.tab-grand-news__title
+                  a(href="#").dark-blue-link #{title[Math.floor(Math.random() * ((title.length-1) - 0 + 1)) + 0]}
+              include ../news-metadata/_news-metadata
+              span.db.tab-grand-news__description #{textSecond[Math.floor(Math.random() * ((textSecond.length-1) - 0 + 1)) + 0]}
+              a(href="#" role="button").btn.btn-orange.db.tab-grand-news__button Читать подробнее
+            .col-md-6.tab-content__table-col
+              -for(var e = 0; e < 3; e++)
+                .tab-mini-news
+                  .row
+                    .col-md-6
+                      img(src="http://loremflickr.com/150/80/all" alt="tab news image").tab-mini-news__img.img-responsive
+                    .col-md-6
+                      h3.mt0.tab-mini-news__description
+                        a(href="#").dark-blue-link.text-bold
+                          span(data-line="4").db.truncate-text Горячие капеция дня затоплен цукцукв ук право на репост выавыа ыв выапвалпо вавыаываы
+                  include ../news-metadata/_news-metadata

@@ -1,4 +1,5 @@
 @import "meta/variables";
+@import "meta/mixins";
 @import "modfiles/modfiles";
 
 @import "meta/extends";
@@ -21,3 +22,5 @@
 @import "meta/main";
 
 @import "meta/debug";
+
+@import "../components/**/*";

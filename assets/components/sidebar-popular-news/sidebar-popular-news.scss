@@ -1,0 +1,35 @@
+.popular-news{
+  &__item{
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 0px + $base-margin;
+    padding-bottom: 0px + $base-margin;
+    &:last-child{
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  &__image{
+
+  }
+  &__user{
+    // margin-top: 4px;
+    // line-height: 16px;
+    // margin-bottom: 8px;
+  }
+  &__time{
+    // margin-top: 4px;
+    // line-height: 16px;
+    // margin-bottom: 8px;
+  }
+  &__title{
+    // margin-top: -4px;
+    // line-height: 16px;
+    // margin-bottom: 8px;
+    @include ritm(2, false, true, true);
+  }
+  &__metadata{
+    margin-top: 0px + $base-margin;
+    line-height: 0px + $base-line-height;
+  }
+}
