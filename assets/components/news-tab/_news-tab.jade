@@ -25,9 +25,9 @@ div(block="white-block")
               .tab-grand-news
                 img(src="http://loremflickr.com/330/180/all" alt="tab news image").tab-grand-news__img.img-responsive
                 h2.text-bold.db.tab-grand-news__title
-                  a(href="#").dark-blue-link #{title[Math.floor(Math.random() * ((title.length-1) - 0 + 1)) + 0]}
+                  a(href="#").dark-blue-link #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
               include ../news-metadata/_news-metadata
-              span.db.tab-grand-news__description #{textSecond[Math.floor(Math.random() * ((textSecond.length-1) - 0 + 1)) + 0]}
+              span.db.tab-grand-news__description #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
               a(href="#" role="button").btn.btn-orange.db.tab-grand-news__button Читать подробнее
             .col-md-6.tab-content__table-col
               -for(var e = 0; e < 3; e++)
@@ -37,6 +37,5 @@ div(block="white-block")
                       img(src="http://loremflickr.com/150/80/all" alt="tab news image").tab-mini-news__img.img-responsive
                     .col-md-6
                       h3.mt0.tab-mini-news__description
-                        a(href="#").dark-blue-link.text-bold
-                          span(data-line="4").db.truncate-text Горячие капеция дня затоплен цукцукв ук право на репост выавыа ыв выапвалпо вавыаываы
+                        a(href="#").dark-blue-link.text-bold #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
                   include ../news-metadata/_news-metadata

@@ -19,7 +19,7 @@ $base-line-height: 20;
     overflow: hidden;
   }
 
-  height: $count * $base-line-height - 2px;
+  height: $count * $base-line-height - 1px;
   line-height: 0px + $base-line-height;
 }
 

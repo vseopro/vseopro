@@ -6,7 +6,7 @@ div(block="news-last")
           img(src="http://loremflickr.com/209/165/all" alt="last news img" elem="img").img-responsive
         .col-md-8(elem="col")
           h2(elem="title").text-bold.db
-            a(href="#").dark-blue-link.db #{title[Math.floor(Math.random() * ((title.length-1) - 0 + 1)) + 0]}
+            a(href="#").dark-blue-link.db #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
           include ../news-metadata/_news-metadata
-          p(elem="text") #{textSecond[Math.floor(Math.random() * ((textSecond.length-1) - 0 + 1)) + 0]}
+          p(elem="text") #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
           a(href="#" elem="read-more").link Читать далее...

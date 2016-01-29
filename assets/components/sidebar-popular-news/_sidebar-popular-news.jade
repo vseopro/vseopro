@@ -6,7 +6,7 @@ div(block="white-block")
         .col-xs-4(elem="col")
           img(src="http://loremflickr.com/85/70/all" alt="popular news image" elem="image")
         .col-xs-8(elem="col")
-          span(elem="title").db #{popularNews[Math.floor(Math.random() * ((popularNews.length-1) - 0 + 1)) + 0]}
+          span(elem="title").db #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
           .row-mini(elem="metadata")
             .col-xs-6(elem="col")
               a(href="#" elem="user").link.text-overflow <span class="icon-user" elem="ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
