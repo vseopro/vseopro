@@ -13,7 +13,7 @@
   "scripts": {
     "preinstall": "npm install -g bower && bower install && npm install -g gulp",
     "prebuild": "rm -rf app",
-    "build": "gulp bootstrap && gulp sass && gulp imagemin && gulp babel && gulp jade && gulp static",
+    "build": "gulp bootstrap && gulp scss && gulp imagemin && gulp babel && gulp jade && gulp static",
     "start": "gulp"
   },
   "author": "vaeum",
