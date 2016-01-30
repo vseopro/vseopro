@@ -173,5 +173,39 @@
         "vote": "154",
         "persent":"100"
     }
+  ],
+  "newsTab": [
+    {
+        "name": "Шаблоны",
+        "active": true,
+        "blob": "tab-teplate"
+    },{
+        "name": "Модули",
+        "active": false,
+        "blob": "tab-modules"
+    },{
+        "name": "Хаки",
+        "active": false,
+        "blob": "tab-hacks"
+    },{
+        "name": "Форумы",
+        "active": false,
+        "blob": "tab-forums"
+    },{
+        "name": "Релизы",
+        "active": false,
+        "blob": "tab-relize"
+    }
+  ],
+  "footerSocialWidgetData": [
+    {
+        "title": "Мы в твиттере"
+    },{
+        "title": "Мы в Facebook"
+    },{
+        "title": "Мы Вконтакте"
+    },{
+        "title": "Мы в Pinterest"
+    }
   ]
 }

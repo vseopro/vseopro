@@ -1,0 +1,15 @@
+.footer-social{
+  &__title{
+    // margin-bottom: 0;
+    // margin-top: 0px + $base-margin;
+    // font-family: $light;
+    font-size: 13px;
+    line-height: 33px;
+  }
+  &__item{
+    padding-top: 40px;
+    border-bottom: 1px black(1) solid;
+    padding-bottom: 0px + $base-margin;
+    margin-bottom: 0px + $base-margin;
+  }
+}

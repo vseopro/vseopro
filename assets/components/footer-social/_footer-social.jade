@@ -1,0 +1,12 @@
+div(block="footer-social")
+  .container(elem="container")
+    .row(elem="row")
+      each val in footerSocialWidgetData
+        .col-xs-12.col-sm-6.col-md-3(elem="col")
+          div(elem="item")
+            .row(elem="row")
+              .col-xs-7(elem="col")
+                span(elem="title").db.text-white #{val.title}
+              .col-xs-5(elem="col")
+                a(href="#" elem="button").btn.btn-orange.pull-right Перейти
+          img(src="https://unsplash.it/270/330" alt="social img").img-responsive

@@ -1,41 +1,32 @@
 div(block="white-block")
   h4(elem="title") <span class="icon-bookmark"></span> Последнее из Datalife Engine
 
-  .tab-news
+  div(block="news-tab")
 
     // Nav tabs
-    ul.nav.nav-tabs.tabs-red(role='tablist')
-      li.active(role='presentation')
-        a(href='#tab-teplate#{i+1}', aria-controls='tab-teplate#{i+1}', role='tab', data-toggle='tab') Шаблоны
-      li(role='presentation')
-        a(href='#tab-modules#{i+1}', aria-controls='tab-modules#{i+1}', role='tab', data-toggle='tab') Модули
-      li(role='presentation')
-        a(href='#tab-hacks#{i+1}', aria-controls='tab-hacks#{i+1}', role='tab', data-toggle='tab') Хаки
-      li(role='presentation')
-        a(href='#tab-forums#{i+1}', aria-controls='tab-forums#{i+1}', role='tab', data-toggle='tab') Форумы
-      li(role='presentation')
-        a(href='#tab-relize#{i+1}', aria-controls='tab-forums#{i+1}', role='tab', data-toggle='tab') Релизы
+    ul.nav.nav-tabs(role='tablist' elem="nav")
+      each val, i in newsTab
+        li(role='presentation' class="#{(val.active)?('active'):('')}" elem="nav-item")
+          a(href='##{val.blob}#{i}', aria-controls='#{val.blob}#{i}', role='tab', data-toggle='tab' elem="nav-link") #{val.name}
 
     // Tab panes
-    .tab-content.tabs-red__content
-      each wer, ter in ['tab-teplate','tab-modules','tab-hacks','tab-forums','tab-relize']
-        div(role='tabpanel' id="#{wer}#{i + 1}" class="tab-pane #{ter === 0 ? 'active' : 'fade'}")
-          .row.col-table
-            .col-md-6.tab-content__table-col
-              .tab-grand-news
-                img(src="https://unsplash.it/330/180" alt="tab news image").tab-grand-news__img.img-responsive
-                h2.text-bold.db.tab-grand-news__title
-                  a(href="#").dark-blue-link #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
-              include ../news-metadata/_news-metadata
-              span.db.tab-grand-news__description #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
-              a(href="#" role="button").btn.btn-orange.db.tab-grand-news__button Читать подробнее
-            .col-md-6.tab-content__table-col
+    .tab-content(elem="content")
+      each val, i in newsTab
+        div(role='tabpanel' id="#{val.blob}#{i}" class="tab-pane #{(val.active)?('active'):('fade')}" elem="panel")
+          .row(elem="row-table")
+            .col-md-6(elem="col-table")
+              div(block="tab-grand-news")
+                img(src="https://unsplash.it/330/180" alt="tab news image" elem="img").img-responsive
+                h2(elem="title").text-bold.db: a(href="#" elem="link").dark-blue-link #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
+                include ../news-metadata/_news-metadata
+                span(elem="description").db #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
+                a(href="#" role="button" elem="button").btn.btn-orange.db Читать подробнее
+            .col-md-6(elem="col-table")
               -for(var e = 0; e < 3; e++)
-                .tab-mini-news
-                  .row
-                    .col-md-6
-                      img(src="https://unsplash.it/150/80" alt="tab news image").tab-mini-news__img.img-responsive
-                    .col-md-6
-                      h3.mt0.tab-mini-news__description
-                        a(href="#").dark-blue-link.text-bold #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
+                div(block="tab-mini-news")
+                  .row(elem="row")
+                    .col-md-6(elem="col")
+                      img(src="https://unsplash.it/150/80" alt="tab news image" elem="img").img-responsive
+                    .col-md-6(elem="col")
+                      h3(elem="description"): a(href="#" elem="link").dark-blue-link.text-bold #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
                   include ../news-metadata/_news-metadata
