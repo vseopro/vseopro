@@ -389,8 +389,8 @@ footer.main{
   margin-bottom: 30px;
   &__button{
     padding: 9px 12px;
-    @media(max-width:992px){
-      // margin-bottom: 20px;
+    @media(max-width:768px){
+      margin-bottom: 20px;
     }
   }
   &__render{

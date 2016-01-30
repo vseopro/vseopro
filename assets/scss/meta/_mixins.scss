@@ -21,6 +21,11 @@ $base-line-height: 20;
 
   height: $count * $base-line-height - 1px;
   line-height: 0px + $base-line-height;
+
+  @media all and (max-width: 992px){
+    height: auto;
+    overflow: visible;
+  }
 }
 
 .www {
