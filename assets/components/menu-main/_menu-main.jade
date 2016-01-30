@@ -1,5 +1,5 @@
 .affix-wrap
-  .navbar.yamm.navbar-vseopro.nav-afix(data-spy="affix" data-offset-top="135" data-offset-bottom="200")
+  .yamm.navbar.navbar-vseopro.nav-afix(data-spy="affix" data-offset-top="135" data-offset-bottom="200")
     .container
       .hidden-md.hidden-lg.pull-left(block="open-menu")
         button(type="button" data-show="left-menu" elem="button").no-outline.no-select.pull-left
@@ -15,7 +15,7 @@
             -for(var i = 0; i < 3; i++)
               span(elem="span")
 
-      .visible-md.visible-lg
+      //- .visible-md.visible-lg
         ul.nav.navbar-nav
           li.dropdown
             a.dropdown-toggle(href='#', data-toggle='dropdown') Classic
@@ -24,16 +24,39 @@
               li: a(tabindex='-1', href='#')  Another action
               li: a(tabindex='-1', href='#')  Something else here
 
-        ul.nav.navbar-nav.pull-right
-          li.dropdown.yamm-fw
-            a.dropdown-toggle(href='#', data-toggle='dropdown')
-              span.icon-search
-            ul.dropdown-menu
+      // основное меню видно везде кроме мобильных устройств
+      .main-nav.visible-md.visible-lg
+        ul.clearfix.pull-left
+          each key in navMenu
+            if key.submenu == undefined
               li
-                include ../form-search/_form-search
+                a(href="#{key.url}") #{key.text}
+            if key.submenu !== undefined
+              li
+                a(href="#").has-menu #{key.text}
+                ul
+                  each val in key.submenu
+                    if val.submenu == undefined
+                      li
+                        a(href="#") #{val.text}
+                    if val.submenu !== undefined
+                      li
+                        a(href="#").has-menu #{val.text}
+                        ul
+                          each link in val.submenu
+                            li
+                              a(href="#") #{link.text}
 
-          li.dropdown.yamm-fw
-            a.dropdown-toggle(href='#', data-toggle='dropdown') <span class="icon-login"></span> Вход
-            ul.dropdown-menu
-              li
-                include ../form-login/_form-login
+      ul.nav.navbar-nav.pull-right.visible-md.visible-lg
+        li.dropdown.yamm-fw
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            span.icon-search
+          ul.dropdown-menu
+            li
+              include ../form-search/_form-search
+
+        li.dropdown.yamm-fw.visible-md.visible-lg
+          a.dropdown-toggle(href='#', data-toggle='dropdown') <span class="icon-login"></span> Вход
+          ul.dropdown-menu
+            li
+              include ../form-login/_form-login
