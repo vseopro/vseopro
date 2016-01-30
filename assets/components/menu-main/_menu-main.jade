@@ -2,14 +2,14 @@
   .navbar.yamm.navbar-vseopro.nav-afix(data-spy="affix" data-offset-top="135" data-offset-bottom="200")
     .container
       .hidden-md.hidden-lg.pull-left(block="open-menu")
-        button(type="button" data-show="left-menu" elem="button").no-outline.no-select.pull-left
+        button(type="button" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu-fixed-left" data-canvas="body" elem="button").no-outline.no-select.pull-left
           span.dib(elem="dib")
             -for(var i = 0; i < 3; i++)
               span(elem="span")
           span(elem="right-label").text-white Меню
 
       .hidden-md.hidden-lg.pull-right(block="open-menu")
-        button(type="button" data-show="right-menu" elem="button").no-outline.no-select.pull-right
+        button(type="button" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu-fixed-right" data-canvas="body" elem="button").no-outline.no-select.pull-right
           span(elem="left-label").text-white Вход
           span.dib(elem="dib")
             -for(var i = 0; i < 3; i++)

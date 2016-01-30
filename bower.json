@@ -22,6 +22,7 @@
     "bootstrap": "~3.3.6",
     "jquery-form-styler": "jquery.formstyler#1.7.4",
     "Readmore.js": "readmore#~2.1.0",
-    "goodshare.js": "goodshare#^3.2.5"
+    "goodshare.js": "goodshare#^3.2.5",
+    "css.modfiles": "^0.0.6"
   }
 }

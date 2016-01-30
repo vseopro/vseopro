@@ -3,7 +3,7 @@ div(block="white-block")
   div(block="sidebar-comments")
     -for(var i = 0; i < 10; i++)
       .pr(elem="item")
-        img(src="https://unsplash.it/80" alt="img sidebar comment avatar" elem="avatar").img-responsive
+        img(src="https://unsplash.it/80/?random" alt="img sidebar comment avatar" elem="avatar").img-responsive
         span(elem="autor").db.text-overflow <strong elem="bold">Написал(а):</strong> <a href="#" class="link" elem="link">#{users[Math.floor(Math.random() * ((users.length - 1) - 0 + 1)) + 0]}</a>
         span(elem="time").db <strong elem="bold">Дата:</strong> Вчера в #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
         span(elem="comment").db <strong elem="bold">К новости:</strong> <span class="cur" data-toggle="tooltip" data-placement="top" title="Дная затоплен служба Яндекс. ываыдвшао, Рефераты предназначена ываыва ываыва ываыва ываываварв ываыва затоплен служба затоплен служба">#{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}</span>
