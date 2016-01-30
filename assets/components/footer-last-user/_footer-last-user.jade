@@ -6,16 +6,13 @@
         .row(elem="row")
           -for(var i = 0; i < 15; i++)
             .col-xs-6.col-sm-6.col-md-6.col-lg-4(elem="col")
-              .row-mini(elem="item")
-                .col-xs-6(elem="col")
-                  div(elem="avatar-wrap")
-                    img(src="https://unsplash.it/60" alt="user avatar" elem="avatar").img-responsive
-                .col-xs-6(elem="col")
-                  span(elem="text").db сейчас
-                    span(elem="status" class="#{ i % 2 == 0 ? 'off' : ''}") #{ i % 2 == 0 ? 'OFF' : 'ON'}
-                  span(elem="text").db.text-overflow Ник #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
-                  span(elem="text").db Пользователи
-                  span(elem="text").db Был в 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}:0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}
+              .pr(elem="item")
+                img(src="https://unsplash.it/60" alt="user avatar" elem="avatar").img-responsive
+                span(elem="text").db сейчас
+                  span(elem="status" class="#{ i % 2 == 0 ? 'off' : ''}") #{ i % 2 == 0 ? 'OFF' : 'ON'}
+                span(elem="text").db.text-overflow Ник #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
+                span(elem="text").db Пользователи
+                span(elem="text").db Был в 0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}:0#{Math.floor(Math.random() * (9 - 1 + 1)) + 1}
 
     .col-xs-12.col-sm-6.col-md-6.col-lg-6
       .clearfix(block="footer-tags")

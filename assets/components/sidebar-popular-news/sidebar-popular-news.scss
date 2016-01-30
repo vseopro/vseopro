@@ -1,5 +1,6 @@
 .popular-news{
   &__item{
+    // height: 70px;
     border-bottom: 1px solid #f1f1f1;
     margin-bottom: 0px + $base-margin;
     padding-bottom: 0px + $base-margin;
@@ -10,25 +11,33 @@
     }
   }
   &__image{
-
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   &__user{
     // margin-top: 4px;
     // line-height: 16px;
     // margin-bottom: 8px;
+    float: left;
+    width: 50%;
   }
   &__time{
     // margin-top: 4px;
     // line-height: 16px;
     // margin-bottom: 8px;
+    float: left;
+    width: 50%;
   }
   &__title{
     // margin-top: -4px;
     // line-height: 16px;
     // margin-bottom: 8px;
+    padding-left: 90px;
     @include ritm(2, false, true, true);
   }
   &__metadata{
+    padding-left: 90px;
     margin-top: 0px + $base-margin;
     line-height: 0px + $base-line-height;
   }

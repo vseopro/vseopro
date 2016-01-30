@@ -1,12 +1,15 @@
 .sidebar-comments{
   &__avatar{
     // @extend %fluid;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   &__item{
     border-bottom: 1px #eee solid;
     // margin-top: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: $base-margin + px;
+    padding-bottom: $base-margin + px;
     &:last-child{
       border-bottom: none;
       margin-bottom: 0;
@@ -18,7 +21,7 @@
   &__comment{
     font-size: 12px;
     line-height: 0px + $base-line-height;
-    // padding-left: 15px;
+    padding-left: 95px;
   }
   &__autor{
     // margin-top: -4px;

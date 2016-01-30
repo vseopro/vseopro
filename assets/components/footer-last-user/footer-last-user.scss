@@ -19,15 +19,15 @@
   &__item{
     margin-bottom: 0px + $base-margin;
   }
-  &__avatar-wrap{
-
-  }
   &__avatar{
-
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   &__text{
     font-size: 10px;
     // margin-bottom: 4px;
+    margin-left: 75px;
     color: #ccc;
     line-height: $base-margin + px;
   }
