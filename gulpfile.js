@@ -68,7 +68,7 @@ var PROCESSORS = [
         root_value: 14,
         selector_black_list: ['html']
     }),
-    autoprefixer({ browsers: ['last 2 versions'] }),
+    autoprefixer({ browsers: ['last 2 versions', '> 1%'] }),
     mqpacker,
     selector,
     postCSSFocus

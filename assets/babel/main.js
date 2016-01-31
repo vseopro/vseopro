@@ -83,3 +83,18 @@ $(() => {
         $(".pages-menu").empty();
     })
 });
+
+function toConsole (argument) {
+    $('.console').append(argument + '<br/>')
+}
+
+$(() => {
+    if ($) {
+        toConsole('Jquery есть');
+    };
+
+    $('.console-close').on(istouch, function () {
+        $('.console-wrap').remove();
+    })
+});
+

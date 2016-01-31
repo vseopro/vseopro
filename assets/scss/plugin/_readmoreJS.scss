@@ -6,8 +6,9 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 40px;
-    background: linear-gradient(to top, #fff, transparent);
+    height: 30px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAMAAADaS4T1AAAATlBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////+QPFRFAAAAGnRSTlP9FAf17ubf1s3Eu7Clm5CFem9lWk9EOzIoIKzFPqsAAAAuSURBVAjXDcGFAcAgAAAg1t2h/v+ogrqsyiQKfp/X43Y5HXab1WI2GQ16nVYDZC3yAUlXWqZrAAAAAElFTkSuQmCC') repeat-x;
+    // background: linear-gradient(to top, #fff, transparent);
   }
   @media all and (min-width:992px){
     border-bottom: #FF672B 1px solid;

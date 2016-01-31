@@ -43,3 +43,22 @@
     }
   }
 }
+
+.console-wrap{
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  border: 1px #333 solid;
+  background: #ddd;
+  z-index: 2;
+}
+
+.console{
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+.console-close{
+  background: #333;
+  height: 10px;
+}

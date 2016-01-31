@@ -28,18 +28,18 @@
       .main-nav.visible-md.visible-lg
         ul.clearfix.pull-left
           each key in navMenu
-            if key.submenu == undefined
+            if !key.submenu
               li
                 a(href="#{key.url}") #{key.text}
-            if key.submenu !== undefined
+            else
               li
                 a(href="#").has-menu #{key.text}
                 ul
                   each val in key.submenu
-                    if val.submenu == undefined
+                    if !val.submenu
                       li
                         a(href="#") #{val.text}
-                    if val.submenu !== undefined
+                    else
                       li
                         a(href="#").has-menu #{val.text}
                         ul
