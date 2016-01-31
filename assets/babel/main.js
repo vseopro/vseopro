@@ -37,11 +37,18 @@ $(() => {
     $(".js-off-canvas-exit").on(istouch, function () {
         clearMobileClasses();
     })
+
+    $(window).resize(function () {
+        if ($(window).width() > 768) {
+            clearMobileClasses();
+        }
+    })
 });
 
 $(() => {
     $(".search-form").clone().appendTo(".off-canvas.position-right");
     $(".login-form").clone().appendTo(".off-canvas.position-right");
+    $(".profile-info").clone().appendTo(".off-canvas.position-right");
 
     //hideShowPassword
     $('.hideShowPassword').hidePassword(true);
