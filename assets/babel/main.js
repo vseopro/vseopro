@@ -1,7 +1,6 @@
 const istouch = ( !!('ontouchstart' in window)) ? 'touchstart' : 'click';
 
-$(function() {
-
+$(() => {
     let clearMobileClasses = function () {
         $(".off-canvas-wrapper-inner")
             .removeClass("is-off-canvas-open")
@@ -38,7 +37,9 @@ $(function() {
     $(".js-off-canvas-exit").on(istouch, function () {
         clearMobileClasses();
     })
+});
 
+$(() => {
     $(".search-form").clone().appendTo(".off-canvas.position-right");
     $(".login-form").clone().appendTo(".off-canvas.position-right");
 
@@ -52,7 +53,9 @@ $(function() {
     $('[data-toggle="popover"]').popover();
 
     $('a.disabled').on(istouch, () => {return false;})
+});
 
+$(() => {
     var readmoreSettings = {
         speed: 75,
         moreLink: '<a href="#" class="btn btn-orange btn-read-more table-center">Подробнее</a>',
@@ -71,65 +74,7 @@ $(function() {
     })
 });
 
-// $(function() {
-//     $(window).on('scroll', (e) => {
-//         if ($('.grand-content').height() > $('.sidebar').height()) {
-
-//             // вычисляем высоту верхних блоков
-//             var headerHeight = $('header.main').outerHeight() + $('.affix-wrap').outerHeight() + $('.hot-news').outerHeight() + $('.welcome-block').outerHeight();
-
-//             // вычисляем разницу между .grand-content и .sidebar
-//             var heigthResult = $('.grand-content').height() - $('.sidebar').height();
-
-//             // вычисляем постоянную константу
-//             var constant = heigthResult / $('.grand-content').height();
-
-//             // заносим в переменную высоту окна
-//             var windowHeight = $(window).height();
-
-//             if ($(window).scrollTop() > headerHeight && $(window).scrollTop() < headerHeight + $('.grand-content').height() - windowHeight * 2) {
-//                 $('.sidebar').css({
-//                     "top": ($(window).scrollTop() - headerHeight) * constant,
-//                     "bottom": "auto"
-//                 });
-//             } else if($(window).scrollTop() < headerHeight){
-//                 $('.sidebar').css({
-//                     "top": 0,
-//                     "bottom": "auto"
-//                 })
-//             } else if($(window).scrollTop() > headerHeight + ($('.grand-content').height() - $(window).height() * 2)){
-//                 $('.sidebar').css({
-//                     "top": "auto",
-//                     "bottom": 0
-//                 })
-//             }
-//         };
-//     })
-// });
-
-$(function() {
-//     if(device.ipad() ||
-//         device.androidTablet() ||
-//         device.blackberryTablet() ||
-//         device.windowsTablet() ||
-//         device.fxosTablet() ||
-//         device.tablet()){
-
-//         $('.first-menu__has-menu').on('click', () => {
-//             var _this = $(this);
-//             _this.find('.second-menu__list').css({
-//                 'display': 'block'
-//             });
-//         });
-
-//         $('.second-menu__has-menu').on('click', () => {
-//             var _this = $(this);
-//             _this.find('.third-menu__list').css({
-//                 'display': 'block'
-//             });
-//         });
-//     }
-
+$(() => {
     $(document).on(istouch, '.yamm .dropdown-menu', (e) => {
         e.stopPropagation()
     })

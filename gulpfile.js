@@ -93,7 +93,7 @@ gulp.task('imagemin_clear', function () {
 })
 
 gulp.task('imagemin_build', function () {
-    gulp.src('./assets/images/**')
+    return gulp.src('./assets/images/**')
         .pipe(imagemin({progressive: true}))
         .pipe(gulp.dest('app/img/'));
 });
@@ -137,7 +137,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('bootstrap', function () {
-    gulp.src(['./assets/scss/**/bootstrap.scss'])
+    return gulp.src(['./assets/scss/**/bootstrap.scss'])
 
         .pipe(sass({
             outputStyle: 'nested',
@@ -151,7 +151,7 @@ gulp.task('bootstrap', function () {
 });
 
 gulp.task('scss', function () {
-    gulp.src(['./assets/scss/**/style.scss'])
+    return gulp.src(['assets/scss/**/style.scss'])
 
         .pipe(bulkSass())
         .pipe(sass({includePaths: ['src/stylesheets']}))
