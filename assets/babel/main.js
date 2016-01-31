@@ -77,6 +77,8 @@ $(() => {
         targetMap();
     }
 
+    if (target.length) {toConsole("Есть SEO текст на странице: " + target.length)};
+
     $(window).resize(function () {
         if ($(window).width() < 992) {
             $('.read-more-block').readmore('destroy');

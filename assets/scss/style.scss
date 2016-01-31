@@ -3,19 +3,16 @@
 @import "meta/extends";
 @import "meta/functions";
 
+@import "meta/base";
 @import "meta/font";
 @import "meta/fontello";
-@import "meta/mobile-menu";
 
 //импорт плагинов
 @import "plugin/*";
 
 //импорт компонентов
 @import "components/*";
-
-//импорт базовых стилей и шрифтов
-@import "meta/base";
-@import "meta/main";
-@import "meta/debug";
-
 @import "../components/**/*";
+
+@import "meta/main";
+
