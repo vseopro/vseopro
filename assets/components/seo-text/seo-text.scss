@@ -1,4 +1,4 @@
-.read-more-block{
+.seo-text{
   position: relative;
   &:after{
     position: absolute;
@@ -8,15 +8,26 @@
     right: 0;
     height: 30px;
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAMAAADaS4T1AAAATlBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////+QPFRFAAAAGnRSTlP9FAf17ubf1s3Eu7Clm5CFem9lWk9EOzIoIKzFPqsAAAAuSURBVAjXDcGFAcAgAAAg1t2h/v+ogrqsyiQKfp/X43Y5HXab1WI2GQ16nVYDZC3yAUlXWqZrAAAAAElFTkSuQmCC') repeat-x;
-    // background: linear-gradient(to top, #fff, transparent);
+    @media all and (max-width:992px){
+      display: none;
+    }
   }
   @media all and (min-width:992px){
     border-bottom: #FF672B 1px solid;
   }
-}
+  &__inner{
 
-.btn-read-more{
-  display: table !important;
-  width: 170px !important;
-  padding: 10px;
+  }
+  &__text{
+    // font-size: 13px;
+    color: #6C707C;
+  }
+  &__button{
+    display: table ;
+    width: 170px ;
+    padding: 10px;
+    @media all and (max-width:992px){
+      display: none;
+    }
+  }
 }

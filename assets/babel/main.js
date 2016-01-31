@@ -56,22 +56,35 @@ $(() => {
 });
 
 $(() => {
-    var readmoreSettings = {
-        speed: 75,
-        moreLink: '<a href="#" class="btn btn-orange btn-read-more table-center">Подробнее</a>',
-        lessLink: '<a href="#" class="btn btn-orange btn-read-more table-center">Свернуть</a>',
-        collapsedHeight: $('.read-more-block').data("collapsed-height"),
-    }
+    let target = $('.seo-text'),
+            readmoreSettings = {
+            speed: 75,
+            moreLink: '<a href="#" class="btn btn-orange seo-text__button table-center">Подробнее</a>',
+            lessLink: '<a href="#" class="btn btn-orange seo-text__button table-center">Свернуть</a>'
+        },readmoreInit = (item, height) =>{
+            let settings = $.extend(readmoreSettings, {
+                collapsedHeight: height
+            })
+            item.readmore(settings);
+        },targetMap = () =>{
+            target.map((i, item) => {
+                let height = $(item).data("collapsed-height");
+                readmoreInit($(item), height);
+            })
+        };
 
-    $('.read-more-block').readmore(readmoreSettings);
+    if ($(window).width() > 992) {
+        targetMap();
+    }
 
     $(window).resize(function () {
         if ($(window).width() < 992) {
             $('.read-more-block').readmore('destroy');
         } else {
-            $('.read-more-block').readmore(readmoreSettings);
+            targetMap();
         };
     })
+
 });
 
 $(() => {

@@ -67,12 +67,6 @@ block content
         //- include widgets/_editors-choice
 
 
-  //блок с приветствием
-  .container
-    div(block="white-block")
-      h4(elem="title") <span class="icon-home"></span> Добро пожаловать на сайт
-      div(block="welcome-block")
-        .read-more-block(data-collapsed-height="80")
-          -for(var i = 0; i < 5; i++)
-            p(elem="text") #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
+  //SEO text
+  include ../components/seo-text/_seo-text
 
