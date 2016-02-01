@@ -127,11 +127,12 @@ footer.main{
 
 .footer-copyright{
   background: $color-black;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .site-working{
+  line-height: 30px;
   @extend %float-left;
   margin-right: 22px;
   @media(max-width: 1200px){
@@ -145,13 +146,14 @@ footer.main{
   }
   &__icon{
     font-size: 20px;
-    margin-top: -5px;
+    // margin-top: -5px;
     display: inline-block;
-    margin-right: 2px;
+    // margin-right: 2px;
   }
 }
 
 .copyright-text{
+  line-height: 30px;
   @extend %float-left;
   font-size: 12px;
   margin-right: 15px;
@@ -171,6 +173,7 @@ footer.main{
 }
 
 .footer-link{
+  line-height: 30px;
   @extend %float-left;
   @media(max-width: 1200px){
     display: table;
@@ -222,7 +225,7 @@ footer.main{
     color: white(1);
     width: 30px;
     height: 30px;
-    margin-top: -7px;
+    // margin-top: -7px;
     font-size: 16px;
     &.vk{
       &:hover{
