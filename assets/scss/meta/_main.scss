@@ -127,8 +127,8 @@ footer.main{
 
 .footer-copyright{
   background: $color-black;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: $base-margin + px;
+  padding-bottom: $base-margin + px;
 }
 
 .site-working{
