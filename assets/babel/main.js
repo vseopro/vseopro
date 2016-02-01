@@ -1,4 +1,22 @@
 const istouch = ( !!('ontouchstart' in window)) ? 'touchstart' : 'click';
+const toConsole = (obj) => {
+    /*
+        rules{
+            exp: $
+            success: "Есть jquery",
+            error: "Нет Jquery"
+        }
+     */
+
+    if (obj.exp) {
+        $('.console').append(obj.success + '<br/>')
+        console.log(obj.success)
+    } else {
+        $('.console').append(obj.error + '<br/>')
+        console.error(obj.error)
+    };
+}
+
 
 $(() => {
     let clearMobileClasses = function () {
@@ -46,9 +64,14 @@ $(() => {
 });
 
 $(() => {
-    $(".search-form").clone().appendTo(".off-canvas.position-right");
-    $(".login-form").clone().appendTo(".off-canvas.position-right");
-    $(".profile-info").clone().appendTo(".off-canvas.position-right");
+    let targetAppend = $(".off-canvas.position-right");
+
+    $(".search-form").clone().appendTo(targetAppend);
+    $(".login-form").clone().appendTo(targetAppend);
+    $(".profile-info").clone().appendTo(targetAppend);
+});
+
+$(() => {
 
     //hideShowPassword
     $('.hideShowPassword').hidePassword(true);
@@ -84,8 +107,6 @@ $(() => {
         targetMap();
     }
 
-    if (target.length) {toConsole("Есть SEO текст на странице: " + target.length)};
-
     $(window).resize(function () {
         if ($(window).width() < 992) {
             $('.read-more-block').readmore('destroy');
@@ -104,19 +125,23 @@ $(() => {
     $(".pages-menu__close").on('click', () =>{
         $(".pages-menu").empty();
     })
-});
-
-function toConsole (argument) {
-    $('.console').append(argument + '<br/>')
-}
-
-$(() => {
-    if ($) {
-        toConsole('Jquery есть');
-    };
 
     $('.console-close').on(istouch, function () {
         $('.console-wrap').remove();
+    })
+});
+
+$(() => {
+    toConsole({
+        exp: $,
+        error: "Нет Jquery",
+        success: "Есть Jquery"
+    });
+
+    toConsole({
+        exp: $('.seo-text').length,
+        error: "Нет SEO текста на странице",
+        success: "Есть SEO текст на странице"
     })
 });
 
