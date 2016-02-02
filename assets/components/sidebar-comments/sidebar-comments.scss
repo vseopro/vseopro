@@ -1,11 +1,11 @@
 .sidebar-comments{
   &__avatar{
     // @extend %fluid;
-    position: absolute;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
   }
-  &__item{
+  &__media{
     border-bottom: 1px #eee solid;
     // margin-top: 20px;
     margin-bottom: $base-margin + px;
@@ -16,12 +16,19 @@
       padding-bottom: 0;
     }
   }
+  &__media-right{
+    padding-left: $base-margin + px;
+  }
+  &__media-left{
+    padding: 0px;
+    width: 80px;
+  }
   &__autor,
   &__time,
   &__comment{
     font-size: 12px;
     line-height: 0px + $base-line-height;
-    padding-left: 95px;
+    // padding-left: 95px;
   }
   &__autor{
     // margin-top: -4px;

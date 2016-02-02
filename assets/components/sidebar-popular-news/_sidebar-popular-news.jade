@@ -2,9 +2,11 @@ div(block="white-block")
   h5(elem="sidebar-title") <span class="icon-network"></span> Популярные новости
   div(block="popular-news")
     -for(var i = 0; i < 10; i++)
-      .pr(elem="item")
-        img(src="https://unsplash.it/75/?random" alt="popular news image" elem="image")
-        span(elem="title").db #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
-        .clearfix(elem="metadata")
-          a(href="#" elem="user").link.text-overflow <span class="icon-user" elem="ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
-          a(href="#" elem="time").link.text-overflow <span class="icon-calendar" elem="ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
+      .media(elem="media")
+        .media-left(elem="media-left")
+          img(src="https://unsplash.it/75/?random" alt="popular news image" elem="image")
+        .media-right(elem="media-right")
+          span(elem="title").db #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
+          .clearfix(elem="metadata")
+            a(href="#" elem="user").link.text-overflow <span class="icon-user" elem="ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
+            a(href="#" elem="time").link.text-overflow <span class="icon-calendar" elem="ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
