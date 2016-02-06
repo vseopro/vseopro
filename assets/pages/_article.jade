@@ -1,7 +1,7 @@
-extends meta/_layout
+extends _layout
 
 block content
-  include components/_hot-news
+  //- include components/_hot-news
 
   .container
     .row
@@ -9,12 +9,12 @@ block content
         .white-block
           h1.white-block__title.mt0 ClipBucket v.2.7.5 Rus + All Plugins + All
           article.article
-            include components/_article-header
-            include components/_article-content
-            include components/_article-share
-            include components/_article-footer
+            include ../components/_article-header
+            include ../components/_article-content
+            include ../components/_article-share
+            include ../components/_article-footer
 
-        include components/_click-block
+        //- include components/_click-block
 
         div(block="white-block")
           h4(elem="title") <span class="icon-bookmark"></span> Похожие новости в этой категории
@@ -31,7 +31,7 @@ block content
           div(block="comment-block")
             -for(var i = 0; i < 5; i++)
               div(elem="item")
-                include components/_comment-meta
+                //- include components/_comment-meta
                 span(elem="text") #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
 
         a(href="#").btn.btn-orange.btn-getMoreComments.table-center Показать предыдущие комментарии
@@ -42,13 +42,13 @@ block content
       .col-xs-4.visible-md.visible-lg
 
         // Мы рекомендуем
-        include widgets/_editors-choice
+        //- include widgets/_editors-choice
 
         // Популярные новости
-        include widgets/_popular-news
+        //- include widgets/_popular-news
 
         // Голосование
-        include widgets/_vote-widget
+        //- include widgets/_vote-widget
 
         //- Чат пользователей
         //- include widgets/_sidebar-chat
