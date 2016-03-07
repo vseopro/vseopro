@@ -19,7 +19,7 @@ var pxtorem        = require('postcss-pxtorem');
 var selector       = require('postcss-custom-selectors');
 var mqpacker       = require("css-mqpacker");
 var autoprefixer   = require('autoprefixer');
-var bulkSass = require('gulp-sass-glob-import');
+var bulkSass       = require('gulp-sass-glob-import');
 
 //js compile
 var babel          = require('gulp-babel');

@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - 0.12
 before_install:
+  - npm install -g bower
+  - bower install
+  - npm install -g gulp
   - npm install
 before_script:
   - npm run build
