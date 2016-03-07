@@ -340,3 +340,8 @@ input[type="search"]{
 .progress-bar{
   background: $color-red;
 }
+
+[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
