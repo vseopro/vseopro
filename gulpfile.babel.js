@@ -24,8 +24,6 @@ import imagemin       from 'gulp-imagemin';
 import ftp            from 'vinyl-ftp';
 import browserSync    from 'browser-sync';
 
-let reload = browserSync.reload;
-
 let postCSSFocus = function (css) {
     css.walkRules(function (rule) {
         if (rule.selector.indexOf(':hover') !== -1) {
@@ -102,10 +100,6 @@ gulp.task('browserSync', () => {
     })
 })
 
-gulp.task('reload', () => {
-    browserSync.reload();
-})
-
 gulp.task('jade', () => {
     var data = JSON.parse(fs.readFileSync('./assets/json/data.json', 'utf-8'));
 
@@ -138,7 +132,7 @@ gulp.task('bootstrap', () => {
         .pipe(postcss(PROCESSORS))
         .pipe(csso())
         .pipe(gulp.dest('./app/css'))
-        .pipe(reload({stream: true}))
+        .on('end', browserSync.reload)
 })
 
 gulp.task('scss', () => {
@@ -151,7 +145,7 @@ gulp.task('scss', () => {
         .pipe(csso())
         .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
         .pipe(gulp.dest('./app/css'))
-        .pipe(reload({stream: true}))
+        .on('end', browserSync.reload)
 })
 
 gulp.task('babel', () => {
@@ -161,7 +155,7 @@ gulp.task('babel', () => {
             presets: ['es2015']
         }))
         .pipe(gulp.dest('./app/js/'))
-        .pipe(reload({stream: true}));
+        .on('end', browserSync.reload)
 })
 
 gulp.task('deploy', () => {
