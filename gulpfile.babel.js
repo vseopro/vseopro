@@ -1,41 +1,32 @@
-var gulp           = require('gulp');
-var del            = require('del');
-var mainBowerFiles = require('main-bower-files');
-var gulpFilter     = require('gulp-filter');
-var runSequence    = require('run-sequence');
-var fs             = require('fs');
+'use strict';
 
-//html compile
-var jade           = require('gulp-jade');
-var prettify       = require('gulp-prettify');
-var posthtml       = require('gulp-posthtml');
+import gulp           from 'gulp';
+import del            from 'del';
+import mainBowerFiles from 'main-bower-files';
+import gulpFilter     from 'gulp-filter';
+import runSequence    from 'run-sequence';
+import fs             from 'fs';
+import jade           from 'gulp-jade';
+import prettify       from 'gulp-prettify';
+import posthtml       from 'gulp-posthtml';
+import sass           from 'gulp-sass';
+import csso           from 'gulp-csso';
+import perfectionist  from 'perfectionist';
+import postcss        from 'gulp-postcss';
+import pxtorem        from 'postcss-pxtorem';
+import selector       from 'postcss-custom-selectors';
+import mqpacker       from "css-mqpacker";
+import autoprefixer   from 'autoprefixer';
+import bulkSass       from 'gulp-sass-glob-import';
+import babel          from 'gulp-babel';
+import uglify         from 'gulp-uglify';
+import imagemin       from 'gulp-imagemin';
+import ftp            from 'vinyl-ftp';
+import browserSync    from 'browser-sync';
 
-//css compile
-var sass           = require('gulp-sass');
-var csso           = require('gulp-csso');
-var perfectionist  = require('perfectionist');
-var postcss        = require('gulp-postcss');
-var pxtorem        = require('postcss-pxtorem');
-var selector       = require('postcss-custom-selectors');
-var mqpacker       = require("css-mqpacker");
-var autoprefixer   = require('autoprefixer');
-var bulkSass       = require('gulp-sass-glob-import');
+let reload = browserSync.reload;
 
-//js compile
-var babel          = require('gulp-babel');
-var uglify         = require('gulp-uglify');
-
-//img compile
-var imagemin       = require('gulp-imagemin');
-
-//deploy
-var ftp            = require('vinyl-ftp');
-
-//browserSync
-var browserSync    = require('browser-sync');
-var reload         = browserSync.reload;
-
-var postCSSFocus = function (css) {
+let postCSSFocus = function (css) {
     css.walkRules(function (rule) {
         if (rule.selector.indexOf(':hover') !== -1) {
             var focuses = [];
@@ -55,15 +46,15 @@ var postCSSFocus = function (css) {
                 if (selector.indexOf(':only-hover') !== -1) {
                     hovered.push(selector.replace(/:only-hover/g, ':hover'));
                 }
-            });
+            })
             if (hovered.length) {
                 rule.selectors = hovered;
             }
         }
-    });
-};
+    })
+}
 
-var PROCESSORS = [
+let PROCESSORS = [
     pxtorem({
         root_value: 14,
         selector_black_list: ['html']
@@ -72,15 +63,15 @@ var PROCESSORS = [
     mqpacker,
     selector,
     postCSSFocus
-];
+]
 
-var PERFECTIONIST_CONFIG = {
+let PERFECTIONIST_CONFIG = {
     maxValueLength: false,
     maxAtRuleLength: false,
     maxSelectorLength: true
-};
+}
 
-var BOWER_MAIN_FILES_CONFIG = {
+let BOWER_MAIN_FILES_CONFIG = {
     includeDev: true,
     paths:{
         bowerDirectory: './assets/bower',
@@ -88,34 +79,34 @@ var BOWER_MAIN_FILES_CONFIG = {
     }
 }
 
-gulp.task('imagemin_clear', function () {
+gulp.task('imagemin_clear', () => {
     return del(['app/img/']);
 })
 
-gulp.task('imagemin_build', function () {
+gulp.task('imagemin_build', () => {
     return gulp.src('./assets/images/**')
         .pipe(imagemin({progressive: true}))
         .pipe(gulp.dest('app/img/'));
-});
+})
 
-gulp.task('imagemin', function() {
+gulp.task('imagemin', () => {
     runSequence('imagemin_clear', 'imagemin_build');
-});
+})
 
-gulp.task('browserSync', function () {
+gulp.task('browserSync', () => {
     browserSync({
         server: {
             baseDir: "./app/"
         },
         open: false
-    });
-});
+    })
+})
 
-gulp.task('reload', function () {
+gulp.task('reload', () => {
     browserSync.reload();
-});
+})
 
-gulp.task('jade', function () {
+gulp.task('jade', () => {
     var data = JSON.parse(fs.readFileSync('./assets/json/data.json', 'utf-8'));
 
     return gulp.src('./assets/pages/!(_)*.jade')
@@ -134,9 +125,9 @@ gulp.task('jade', function () {
         .on('error', console.log)
         .pipe(gulp.dest('./app/'))
         .on('end', browserSync.reload)
-});
+})
 
-gulp.task('bootstrap', function () {
+gulp.task('bootstrap', () => {
     return gulp.src(['./assets/scss/**/bootstrap.scss'])
 
         .pipe(sass({
@@ -148,9 +139,9 @@ gulp.task('bootstrap', function () {
         .pipe(csso())
         .pipe(gulp.dest('./app/css'))
         .pipe(reload({stream: true}))
-});
+})
 
-gulp.task('scss', function () {
+gulp.task('scss', () => {
     return gulp.src(['assets/scss/**/style.scss'])
 
         .pipe(bulkSass())
@@ -161,9 +152,9 @@ gulp.task('scss', function () {
         .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
         .pipe(gulp.dest('./app/css'))
         .pipe(reload({stream: true}))
-});
+})
 
-gulp.task('babel', function () {
+gulp.task('babel', () => {
     return gulp.src(['./assets/babel/**/*.js'])
         .pipe(babel({
             comments: false,
@@ -171,9 +162,9 @@ gulp.task('babel', function () {
         }))
         .pipe(gulp.dest('./app/js/'))
         .pipe(reload({stream: true}));
-});
+})
 
-gulp.task('deploy', function () {
+gulp.task('deploy', () => {
     var conn = ftp.create( {
         host:     'ftp44.hostland.ru',
         user:     'host1339720_test',
@@ -188,25 +179,25 @@ gulp.task('deploy', function () {
     return gulp.src( globs, { base: './app', buffer: false } )
         // .pipe( conn.newer( '/' ) ) // only upload newer files
         .pipe( conn.dest( '/' ) );
-} );
+})
 
-gulp.task('copyMiscFiles', function () {
+gulp.task('copyMiscFiles',  () => {
     return gulp.src(['assets/misc/**'])
         .pipe(gulp.dest('app/'))
 })
 
-gulp.task('copyLibsFiles', function () {
+gulp.task('copyLibsFiles',  () => {
     return gulp.src(['assets/lib/**'])
         .pipe(uglify())
         .pipe(gulp.dest('app/js'))
 })
 
-gulp.task('copyFontFiles', function () {
+gulp.task('copyFontFiles',  () => {
     return gulp.src(['assets/font/**'])
         .pipe(gulp.dest('app/font'))
 })
 
-gulp.task('buildBowerCSS', function () {
+gulp.task('buildBowerCSS',  () => {
     var cssFilter = gulpFilter('**/*.css')
     return gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
         .pipe(cssFilter)
@@ -215,7 +206,7 @@ gulp.task('buildBowerCSS', function () {
         .pipe(gulp.dest('app/css'))
 })
 
-gulp.task('buildBowerJS', function () {
+gulp.task('buildBowerJS',  () => {
     var jsFilter = gulpFilter('**/*.js')
     return gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
         .pipe(jsFilter)
@@ -223,11 +214,11 @@ gulp.task('buildBowerJS', function () {
         .pipe(gulp.dest('app/js'))
 })
 
-gulp.task('static', function () {
+gulp.task('static',  () => {
     runSequence('copyMiscFiles', 'copyFontFiles', 'buildBowerCSS', 'buildBowerJS', 'copyLibsFiles');
 })
 
-gulp.task('watch', function(){
+gulp.task('watch', () => {
     gulp.watch('assets/scss/**/*.scss', ['scss']);
     gulp.watch('assets/components/**/*.scss', ['scss']);
 
@@ -243,6 +234,6 @@ gulp.task('watch', function(){
     gulp.watch('assets/font/**', ['static']);
 })
 
-gulp.task('default', function() {
+gulp.task('default', () =>{
     runSequence('browserSync', 'watch');
-});
+})
