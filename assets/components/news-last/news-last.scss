@@ -26,7 +26,7 @@
   &__text{
     // margin-top: 15px;
     margin-bottom: 0;
-    @include ritm(3, true, false, true);
+    @include ritm(4, true, false, true);
   }
   &__read-more{
     line-height: 0px + $base-line-height;
