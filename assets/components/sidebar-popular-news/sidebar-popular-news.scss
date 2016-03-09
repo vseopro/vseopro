@@ -42,6 +42,9 @@
     // padding-left: 90px;
     @include ritm(2, false, true, true);
     color: #6c707c;
+    &:hover{
+      color: #6c707c;
+    }
   }
   &__metadata{
     // padding-left:  90px;
