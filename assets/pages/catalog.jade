@@ -1,0 +1,36 @@
+extends _layout
+
+block content
+  include ../components/news-hot/_news-hot
+
+  .container
+    .row.pr
+      // основные блоки
+      .col-md-8
+
+        div(block="white-block")
+          h4(elem="title") <span class="icon-bookmark"></span> Последние новости
+          include ../components/news-last/_news-last
+          include ../components/news-pagination/_news-pagination
+
+      // сайдбар
+      .col-xs-4.visible-md.visible-lg
+
+        // Выбор редакции
+        include ../components/sidebar-editors-choice/_sidebar-editors-choice
+
+        // Популярные новости
+        include ../components/sidebar-popular-news/_sidebar-popular-news
+
+        //- Комментарии
+        //- include widgets/_sidebar-comments
+
+        //- Статистика сайта
+        //- include widgets/_site-statistic
+
+        // Голосование
+        include ../components/sidebar-vote/_sidebar-vote
+
+        //- География сайта
+        //- include widgets/_sidebar-geography
+

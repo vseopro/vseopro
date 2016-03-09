@@ -1,4 +1,4 @@
-extends meta/_layout
+extends _layout
 
 block content
   .container
@@ -15,7 +15,7 @@ block content
           div(elem="item")
             h4(elem="title")
               a(href="#").dark-blue-link Шаблон GhostAnime для DLE 10.3
-            include components/_search-result-meta
+            include ../components/search-result-meta/_search-result-meta
             .row(elem="row")
               .col-md-3(elem="col")
                 a(href="#" elem="image-link").db

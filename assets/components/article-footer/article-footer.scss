@@ -1,0 +1,29 @@
+.article-footer{
+  border-top: 1px #f1f1f1 solid;
+  // margin-top: 20px;
+  padding-top: 10px;
+  &__item{
+    margin-right: 10px;
+    @media all and (max-width: 992px){
+      display: block;
+    }
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+  &__link{
+    margin-right: 5px;
+    font-size: 13px;
+    @media all and (max-width: 992px){
+      font-size: 15px;
+    }
+  }
+  &__icon{
+    color: #919191;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  &__text{
+    color: #919191;
+  }
+}

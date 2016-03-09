@@ -341,7 +341,7 @@ input[type="search"]{
   background: $color-red;
 }
 
-[class^="icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   vertical-align: middle;
 }

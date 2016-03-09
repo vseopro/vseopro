@@ -77,6 +77,8 @@ let BOWER_MAIN_FILES_CONFIG = {
     }
 }
 
+let reload = browserSync.reload;
+
 gulp.task('imagemin_clear', () => {
     return del(['app/img/']);
 })
@@ -145,7 +147,7 @@ gulp.task('scss', () => {
         .pipe(csso())
         .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
         .pipe(gulp.dest('./app/css'))
-        .on('end', browserSync.reload)
+        .pipe(reload({stream: true}))
 })
 
 gulp.task('babel', () => {
