@@ -1,5 +1,5 @@
 .navbar-vseopro{
-  background: #192637;
+  background: $color-black;
   border: none;
   .dropdown-menu{
     padding: 0;
@@ -11,17 +11,17 @@
   .dropdown-toggle{
     border-top: 2px transparent solid;
     color: #fff;
-    background-color: #192637 !important;
+    background-color: $color-black !important;
     &:only-hover{
-      border-color: #ff690b !important;
-      color: #ff690b;
-      background-color: #192637 !important;
+      border-color: $color-orange !important;
+      color: $color-orange;
+      background-color: $color-black !important;
     }
   }
   .open{
     .dropdown-toggle{
-      border-color: #ff690b !important;
-      color: #ff690b !important;
+      border-color: $color-orange !important;
+      color: $color-orange !important;
     }
     .dropdown-menu{
       display: initial !important;
