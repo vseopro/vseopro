@@ -6,6 +6,7 @@
     margin: 0;
     border: none;
     display: initial !important;
+    background: transparent !important;
     @extend %hover-transform-before;
   }
   .dropdown-toggle{
