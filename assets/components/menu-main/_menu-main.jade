@@ -1,5 +1,5 @@
 .affix-wrap
-  .yamm.navbar.navbar-vseopro.nav-afix(data-spy="affix" data-offset-top="135" data-offset-bottom="200")
+  .yamm.navbar.navbar-vseopro.nav-afix
     .container
       .hidden-md.hidden-lg.pull-left(block="open-menu")
         button(type="button" data-show="left-menu" elem="button").no-outline.no-select.pull-left
@@ -14,15 +14,6 @@
           span.dib(elem="dib")
             -for(var i = 0; i < 3; i++)
               span(elem="span")
-
-      //- .visible-md.visible-lg
-        ul.nav.navbar-nav
-          li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown') Classic
-            ul.dropdown-menu(role='menu')
-              li: a(tabindex='-1', href='#')  Action
-              li: a(tabindex='-1', href='#')  Another action
-              li: a(tabindex='-1', href='#')  Something else here
 
       // основное меню видно везде кроме мобильных устройств
       .main-nav.visible-md.visible-lg

@@ -72,7 +72,6 @@ $(() => {
 });
 
 $(() => {
-
     //hideShowPassword
     $('.hideShowPassword').hidePassword(true);
 
@@ -143,5 +142,21 @@ $(() => {
         error: "Нет SEO текста на странице",
         success: "Есть SEO текст на странице"
     })
+});
+
+// --- affix top menu script ---
+$(() => {
+    let target = $('.nav-afix');
+    let startPosition = target.offset().top;
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() >= startPosition) {
+            if (!target.hasClass()) {
+                target.addClass('affix')
+            };
+        } else {
+            target.removeClass('affix')
+        };
+    });
 });
 
