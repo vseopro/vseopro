@@ -11,8 +11,10 @@
   }
   &__group-title{
     font-size: 16px;
+    border-top: 1px #f1f1f1 solid;
     color: #919191;
     margin-top: 0px + $base-margin;
+    padding-top: 0px + $base-margin;
     margin-bottom: 0px + $base-margin;
   }
 }
