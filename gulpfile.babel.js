@@ -64,9 +64,9 @@ let PROCESSORS = [
 ]
 
 let PERFECTIONIST_CONFIG = {
-    maxValueLength: false,
-    maxAtRuleLength: false,
-    maxSelectorLength: true
+    // maxValueLength: false,
+    // maxAtRuleLength: false,
+    // maxSelectorLength: true
 }
 
 let BOWER_MAIN_FILES_CONFIG = {

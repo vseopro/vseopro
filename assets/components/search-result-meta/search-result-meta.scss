@@ -1,0 +1,42 @@
+.search-result-meta{
+  border-bottom: 1px #f1f1f1 solid;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  &__list{
+    margin-bottom: 0;
+    // margin-top: -5px;
+    @media all and (max-width:992px){
+      text-align: center;
+    }
+  }
+  &__item{
+    margin-bottom: 0;
+    margin-right: 20px;
+    &:lat-child{
+      margin-right: 0;
+    }
+  }
+  &__icon{
+    font-size: 19px;
+    color: #919191;
+    // display: inline-block;
+    // vertical-align: middle;
+  }
+  &__link{
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    &_breadcrumbs{
+      margin-right: 5px;
+      &:last-child{
+        &:after{
+          content: ""
+        }
+      }
+      &:after{
+        content: " >";
+        color: #6c707c;
+      }
+    }
+  }
+}

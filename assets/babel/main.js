@@ -85,22 +85,24 @@ $(() => {
 });
 
 $(() => {
-    let target = $('.seo-text'),
-            readmoreSettings = {
-            speed: 75,
-            moreLink: '<a href="#" class="btn btn-orange seo-text__button table-center">Подробнее</a>',
-            lessLink: '<a href="#" class="btn btn-orange seo-text__button table-center">Свернуть</a>'
-        },readmoreInit = (item, height) =>{
-            let settings = $.extend(readmoreSettings, {
-                collapsedHeight: height
-            })
-            item.readmore(settings);
-        },targetMap = () =>{
-            target.map((i, item) => {
-                let height = $(item).data("collapsed-height");
-                readmoreInit($(item), height);
-            })
-        };
+    let target = $('.seo-text');
+    let readmoreSettings = {
+        speed: 75,
+        moreLink: '<a href="#" class="btn btn-orange seo-text__button table-center">Подробнее</a>',
+        lessLink: '<a href="#" class="btn btn-orange seo-text__button table-center">Свернуть</a>'
+    }
+    let readmoreInit = (item, height) => {
+        let settings = $.extend(readmoreSettings, {
+            collapsedHeight: height
+        })
+        item.readmore(settings);
+    }
+    let targetMap = () => {
+        target.map((i, item) => {
+            let height = $(item).data("collapsed-height");
+            readmoreInit($(item), height);
+        })
+    };
 
     if ($(window).width() > 992) {
         targetMap();
