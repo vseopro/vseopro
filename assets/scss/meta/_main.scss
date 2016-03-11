@@ -370,7 +370,7 @@ footer.main{
       // display: block;
     }
     &:last-child{
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
   .admin-edit{
@@ -427,13 +427,13 @@ footer.main{
     border-bottom: #f1f1f1 1px solid;
     &:last-child{
       border-bottom: none;
-      padding-bottom: 0px;
-      margin-bottom: 0px;
+      padding-bottom: 0;
+      margin-bottom: 0;
     }
   }
   &__section-title{
     font-size: 18px;
-    color: #192637;
+    color: $color-black;
     margin-bottom: 20px;
   }
   &__label{

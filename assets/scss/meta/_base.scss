@@ -1,5 +1,5 @@
 html{
-  // background: #192637;
+  // background: $color-black;
   font-size: 14px;
   @media(max-width:768px){
     // font-size: 15px;
@@ -115,10 +115,10 @@ p{
 }
 
 .dark-blue-link{
-  color: #192637;
+  color: $color-black;
   text-decoration: none;
   &:hover{
-    color: lighten(#192637, 5%);
+    color: lighten($color-black, 5%);
     text-decoration: underline;
   }
 }

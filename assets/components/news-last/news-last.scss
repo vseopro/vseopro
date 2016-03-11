@@ -9,7 +9,7 @@
   }
   &__title{
     font-size: 18px;
-    color: #192637;
+    color: $color-black;
     // margin-bottom: 15px;
     // line-height: 22px;
     @include ritm(2, true, true, true);

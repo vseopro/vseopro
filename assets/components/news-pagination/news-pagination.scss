@@ -22,7 +22,7 @@
     &.disabled{
       background: #f1f1f1;
       &:before, &:after{
-        background: #394553;
+        background: $color-bold;
       }
     }
     &:before, &:after{
@@ -87,7 +87,7 @@
   &__link{
     // background: #fff;
     height: 40px;
-    color: #394553;
+    color: $color-bold;
     background: #f1f1f1;
     padding: 10px 15px;
     &:hover{
