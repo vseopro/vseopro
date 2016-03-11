@@ -1,6 +1,6 @@
 .news-tab{
   &__nav{
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid $color-gray;
     margin-top: 0px + $base-margin;
     margin-bottom: 0px + $base-margin;
     @media(max-width: 768px){
@@ -93,7 +93,7 @@
 .tab-mini-news{
   // padding-bottom: 0px + $base-margin;
   margin-bottom: 0px + $base-margin;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid $color-gray;
   &:last-child{
     .news-metadata{
       margin-bottom: 0;

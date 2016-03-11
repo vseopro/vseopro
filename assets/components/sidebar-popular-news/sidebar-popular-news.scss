@@ -1,7 +1,7 @@
 .popular-news{
   &__media{
     // height: 70px;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid $color-gray;
     margin-bottom: 0px + $base-margin;
     padding-bottom: 0px + $base-margin;
     &:last-child{

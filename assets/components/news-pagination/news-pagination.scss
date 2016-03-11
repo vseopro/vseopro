@@ -20,7 +20,7 @@
       background: darken($color-red, 10%);
     }
     &.disabled{
-      background: #f1f1f1;
+      background: $color-gray;
       &:before, &:after{
         background: $color-bold;
       }
@@ -88,7 +88,7 @@
     // background: #fff;
     height: 40px;
     color: $color-bold;
-    background: #f1f1f1;
+    background: $color-gray;
     padding: 10px 15px;
     &:hover{
       text-decoration: none;
