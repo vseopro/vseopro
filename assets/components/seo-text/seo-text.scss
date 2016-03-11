@@ -13,14 +13,14 @@
     }
   }
   @media all and (min-width:992px){
-    border-bottom: #FF672B 1px solid;
+    border-bottom: $color-orange 1px solid;
   }
   &__inner{
 
   }
   &__text{
     // font-size: 13px;
-    color: #6C707C;
+    color: $color-main;
   }
   &__button{
     display: table ;

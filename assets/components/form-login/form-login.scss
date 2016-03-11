@@ -1,11 +1,11 @@
 .login-form{
-  background: rgba(25,38,55,.8);
+  background: rgba($color-black,.8);
   color: #fff;
   padding-top: $base-margin + px;
   padding-bottom: $base-margin + px;
   &__login,
   &__password{
-    border: 2px #6c707c solid;
+    border: 2px $color-main solid;
     background: transparent;
     height: 46px;
     padding-left: 20px;

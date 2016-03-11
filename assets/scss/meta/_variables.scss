@@ -18,19 +18,24 @@ $bold: 'opensans-bold', sans-serif;
 $regular: 'opensans-regular', sans-serif;
 $roboto: 'roboto-slab-bold', sans-serif;
 
-//project color
-$color: #6c707c;
-$color-black: #192637;
-$color-bold: #394553;
-$color-light: #b1b2b7;
-$color-orange: #ff690b;
-$color-red: #ef4628;
-$color-gray: #f1f1f1;
+//color generator
+//http://ethanmuller.github.io/sass-color-function-generator-thing/
+
+//main-color
+$color-main: #6c707c;
+
+//site color
+$color-black: darken( saturate( adjust-hue( $color-main, -11deg ), 31 ), 29 ); //#192637;
+$color-bold: darken( saturate( adjust-hue( $color-main, -13deg ), 12 ), 18 ); //#394553;
+$color-light: lighten( desaturate( adjust-hue( $color-main, 5deg ), 3 ), 26 ); //#b1b2b7;
+$color-orange: lighten( saturate( adjust-hue( $color-main, -202deg ), 93 ), 7 ); //#ff690b;
+$color-red: lighten( saturate( adjust-hue( $color-main, -216deg ), 79 ), 10 ); //#ef4628;
+$color-gray: lighten( desaturate( adjust-hue( $color-main, -225deg ), 7 ), 50 ); //#f1f1f1;
 
 //company color
-$color-vk: #5B7FA6;
-$color-facebook: #3B5998;
-$color-google: #D62408;
-$color-mail: #168DE2;
-$color-yandex: #F00;
-$color-odnoklassniki: #FA890F;
+$color-vk: lighten( saturate( adjust-hue( $color-main, -14deg ), 23 ), 5 ); //#5b7fa6;
+$color-facebook: darken( saturate( adjust-hue( $color-main, -4deg ), 37 ), 4 ); //#3b5998;
+$color-google: darken( saturate( adjust-hue( $color-main, -217deg ), 86 ), 1 ); //#d62408;
+$color-mail: lighten( saturate( adjust-hue( $color-main, -20deg ), 75 ), 4 ); //#168de2;
+$color-yandex: lighten( saturate( adjust-hue( $color-main, -225deg ), 93 ), 5 ); //#f00;
+$color-odnoklassniki: lighten( saturate( adjust-hue( $color-main, -194deg ), 89 ), 7 ); //#fa890f;

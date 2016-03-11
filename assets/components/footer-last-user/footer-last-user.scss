@@ -35,7 +35,7 @@
     color: #25CE56;
     margin-left: 5px;
     &.off{
-      color: #FB3131;
+      color: $color-red;
     }
   }
 }
@@ -60,15 +60,14 @@
   }
   &__item{
     font-size: 11px;
-    color: #b9b9b9;
+    color: $color-gray;
     // display: inline-block;
     padding: 8px 10px;
-    background: #2a3b52;
+    background: $color-black;
     // border-radius: 3px;
     margin-bottom: 3px;
     margin-right: 3px;
     float: left;
-    // font-family: $light;
     &:hover{
       text-decoration: none;
       color: white(1);

@@ -143,7 +143,7 @@ footer.main{
   &__link{
     text-align: center;
     line-height: 30px;
-    background: #394553;
+    background: $color-bold;
     color: white(1);
     width: 30px;
     height: 30px;
@@ -260,7 +260,7 @@ footer.main{
 //     margin-top: 10px;
 //     background: #f7f7f7;
 //     // border-radius: 6px;
-//     border: #d9d9d9 1px solid;
+//     border: $color-gray 1px solid;
 //     line-height: 20px;
 //   }
 //   &__text{
@@ -394,7 +394,7 @@ footer.main{
   }
   &__result-text{
     margin-top: 20px;
-    // color: #6c707c;
+    // color: $color-main;
   }
   &__title{
     font-size: 18px;
@@ -412,7 +412,7 @@ footer.main{
     }
   }
   &__text{
-    // color: #6c707c;
+    // color: $color-main;
   }
   &__link{
     @media all and (max-width: 992px){

@@ -79,7 +79,7 @@ nav.main{
           // background: rgba(25, 38, 55, .8);
           padding: 14px 25px 14px 15px;
           color: #fff;
-          border-bottom: 1px solid #6c707c;
+          border-bottom: 1px solid $color-main;
         }
       }
       > ul{
@@ -154,7 +154,7 @@ nav.main{
   li {
     ul {
       box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .3);
-      background: rgba(25, 38, 55, .8);
+      background: rgba($color-black, .8);
       position: absolute;
       z-index: 1;
       @extend %hover-transform-before;

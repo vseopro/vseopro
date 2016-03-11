@@ -8,7 +8,7 @@ html{
 
 body{
   font-family: $regular;
-  color: $color;
+  color: $color-main;
   background: $color-gray;
   // line-height: 0px + $base-line-height;
 }
@@ -136,7 +136,7 @@ small, .small{
 }
 
 blockquote{
-  border-color: #6C707C !important;
+  border-color: $color-main !important;
 }
 
 .hover-transform-before{
@@ -299,7 +299,7 @@ textarea {
 }
 
 input.input {
-  border:1px #d9d9d9 solid;
+  border:1px $color-gray solid;
   height: 40px;
   font-size: 12px;
   margin-bottom: 20px;
@@ -310,7 +310,7 @@ input.input {
     color: #999;
   }
   &:focus{
-    border-color: darken(#d9d9d9, 15%);
+    border-color: darken($color-gray, 15%);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
     border-color: #00aeef;
     background: #effbff;
@@ -334,7 +334,7 @@ input[type="search"]{
 
 .progress{
   height: 10px;
-  background: #f0f0f2;
+  background: $color-gray;
 }
 
 .progress-bar{

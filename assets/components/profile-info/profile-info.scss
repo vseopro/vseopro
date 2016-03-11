@@ -1,5 +1,5 @@
 .profile-info{
-  background: rgba(25,38,55,.8);
+  background: rgba($color-black,.8);
   color: #fff;
   padding-top: $base-margin + px;
   padding-bottom: $base-margin + px;
@@ -35,7 +35,7 @@
       background: #5669B7;
     }
     &.green{
-      background: #399f53;
+      background: #25ce56;
     }
     &.orange{
       background: $color-orange;

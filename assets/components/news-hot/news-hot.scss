@@ -8,7 +8,7 @@
     }
   }
   &__render{
-    background: #6C707C;
+    background: $color-main;
     padding-right: 75px;
     height: 40px;
     padding-left: 20px;
@@ -23,11 +23,11 @@
     top: 0;
     bottom: 0;
     right: 0;
-    background: #6C707C;
+    background: $color-main;
     // background: transparent;
     width: 34px;
     &:hover{
-      background: darken(#6C707C, 10%);
+      background: darken($color-main, 10%);
     }
     &:before, &:after{
       content:'';

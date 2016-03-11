@@ -33,14 +33,14 @@
       }
     }
     &__link__second{
-      background: #384552;
+      background: $color-bold;
       &[aria-expanded="true"]{
         color: #FFF;
         background: $color-orange;
       }
     }
     &__link__third{
-      background: #6C707B;
+      background: $color-main;
     }
     &__has-menu{
       position: relative;
