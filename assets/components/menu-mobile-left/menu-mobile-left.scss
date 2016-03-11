@@ -10,13 +10,13 @@
   }
   .list-group-item{
     background: $color-black;
-    color: #FFF;
+    color: white(1);
     border-top: none;
     border-left: none;
     border-right: none;
     margin-bottom: 0;
     padding-right: 40px;
-    border-bottom: 1px #fff solid;
+    border-bottom: 1px white(1) solid;
     &:first-child, &:last-child{
       border-radius: 0;
     }
@@ -24,18 +24,18 @@
   .mobile{
     &__link__first{
       &:hover{
-        color: #FFF;
+        color: white(1);
         background: $color-orange;
       }
       &[aria-expanded="true"]{
-        color: #FFF;
+        color: white(1);
         background: $color-orange;
       }
     }
     &__link__second{
       background: $color-bold;
       &[aria-expanded="true"]{
-        color: #FFF;
+        color: white(1);
         background: $color-orange;
       }
     }
@@ -51,7 +51,7 @@
         right: 22px;
         top: 50%;
         // margin-top: 0px;
-        background: #fff;
+        background: white(1);
         height: 1px;
         width: 10px;
       }

@@ -14,7 +14,7 @@
     padding-left: 20px;
   }
   &__text{
-    color: #fff;
+    color: white(1);
   }
   &__prev,
   &__next{
@@ -35,7 +35,7 @@
       top: 50%;
       // margin-top: -5px;
       left: 10px;
-      background: #FFF;
+      background: white(1);
       width: 15px;
       height: 1px;
     }
@@ -67,7 +67,7 @@
   }
   &__text{
     &:hover{
-      color: #FFF;
+      color: white(1);
     }
   }
 }

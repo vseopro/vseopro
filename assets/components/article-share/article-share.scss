@@ -35,13 +35,13 @@
     height: 30px;
     width: 30px;
     text-align: center;
-    color: #fff;
+    color: white(1);
     @media all and (max-width:768px){
       width: 50px;
       height: 50px;
     }
     &:hover{
-      color: #fff;
+      color: white(1);
     }
     &.vk{
       background: #5b7fa6;

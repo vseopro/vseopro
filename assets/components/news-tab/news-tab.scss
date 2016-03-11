@@ -15,12 +15,12 @@
     }
     &.active{
       a{
-        color: #fff !important;
+        color: white(1) !important;
         background: $color-red !important;
         margin-right: 0 !important;
         border: 1px solid transparent !important;
         &:hover{
-          color: #fff;
+          color: white(1);
           background: $color-red;
           border: 0;
         }

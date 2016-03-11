@@ -11,7 +11,7 @@
   }
   .dropdown-toggle{
     border-top: 2px transparent solid;
-    color: #fff;
+    color: white(1);
     background-color: $color-black !important;
     padding: 14px 18px 13px 15px !important;
     &:only-hover{
@@ -78,7 +78,7 @@ nav.main{
         a{
           // background: rgba(25, 38, 55, .8);
           padding: 14px 25px 14px 15px;
-          color: #fff;
+          color: white(1);
           border-bottom: 1px solid $color-main;
         }
       }
@@ -137,14 +137,14 @@ nav.main{
         border-top: 2px solid transparent;
         font-size: 15px;
         padding: 14px 18px 13px 15px;
-        color: #fff;
+        color: white(1);
         position: relative;
 
         display: block;
         // padding: 1em;
         text-decoration: none;
         white-space: nowrap;
-        color: #fff;
+        color: white(1);
         &:only-hover {
           color: $color-orange;
         }
