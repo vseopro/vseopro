@@ -59,3 +59,11 @@
   height: 15px;
   line-height: 15px;
 }
+
+img[alt=""] {
+  outline: 3px solid #b94a48 !important;
+}
+
+img:not([alt]) {
+  outline: 3px solid #b94a48 !important;
+}
