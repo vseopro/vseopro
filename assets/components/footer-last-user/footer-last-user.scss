@@ -32,7 +32,7 @@
     line-height: $base-margin + px;
   }
   &__status{
-    color: #25CE56;
+    color: $color-green;
     margin-left: 5px;
     &.off{
       color: $color-red;
