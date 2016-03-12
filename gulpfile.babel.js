@@ -141,7 +141,8 @@ gulp.task('scss', () => {
     return gulp.src(['assets/scss/**/style.scss'])
 
         .pipe(bulkSass())
-        .pipe(sass({includePaths: ['src/stylesheets']}))
+        .pipe(sass({includePaths: ['src/stylesheets']})
+            .on('error', sass.logError))
 
         .pipe(postcss(PROCESSORS))
         .pipe(csso())

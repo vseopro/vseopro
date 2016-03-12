@@ -204,9 +204,9 @@ blockquote{
     }
   }
   &-odnoklassniki{
-    background: $color-odnoklassniki;
+    background: $color-ok;
     &:hover{
-      background: darken($color-odnoklassniki, 10%);
+      background: darken($color-ok, 10%);
     }
   }
   &-getMoreComments{
