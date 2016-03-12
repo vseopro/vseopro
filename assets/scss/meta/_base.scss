@@ -71,10 +71,10 @@ h6, .h6{
 }
 
 a{
-  color: $color-orange;
+  color: $color-red;
   // font-size: 14px;
   &:hover{
-    color: $color-orange;
+    color: $color-red;
   }
   &.white-link{
     color: white(1);
@@ -85,10 +85,10 @@ a{
     }
   }
   &.link{
-    color: $color-orange;
+    color: $color-red;
     text-decoration: none;
     &:hover{
-      color: $color-orange;
+      color: $color-red;
       text-decoration: underline;
     }
   }
