@@ -127,9 +127,8 @@ gulp.task('bootstrap', () => {
     return gulp.src(['./assets/scss/**/bootstrap.scss'])
 
         .pipe(sass({
-            outputStyle: 'nested',
-            errLogToConsole: true
-        }))
+            includePaths: ['assets/bower/bootstrap-sass/assets/stylesheets/']
+        }).on('error', sass.logError))
 
         .pipe(postcss(PROCESSORS))
         .pipe(csso())
@@ -141,8 +140,7 @@ gulp.task('scss', () => {
     return gulp.src(['assets/scss/**/style.scss'])
 
         .pipe(bulkSass())
-        .pipe(sass({includePaths: ['src/stylesheets']})
-            .on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
 
         .pipe(postcss(PROCESSORS))
         .pipe(csso())
@@ -211,7 +209,7 @@ gulp.task('buildBowerJS',  () => {
         .pipe(gulp.dest('app/js'))
 })
 
-gulp.task('static',  () => {
+gulp.task('static', () => {
     runSequence('copyMiscFiles', 'copyFontFiles', 'buildBowerCSS', 'buildBowerJS', 'copyLibsFiles');
 })
 

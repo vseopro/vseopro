@@ -151,7 +151,7 @@ $(() => {
     let target = $('.nav-afix');
     let startPosition = target.offset().top;
 
-    $(window).scroll(function(){
+    $(window).scroll(() => {
         if ($(window).scrollTop() >= startPosition) {
             if (!target.hasClass()) {
                 target.addClass('affix')
