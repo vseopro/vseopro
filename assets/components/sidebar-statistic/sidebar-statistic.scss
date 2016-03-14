@@ -12,7 +12,7 @@
   &__group-title{
     font-size: 16px;
     border-top: 1px $color-gray solid;
-    color: #919191;
+    color: darken($color-gray, 30%);
     margin-top: 0px + $base-margin;
     padding-top: 0px + $base-margin;
     margin-bottom: 0px + $base-margin;

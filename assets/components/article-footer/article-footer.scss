@@ -19,11 +19,11 @@
     }
   }
   &__icon{
-    color: #919191;
+    color: darken($color-gray, 30%);
     font-size: 20px;
     margin-right: 10px;
   }
   &__text{
-    color: #919191;
+    color: darken($color-gray, 30%);
   }
 }

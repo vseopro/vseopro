@@ -17,7 +17,7 @@
     color: $color-black;
   }
   &__time{
-    color: #919191;
+    color: darken($color-gray, 30%);
     &-orange{
       color: $color-orange;
     }

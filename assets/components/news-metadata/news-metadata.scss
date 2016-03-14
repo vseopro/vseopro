@@ -11,11 +11,12 @@
   }
   &__ico{
     font-size: 20px;
-    color: #919191;
+    color: darken($color-gray, 30%);
     line-height: 0px + $base-line-height;
-    margin-top: -1px;
-    display: inline-block;
-    vertical-align: middle;
+    margin-right: 5px;
+    // margin-top: -1px;
+    // display: inline-block;
+    // vertical-align: middle;
   }
   &__col{
     @media all and (max-width: 992px){

@@ -16,6 +16,10 @@
   &__media-right{
     padding-left: $base-margin + px;
   }
+  &__ico{
+    color: darken($color-gray, 30%);
+    margin-right: 5px;
+  }
   &__image{
     // position: absolute;
     // top: 0;
@@ -25,17 +29,17 @@
     // margin-top: 4px;
     // line-height: 16px;
     // margin-bottom: 8px;
-    float: left;
-    width: 50%;
-    padding-right: 5px;
+    // float: left;
+    // width: 50%;
+    // padding-right: 5px;
   }
   &__time{
     // margin-top: 4px;
     // line-height: 16px;
     // margin-bottom: 8px;
-    float: left;
-    width: 50%;
-    padding-left: 5px;
+    // float: left;
+    // width: 50%;
+    // padding-left: 5px;
   }
   &__title{
     // margin-top: -4px;

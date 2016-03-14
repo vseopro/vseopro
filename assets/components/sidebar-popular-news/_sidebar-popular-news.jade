@@ -7,6 +7,12 @@ div(block="white-block")
           img(src="https://unsplash.it/75/?random" alt="popular news image" elem="image")
         .media-right(elem="media-right")
           a(href="#" elem="title").db #{text[Math.floor(Math.random() * ((text.length-1) - 0 + 1)) + 0]}
-          .clearfix(elem="metadata")
-            a(href="#" elem="user").link.text-overflow <span class="icon-user" elem="ico"></span> #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
-            a(href="#" elem="time").link.text-overflow <span class="icon-calendar" elem="ico"></span> #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}
+          .row(elem="metadata")
+            .col-xs-6(elem="col")
+              a(href="#" elem="user").link.text-overflow
+                span.icon-user(elem="ico")
+                | #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]}
+            .col-xs-6(elem="col")
+              a(href="#" elem="time").link.text-overflow
+                span.icon-calendar(elem="ico")
+                | #{time[Math.floor(Math.random() * ((time.length - 1) - 0 + 1)) + 0]}

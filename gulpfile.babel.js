@@ -132,10 +132,8 @@ gulp.task('bootstrap', () => {
 
 gulp.task('scss', () => {
     return gulp.src(['assets/scss/**/style.scss'])
-
         .pipe(bulkSass())
         .pipe(sass().on('error', sass.logError))
-
         .pipe(postcss(PROCESSORS))
         .pipe(csso())
         .pipe(postcss([perfectionist({})]))
@@ -155,19 +153,18 @@ gulp.task('babel', () => {
 
 gulp.task('deploy', () => {
     var conn = ftp.create( {
-        host:     'ftp44.hostland.ru',
-        user:     'host1339720_test',
+        host: 'ftp44.hostland.ru',
+        user: 'host1339720_test',
         password: '8242332812',
         parallel: 1
     } );
 
-    var globs = [
-        'app/**'
-    ];
+    var globs = ['app/**'];
 
-    return gulp.src( globs, { base: './app', buffer: false } )
-        // .pipe( conn.newer( '/' ) ) // only upload newer files
-        .pipe( conn.dest( '/' ) );
+    return gulp.src(globs, {
+        base: './app',
+        buffer: false
+    }).pipe(conn.dest('/'));
 })
 
 gulp.task('copyMiscFiles', () => {
