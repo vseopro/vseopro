@@ -63,12 +63,6 @@ let PROCESSORS = [
     postCSSFocus
 ]
 
-let PERFECTIONIST_CONFIG = {
-    // maxValueLength: false,
-    // maxAtRuleLength: false,
-    // maxSelectorLength: true
-}
-
 let BOWER_MAIN_FILES_CONFIG = {
     includeDev: true,
     paths:{
@@ -133,7 +127,7 @@ gulp.task('bootstrap', () => {
         .pipe(postcss(PROCESSORS))
         .pipe(csso())
         .pipe(gulp.dest('./app/css'))
-        .on('end', browserSync.reload)
+        .pipe(reload({stream: true}))
 })
 
 gulp.task('scss', () => {
@@ -144,7 +138,7 @@ gulp.task('scss', () => {
 
         .pipe(postcss(PROCESSORS))
         .pipe(csso())
-        .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
+        .pipe(postcss([perfectionist({})]))
         .pipe(gulp.dest('./app/css'))
         .pipe(reload({stream: true}))
 })
@@ -176,23 +170,23 @@ gulp.task('deploy', () => {
         .pipe( conn.dest( '/' ) );
 })
 
-gulp.task('copyMiscFiles',  () => {
+gulp.task('copyMiscFiles', () => {
     return gulp.src(['assets/misc/**'])
         .pipe(gulp.dest('app/'))
 })
 
-gulp.task('copyLibsFiles',  () => {
+gulp.task('copyLibsFiles', () => {
     return gulp.src(['assets/lib/**'])
         .pipe(uglify())
         .pipe(gulp.dest('app/js'))
 })
 
-gulp.task('copyFontFiles',  () => {
+gulp.task('copyFontFiles', () => {
     return gulp.src(['assets/font/**'])
         .pipe(gulp.dest('app/font'))
 })
 
-gulp.task('buildBowerCSS',  () => {
+gulp.task('buildBowerCSS', () => {
     var cssFilter = gulpFilter('**/*.css')
     return gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
         .pipe(cssFilter)
@@ -201,7 +195,7 @@ gulp.task('buildBowerCSS',  () => {
         .pipe(gulp.dest('app/css'))
 })
 
-gulp.task('buildBowerJS',  () => {
+gulp.task('buildBowerJS', () => {
     var jsFilter = gulpFilter('**/*.js')
     return gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
         .pipe(jsFilter)
