@@ -191,7 +191,7 @@ gulp.task('buildBowerCSS', () => {
     return gulp.src(mainBowerFiles(BOWER_MAIN_FILES_CONFIG))
         .pipe(cssFilter)
         .pipe(csso())
-        .pipe(postcss([perfectionist(PERFECTIONIST_CONFIG)]))
+        .pipe(postcss([perfectionist({})]))
         .pipe(gulp.dest('app/css'))
 })
 
