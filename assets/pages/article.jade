@@ -6,13 +6,13 @@ block content
   .container
     .row
       .col-md-8
-        .white-block
-          h1.white-block__title.mt0 ClipBucket v.2.7.5 Rus + All Plugins + All
-          article.article
-            include ../components/article-header/_article-header
-            include ../components/article-content/_article-content
-            include ../components/article-share/_article-share
-            include ../components/article-footer/_article-footer
+        div(block="white-block")
+          h1(elem="title") ClipBucket v.2.7.5 Rus + All Plugins + All
+
+          include ../components/article-header/_article-header
+          include ../components/article-content/_article-content
+          include ../components/article-share/_article-share
+          include ../components/article-footer/_article-footer
 
         //- include components/_click-block
 
@@ -28,8 +28,8 @@ block content
 
         a(href="#").btn.btn-orange.btn-getMoreComments.table-center Показать предыдущие комментарии
 
-        .white-block
-          h4.white-block__title.mt0 <span class="icon-plus"></span> Добавить комментарий
+        div(block="white-block")
+          h1(elem="title") <span class="icon-plus"></span> Добавить комментарий
 
       .col-xs-4.visible-md.visible-lg
 
