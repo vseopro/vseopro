@@ -3,12 +3,12 @@
   // padding-bottom: 0px + $base-margin;
   // margin-bottom: 0px + $base-margin;
   &__row{
-    @media screen and (min-width: 992px){
+    @media(min-width: 992px){
       display: table;
     }
   }
   &__col{
-    @media screen and (min-width: 992px){
+    @media(min-width: 992px){
       display: table-cell;
       vertical-align: top;
       float: none;
@@ -17,7 +17,7 @@
   &__img{
     display: table;
     margin: 0 auto;
-    @media screen and (max-width: 992px){
+    @media(max-width: 992px){
       margin: 0 auto 20px;
     }
   }
@@ -34,20 +34,20 @@
   &__description{
     // margin-top: 10px;
     @include ritm(4, true, true, true);
-    @media screen and (min-width: 992px){
+    @media(min-width: 992px){
       padding-bottom: 64px;
     }
   }
   &__button{
     font-size: 16px;
     padding: 15px;
-    @media screen and (min-width: 992px){
+    @media(min-width: 992px){
       position: absolute;
       bottom: 0;
       left: 15px;
       right: 15px;
     }
-    @media screen and (max-width: 1100px){
+    @media(max-width: 1100px){
       left: 10px;
       right: 10px;
     }

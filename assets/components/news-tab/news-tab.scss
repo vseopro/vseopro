@@ -38,7 +38,7 @@
   }
   &__row-table{
     display: table;
-    @media all and (max-width:992px){
+    @media(max-width:992px){
       display: block;
     }
   }
@@ -46,7 +46,7 @@
     float: none;
     display: table-cell;
     vertical-align: top;
-    @media all and (max-width:992px){
+    @media(max-width:992px){
       display: block;
       width: auto;
     }

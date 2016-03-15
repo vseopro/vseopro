@@ -15,7 +15,7 @@ header.main{
   }
   &__slogan{
     font-size: 15px;
-    @media all and (max-width:992px){
+    @media(max-width:992px){
       text-align: center;
     }
   }

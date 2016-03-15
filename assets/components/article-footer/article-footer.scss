@@ -4,7 +4,7 @@
   padding-top: 10px;
   &__item{
     margin-right: 10px;
-    @media all and (max-width: 992px){
+    @media(max-width: 992px){
       display: block;
     }
     &:last-child{
@@ -14,7 +14,7 @@
   &__link{
     margin-right: 5px;
     font-size: 13px;
-    @media all and (max-width: 992px){
+    @media(max-width: 992px){
       font-size: 15px;
     }
   }

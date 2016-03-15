@@ -5,7 +5,7 @@
     float: left;
     color: #6d747e;
     margin-top: 5px;
-    @media all and (max-width:768px){
+    @media(max-width:768px){
       float: none;
       text-align: center;
       display: block;
@@ -14,14 +14,14 @@
   }
   &__list{
     float: right;
-    @media all and (max-width:768px){
+    @media(max-width:768px){
       float: none;
       text-align: center;
     }
   }
   &__item{
     margin-right: 10px;
-    @media all and (max-width:768px){
+    @media(max-width:768px){
       display: inline-block;
       float: none !important;
       margin-bottom: 10px;
@@ -36,7 +36,7 @@
     width: 30px;
     text-align: center;
     color: white(1);
-    @media all and (max-width:768px){
+    @media(max-width:768px){
       width: 50px;
       height: 50px;
     }
@@ -119,7 +119,7 @@
   &__ico{
     &:before{
       line-height: 30px;
-      @media all and (max-width:768px){
+      @media(max-width:768px){
         line-height: 50px;
         font-size: 16px;
       }
