@@ -1,0 +1,9 @@
+div(block="white-block")
+  h4(elem="title") <span class="icon-bookmark"></span> Похожие новости в этой категории
+  div(block="similar-news")
+    .row(elem="row")
+      -for(var i = 0; i < 4; i++)
+        .col-xs-12.col-sm-6.col-md-6.col-lg-3(elem="col")
+          a(href="#" elem="link").db.text-center.text-underline
+            img(src="img/img_demo_similar_news.png" alt="img demo similar news" elem="img").table-center
+            span(elem="text").text-bold #{users[Math.floor(Math.random() * ((users.length-1) - 0 + 1)) + 0]} V2.7.3

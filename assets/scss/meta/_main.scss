@@ -152,36 +152,30 @@ footer.main{
     &.vk{
       &:hover{
         color: $color-vk;
-        // background: $color-orange;
       }
     }
     &.odnoklassniki{
       &:hover{
         color: $color-ok;
-        // background: $color-orange;
       }
     }
     &.twitter{
       &:hover{
         color: $color-mail;
-        // background: $color-orange;
       }
     }
     &.google{
       &:hover{
         color: $color-google;
-        // background: $color-orange;
       }
     }
     &.facebook{
       &:hover{
         color: $color-facebook;
-        // background: $color-orange;
       }
     }
     &.rss{
       &:hover{
-        // color: white(1);
         color: $color-orange;
       }
     }
@@ -300,18 +294,6 @@ footer.main{
   &__check-login{
     padding: 10px;
     height: 40px;
-  }
-}
-
-.similar-news{
-  &__img{
-    margin-bottom: 5px;
-  }
-  &__link{
-    padding-top: 15px;
-  }
-  &__text{
-
   }
 }
 

@@ -36,16 +36,16 @@ $color-red       : lighten( saturate( adjust-hue( $color-main, -216deg ), 79 ), 
 //company color
 //get more colors http://brandcolors.net/
 
-$color-blogger   : lighten( saturate( adjust-hue( $color-main, -194deg ), 93 ), 3 )       ; //#f57d00
-$color-evernote  : lighten( saturate( adjust-hue( $color-main, -131deg ), 44 ), 6 )       ; //#7ac142
-$color-facebook  : darken( saturate( adjust-hue( $color-main, -4deg ), 37 ), 4 )          ; //#3b5998
-$color-google    : lighten( saturate( adjust-hue( $color-main, -220deg ), 62 ), 11 )      ; //#dc4e41
-$color-linkedin  : darken( saturate( adjust-hue( $color-main, -24deg ), 93 ), 10 )        ; //#0077b5
-$color-mail      : lighten( saturate( adjust-hue( $color-main, -20deg ), 75 ), 4 )        ; //#168de2
-$color-ok        : lighten( saturate( adjust-hue( $color-main, -198deg ), 77 ), 10 )      ; //#ed812b
-$color-pinterest : darken( saturate( adjust-hue( $color-main, 128deg ), 85 ), 6 )         ; //#bd081c
-$color-reddit    : lighten( saturate( adjust-hue( $color-main, -209deg ), 93 ), 5 )       ; //#ff4500
-$color-tumblr    : darken( saturate( adjust-hue( $color-main, -11deg ), 20 ), 17 )        ; //#35465c
-$color-twitter   : lighten( saturate( adjust-hue( $color-main, -19deg ), 75 ), 18 )       ; //#55acee
-$color-vk        : darken( saturate( adjust-hue( $color-main, -12deg ), 28 ), 4 )         ; //#45668e
-$color-yandex    : lighten( saturate( adjust-hue( $color-main, -177deg ), 93 ), 5 )       ; //#ffcc00
+$color-blogger   : lighten( saturate( adjust-hue( $color-main, -194deg ), 93 ), 3 )   ; //#f57d00
+$color-evernote  : lighten( saturate( adjust-hue( $color-main, -131deg ), 44 ), 6 )   ; //#7ac142
+$color-facebook  : darken( saturate( adjust-hue( $color-main, -4deg ), 37 ), 4 )      ; //#3b5998
+$color-google    : lighten( saturate( adjust-hue( $color-main, -220deg ), 62 ), 11 )  ; //#dc4e41
+$color-linkedin  : darken( saturate( adjust-hue( $color-main, -24deg ), 93 ), 10 )    ; //#0077b5
+$color-mail      : lighten( saturate( adjust-hue( $color-main, -20deg ), 75 ), 4 )    ; //#168de2
+$color-ok        : lighten( saturate( adjust-hue( $color-main, -198deg ), 77 ), 10 )  ; //#ed812b
+$color-pinterest : darken( saturate( adjust-hue( $color-main, 128deg ), 85 ), 6 )     ; //#bd081c
+$color-reddit    : lighten( saturate( adjust-hue( $color-main, -209deg ), 93 ), 5 )   ; //#ff4500
+$color-tumblr    : darken( saturate( adjust-hue( $color-main, -11deg ), 20 ), 17 )    ; //#35465c
+$color-twitter   : lighten( saturate( adjust-hue( $color-main, -19deg ), 75 ), 18 )   ; //#55acee
+$color-vk        : darken( saturate( adjust-hue( $color-main, -12deg ), 28 ), 4 )     ; //#45668e
+$color-yandex    : lighten( saturate( adjust-hue( $color-main, -177deg ), 93 ), 5 )   ; //#ffcc00
