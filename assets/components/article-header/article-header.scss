@@ -21,8 +21,9 @@
   &__icon{
     font-size: 19px;
     color: darken($color-gray, 30%);
-    display: inline-block;
-    vertical-align: middle;
+    margin-right: 5px;
+    // display: inline-block;
+    // vertical-align: middle;
   }
   &__link{
     font-size: 12px;
