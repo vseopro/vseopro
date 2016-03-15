@@ -133,6 +133,11 @@ nav.main{
       float: left;
       z-index: 1001;
       // background: #1bc2a2;
+      &:last-child{
+        a{
+          border-bottom: none;
+        }
+      }
       a {
         border-top: 2px solid transparent;
         font-size: 15px;
